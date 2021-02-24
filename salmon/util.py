@@ -1,12 +1,3 @@
-'''
-Author       : DiheChen
-Date         : 2021-01-05 01:32:37
-LastEditors  : DiheChen
-LastEditTime : 2021-01-05 02:34:48
-Description  : None
-GitHub       : https://github.com/Chendihe4975
-'''
-# 部分内容是从 [Ice-Cirno / HoshinoBot](https://github.com/Ice-Cirno/HoshinoBot) 上抄来的
 import time
 from collections import defaultdict
 from datetime import datetime, timedelta
