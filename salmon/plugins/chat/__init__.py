@@ -7,7 +7,6 @@ Description: None
 GitHub: https://github.com/Chendihe4975
 '''
 from .zai import *
-from .poke import *
 from .tql import *
 from .auth_qa import *
 from .darkneteasy import *
