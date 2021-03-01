@@ -6,7 +6,11 @@ Thanks to @Akiraxie dalao！
 import os
 import re
 import asyncio
+from functools import wraps
 from collections import defaultdict
+from loguru import logger
+from apscheduler import job
+from nonebot_plugin_apscheduler import scheduler
 from nonebot.adapters.cqhttp.utils import escape
 from nonebot.adapters.cqhttp.message import MessageSegment, Message
 from nonebot.matcher import Matcher, matchers, current_bot, current_event
@@ -15,6 +19,7 @@ from nonebot.typing import T_State, T_ArgsParser, T_Handler
 from nonebot.plugin import on_command, on_message, on_startswith, on_endswith, on_notice, on_request, on_shell_command
 from nonebot.exception import FinishedException, PausedException, RejectedException
 from nonebot.message import run_preprocessor, run_postprocessor
+import salmon
 from salmon.typing import *
 from salmon.util import normalize_str
 from salmon import log, priv, Bot
@@ -67,6 +72,22 @@ def regex(regex: str, flags: Union[int, re.RegexFlag] = 0, normal: bool = True) 
         else:
             return False
     return Rule(_regex)
+
+
+def wrapper(func: Callable[[], Any], id: str) -> Callable[[], Awaitable[Any]]:
+    @wraps(func)
+    async def _wrapper() -> Awaitable[Any]:
+        try:
+            logger.opt(colors=True).info(
+                f'<ly>Scheduled job <c>{id}</c> started.</ly>')
+            res = await func()
+            logger.opt(colors=True).info(
+                f'<ly>Scheduled job <c>{id}</c> completed.</ly>')
+            return res
+        except Exception as e:
+            logger.opt(colors=True, exception=e).error(
+                f'<r><bg #f8bbd0>Scheduled job <c>{id}</c> failed.</bg #f8bbd0></r>')
+    return _wrapper
 
 
 def _load_service_config(service_name):
@@ -318,6 +339,20 @@ class Service:
         self.matchers.append(str(mw))
         _loaded_matchers[mw.matcher] = mw
         return mw
+
+
+    def scheduled_job(trigger: str, **kwargs):
+        def deco(func: Callable[[], Any]) -> Callable[[], Awaitable[Any]]:
+            id = kwargs.get('id', func.__name__)
+            kwargs['id'] = id
+            return scheduler.scheduled_job(trigger, **kwargs)(wrapper(func, id))
+        return deco
+
+
+    def add_job(func: Callable[[], Any], trigger: str, **kwargs)->job.Job:
+        id = kwargs.get('id', func.__name__)
+        kwargs['id'] = id
+        return scheduler.add_job(wrapper(func, id), trigger, **kwargs)
 
 
     def on_notice(self,  only_group: bool = True, **kwargs) -> "matcher_wrapper":
