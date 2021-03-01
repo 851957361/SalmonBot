@@ -1,6 +1,7 @@
-"""请根据注释编辑图片和功能配置
+"""请根据注释编辑图片和功能配置，
 然后将文件夹config_example重命名为config
-※bot监听的端口与ip请将根目录下的.env.dev.example重命名为.env.dev并编辑配置
+
+※bot监听的端口与ip等请在根目录下的.env.dev.example重命名为.env.dev并编辑配置
 """
 
 DEBUG = False           # log日志调试模式

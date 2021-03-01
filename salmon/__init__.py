@@ -33,7 +33,7 @@ def get_bot() -> SalmonBot:
     return _bot
 
 
-def getBot() -> SalmonBot:
+def get_bot_list() -> SalmonBot:
     return list(nonebot.get_bots().values())[0]
 
 
