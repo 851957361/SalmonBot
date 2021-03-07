@@ -1,11 +1,3 @@
-'''
-Author: DiheChen
-Date: 2021-01-01 16:03:36
-LastEditors  : DiheChen
-LastEditTime : 2021-01-04 20:48:49
-Description: None
-GitHub: https://github.com/Chendihe4975
-'''
 import os
 import random
 from loguru import logger

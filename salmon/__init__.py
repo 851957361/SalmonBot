@@ -29,7 +29,7 @@ def init() -> SalmonBot:
 
 def get_bot() -> SalmonBot:
     if _bot is None:
-        raise ValueError('HoshinoBot has not been initialized')
+        raise ValueError('SalmonBot has not been initialized')
     return _bot
 
 

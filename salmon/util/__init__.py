@@ -8,7 +8,9 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 from nonebot import require
 import pytz
-import collections
+from nonebot.adapters.cqhttp import Event as CQEvent
+from aiocqhttp import ActionFailed
+from nonebot.permission import SUPERUSER
 from matplotlib import pyplot as plt
 from PIL import Image
 import salmon
@@ -65,6 +67,26 @@ def normalize_str(string) -> str:
     string = string.lower()
     string = zhconv.convert(string, 'zh-hans')
     return string
+
+
+async def delete_msg(ev: CQEvent):
+    try:
+        await salmon.get_bot().delete_msg(self_id=ev.self_id, message_id=ev.message_id)
+    except ActionFailed as e:
+        salmon.logger.error(f'撤回失败 retcode={e.retcode}')
+    except Exception as e:
+        salmon.logger.exception(e)
+
+
+async def silence(ev: CQEvent, ban_time, skip_su=True):
+    try:
+        if skip_su and ev.user_id in SUPERUSER:
+            return
+        await salmon.get_bot().set_group_ban(self_id=ev.self_id, group_id=ev.group_id, user_id=ev.user_id, duration=ban_time)
+    except ActionFailed as e:
+        salmon.logger.error(f'禁言失败 retcode={e.retcode}')
+    except Exception as e:
+        salmon.logger.exception(e)
 
 
 MONTH_NAME = ('睦月', '如月', '弥生', '卯月', '皐月', '水無月',

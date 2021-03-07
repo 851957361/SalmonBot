@@ -11,12 +11,13 @@ from collections import defaultdict
 from loguru import logger
 from apscheduler import job
 from nonebot_plugin_apscheduler import scheduler
+from nonebot.permission import SUPERUSER
 from nonebot.adapters.cqhttp.utils import escape
 from nonebot.adapters.cqhttp.message import MessageSegment, Message
 from nonebot.matcher import Matcher, matchers, current_bot, current_event
 from nonebot.rule import ArgumentParser, Rule, to_me
 from nonebot.typing import T_State, T_ArgsParser, T_Handler
-from nonebot.plugin import on_command, on_message, on_startswith, on_endswith, on_notice, on_request, on_shell_command
+from nonebot.plugin import on_command, on_message, on_startswith, on_endswith, on_notice, on_request, on_shell_command, CommandGroup
 from nonebot.exception import FinishedException, PausedException, RejectedException
 from nonebot.message import run_preprocessor, run_postprocessor
 import salmon
@@ -119,6 +120,30 @@ def _save_service_config(service):
             f,
             ensure_ascii=False,
             indent=2)
+
+
+async def parse_gid(bot: Bot, ev: CQEvent, state: T_State):
+    msgs = ev.get_plaintext().split(' ')
+    glist = list(g['group_id'] for g in await bot.get_group_list())
+    failure = set()
+    illegal = set()
+    gids = []
+    for msg in msgs:
+        if msg.isdigit():
+            gid = int(msg)
+            if gid not in glist:
+                failure.add(msg)
+                continue
+            else:
+                gids.append(gid)
+        elif msg != '':
+            illegal.add(msg)
+    if illegal:
+        await bot.send(ev, f'"{"、".join(illegal)}"无效，群ID只能为纯数字')
+    if failure:
+        await bot.send(ev, f'Bot未入群 {"、".join(failure)}')
+    if len(gids) != 0:
+        state['gids'] = gids.copy()
 
 
 class ServiceFunc:
@@ -510,3 +535,18 @@ async def _(matcher: Matcher, exception: Exception, bot: Bot, event: CQEvent, st
             mw.sv.logger.error(
                 f'Event handling failed from <lc>{mw}</>', False)
         mw.sv.logger.info(f'Event handling completed from <lc>{mw}</>')
+
+
+sulogger = log.new_logger('sucmd', salmon.config.DEBUG)
+
+def sucmd(name: str, only_to_me: bool = False, aliases: Optional[set] = None, **kwargs) -> Type[Matcher]:
+    kwargs['aliases'] = aliases
+    kwargs['permission'] = SUPERUSER
+    kwargs['rule'] = to_me() if only_to_me else Rule()
+    return on_command(name, **kwargs)
+
+
+def sucmds(name: str, only_to_me: bool = False, **kwargs) -> CommandGroup:
+    kwargs['permission'] = SUPERUSER
+    kwargs['rule'] = to_me() if only_to_me else Rule()
+    return CommandGroup(name, **kwargs)

@@ -12,6 +12,10 @@ from nonebot.permission import SUPERUSER, Permission
 import salmon
 from salmon.typing import CQEvent
 
+OWNERS = SUPERUSER | GROUP_OWNER
+ADMINS = SUPERUSER | GROUP_OWNER | GROUP_ADMIN
+NORMALS = SUPERUSER | GROUP | PRIVATE
+
 #===================== block list =======================#
 _black_group = {}  # Dict[group_id, expr_time]
 _black_user = {}  # Dict[user_id, expr_time]
