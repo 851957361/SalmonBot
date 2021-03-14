@@ -11,7 +11,7 @@ DEBUG = False           # log日志调试模式
 # 当cqhttp与bot端不在同一台计算机时，可用http协议
 RES_PROTOCOL = 'file'
 # 资源库文件夹，需可读可写，windows下注意反斜杠转义
-RES_DIR = r'./res/'
+RES_DIR = r'C:/bot/res/'
 # 使用http协议时需填写，原则上该url应指向RES_DIR目录
 RES_URL = 'http://127.0.0.1:5000/static/'
 
@@ -21,12 +21,6 @@ RES_URL = 'http://127.0.0.1:5000/static/'
 # 切忌一次性开启多个
 PLUGINS_ON = {
     'botmanage',
-    'dice',
-    'groupmaster',
-    # 'hourcall',
-    # 'kancolle',
-    # 'mikan',
-    'pcrclanbattle',
     'priconne',
     # 'setu',
     # 'translate',

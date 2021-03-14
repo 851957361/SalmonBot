@@ -1,30 +1,28 @@
 import os
 import nonebot
-from nonebot.adapters import Bot, Event, Message
+from nonebot import plugin
+from nonebot.adapters import Bot
 from nonebot.adapters.cqhttp import Bot as CQHTTPBot
 from .log import new_logger
-from . import config
+from . import configs
 
 _bot = None
 SalmonBot = Bot
 os.makedirs(os.path.expanduser('~/.hoshino'), exist_ok=True)
-logger = new_logger('hoshino', config.DEBUG)
-
-def init() -> SalmonBot:
-    global _bot
-    nonebot.init(config)
-    _bot = nonebot.get_bots()
-    driver = nonebot.get_driver()
-    driver.register_adapter("cqhttp", CQHTTPBot)
-    config = driver.config
-    from .log import error_handler, critical_handler
-    nonebot.logger.addHandler(error_handler)
-    nonebot.logger.addHandler(critical_handler)
-    for plugin_name in config.PLUGINS_ON:
-        nonebot.load_plugins(
-            os.path.join(os.path.dirname(__file__), 'plugins', plugin_name),
-            f'salmon.plugins.{plugin_name}')
-    return _bot
+logger = new_logger('salmon', configs.DEBUG)
+plugins = 'salmon/plugins/'
+configs = 'salmon/configs/'
+nonebot.init()
+driver = nonebot.get_driver()
+driver.register_adapter('cqhttp', Bot)
+config = driver.config
+nonebot.load_plugins(configs)
+from .log import error_handler, critical_handler
+nonebot.logger.add(error_handler)
+nonebot.logger.add(critical_handler)
+for plugin_name in configs.PLUGINS_ON:
+    module = os.path.join(plugins, plugin_name)
+    nonebot.load_plugins(plugin_name)
 
 
 def get_bot() -> SalmonBot:
@@ -35,7 +33,3 @@ def get_bot() -> SalmonBot:
 
 def get_bot_list() -> SalmonBot:
     return list(nonebot.get_bots().values())[0]
-
-
-from . import R
-from .service import Service, sucmd

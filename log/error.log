@@ -1,0 +1,480 @@
+[2021-03-10 00:05:25,705 nonebot] ERROR: 2021-03-10 00:05:25.701 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x000001AEA487F8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001AEA4E87F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001AEA4E97440>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001AEA4E92A30>, origin='C:\\bot\\S...
+             └ <function _load at 0x000001AEA184F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-10 00:05:25,711 nonebot] ERROR: 2021-03-10 00:05:25.709 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x000001AEA487F8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001AEA4E87F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001AEA4E97200>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001AEA4E92CA0>, origin='...
+             └ <function _load at 0x000001AEA184F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-10 00:05:26,207 nonebot] ERROR: 2021-03-10 00:05:26.205 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x000001AEA487F8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001AEA4E87EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001AEA4E97440>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001AEA56DF3D0>, origin='C:\...
+             └ <function _load at 0x000001AEA184F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-10 17:50:44,877 nonebot] ERROR: 2021-03-10 17:50:44.870 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x0000024B70725A60>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000024B70D2CF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000024B7153B640>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000024B7153D1F0>, origin='C:\...
+             └ <function _load at 0x0000024B6DA5F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-10 17:50:44,883 nonebot] ERROR: 2021-03-10 17:50:44.882 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x0000024B70725A60>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000024B7153E0D0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000024B715373C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000024B715E8910>, origin='C:\\bot\\S...
+             └ <function _load at 0x0000024B6DA5F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-10 17:50:44,924 nonebot] ERROR: 2021-03-10 17:50:44.885 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x0000024B70725A60>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000024B7153E0D0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000024B11B4EEC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000024B1040B190>, origin='...
+             └ <function _load at 0x0000024B6DA5F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-14 22:52:30,712 nonebot] ERROR: 2021-03-14 22:52:30.703 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x000001E858315A60>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001E85891CF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001E85912B4C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001E85912D1F0>, origin='C:\\bot\\S...
+             └ <function _load at 0x000001E85563F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-14 22:52:30,719 nonebot] ERROR: 2021-03-14 22:52:30.717 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x000001E858315A60>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001E85891CF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001E858651300>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001E85912D280>, origin='...
+             └ <function _load at 0x000001E85563F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-14 22:52:31,661 nonebot] ERROR: 2021-03-14 22:52:31.659 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x000001E858315A60>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001E85912E550>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001E85912B4C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001E85912D400>, origin='C:\...
+             └ <function _load at 0x000001E85563F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-14 22:53:05,679 nonebot] ERROR: 2021-03-14 22:53:05.674 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x0000026E28B398B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026E29145F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026E29953940>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026E2914F9D0>, origin='C:\\bot\\S...
+             └ <function _load at 0x0000026E25B0F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-14 22:53:05,682 nonebot] ERROR: 2021-03-14 22:53:05.680 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x0000026E28B398B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026E29145F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026E28E79600>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026E2914FA60>, origin='...
+             └ <function _load at 0x0000026E25B0F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-14 22:53:06,215 nonebot] ERROR: 2021-03-14 22:53:06.213 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 1, in <module>
+    import salmon
+
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 21, in <module>
+    nonebot.load_plugins(
+    │       └ <function load_plugins at 0x0000026E28B398B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\plugins\\priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026E29145EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026E29953940>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026E2914FC40>, origin='C:\...
+             └ <function _load at 0x0000026E25B0F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\plugins\priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
+
+

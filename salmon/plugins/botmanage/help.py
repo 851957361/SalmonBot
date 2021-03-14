@@ -1,8 +1,6 @@
 from salmon import Service, priv, Bot
 from salmon.typing import CQEvent
-from salmon.service import parse_gid
-from nonebot.typing import T_State
-from nonebot.adapters.cqhttp.event import GroupMessageEvent
+from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 
 sv = Service('_help_', manage_priv=priv.SUPERUSER, visible=False)
 
@@ -50,6 +48,15 @@ def get_bundle_manual(bundle_name, service_list, gid):
     return '\n'.join(manual)
 
 
+def get_private_manual(bundle_name, service_list):
+    manual = [bundle_name]
+    service_list = sorted(service_list, key=lambda s: s.name)
+    for sv in service_list:
+        if sv.visible:
+            manual.append(f"|※| {sv.name}")
+    return '\n'.join(manual)
+d
+
 def get_service_help(name, service_info):
     manual = [f"➤{name}功能帮助："]
     service_info = sorted(service_info, key=lambda s: s.name)
@@ -65,13 +72,7 @@ help_bundle = sv.on_command('help_bundle', aliases={'帮助分组'}, only_group=
 
 
 @send_help.handle()
-async def _(bot: Bot, ev: CQEvent, state: T_State):
-    if isinstance(ev, GroupMessageEvent):
-        state['gids'] = [ev.group_id]
-
-
-@send_help.got('gids', prompt='空格后请接群号', args_parser=parse_gid)
-async def help_handle(bot: Bot, ev: CQEvent, state: T_State):
+async def help_handle(bot: Bot, ev: CQEvent):
     name = ev.get_plaintext().split()
     bundles = Service.get_bundles()
     svs = Service.get_loaded_services()
@@ -84,11 +85,8 @@ async def help_handle(bot: Bot, ev: CQEvent, state: T_State):
     elif name in bundles:
         if isinstance(ev, GroupMessageEvent):
             msg = get_bundle_manual(name, bundles[name], ev.group_id)
-        else:
-            if not 'gids' in state:
-                await send_help.finish(ev, '请输入正确的群号')
-            for gid in state['gids']:
-                msg = get_bundle_manual(name, bundles[name], gid)
+        elif isinstance(ev, PrivateMessageEvent):
+            msg = get_private_manual(name, bundles[name])
         await send_help.finish(ev, msg)
 
 
