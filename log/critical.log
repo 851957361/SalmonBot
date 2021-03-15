@@ -2357,3 +2357,23 @@ https://t.co/gj0j7f0DeM
 [2021-03-15 16:49:13,556 nonebot] INFO: 2021-03-15 16:49:13.555 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
 [2021-03-15 16:49:13,556 nonebot] INFO: 2021-03-15 16:49:13.556 | INFO     | nonebot:run:218 - Running NoneBot...
 [2021-03-15 16:49:13,556 nonebot] DEBUG: 2021-03-15 16:49:13.556 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 16:49:13,574 uvicorn] INFO: 2021-03-15 16:49:13.574 | INFO     | uvicorn:serve:405 - Started server process [9448]
+[2021-03-15 16:49:13,575 uvicorn] INFO: 2021-03-15 16:49:13.574 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 16:49:13,575 uvicorn] INFO: 2021-03-15 16:49:13.575 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 16:49:13,576 uvicorn] INFO: 2021-03-15 16:49:13.575 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 16:49:16,224 uvicorn] INFO: 2021-03-15 16:49:16.223 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 50471) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 16:49:16,225 nonebot] INFO: 2021-03-15 16:49:16.224 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 16:49:16,887 nonebot] INFO: 2021-03-15 16:49:16.886 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 556866771 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 16:49:16,888 nonebot] DEBUG: 2021-03-15 16:49:16.887 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:49:16,889 nonebot] INFO: 2021-03-15 16:49:16.889 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:49:16,890 nonebot] DEBUG: 2021-03-15 16:49:16.890 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:49:16,891 nonebot] DEBUG: 2021-03-15 16:49:16.891 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:49:18,073 nonebot] INFO: 2021-03-15 16:49:18.073 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:49:18,074 nonebot] DEBUG: 2021-03-15 16:49:18.074 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:49:45,342 nonebot] INFO: 2021-03-15 16:49:45.341 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -817922561 from 296432694@[群:1128254624] "签到"
+[2021-03-15 16:49:45,343 nonebot] DEBUG: 2021-03-15 16:49:45.343 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:49:45,344 nonebot] INFO: 2021-03-15 16:49:45.344 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:49:45,345 nonebot] DEBUG: 2021-03-15 16:49:45.345 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:49:45,346 nonebot] DEBUG: 2021-03-15 16:49:45.346 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:49:46,206 nonebot] INFO: 2021-03-15 16:49:46.206 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:49:46,207 nonebot] DEBUG: 2021-03-15 16:49:46.207 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
