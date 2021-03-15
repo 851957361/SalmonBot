@@ -10,7 +10,7 @@ from salmon import logger, util
 
 class ResObj:
     def __init__(self, res_path):
-        res_dir = os.path.expanduser(salmon.config.RES_DIR)
+        res_dir = os.path.expanduser(salmon.configs.RES_DIR)
         fullpath = os.path.abspath(os.path.join(res_dir, res_path))
         if not fullpath.startswith(os.path.abspath(res_dir)):
             raise ValueError('Cannot access outside RESOUCE_DIR')
@@ -19,12 +19,12 @@ class ResObj:
     @property
     def url(self):
         """资源文件的url，供酷Q（或其他远程服务）使用"""
-        return urljoin(salmon.config.RES_URL, pathname2url(self.__path))
+        return urljoin(salmon.configs.RES_URL, pathname2url(self.__path))
 
     @property
     def path(self):
         """资源文件的路径，供bot内部使用"""
-        return os.path.join(salmon.config.RES_DIR, self.__path)
+        return os.path.join(salmon.configs.RES_DIR, self.__path)
 
     @property
     def exist(self):
@@ -34,9 +34,9 @@ class ResObj:
 class ResImg(ResObj):
     @property
     def cqcode(self) -> MessageSegment:
-        if salmon.config.RES_PROTOCOL == 'http':
+        if salmon.configs.RES_PROTOCOL == 'http':
             return MessageSegment.image(self.url)
-        elif salmon.config.RES_PROTOCOL == 'file':
+        elif salmon.configs.RES_PROTOCOL == 'file':
             return MessageSegment.image(f'file:///{os.path.abspath(self.path)}')
         else:
             try:

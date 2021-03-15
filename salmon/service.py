@@ -6,11 +6,7 @@ Thanks to @Akiraxie dalao！
 import os
 import re
 import asyncio
-from functools import wraps
 from collections import defaultdict
-from loguru import logger
-from apscheduler import job
-from nonebot_plugin_apscheduler import scheduler
 from nonebot.permission import SUPERUSER
 from nonebot.adapters.cqhttp.utils import escape
 from nonebot.adapters.cqhttp.message import MessageSegment, Message
@@ -73,22 +69,6 @@ def regex(regex: str, flags: Union[int, re.RegexFlag] = 0, normal: bool = True) 
         else:
             return False
     return Rule(_regex)
-
-
-def wrapper(func: Callable[[], Any], id: str) -> Callable[[], Awaitable[Any]]:
-    @wraps(func)
-    async def _wrapper() -> Awaitable[Any]:
-        try:
-            logger.opt(colors=True).info(
-                f'<ly>Scheduled job <c>{id}</c> started.</ly>')
-            res = await func()
-            logger.opt(colors=True).info(
-                f'<ly>Scheduled job <c>{id}</c> completed.</ly>')
-            return res
-        except Exception as e:
-            logger.opt(colors=True, exception=e).error(
-                f'<r><bg #f8bbd0>Scheduled job <c>{id}</c> failed.</bg #f8bbd0></r>')
-    return _wrapper
 
 
 def _load_service_config(service_name):
@@ -181,7 +161,7 @@ class Service:
         self.help = help_
         self.enable_group = set(config.get('enable_group', []))
         self.disable_group = set(config.get('disable_group', []))
-        self.logger = log.new_logger(name, salmon.config.DEBUG)
+        self.logger = log.new_logger(name, salmon.configs.DEBUG)
         self.matchers = []
         assert self.name not in _loaded_services, f'Service name "{self.name}" already exist!'
         _loaded_services[self.name] = self
@@ -366,20 +346,6 @@ class Service:
         return mw
 
 
-    def scheduled_job(trigger: str, **kwargs):
-        def deco(func: Callable[[], Any]) -> Callable[[], Awaitable[Any]]:
-            id = kwargs.get('id', func.__name__)
-            kwargs['id'] = id
-            return scheduler.scheduled_job(trigger, **kwargs)(wrapper(func, id))
-        return deco
-
-
-    def add_job(func: Callable[[], Any], trigger: str, **kwargs)->job.Job:
-        id = kwargs.get('id', func.__name__)
-        kwargs['id'] = id
-        return scheduler.add_job(wrapper(func, id), trigger, **kwargs)
-
-
     def on_notice(self,  only_group: bool = True, **kwargs) -> "matcher_wrapper":
         rule = self.check_service(0, only_group)
         priority = kwargs.get('priority', 1)
@@ -537,7 +503,7 @@ async def _(matcher: Matcher, exception: Exception, bot: Bot, event: CQEvent, st
         mw.sv.logger.info(f'Event handling completed from <lc>{mw}</>')
 
 
-sulogger = log.new_logger('sucmd', salmon.config.DEBUG)
+sulogger = log.new_logger('sucmd', salmon.configs.DEBUG)
 
 def sucmd(name: str, only_to_me: bool = False, aliases: Optional[set] = None, **kwargs) -> Type[Matcher]:
     kwargs['aliases'] = aliases

@@ -478,3 +478,1882 @@ Traceback (most recent call last):
 ImportError: cannot import name 'Service' from partially initialized module 'salmon' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\__init__.py)
 
 
+[2021-03-15 14:17:45,075 nonebot] ERROR: 2021-03-15 14:17:45.070 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 3, in <module>
+    bot = salmon.init()
+          │      └ <function init at 0x000002B1C4978AF0>
+          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 29, in init
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x000002B1C720E8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002B1C7818F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002B1C8028680>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002B1C8022910>, origin='sal...
+             └ <function _load at 0x000002B1C457F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 14:17:45,082 nonebot] ERROR: 2021-03-15 14:17:45.080 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 3, in <module>
+    bot = salmon.init()
+          │      └ <function init at 0x000002B1C4978AF0>
+          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 29, in init
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000002B1C720E8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002B1E9873430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002B1E6D26700>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002B1C80DCD60>, origin='salmon/plu...
+             └ <function _load at 0x000002B1C457F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 14:17:45,098 nonebot] ERROR: 2021-03-15 14:17:45.084 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 3, in <module>
+    bot = salmon.init()
+          │      └ <function init at 0x000002B1C4978AF0>
+          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 29, in init
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000002B1C720E8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002B1E9873430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002B1E862A680>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002B1C80DCD30>, origin='...
+             └ <function _load at 0x000002B1C457F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 14:19:19,103 nonebot] ERROR: 2021-03-15 14:19:19.098 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 3, in <module>
+    bot = salmon.init()
+          │      └ <function init at 0x000001868FA28AF0>
+          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 29, in init
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001869230E8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000018692918F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000186931276C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000186931228E0>, origin='salmon/plu...
+             └ <function _load at 0x000001868F2DF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 14:19:19,106 nonebot] ERROR: 2021-03-15 14:19:19.104 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 3, in <module>
+    bot = salmon.init()
+          │      └ <function init at 0x000001868FA28AF0>
+          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 29, in init
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001869230E8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000018692918F70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000018693127940>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000018693122970>, origin='...
+             └ <function _load at 0x000001868F2DF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 14:19:19,586 nonebot] ERROR: 2021-03-15 14:19:19.585 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 3, in <module>
+    bot = salmon.init()
+          │      └ <function init at 0x000001868FA28AF0>
+          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 29, in init
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x000001869230E8B0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001869312A5E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000186931276C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000018693122B20>, origin='sal...
+             └ <function _load at 0x000001868F2DF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:01:29,733 nonebot] INFO: 2021-03-15 15:01:29.733 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:01:29,737 nonebot] INFO: 2021-03-15 15:01:29.737 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:01:29,739 nonebot] DEBUG: 2021-03-15 15:01:29.738 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev', 'apscheduler_autostart': True, 'tencent_app_id': ''}
+[2021-03-15 15:01:29,808 nonebot] DEBUG: 2021-03-15 15:01:29.807 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:01:30,180 nonebot] ERROR: 2021-03-15 15:01:30.174 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x000001F689DBBCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001F68A10C820>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001F68ABD7280>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001F68ABD4220>, origin='sal...
+             └ <function _load at 0x000001F686DAF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+  File "C:\bot\SalmonBot\salmon\R.py", line 9, in <module>
+    from salmon import logger, util
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\util\__init__.py", line 17, in <module>
+    from salmon.typing import Message, Union
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\typing.py", line 5, in <module>
+    from . import SalmonBot
+
+ImportError: cannot import name 'SalmonBot' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:01:30,184 nonebot] ERROR: 2021-03-15 15:01:30.182 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001F689DBBCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001F68ABD5430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001F687255740>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001F6AB2560A0>, origin='salmon/plu...
+             └ <function _load at 0x000001F686DAF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+  File "C:\bot\SalmonBot\salmon\priv.py", line 13, in <module>
+    from salmon.typing import CQEvent
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\typing.py", line 5, in <module>
+    from . import SalmonBot
+
+ImportError: cannot import name 'SalmonBot' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:01:30,213 nonebot] ERROR: 2021-03-15 15:01:30.186 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001F689DBBCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001F68ABD5430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001F6A9DEE580>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001F6AB2679D0>, origin='...
+             └ <function _load at 0x000001F686DAF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+  File "C:\bot\SalmonBot\salmon\priv.py", line 13, in <module>
+    from salmon.typing import CQEvent
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\typing.py", line 5, in <module>
+    from . import SalmonBot
+
+ImportError: cannot import name 'SalmonBot' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:01:30,216 nonebot] INFO: 2021-03-15 15:01:30.215 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:01:30,217 nonebot] DEBUG: 2021-03-15 15:01:30.216 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:01:30,286 uvicorn] INFO: 2021-03-15 15:01:30.286 | INFO     | uvicorn:serve:405 - Started server process [6976]
+[2021-03-15 15:01:30,288 uvicorn] INFO: 2021-03-15 15:01:30.287 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:01:30,289 uvicorn] INFO: 2021-03-15 15:01:30.289 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:01:30,290 uvicorn] INFO: 2021-03-15 15:01:30.290 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:05:41,933 nonebot] INFO: 2021-03-15 15:05:41.932 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:05:41,936 nonebot] INFO: 2021-03-15 15:05:41.936 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:05:41,938 nonebot] DEBUG: 2021-03-15 15:05:41.938 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'tencent_app_key': '', 'environment': 'dev'}
+[2021-03-15 15:05:42,008 nonebot] DEBUG: 2021-03-15 15:05:42.008 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:05:42,016 nonebot] ERROR: 2021-03-15 15:05:42.012 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001B042F6BCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001B0432BC820>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001B043587180>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001B043584130>, origin='salmon/plu...
+             └ <function _load at 0x000001B03FF5F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 1, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:05:42,018 nonebot] ERROR: 2021-03-15 15:05:42.017 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001B042F6BCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001B0432BC820>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001B0435C2100>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001B043584190>, origin='...
+             └ <function _load at 0x000001B03FF5F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 10, in <module>
+    from salmon import Service, priv, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:05:42,487 nonebot] ERROR: 2021-03-15 15:05:42.486 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x000001B042F6BCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001B0435859D0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001B043587180>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001B043584340>, origin='sal...
+             └ <function _load at 0x000001B03FF5F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\login_bonus.py", line 2, in <module>
+    from salmon import Service, R, Bot
+
+ImportError: cannot import name 'Service' from 'salmon' (C:\bot\SalmonBot\salmon\__init__.py)
+
+
+[2021-03-15 15:05:42,488 nonebot] INFO: 2021-03-15 15:05:42.488 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:05:42,488 nonebot] DEBUG: 2021-03-15 15:05:42.488 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:05:42,505 uvicorn] INFO: 2021-03-15 15:05:42.505 | INFO     | uvicorn:serve:405 - Started server process [16668]
+[2021-03-15 15:05:42,505 uvicorn] INFO: 2021-03-15 15:05:42.505 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:05:42,506 uvicorn] INFO: 2021-03-15 15:05:42.506 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:05:42,506 uvicorn] INFO: 2021-03-15 15:05:42.506 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:14:03,116 nonebot] INFO: 2021-03-15 15:14:03.115 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:14:03,118 nonebot] INFO: 2021-03-15 15:14:03.118 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:14:03,122 nonebot] DEBUG: 2021-03-15 15:14:03.122 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True, 'environment': 'dev'}
+[2021-03-15 15:14:03,223 nonebot] DEBUG: 2021-03-15 15:14:03.223 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:14:03,231 nonebot] ERROR: 2021-03-15 15:14:03.224 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x0000021F6930CCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000021F0B7B1430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000021F0B9761C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000021F0B973220>, origin='sal...
+             └ <function _load at 0x0000021F662FF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\login_bonus.py", line 6, in <module>
+    sv = Service('每日签到', bundle='pcr娱乐', help_='[签到] 给主さま盖章章')
+         └ <class 'salmon.service.Service'>
+
+  File "C:\bot\SalmonBot\salmon\service.py", line 164, in __init__
+    self.logger = log.new_logger(name, salmon.config.DEBUG)
+    │             │   │          │     └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+    │             │   │          └ '每日签到'
+    │             │   └ <function new_logger at 0x0000021F69636DC0>
+    │             └ <module 'salmon.log' from 'C:\\bot\\SalmonBot\\salmon\\log.py'>
+    └ <salmon.service.Service object at 0x0000021F0B973280>
+
+AttributeError: module 'salmon' has no attribute 'config'
+
+
+[2021-03-15 15:14:03,235 nonebot] ERROR: 2021-03-15 15:14:03.233 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000021F6930CCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000021F0B975280>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000021F7F715B00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000021F0B973250>, origin='salmon/plu...
+             └ <function _load at 0x0000021F662FF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 5, in <module>
+    sv = Service('_help_', manage_priv=priv.SUPERUSER, visible=False)
+         │                             │    └ <nonebot.permission.Permission object at 0x0000021F69304040>
+         │                             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
+         └ <class 'salmon.service.Service'>
+
+  File "C:\bot\SalmonBot\salmon\service.py", line 164, in __init__
+    self.logger = log.new_logger(name, salmon.config.DEBUG)
+    │             │   │          │     └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+    │             │   │          └ '_help_'
+    │             │   └ <function new_logger at 0x0000021F69636DC0>
+    │             └ <module 'salmon.log' from 'C:\\bot\\SalmonBot\\salmon\\log.py'>
+    └ <salmon.service.Service object at 0x0000021F0B9734C0>
+
+AttributeError: module 'salmon' has no attribute 'config'
+
+
+[2021-03-15 15:14:03,308 nonebot] ERROR: 2021-03-15 15:14:03.236 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000021F6930CCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000021F0B975280>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000021F0B976FC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000021F0B9733D0>, origin='...
+             └ <function _load at 0x0000021F662FF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 16, in <module>
+    parser.add_argument('-h', '--hidden', action='store_true')
+    │      └ <function _ActionsContainer.add_argument at 0x0000021F692DB550>
+    └ ArgumentParser(prog='run.py', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handle...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\argparse.py", line 1434, in add_argument
+    return self._add_action(action)
+           │    │           └ _StoreTrueAction(option_strings=['-h', '--hidden'], dest='hidden', nargs=0, const=True, default=False, type=None, choices=Non...
+           │    └ <function ArgumentParser._add_action at 0x0000021F692DF280>
+           └ ArgumentParser(prog='run.py', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handle...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\argparse.py", line 1799, in _add_action
+    self._optionals._add_action(action)
+    │    │          │           └ _StoreTrueAction(option_strings=['-h', '--hidden'], dest='hidden', nargs=0, const=True, default=False, type=None, choices=Non...
+    │    │          └ <function _ArgumentGroup._add_action at 0x0000021F692DBD30>
+    │    └ <argparse._ArgumentGroup object at 0x0000021F0B9739A0>
+    └ ArgumentParser(prog='run.py', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handle...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\argparse.py", line 1636, in _add_action
+    action = super(_ArgumentGroup, self)._add_action(action)
+                   │               │                 └ _StoreTrueAction(option_strings=['-h', '--hidden'], dest='hidden', nargs=0, const=True, default=False, type=None, choices=Non...
+                   │               └ <argparse._ArgumentGroup object at 0x0000021F0B9739A0>
+                   └ <class 'argparse._ArgumentGroup'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\argparse.py", line 1448, in _add_action
+    self._check_conflict(action)
+    │    │               └ _StoreTrueAction(option_strings=['-h', '--hidden'], dest='hidden', nargs=0, const=True, default=False, type=None, choices=Non...
+    │    └ <function _ActionsContainer._check_conflict at 0x0000021F692DBAF0>
+    └ <argparse._ArgumentGroup object at 0x0000021F0B9739A0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\argparse.py", line 1585, in _check_conflict
+    conflict_handler(action, confl_optionals)
+    │                │       └ [('-h', _HelpAction(option_strings=['-h', '--help'], dest='help', nargs=0, const=None, default='==SUPPRESS==', type=None, cho...
+    │                └ _StoreTrueAction(option_strings=['-h', '--hidden'], dest='hidden', nargs=0, const=True, default=False, type=None, choices=Non...
+    └ <bound method _ActionsContainer._handle_conflict_error of <argparse._ArgumentGroup object at 0x0000021F0B9739A0>>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\argparse.py", line 1594, in _handle_conflict_error
+    raise ArgumentError(action, message % conflict_string)
+          │             │       │         └ '-h'
+          │             │       └ 'conflicting option string: %s'
+          │             └ _StoreTrueAction(option_strings=['-h', '--hidden'], dest='hidden', nargs=0, const=True, default=False, type=None, choices=Non...
+          └ <class 'argparse.ArgumentError'>
+
+argparse.ArgumentError: argument -h/--hidden: conflicting option string: -h
+
+
+[2021-03-15 15:14:03,313 nonebot] INFO: 2021-03-15 15:14:03.312 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:14:03,313 nonebot] DEBUG: 2021-03-15 15:14:03.313 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:14:03,343 uvicorn] INFO: 2021-03-15 15:14:03.342 | INFO     | uvicorn:serve:405 - Started server process [14860]
+[2021-03-15 15:14:03,343 uvicorn] INFO: 2021-03-15 15:14:03.343 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:14:03,344 uvicorn] INFO: 2021-03-15 15:14:03.343 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:14:03,344 uvicorn] INFO: 2021-03-15 15:14:03.344 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:24:52,933 nonebot] INFO: 2021-03-15 15:24:52.932 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:24:52,934 nonebot] INFO: 2021-03-15 15:24:52.934 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:24:52,935 nonebot] DEBUG: 2021-03-15 15:24:52.935 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_id': ''}
+[2021-03-15 15:24:53,016 nonebot] DEBUG: 2021-03-15 15:24:53.016 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:24:53,021 nonebot] ERROR: 2021-03-15 15:24:53.017 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x00000225F5ECCCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002259835F430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000022598525340>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000022598522160>, origin='salmon/plu...
+             └ <function _load at 0x00000225F31DF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 58, in <module>
+    d
+
+NameError: name 'd' is not defined
+
+
+[2021-03-15 15:24:53,029 nonebot] ERROR: 2021-03-15 15:24:53.027 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x00000225F5ECCCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002259835F430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002259836FD40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000225985221C0>, origin='...
+             └ <function _load at 0x00000225F31DF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 18, in <module>
+    enable = on_shell_command('enable', aliases=('启用', '开启', '打开'))
+             └ <function on_shell_command at 0x00000225F5ECC280>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 484, in on_shell_command
+    commands = set([cmd]) | (aliases or set())
+                    │        └ ('启用', '开启', '打开')
+                    └ 'enable'
+
+TypeError: unsupported operand type(s) for |: 'set' and 'tuple'
+
+
+[2021-03-15 15:24:53,047 nonebot] ERROR: 2021-03-15 15:24:53.031 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "login_bonus"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x00000225F5ECCCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='login_bonus', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000225985243A0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000022598525340>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='login_bonus', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000022598570E80>, origin='sal...
+             └ <function _load at 0x00000225F31DF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\login_bonus.py", line 45, in <module>
+    login = sv.on_command('签到', aliases={'盖章', '妈', '妈?', '妈妈', '妈!', '妈！', '妈妈！'}, only_group=False)
+            └ <salmon.service.Service object at 0x0000022598570F40>
+
+AttributeError: 'Service' object has no attribute 'on_command'
+
+
+[2021-03-15 15:24:53,049 nonebot] INFO: 2021-03-15 15:24:53.049 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:24:53,050 nonebot] DEBUG: 2021-03-15 15:24:53.049 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:24:53,067 uvicorn] INFO: 2021-03-15 15:24:53.067 | INFO     | uvicorn:serve:405 - Started server process [10144]
+[2021-03-15 15:24:53,069 uvicorn] INFO: 2021-03-15 15:24:53.069 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:24:53,069 uvicorn] INFO: 2021-03-15 15:24:53.069 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:24:53,070 uvicorn] INFO: 2021-03-15 15:24:53.069 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:29:35,689 nonebot] INFO: 2021-03-15 15:29:35.689 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:29:35,691 nonebot] INFO: 2021-03-15 15:29:35.690 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:29:35,693 nonebot] DEBUG: 2021-03-15 15:29:35.693 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'environment': 'dev', 'tencent_app_key': ''}
+[2021-03-15 15:29:35,774 nonebot] DEBUG: 2021-03-15 15:29:35.774 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:29:35,780 nonebot] INFO: 2021-03-15 15:29:35.780 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:29:35,788 nonebot] ERROR: 2021-03-15 15:29:35.783 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000002742E27BCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000274508B9040>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000274507EAEC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000274508DBF10>, origin='salmon/plu...
+             └ <function _load at 0x000002742B5BF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 70, in <module>
+    send_help = sv.on_command('help', aliases={'帮助'}, only_group=False)
+                └ <salmon.service.Service object at 0x00000274508E5F40>
+
+AttributeError: 'Service' object has no attribute 'on_command'
+
+
+[2021-03-15 15:29:35,794 nonebot] ERROR: 2021-03-15 15:29:35.792 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000002742E27BCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000274508B9040>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002744DF98C00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000274508DD610>, origin='...
+             └ <function _load at 0x000002742B5BF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 18, in <module>
+    enable = on_shell_command('enable', aliases={'启用', '开启', '打开'})
+             └ <function on_shell_command at 0x000002742E27B280>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 485, in on_shell_command
+    return on_message(shell_command(*commands, parser=parser) & rule,
+           │          │              │                │         └ None
+           │          │              │                └ None
+           │          │              └ {'打开', 'enable', '启用', '开启'}
+           │          └ <function shell_command at 0x000002742E26D550>
+           └ <function on_message at 0x000002742E276E50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\rule.py", line 338, in shell_command
+    raise TypeError(
+
+TypeError: `parser` must be an instance of nonebot.rule.ArgumentParser
+
+
+[2021-03-15 15:29:35,795 nonebot] INFO: 2021-03-15 15:29:35.795 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:29:35,795 nonebot] DEBUG: 2021-03-15 15:29:35.795 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:29:35,813 uvicorn] INFO: 2021-03-15 15:29:35.813 | INFO     | uvicorn:serve:405 - Started server process [9812]
+[2021-03-15 15:29:35,814 uvicorn] INFO: 2021-03-15 15:29:35.814 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:29:35,814 uvicorn] INFO: 2021-03-15 15:29:35.814 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:29:35,815 uvicorn] INFO: 2021-03-15 15:29:35.815 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:33:45,101 nonebot] INFO: 2021-03-15 15:33:45.101 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:33:45,102 nonebot] INFO: 2021-03-15 15:33:45.102 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:33:45,104 nonebot] DEBUG: 2021-03-15 15:33:45.104 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev', 'tencent_app_id': ''}
+[2021-03-15 15:33:45,188 nonebot] DEBUG: 2021-03-15 15:33:45.187 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:33:45,189 nonebot] INFO: 2021-03-15 15:33:45.189 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:33:45,198 nonebot] ERROR: 2021-03-15 15:33:45.193 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "help"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000026CE39DCCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='help', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026C86279040>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026C861A8980>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='help', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026C86186520>, origin='salmon/plu...
+             └ <function _load at 0x0000026CE0D2F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\help.py", line 70, in <module>
+    send_help = sv.on_prefix('help', aliases={'帮助'}, only_group=False)
+                │  └ <function Service.on_prefix at 0x0000026C860D74C0>
+                └ <salmon.service.Service object at 0x0000026C862A7040>
+
+  File "C:\bot\SalmonBot\salmon\service.py", line 250, in on_prefix
+    mw.load_matcher(on_startswith(msg, **kwargs))
+    │  │            │             │      └ {'aliases': {'帮助'}, 'rule': <nonebot.rule.Rule object at 0x0000026C862A7160>}
+    │  │            │             └ 'help'
+    │  │            └ <function on_startswith at 0x0000026CE39DC040>
+    │  └ <function matcher_wrapper.load_matcher at 0x0000026C860D7A60>
+    └ <unprintable matcher_wrapper object>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 337, in on_startswith
+    return on_message(startswith(msg) & rule, **kwargs)
+           │          │          │      │       └ {'aliases': {'帮助'}}
+           │          │          │      └ <nonebot.rule.Rule object at 0x0000026C862A7160>
+           │          │          └ 'help'
+           │          └ <function startswith at 0x0000026CE39624C0>
+           └ <function on_message at 0x0000026CE39D7E50>
+
+TypeError: on_message() got an unexpected keyword argument 'aliases'
+
+
+[2021-03-15 15:33:45,205 nonebot] ERROR: 2021-03-15 15:33:45.203 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000026CE39DCCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026C86279040>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026C860D3F40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026C862A6F10>, origin='...
+             └ <function _load at 0x0000026CE0D2F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 18, in <module>
+    enable = on_startswith('enable', aliases={'启用', '开启', '打开'})
+             └ <function on_startswith at 0x0000026CE39DC040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 337, in on_startswith
+    return on_message(startswith(msg) & rule, **kwargs)
+           │          │          │      │       └ {'aliases': {'打开', '开启', '启用'}}
+           │          │          │      └ None
+           │          │          └ 'enable'
+           │          └ <function startswith at 0x0000026CE39624C0>
+           └ <function on_message at 0x0000026CE39D7E50>
+
+TypeError: on_message() got an unexpected keyword argument 'aliases'
+
+
+[2021-03-15 15:33:45,206 nonebot] INFO: 2021-03-15 15:33:45.206 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:33:45,206 nonebot] DEBUG: 2021-03-15 15:33:45.206 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:33:45,223 uvicorn] INFO: 2021-03-15 15:33:45.223 | INFO     | uvicorn:serve:405 - Started server process [3656]
+[2021-03-15 15:33:45,224 uvicorn] INFO: 2021-03-15 15:33:45.224 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:33:45,224 uvicorn] INFO: 2021-03-15 15:33:45.224 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:33:45,225 uvicorn] INFO: 2021-03-15 15:33:45.225 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:39:59,934 nonebot] INFO: 2021-03-15 15:39:59.934 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:39:59,935 nonebot] INFO: 2021-03-15 15:39:59.935 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:39:59,937 nonebot] DEBUG: 2021-03-15 15:39:59.937 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True}
+[2021-03-15 15:40:00,020 nonebot] DEBUG: 2021-03-15 15:40:00.019 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:40:00,023 nonebot] INFO: 2021-03-15 15:40:00.023 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 15:40:00,027 nonebot] INFO: 2021-03-15 15:40:00.027 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 15:40:00,028 nonebot] INFO: 2021-03-15 15:40:00.028 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:40:00,029 nonebot] INFO: 2021-03-15 15:40:00.029 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:40:00,029 nonebot] DEBUG: 2021-03-15 15:40:00.029 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:40:00,046 uvicorn] INFO: 2021-03-15 15:40:00.046 | INFO     | uvicorn:serve:405 - Started server process [9032]
+[2021-03-15 15:40:00,047 uvicorn] INFO: 2021-03-15 15:40:00.047 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:40:00,047 uvicorn] INFO: 2021-03-15 15:40:00.047 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:40:00,048 uvicorn] INFO: 2021-03-15 15:40:00.047 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:40:22,070 uvicorn] INFO: 2021-03-15 15:40:22.069 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 65428) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 15:40:22,070 nonebot] INFO: 2021-03-15 15:40:22.070 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 15:40:41,034 nonebot] INFO: 2021-03-15 15:40:41.033 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1721378183 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 15:40:41,034 nonebot] DEBUG: 2021-03-15 15:40:41.034 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:40:41,036 nonebot] INFO: 2021-03-15 15:40:41.035 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:40:41,036 nonebot] DEBUG: 2021-03-15 15:40:41.036 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:40:41,037 nonebot] INFO: 2021-03-15 15:40:41.037 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:40:41,110 nonebot] ERROR: 2021-03-15 15:40:41.037 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x000001C82D894C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x000001C82B048A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001C84FF64E50>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001C82B037F70>
+    │       │   └ None
+    │       └ <function run at 0x000001C84FDE14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001C84FE031F0>
+    └ <uvicorn.main.Server object at 0x000001C84FF7BAC0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001C84FE03280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001C84FF7BAC0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001C82D75D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001C82D75D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C82D75F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C82D6FC4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615794041, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001C82DC45670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615794041, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │       └ <function Matcher.run at 0x000001C82D9179D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615794041, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │    │           └ <function give_okodokai at 0x000001C84FF8B310>
+          │    └ <function Matcher.run_handler at 0x000001C82D917940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x000001C84FF8B310>
+
+TypeError: give_okodokai() missing 1 required positional argument: 'ev'
+
+
+[2021-03-15 15:40:41,469 nonebot] DEBUG: 2021-03-15 15:40:41.469 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 15:40:59,393 nonebot] INFO: 2021-03-15 15:40:59.393 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [notice.group_recall]: {'time': 1615794038, 'self_id': 3235657949, 'post_type': 'notice', 'notice_type': 'group_recall', 'user_id': 1351495774, 'group_id': 1128254624, 'operator_id': 1351495774, 'message_id': -1721378183}
+[2021-03-15 15:40:59,394 nonebot] DEBUG: 2021-03-15 15:40:59.393 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:48:22,009 nonebot] INFO: 2021-03-15 15:48:22.008 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1245736422 from 1351495774 "签到"
+[2021-03-15 15:48:22,010 nonebot] DEBUG: 2021-03-15 15:48:22.009 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:48:22,011 nonebot] INFO: 2021-03-15 15:48:22.011 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:48:22,012 nonebot] DEBUG: 2021-03-15 15:48:22.011 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:48:22,012 nonebot] INFO: 2021-03-15 15:48:22.012 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:48:22,067 nonebot] ERROR: 2021-03-15 15:48:22.013 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x000001C82D894C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x000001C82B048A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001C84FF64E50>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001C82B037F70>
+    │       │   └ None
+    │       └ <function run at 0x000001C84FDE14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001C84FE031F0>
+    └ <uvicorn.main.Server object at 0x000001C84FF7BAC0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001C84FE03280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001C84FF7BAC0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001C82D75D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001C82D75D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C82D75F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C82D6FC4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003CF70>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003CF70>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003CF70>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003CF70>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615794502, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001C82DC45670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615794502, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │       └ <function Matcher.run at 0x000001C82D9179D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615794502, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │    │           └ <function give_okodokai at 0x000001C84FF8B310>
+          │    └ <function Matcher.run_handler at 0x000001C82D917940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x000001C84FF8B310>
+
+TypeError: give_okodokai() missing 1 required positional argument: 'ev'
+
+
+[2021-03-15 15:48:22,385 nonebot] DEBUG: 2021-03-15 15:48:22.385 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 15:51:54,899 nonebot] INFO: 2021-03-15 15:51:54.899 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1028087156 from 1351495774 "签到"
+[2021-03-15 15:51:54,900 nonebot] DEBUG: 2021-03-15 15:51:54.900 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:51:54,901 nonebot] INFO: 2021-03-15 15:51:54.901 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:51:54,902 nonebot] DEBUG: 2021-03-15 15:51:54.902 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:51:54,903 nonebot] INFO: 2021-03-15 15:51:54.903 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:51:54,927 nonebot] ERROR: 2021-03-15 15:51:54.903 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x000001C82D894C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x000001C82B048A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001C84FF64E50>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001C82B037F70>
+    │       │   └ None
+    │       └ <function run at 0x000001C84FDE14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001C84FE031F0>
+    └ <uvicorn.main.Server object at 0x000001C84FF7BAC0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001C84FE03280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001C84FF7BAC0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001C82D75D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001C82D75D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C82D75F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C82D6FC4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001C85003C730>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615794714, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001C82DC45670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615794714, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │       └ <function Matcher.run at 0x000001C82D9179D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615794714, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001C850027640>
+          │    │           └ <function give_okodokai at 0x000001C84FF8B310>
+          │    └ <function Matcher.run_handler at 0x000001C82D917940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x000001C84FF8B310>
+
+TypeError: give_okodokai() missing 1 required positional argument: 'ev'
+
+
+[2021-03-15 15:51:55,046 nonebot] DEBUG: 2021-03-15 15:51:55.046 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 15:53:05,083 nonebot] INFO: 2021-03-15 15:53:05.083 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:53:05,084 nonebot] INFO: 2021-03-15 15:53:05.084 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:53:05,086 nonebot] DEBUG: 2021-03-15 15:53:05.086 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'tencent_app_id': ''}
+[2021-03-15 15:53:05,167 nonebot] DEBUG: 2021-03-15 15:53:05.167 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:53:05,168 nonebot] INFO: 2021-03-15 15:53:05.168 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 15:53:05,170 nonebot] INFO: 2021-03-15 15:53:05.170 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 15:53:05,173 nonebot] INFO: 2021-03-15 15:53:05.173 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:53:05,174 nonebot] INFO: 2021-03-15 15:53:05.173 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:53:05,174 nonebot] DEBUG: 2021-03-15 15:53:05.174 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:53:05,190 uvicorn] INFO: 2021-03-15 15:53:05.190 | INFO     | uvicorn:serve:405 - Started server process [15808]
+[2021-03-15 15:53:05,191 uvicorn] INFO: 2021-03-15 15:53:05.191 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:53:05,191 uvicorn] INFO: 2021-03-15 15:53:05.191 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:53:05,192 uvicorn] INFO: 2021-03-15 15:53:05.192 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:53:07,172 uvicorn] INFO: 2021-03-15 15:53:07.172 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 49284) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 15:53:07,173 nonebot] INFO: 2021-03-15 15:53:07.173 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 15:53:09,358 nonebot] INFO: 2021-03-15 15:53:09.357 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1538388790 from 1351495774 "签到"
+[2021-03-15 15:53:09,358 nonebot] DEBUG: 2021-03-15 15:53:09.358 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:53:09,360 nonebot] INFO: 2021-03-15 15:53:09.359 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:53:09,361 nonebot] DEBUG: 2021-03-15 15:53:09.360 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:53:09,361 nonebot] INFO: 2021-03-15 15:53:09.361 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:53:09,391 nonebot] ERROR: 2021-03-15 15:53:09.362 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x000001BBE88D4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x000001BBE6078A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001BB8AFB4EA0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001BBE6067F70>
+    │       │   └ None
+    │       └ <function run at 0x000001BB8AE324C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001BB8AE531F0>
+    └ <uvicorn.main.Server object at 0x000001BB8AFE0520>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001BB8AE53280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001BB8AFE0520>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001BBE879D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001BBE879D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001BBE879F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001BBE873C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001BB8B095DF0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001BB8B095DF0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001BB8B095DF0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001BB8B095DF0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615794789, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BB8B07F610>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001BBE8C85670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615794789, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BB8B07F610>
+          │       └ <function Matcher.run at 0x000001BBE89579D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615794789, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BB8B07F610>
+          │    │           └ <function give_okodokai at 0x000001BB8AFD8430>
+          │    └ <function Matcher.run_handler at 0x000001BBE8957940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x000001BB8AFD8430>
+
+  File "salmon/plugins/priconne\login_bonus.py", line 49, in give_okodokai
+    if not lmt.check(uid):
+           │   └ <function DailyNumberLimiter.check at 0x000001BBE8D83940>
+           └ <salmon.util.DailyNumberLimiter object at 0x000001BB8AFE0940>
+
+NameError: name 'uid' is not defined
+
+
+[2021-03-15 15:53:09,514 nonebot] DEBUG: 2021-03-15 15:53:09.514 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 15:54:26,223 nonebot] INFO: 2021-03-15 15:54:26.223 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:54:26,225 nonebot] INFO: 2021-03-15 15:54:26.224 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:54:26,227 nonebot] DEBUG: 2021-03-15 15:54:26.226 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'environment': 'dev', 'tencent_app_key': ''}
+[2021-03-15 15:54:26,308 nonebot] DEBUG: 2021-03-15 15:54:26.308 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:54:26,310 nonebot] INFO: 2021-03-15 15:54:26.309 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 15:54:26,311 nonebot] INFO: 2021-03-15 15:54:26.311 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 15:54:26,315 nonebot] INFO: 2021-03-15 15:54:26.314 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:54:26,315 nonebot] INFO: 2021-03-15 15:54:26.315 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:54:26,315 nonebot] DEBUG: 2021-03-15 15:54:26.315 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:54:26,334 uvicorn] INFO: 2021-03-15 15:54:26.333 | INFO     | uvicorn:serve:405 - Started server process [17128]
+[2021-03-15 15:54:26,334 uvicorn] INFO: 2021-03-15 15:54:26.334 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:54:26,334 uvicorn] INFO: 2021-03-15 15:54:26.334 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:54:26,335 uvicorn] INFO: 2021-03-15 15:54:26.335 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:54:29,199 uvicorn] INFO: 2021-03-15 15:54:29.199 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 49309) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 15:54:29,200 nonebot] INFO: 2021-03-15 15:54:29.200 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 15:54:29,576 nonebot] INFO: 2021-03-15 15:54:29.575 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 750175136 from 1351495774 "签到"
+[2021-03-15 15:54:29,576 nonebot] DEBUG: 2021-03-15 15:54:29.576 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:54:29,578 nonebot] INFO: 2021-03-15 15:54:29.577 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:54:29,578 nonebot] DEBUG: 2021-03-15 15:54:29.578 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:54:29,579 nonebot] INFO: 2021-03-15 15:54:29.579 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:54:29,636 nonebot] ERROR: 2021-03-15 15:54:29.579 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x00000235A7EA4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000235A5668A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x00000235CA574E50>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x00000235A5657F70>
+    │       │   └ None
+    │       └ <function run at 0x00000235CA3F24C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x00000235CA4131F0>
+    └ <uvicorn.main.Server object at 0x00000235CA5A1850>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x00000235CA413280>
+    │    │                  └ <uvicorn.main.Server object at 0x00000235CA5A1850>
+    │    └ <function BaseEventLoop.run_until_complete at 0x00000235A7D6D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x00000235A7D6D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000235A7D6F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000235A7D0C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000235CA64DE80>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x00000235CA64DE80>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x00000235CA64DE80>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000235CA64DE80>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615794869, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000235CA638640>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x00000235A8256670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615794869, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000235CA638640>
+          │       └ <function Matcher.run at 0x00000235A7F279D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615794869, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000235CA638640>
+          │    │           └ <function give_okodokai at 0x00000235CA5983A0>
+          │    └ <function Matcher.run_handler at 0x00000235A7F27940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x00000235CA5983A0>
+
+  File "salmon/plugins/priconne\login_bonus.py", line 55, in give_okodokai
+    await bot.send(event, f'\nおかえりなさいませ、主さま{R.img("priconne/kokkoro_stamp.png").cqcode}\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？')
+          │   │    └ PrivateMessageEvent(time=1615794869, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │   └ <function Bot.send at 0x00000235A8260430>
+          └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000235CA638640>
+
+  File "C:\bot\SalmonBot\salmon\R.py", line 60, in img
+    return ResImg(os.path.join('img', path, *paths))
+           │      │  │    │           │      └ ()
+           │      │  │    │           └ 'priconne/kokkoro_stamp.png'
+           │      │  │    └ <function join at 0x00000235A53F8820>
+           │      │  └ <module 'ntpath' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py'>
+           │      └ <module 'os' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py'>
+           └ <class 'salmon.R.ResImg'>
+
+  File "C:\bot\SalmonBot\salmon\R.py", line 13, in __init__
+    res_dir = os.path.expanduser(salmon.config.RES_DIR)
+              │  │    │          └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+              │  │    └ <function expanduser at 0x00000235A53F8D30>
+              │  └ <module 'ntpath' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py'>
+              └ <module 'os' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py'>
+
+AttributeError: module 'salmon' has no attribute 'config'
+
+
+[2021-03-15 15:54:29,772 nonebot] DEBUG: 2021-03-15 15:54:29.772 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 15:55:18,091 nonebot] INFO: 2021-03-15 15:55:18.091 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:55:18,092 nonebot] INFO: 2021-03-15 15:55:18.092 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:55:18,094 nonebot] DEBUG: 2021-03-15 15:55:18.094 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'/', ''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_autostart': True, 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-15 15:55:18,174 nonebot] DEBUG: 2021-03-15 15:55:18.174 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:55:18,175 nonebot] INFO: 2021-03-15 15:55:18.175 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:55:18,177 nonebot] INFO: 2021-03-15 15:55:18.176 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 15:55:18,178 nonebot] INFO: 2021-03-15 15:55:18.178 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 15:55:18,179 nonebot] INFO: 2021-03-15 15:55:18.178 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:55:18,179 nonebot] DEBUG: 2021-03-15 15:55:18.179 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:55:18,197 uvicorn] INFO: 2021-03-15 15:55:18.197 | INFO     | uvicorn:serve:405 - Started server process [13492]
+[2021-03-15 15:55:18,198 uvicorn] INFO: 2021-03-15 15:55:18.198 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:55:18,198 uvicorn] INFO: 2021-03-15 15:55:18.198 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:55:18,199 uvicorn] INFO: 2021-03-15 15:55:18.199 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:55:19,215 uvicorn] INFO: 2021-03-15 15:55:19.215 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 49347) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 15:55:19,216 nonebot] INFO: 2021-03-15 15:55:19.216 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 15:55:21,234 nonebot] INFO: 2021-03-15 15:55:21.234 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1140203983 from 1351495774 "签到"
+[2021-03-15 15:55:21,235 nonebot] DEBUG: 2021-03-15 15:55:21.235 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:55:21,236 nonebot] INFO: 2021-03-15 15:55:21.236 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:55:21,237 nonebot] DEBUG: 2021-03-15 15:55:21.237 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:55:21,238 nonebot] INFO: 2021-03-15 15:55:21.237 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:55:21,279 nonebot] ERROR: 2021-03-15 15:55:21.238 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000026F313F4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000026F2EBE8A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000026F53AC7D60>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000026F2EBD7F70>
+    │       │   └ None
+    │       └ <function run at 0x0000026F539424C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000026F539641F0>
+    └ <uvicorn.main.Server object at 0x0000026F53AEDD60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000026F53964280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000026F53AEDD60>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000026F312BD8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000026F312BD820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000026F312BF3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000026F3125C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000026F53B9D610>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000026F53B9D610>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000026F53B9D610>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000026F53B9D610>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615794921, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000026F53B865B0>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000026F317A6670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615794921, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000026F53B865B0>
+          │       └ <function Matcher.run at 0x0000026F314779D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615794921, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000026F53B865B0>
+          │    │           └ <function give_okodokai at 0x0000026F53AD63A0>
+          │    └ <function Matcher.run_handler at 0x0000026F31477940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x0000026F53AD63A0>
+
+  File "salmon/plugins/priconne\login_bonus.py", line 55, in give_okodokai
+    await bot.send(event, f'\nおかえりなさいませ、主さま{R.img("priconne/kokkoro_stamp.png").cqcode}\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？')
+          │   │    └ PrivateMessageEvent(time=1615794921, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
+          │   └ <function Bot.send at 0x0000026F317B0430>
+          └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000026F53B865B0>
+
+  File "C:\bot\SalmonBot\salmon\R.py", line 37, in cqcode
+    if salmon.config.RES_PROTOCOL == 'http':
+       └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+AttributeError: module 'salmon' has no attribute 'config'
+
+
+[2021-03-15 15:55:21,409 nonebot] DEBUG: 2021-03-15 15:55:21.409 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 15:56:16,354 nonebot] INFO: 2021-03-15 15:56:16.354 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 15:56:16,355 nonebot] INFO: 2021-03-15 15:56:16.355 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 15:56:16,357 nonebot] DEBUG: 2021-03-15 15:56:16.357 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'/', ''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True, 'tencent_app_id': '', 'environment': 'dev'}
+[2021-03-15 15:56:16,438 nonebot] DEBUG: 2021-03-15 15:56:16.438 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 15:56:16,440 nonebot] INFO: 2021-03-15 15:56:16.439 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 15:56:16,441 nonebot] INFO: 2021-03-15 15:56:16.441 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 15:56:16,443 nonebot] INFO: 2021-03-15 15:56:16.442 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 15:56:16,443 nonebot] INFO: 2021-03-15 15:56:16.443 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 15:56:16,443 nonebot] DEBUG: 2021-03-15 15:56:16.443 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 15:56:16,461 uvicorn] INFO: 2021-03-15 15:56:16.461 | INFO     | uvicorn:serve:405 - Started server process [9964]
+[2021-03-15 15:56:16,461 uvicorn] INFO: 2021-03-15 15:56:16.461 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 15:56:16,462 uvicorn] INFO: 2021-03-15 15:56:16.462 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 15:56:16,462 uvicorn] INFO: 2021-03-15 15:56:16.462 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 15:56:17,232 uvicorn] INFO: 2021-03-15 15:56:17.232 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 49384) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 15:56:17,233 nonebot] INFO: 2021-03-15 15:56:17.233 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 15:56:19,562 nonebot] INFO: 2021-03-15 15:56:19.561 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -888213849 from 1351495774 "签到"
+[2021-03-15 15:56:19,562 nonebot] DEBUG: 2021-03-15 15:56:19.562 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 15:56:19,563 nonebot] INFO: 2021-03-15 15:56:19.563 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:56:19,564 nonebot] DEBUG: 2021-03-15 15:56:19.564 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 15:56:19,565 nonebot] DEBUG: 2021-03-15 15:56:19.565 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 15:56:19,569 nonebot] INFO: 2021-03-15 15:56:19.569 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 15:56:19,570 nonebot] DEBUG: 2021-03-15 15:56:19.570 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:00:20,958 nonebot] INFO: 2021-03-15 16:00:20.957 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 165332968 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 16:00:20,958 nonebot] DEBUG: 2021-03-15 16:00:20.958 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:00:20,960 nonebot] INFO: 2021-03-15 16:00:20.960 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:00:20,961 nonebot] DEBUG: 2021-03-15 16:00:20.961 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:00:20,961 nonebot] INFO: 2021-03-15 16:00:20.961 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:00:21,005 nonebot] ERROR: 2021-03-15 16:00:20.962 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000029ABF524C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000029ABCCC8A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000029AE1BF7C70>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000029ABCCB7F70>
+    │       │   └ None
+    │       └ <function run at 0x0000029AE1A724C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000029AE1A941F0>
+    └ <uvicorn.main.Server object at 0x0000029AE1C1AB20>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000029AE1A94280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000029AE1C1AB20>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000029ABF3ED8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000029ABF3ED820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000029ABF3EF3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000029ABF38C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000029AE1CCB1C0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000029AE1CCB1C0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000029AE1CCB1C0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000029AE1CCB1C0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615795220, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000029AE1CB33D0>
+          │            └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000029ABF8D5670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615795220, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000029AE1CB33D0>
+          │       └ <function Matcher.run at 0x0000029ABF5A79D0>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '签到', 'command': ('签到',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615795220, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000029AE1CB33D0>
+          │    │           └ <function give_okodokai at 0x0000029AE1C1B3A0>
+          │    └ <function Matcher.run_handler at 0x0000029ABF5A7940>
+          └ <Matcher from login_bonus, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function give_okodokai at 0x0000029AE1C1B3A0>
+
+  File "salmon/plugins/priconne\login_bonus.py", line 51, in give_okodokai
+    await login.finish(event, '明日はもう一つプレゼントをご用意してお待ちしますね')
+          │     │      └ GroupMessageEvent(time=1615795220, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │     └ <function matcher_wrapper.finish at 0x0000029AE1A47F70>
+          └ <unprintable matcher_wrapper object>
+
+TypeError: finish() takes from 1 to 2 positional arguments but 3 were given
+
+
+[2021-03-15 16:00:21,345 nonebot] DEBUG: 2021-03-15 16:00:21.345 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:00:32,122 nonebot] INFO: 2021-03-15 16:00:32.122 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [notice.group_recall]: {'time': 1615795218, 'self_id': 3235657949, 'post_type': 'notice', 'notice_type': 'group_recall', 'user_id': 1351495774, 'group_id': 1128254624, 'operator_id': 1351495774, 'message_id': 165332968}
+[2021-03-15 16:00:32,123 nonebot] DEBUG: 2021-03-15 16:00:32.123 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:00:54,979 nonebot] INFO: 2021-03-15 16:00:54.638 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1061677451 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十五・一六〇〇
+
+明日03/16(火) 05:00から「ノーマルクエスト」ドロップ量2倍キャンペーンを開催します！
+開催期間中、メインクエスト(NORMAL)クリア時に獲得できる装備アイテムやマナなどの獲得量が、通常の2倍にアップ！
+詳細は、当日掲載予定のお知らせをご確認ください。
+#プリコネR https://t.co/9sR4aGYfYx
+[CQ:image,file=47a7881be04a60f9762ca75a8bae30d4.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2900497435-47A7881BE04A60F9762CA75A8BAE30D4/0?term=3]"
+[2021-03-15 16:00:54,980 nonebot] DEBUG: 2021-03-15 16:00:54.980 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:14:49,541 nonebot] INFO: 2021-03-15 16:14:49.541 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 16:14:49,542 nonebot] INFO: 2021-03-15 16:14:49.542 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 16:14:49,545 nonebot] DEBUG: 2021-03-15 16:14:49.544 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_key': '', 'tencent_app_id': ''}
+[2021-03-15 16:14:49,635 nonebot] DEBUG: 2021-03-15 16:14:49.635 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 16:14:49,640 nonebot] INFO: 2021-03-15 16:14:49.639 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 16:14:49,644 nonebot] INFO: 2021-03-15 16:14:49.643 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 16:14:49,647 nonebot] INFO: 2021-03-15 16:14:49.647 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 16:14:49,647 nonebot] INFO: 2021-03-15 16:14:49.647 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 16:14:49,648 nonebot] DEBUG: 2021-03-15 16:14:49.648 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 16:14:49,670 uvicorn] INFO: 2021-03-15 16:14:49.669 | INFO     | uvicorn:serve:405 - Started server process [14876]
+[2021-03-15 16:14:49,671 uvicorn] INFO: 2021-03-15 16:14:49.670 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 16:14:49,671 uvicorn] INFO: 2021-03-15 16:14:49.671 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 16:14:49,672 uvicorn] INFO: 2021-03-15 16:14:49.672 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 16:14:51,586 uvicorn] INFO: 2021-03-15 16:14:51.586 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 49750) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 16:14:51,587 nonebot] INFO: 2021-03-15 16:14:51.587 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 16:14:54,501 nonebot] INFO: 2021-03-15 16:14:54.501 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -783710041 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 16:14:54,502 nonebot] DEBUG: 2021-03-15 16:14:54.502 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:14:54,503 nonebot] INFO: 2021-03-15 16:14:54.503 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:14:54,504 nonebot] DEBUG: 2021-03-15 16:14:54.504 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:14:54,505 nonebot] DEBUG: 2021-03-15 16:14:54.505 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:14:55,402 nonebot] INFO: 2021-03-15 16:14:55.401 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:14:55,403 nonebot] DEBUG: 2021-03-15 16:14:55.402 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:29:48,463 nonebot] INFO: 2021-03-15 16:29:48.462 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [notice.notify.honor]: {'time': 1615796988, 'self_id': 3235657949, 'post_type': 'notice', 'notice_type': 'notify', 'sub_type': 'honor', 'user_id': 2842117629, 'group_id': 1128254624, 'honor_type': 'talkative'}
+[2021-03-15 16:29:48,463 nonebot] DEBUG: 2021-03-15 16:29:48.463 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:31:43,003 nonebot] INFO: 2021-03-15 16:31:43.003 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 16:31:43,004 nonebot] INFO: 2021-03-15 16:31:43.004 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 16:31:43,006 nonebot] DEBUG: 2021-03-15 16:31:43.006 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_autostart': True}
+[2021-03-15 16:31:43,089 nonebot] DEBUG: 2021-03-15 16:31:43.088 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 16:31:43,090 nonebot] INFO: 2021-03-15 16:31:43.090 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 16:31:43,092 nonebot] INFO: 2021-03-15 16:31:43.091 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 16:31:43,096 nonebot] INFO: 2021-03-15 16:31:43.095 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 16:31:43,096 nonebot] INFO: 2021-03-15 16:31:43.096 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 16:31:43,096 nonebot] DEBUG: 2021-03-15 16:31:43.096 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 16:31:43,114 uvicorn] INFO: 2021-03-15 16:31:43.114 | INFO     | uvicorn:serve:405 - Started server process [17024]
+[2021-03-15 16:31:43,115 uvicorn] INFO: 2021-03-15 16:31:43.114 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 16:31:43,115 uvicorn] INFO: 2021-03-15 16:31:43.115 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 16:31:43,115 uvicorn] INFO: 2021-03-15 16:31:43.115 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 16:31:45,908 uvicorn] INFO: 2021-03-15 16:31:45.907 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 50134) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 16:31:45,908 nonebot] INFO: 2021-03-15 16:31:45.908 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 16:31:49,538 nonebot] INFO: 2021-03-15 16:31:49.538 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 942288274 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 16:31:49,539 nonebot] DEBUG: 2021-03-15 16:31:49.539 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:31:49,540 nonebot] INFO: 2021-03-15 16:31:49.540 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:31:49,541 nonebot] DEBUG: 2021-03-15 16:31:49.541 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:31:49,542 nonebot] DEBUG: 2021-03-15 16:31:49.542 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:31:50,426 nonebot] INFO: 2021-03-15 16:31:50.426 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:31:50,427 nonebot] DEBUG: 2021-03-15 16:31:50.427 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:36:15,481 nonebot] INFO: 2021-03-15 16:36:15.479 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 832332217 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十五・一六三五
+
+【ぷりこねっ！りだいぶ】【4コマ更新】
+第254話「子供扱いは嫌！」
+
+プリンセスコネクト！Re:Diveの公式4コマ「ぷりこねっ！りだいぶ」を更新しました！
+アプリからもご覧いただけます！
+
+▼プリンセスコネクト！Re:Dive公式4コマサイト
+https://t.co/gj0j7f0DeM
+#プリコネR https://t.co/ly2036Luxm
+[CQ:image,file=31a99c1cce309ac3d34a36f1f6e131d6.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-3140461111-31A99C1CCE309AC3D34A36F1F6E131D6/0?term=3]"
+[2021-03-15 16:36:15,482 nonebot] DEBUG: 2021-03-15 16:36:15.482 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:38:13,582 nonebot] INFO: 2021-03-15 16:38:13.582 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 16:38:13,582 nonebot] INFO: 2021-03-15 16:38:13.582 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 16:38:13,584 nonebot] DEBUG: 2021-03-15 16:38:13.584 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'/', ''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'environment': 'dev', 'tencent_app_key': ''}
+[2021-03-15 16:38:13,667 nonebot] DEBUG: 2021-03-15 16:38:13.666 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 16:38:13,670 nonebot] INFO: 2021-03-15 16:38:13.670 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 16:38:13,672 nonebot] INFO: 2021-03-15 16:38:13.671 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 16:38:13,673 nonebot] INFO: 2021-03-15 16:38:13.673 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 16:38:13,674 nonebot] INFO: 2021-03-15 16:38:13.673 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 16:38:13,674 nonebot] DEBUG: 2021-03-15 16:38:13.674 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 16:38:13,691 uvicorn] INFO: 2021-03-15 16:38:13.691 | INFO     | uvicorn:serve:405 - Started server process [14156]
+[2021-03-15 16:38:13,692 uvicorn] INFO: 2021-03-15 16:38:13.692 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 16:38:13,692 uvicorn] INFO: 2021-03-15 16:38:13.692 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 16:38:13,693 uvicorn] INFO: 2021-03-15 16:38:13.693 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 16:38:16,026 uvicorn] INFO: 2021-03-15 16:38:16.026 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 50239) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 16:38:16,027 nonebot] INFO: 2021-03-15 16:38:16.027 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 16:40:10,521 nonebot] INFO: 2021-03-15 16:40:10.521 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 643619018 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 16:40:10,522 nonebot] DEBUG: 2021-03-15 16:40:10.522 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:40:10,523 nonebot] INFO: 2021-03-15 16:40:10.523 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:40:10,524 nonebot] DEBUG: 2021-03-15 16:40:10.524 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:40:10,526 nonebot] DEBUG: 2021-03-15 16:40:10.525 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:40:11,434 nonebot] INFO: 2021-03-15 16:40:11.434 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:40:11,435 nonebot] DEBUG: 2021-03-15 16:40:11.435 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:48:06,266 nonebot] INFO: 2021-03-15 16:48:06.265 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 16:48:06,267 nonebot] INFO: 2021-03-15 16:48:06.266 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 16:48:06,269 nonebot] DEBUG: 2021-03-15 16:48:06.268 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True}
+[2021-03-15 16:48:06,352 nonebot] DEBUG: 2021-03-15 16:48:06.352 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 16:48:06,353 nonebot] INFO: 2021-03-15 16:48:06.353 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 16:48:06,355 nonebot] INFO: 2021-03-15 16:48:06.355 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 16:48:06,359 nonebot] INFO: 2021-03-15 16:48:06.358 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 16:48:06,359 nonebot] INFO: 2021-03-15 16:48:06.359 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 16:48:06,359 nonebot] DEBUG: 2021-03-15 16:48:06.359 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-15 16:48:06,376 uvicorn] INFO: 2021-03-15 16:48:06.376 | INFO     | uvicorn:serve:405 - Started server process [7424]
+[2021-03-15 16:48:06,376 uvicorn] INFO: 2021-03-15 16:48:06.376 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-15 16:48:06,377 uvicorn] INFO: 2021-03-15 16:48:06.377 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-15 16:48:06,377 uvicorn] INFO: 2021-03-15 16:48:06.377 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-15 16:48:08,205 uvicorn] INFO: 2021-03-15 16:48:08.205 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 50433) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-15 16:48:08,206 nonebot] INFO: 2021-03-15 16:48:08.206 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-15 16:48:10,430 nonebot] INFO: 2021-03-15 16:48:10.430 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -40648508 from 1351495774 "签到"
+[2021-03-15 16:48:10,431 nonebot] DEBUG: 2021-03-15 16:48:10.431 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:48:10,432 nonebot] INFO: 2021-03-15 16:48:10.432 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:48:10,433 nonebot] DEBUG: 2021-03-15 16:48:10.433 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:48:10,434 nonebot] DEBUG: 2021-03-15 16:48:10.434 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:48:10,655 nonebot] INFO: 2021-03-15 16:48:10.655 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:48:10,656 nonebot] DEBUG: 2021-03-15 16:48:10.656 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:48:22,690 nonebot] INFO: 2021-03-15 16:48:22.690 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -934102554 from 1351495774@[群:1128254624] "签到"
+[2021-03-15 16:48:22,691 nonebot] DEBUG: 2021-03-15 16:48:22.690 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-15 16:48:22,692 nonebot] INFO: 2021-03-15 16:48:22.692 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:48:22,693 nonebot] DEBUG: 2021-03-15 16:48:22.693 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-15 16:48:22,694 nonebot] DEBUG: 2021-03-15 16:48:22.693 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-15 16:48:22,909 nonebot] INFO: 2021-03-15 16:48:22.909 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-15 16:48:22,910 nonebot] DEBUG: 2021-03-15 16:48:22.910 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-15 16:49:13,464 nonebot] INFO: 2021-03-15 16:49:13.464 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-15 16:49:13,466 nonebot] INFO: 2021-03-15 16:49:13.465 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-15 16:49:13,468 nonebot] DEBUG: 2021-03-15 16:49:13.467 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_autostart': True}
+[2021-03-15 16:49:13,551 nonebot] DEBUG: 2021-03-15 16:49:13.551 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-15 16:49:13,552 nonebot] INFO: 2021-03-15 16:49:13.552 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-15 16:49:13,554 nonebot] INFO: 2021-03-15 16:49:13.553 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-15 16:49:13,555 nonebot] INFO: 2021-03-15 16:49:13.555 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-15 16:49:13,556 nonebot] INFO: 2021-03-15 16:49:13.556 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-15 16:49:13,556 nonebot] DEBUG: 2021-03-15 16:49:13.556 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp

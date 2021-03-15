@@ -1,6 +1,7 @@
 import random
+from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 from salmon import Service, R, Bot
-from salmon.typing import CQEvent
+from salmon.typing import CQEvent, Message
 from salmon.util import DailyNumberLimiter
 
 sv = Service('每日签到', bundle='pcr娱乐', help_='[签到] 给主さま盖章章')
@@ -42,14 +43,20 @@ todo_list = [
     '来几局日麻'
 ]
 
-login = sv.on_command('签到', aliases={'盖章', '妈', '妈?', '妈妈', '妈!', '妈！', '妈妈！'}, only_group=False)
+login = sv.on_fullmatch('签到', aliases={'盖章', '妈', '妈?', '妈妈', '妈!', '妈！', '妈妈！'}, only_group=False)
 
 @login.handle()
-async def give_okodokai(bot: Bot, ev: CQEvent):
-    uid = ev.user_id
+async def give_okodokai(bot: Bot, event: CQEvent):
+    uid = event.user_id
     if not lmt.check(uid):
-        await login.finish(ev, '明日はもう一つプレゼントをご用意してお待ちしますね')
+        await login.finish('明日はもう一つプレゼントをご用意してお待ちしますね')
     lmt.increase(uid)
+    at_sender = Message(f'[CQ:at,qq={uid}]')
     present = random.choice(login_presents)
     todo = random.choice(todo_list)
-    await bot.send(ev, f'\nおかえりなさいませ、主さま{R.img("priconne/kokkoro_stamp.png").cqcode}\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？')
+    pic = Message(R.img("priconne/kokkoro_stamp.png").cqcode)
+    if isinstance(event, GroupMessageEvent):
+        msg = at_sender + '\nおかえりなさいませ、主さま' + pic + f'\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？'
+    elif isinstance(event, PrivateMessageEvent):
+        msg = 'おかえりなさいませ、主さま' + pic + f'\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？'
+    await login.finish(msg)

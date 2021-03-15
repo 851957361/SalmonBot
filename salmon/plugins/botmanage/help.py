@@ -55,7 +55,7 @@ def get_private_manual(bundle_name, service_list):
         if sv.visible:
             manual.append(f"|※| {sv.name}")
     return '\n'.join(manual)
-d
+    
 
 def get_service_help(name, service_info):
     manual = [f"➤{name}功能帮助："]
@@ -67,29 +67,29 @@ def get_service_help(name, service_info):
     return "\n".join(manual)
 
 
-send_help = sv.on_command('help', aliases={'帮助'}, only_group=False)
-help_bundle = sv.on_command('help_bundle', aliases={'帮助分组'}, only_group=False)
+send_help = sv.on_fullmatch('help', aliases={'帮助'}, only_group=False)
+help_bundle = sv.on_fullmatch('help_bundle', aliases={'帮助分组'}, only_group=False)
 
 
 @send_help.handle()
-async def help_handle(bot: Bot, ev: CQEvent):
-    name = ev.get_plaintext().split()
+async def help_handle(bot: Bot, event: CQEvent):
+    name = event.get_plaintext().split()
     bundles = Service.get_bundles()
     svs = Service.get_loaded_services()
     info = Service.get_help()
     if not name:
-        await send_help.finish(ev, TOP_MANUAL)
+        await send_help.finish(TOP_MANUAL)
     elif name in svs:
         msg = get_service_help(name, info[name])
-        await send_help.finish(ev, msg)
+        await send_help.finish(msg)
     elif name in bundles:
-        if isinstance(ev, GroupMessageEvent):
-            msg = get_bundle_manual(name, bundles[name], ev.group_id)
-        elif isinstance(ev, PrivateMessageEvent):
+        if isinstance(event, GroupMessageEvent):
+            msg = get_bundle_manual(name, bundles[name], event.group_id)
+        elif isinstance(event, PrivateMessageEvent):
             msg = get_private_manual(name, bundles[name])
-        await send_help.finish(ev, msg)
+        await send_help.finish(msg)
 
 
 @help_bundle.handle()
-async def help_bundle_handle(bot: Bot, ev: CQEvent):
-    await help_bundle.finish(ev, Bundle_help)
+async def help_bundle_handle(bot: Bot, event: CQEvent):
+    await help_bundle.finish(Bundle_help)
