@@ -5893,3 +5893,16 @@ TypeError: 'int' object is not callable
 [2021-03-16 14:30:27,949 nonebot] INFO: 2021-03-16 14:30:27.949 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
 [2021-03-16 14:30:27,950 nonebot] INFO: 2021-03-16 14:30:27.949 | INFO     | nonebot:run:218 - Running NoneBot...
 [2021-03-16 14:30:27,950 nonebot] DEBUG: 2021-03-16 14:30:27.950 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 14:30:27,972 uvicorn] INFO: 2021-03-16 14:30:27.971 | INFO     | uvicorn:serve:405 - Started server process [1684]
+[2021-03-16 14:30:27,972 uvicorn] INFO: 2021-03-16 14:30:27.972 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 14:30:27,972 uvicorn] INFO: 2021-03-16 14:30:27.972 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 14:30:27,973 uvicorn] INFO: 2021-03-16 14:30:27.973 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 14:30:30,072 uvicorn] INFO: 2021-03-16 14:30:30.071 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 57476) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 14:30:30,072 nonebot] INFO: 2021-03-16 14:30:30.072 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 14:30:33,505 nonebot] INFO: 2021-03-16 14:30:33.504 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1215795835 from 3224889915 "禁用 每日签到 1128254624"
+[2021-03-16 14:30:33,505 nonebot] DEBUG: 2021-03-16 14:30:33.505 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:30:33,506 nonebot] INFO: 2021-03-16 14:30:33.506 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:30:33,507 nonebot] DEBUG: 2021-03-16 14:30:33.506 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:30:33,507 nonebot] DEBUG: 2021-03-16 14:30:33.507 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 14:30:33,511 nonebot] INFO: 2021-03-16 14:30:33.510 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:30:33,511 nonebot] DEBUG: 2021-03-16 14:30:33.511 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
