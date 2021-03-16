@@ -1,4 +1,3 @@
-import re
 from functools import cmp_to_key
 from nonebot.rule import ArgumentParser
 from nonebot.typing import T_State
@@ -44,18 +43,10 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
 
 @enable.handle()
 async def enable_service(bot: Bot, event: CQEvent):
-    await switch_service(event, turn_on=True)
-
-@disable.handle()
-async def disable_service(bot: Bot, event: CQEvent):
-    await switch_service(event, turn_on=False)
-
-async def switch_service(bot: Bot, event: CQEvent, turn_on:bool):
-    action_tip = '启用' if turn_on else '禁用'
-    if isinstance(ev, GroupMessageEvent):
+    if isinstance(event, GroupMessageEvent):
         names = event.get_plaintext().split()
         if not names:
-            await bot.send(event, f'空格后接要{action_tip}的服务名')
+            await bot.send(event, f'空格后接要启用的服务名')
             raise FinishedException
         group_id = event.group_id
         svs = Service.get_loaded_services()
@@ -65,23 +56,23 @@ async def switch_service(bot: Bot, event: CQEvent, turn_on:bool):
                 sv = svs[name]
                 u_priv = priv.get_user_priv(event)
                 if u_priv >= sv.manage_priv:
-                    sv.set_enable(group_id) if turn_on else sv.set_disable(group_id)
+                    sv.set_enable(group_id)
                     succ.append(name)
                 else:
-                    await bot.send(event, f'权限不足！{action_tip}{name}需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
+                    await bot.send(event, f'权限不足！启用[{name}]需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
                     raise FinishedException
             else:
                 notfound.append(name)
         msg = []
         if succ:
-            msg.append(f'已{action_tip}服务：' + '、'.join(succ))
+            msg.append(f'已启用服务：' + '、'.join(succ))
         if notfound:
             msg.append('未找到服务：' + '、'.join(notfound))
         if msg:
             bot.send(event, '\n'.join(msg))
     elif isinstance(event, PrivateMessageEvent):
         if event.group_id not in SUPERUSER:
-            await bot.send(event, f'请在群聊中{action_tip}服务')
+            await bot.send(event, f'请在群聊中启用服务')
             raise FinishedException
         args = event.get_plaintext().split()
         if len(args) < 2:
@@ -97,9 +88,63 @@ async def switch_service(bot: Bot, event: CQEvent, turn_on:bool):
         for gid in group_ids:
             try:
                 gid = int(gid)
-                sv.set_enable(gid) if turn_on else sv.set_disable(gid)
+                sv.set_enable(gid)
                 succ.append(gid)
             except:
                 await bot.send(event, f'非法群号：{gid}')
-        await bot.send(event, f'服务{name}已于{len(succ)}个群内{action_tip}：{succ}')
+        await bot.send(event, f'服务[{name}]已于{len(succ)}个群内启用：{succ}')
+        raise FinishedException
+
+@disable.handle()
+async def disable_service(bot: Bot, event: CQEvent):
+    if isinstance(event, GroupMessageEvent):
+        names = event.get_plaintext().split()
+        if not names:
+            await bot.send(event, f'空格后接要禁用的服务名')
+            raise FinishedException
+        group_id = event.group_id
+        svs = Service.get_loaded_services()
+        succ, notfound = [], []
+        for name in names:
+            if name in svs:
+                sv = svs[name]
+                u_priv = priv.get_user_priv(event)
+                if u_priv >= sv.manage_priv:
+                    sv.set_disable(group_id)
+                    succ.append(name)
+                else:
+                    await bot.send(event, f'权限不足！禁用[{name}]需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
+                    raise FinishedException
+            else:
+                notfound.append(name)
+        msg = []
+        if succ:
+            msg.append(f'已禁用服务：' + '、'.join(succ))
+        if notfound:
+            msg.append('未找到服务：' + '、'.join(notfound))
+        if msg:
+            bot.send(event, '\n'.join(msg))
+    elif isinstance(event, PrivateMessageEvent):
+        if event.group_id not in SUPERUSER:
+            await bot.send(event, f'请在群聊中禁用服务')
+            raise FinishedException
+        args = event.get_plaintext().split()
+        if len(args) < 2:
+            await bot.send(event, 'Usage: <service_name> <group_id1> [<group_id2>, ...]')
+            raise FinishedException
+        name, *group_ids = args
+        svs = Service.get_loaded_services()
+        if name not in svs:
+            await bot.send(event, f'未找到服务：{name}')
+            raise FinishedException
+        sv = svs[name]
+        succ = []
+        for gid in group_ids:
+            try:
+                gid = int(gid)
+                sv.set_disable(gid)
+                succ.append(gid)
+            except:
+                await bot.send(event, f'非法群号：{gid}')
+        await bot.send(event, f'服务[{name}]已于{len(succ)}个群内禁用：{succ}')
         raise FinishedException
