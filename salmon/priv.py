@@ -8,13 +8,9 @@ SUPER = 9
 
 from datetime import datetime
 from nonebot.adapters.cqhttp import Bot
-from nonebot.adapters.cqhttp.permission import GROUP, GROUP_ADMIN, GROUP_OWNER, PRIVATE
-from nonebot.permission import SUPERUSER, Permission
+import salmon
 from salmon.typing import CQEvent
 
-OWNERS = SUPERUSER | GROUP_OWNER
-ADMINS = SUPERUSER | GROUP_OWNER | GROUP_ADMIN
-NORMALS = SUPERUSER | GROUP | PRIVATE
 
 #===================== block list =======================#
 _black_group = {}  # Dict[group_id, expr_time]
@@ -25,7 +21,8 @@ def set_block_group(group_id, time):
 
 
 def set_block_user(user_id, time):
-    _black_user[user_id] = datetime.now() + time
+    if user_id not in salmon.configs.SUPERUSERS:
+        _black_user[user_id] = datetime.now() + time
 
 
 def check_block_group(group_id):
@@ -44,7 +41,7 @@ def check_block_user(user_id):
 
 def get_user_priv(bot: Bot, event: CQEvent):
     uid = event.user_id
-    if uid in bot.config.superusers:
+    if uid in salmon.configs.SUPERUSERS:
         return SUPER
     if check_block_user(uid):
         return BLACK

@@ -6,6 +6,9 @@
 
 DEBUG = False           # log日志调试模式
 
+SUPERUSERS = [1351495774]    # 填写超级用户的QQ号，可填多个用半角逗号","隔开
+NICKNAME = '测试机|测试'           # 机器人的昵称。呼叫昵称等同于@bot，可用元组配置多个昵称
+
 # 发送图片的协议
 # 可选 http, file, base64
 # 当cqhttp与bot端不在同一台计算机时，可用http协议

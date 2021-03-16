@@ -6,16 +6,15 @@ Thanks to @Akiraxie dalao！
 import os
 import re
 import asyncio
+from functools import wraps
 from collections import defaultdict
-from nonebot.permission import SUPERUSER
 from nonebot.adapters.cqhttp.utils import escape
 from nonebot.adapters.cqhttp.message import MessageSegment, Message
 from nonebot.matcher import Matcher, matchers, current_bot, current_event
 from nonebot.rule import ArgumentParser, Rule, to_me
 from nonebot.typing import T_State, T_ArgsParser, T_Handler
-from nonebot.plugin import on_command, on_message, on_startswith, on_endswith, on_notice, on_request, on_shell_command, CommandGroup
+from nonebot.plugin import on_command, on_message, on_startswith, on_endswith, on_notice, on_request, on_shell_command
 from nonebot.exception import FinishedException, PausedException, RejectedException
-from nonebot.message import run_preprocessor, run_postprocessor
 import salmon
 from salmon.typing import *
 from salmon.util import normalize_str
@@ -31,7 +30,7 @@ _loaded_matchers: Dict["Type[Matcher]", "matcher_wrapper"] = {}
 _service_bundle: Dict[str, List["Service"]] = defaultdict(list)
 _service_info: Dict[str, List["Service"]] = defaultdict(list)
 _re_illegal_char = re.compile(r'[\\/:*?"<>|\.]')
-_service_config_dir = os.path.expanduser('~/.hoshino/service_config/')
+_service_config_dir = os.path.expanduser('~/.salmon/service_config/')
 os.makedirs(_service_config_dir, exist_ok=True)
 
 
@@ -139,13 +138,11 @@ class ServiceFunc:
 
 
 class Service:
-    def __init__(self, name, use_priv=None, manage_priv=None, enable_on_default=None, visible=None,
-                 help_=None, bundle=None):
+    def __init__(self, name: str, manage_priv: str =None, enable_on_default: bool =None, visible: bool =None, help_: str = None, bundle: str = None):
         assert not _re_illegal_char.search(
             name), r'Service name cannot contain character in `\/:*?"<>|.`'
-        config = _load_service_config(name)
         self.name = name
-        self.use_priv = config.get('use_priv') or use_priv or priv.NORMAL
+        config = _load_service_config(self.name)
         self.manage_priv = config.get(
             'manage_priv') or manage_priv or priv.ADMIN
         self.enable_on_default = config.get('enable_on_default')
@@ -170,7 +167,7 @@ class Service:
 
     @property
     def bot(self):
-        return salmon.get_bot()
+        return salmon.get_bot_list()
 
     @staticmethod
     def get_loaded_services() -> Dict[str, "Service"]:
@@ -199,10 +196,6 @@ class Service:
 
     def check_enabled(self, group_id):
         return bool( (group_id in self.enable_group) or (self.enable_on_default and group_id not in self.disable_group))
-
-    def _check_all(self, event: CQEvent):
-        gid = event.group_id
-        return self.check_enabled(gid) and not priv.check_block_group(gid) and priv.check_priv(ev, self.use_priv)
 
     def check_service(self, only_to_me: bool = False, only_group: bool = True) -> Rule:
         async def _cs(bot: Bot, event: CQEvent, state: T_State) -> bool:
@@ -484,35 +477,3 @@ class matcher_wrapper:
 
     def __repr__(self) -> str:
         return self.__str__
-
-
-@run_preprocessor
-async def _(matcher: Matcher, bot: Bot, event: CQEvent, state: T_State):
-    mw = _loaded_matchers.get(matcher.__class__, None)
-    if mw:
-        mw.sv.logger.info(f'Event will be handled by <lc>{mw}</>')
-
-
-@run_postprocessor
-async def _(matcher: Matcher, exception: Exception, bot: Bot, event: CQEvent, state: T_State):
-    mw = _loaded_matchers.get(matcher.__class__, None)
-    if mw:
-        if exception:
-            mw.sv.logger.error(
-                f'Event handling failed from <lc>{mw}</>', False)
-        mw.sv.logger.info(f'Event handling completed from <lc>{mw}</>')
-
-
-sulogger = log.new_logger('sucmd', salmon.configs.DEBUG)
-
-def sucmd(name: str, only_to_me: bool = False, aliases: Optional[set] = None, **kwargs) -> Type[Matcher]:
-    kwargs['aliases'] = aliases
-    kwargs['permission'] = SUPERUSER
-    kwargs['rule'] = to_me() if only_to_me else Rule()
-    return on_command(name, **kwargs)
-
-
-def sucmds(name: str, only_to_me: bool = False, **kwargs) -> CommandGroup:
-    kwargs['permission'] = SUPERUSER
-    kwargs['rule'] = to_me() if only_to_me else Rule()
-    return CommandGroup(name, **kwargs)

@@ -69,20 +69,20 @@ def normalize_str(string) -> str:
     return string
 
 
-async def delete_msg(ev: CQEvent):
+async def delete_msg(event: CQEvent):
     try:
-        await salmon.get_bot().delete_msg(self_id=ev.self_id, message_id=ev.message_id)
+        await salmon.get_bot().delete_msg(self_id=event.self_id, message_id=event.message_id)
     except ActionFailed as e:
         salmon.logger.error(f'撤回失败 retcode={e.retcode}')
     except Exception as e:
         salmon.logger.exception(e)
 
 
-async def silence(ev: CQEvent, ban_time, skip_su=True):
+async def silence(event: CQEvent, ban_time, skip_su=True):
     try:
-        if skip_su and ev.user_id in SUPERUSER:
+        if skip_su and event.user_id in salmon.configs.SUPERUSERS:
             return
-        await salmon.get_bot().set_group_ban(self_id=ev.self_id, group_id=ev.group_id, user_id=ev.user_id, duration=ban_time)
+        await salmon.get_bot().set_group_ban(self_id=event.self_id, group_id=event.group_id, user_id=event.user_id, duration=ban_time)
     except ActionFailed as e:
         salmon.logger.error(f'禁言失败 retcode={e.retcode}')
     except Exception as e:

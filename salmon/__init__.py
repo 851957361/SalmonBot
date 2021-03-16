@@ -4,7 +4,7 @@ from nonebot.adapters.cqhttp import Bot
 from .log import new_logger
 from . import configs
 
-os.makedirs(os.path.expanduser('~/.hoshino'), exist_ok=True)
+os.makedirs(os.path.expanduser('~/.salmon'), exist_ok=True)
 logger = new_logger('salmon', configs.DEBUG)
 
 
@@ -18,4 +18,4 @@ def get_bot_list():
 
 
 from . import R
-from .service import Service, sucmd
+from .service import Service

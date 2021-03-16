@@ -2,7 +2,7 @@ from salmon import Service, priv, Bot
 from salmon.typing import CQEvent
 from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 
-sv = Service('_help_', manage_priv=priv.SUPERUSER, visible=False)
+sv = Service('_help_', manage_priv=priv.SUPER, visible=False)
 
 TOP_MANUAL = '''
 =====================
@@ -79,14 +79,14 @@ async def help_handle(bot: Bot, event: CQEvent):
     info = Service.get_help()
     if not name:
         await send_help.finish(TOP_MANUAL)
-    elif name in svs:
-        msg = get_service_help(name, info[name])
-        await send_help.finish(msg)
     elif name in bundles:
         if isinstance(event, GroupMessageEvent):
             msg = get_bundle_manual(name, bundles[name], event.group_id)
         elif isinstance(event, PrivateMessageEvent):
             msg = get_private_manual(name, bundles[name])
+        await send_help.finish(msg)
+    elif name in svs:
+        msg = get_service_help(name, info[name])
         await send_help.finish(msg)
 
 
