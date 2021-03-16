@@ -4024,3 +4024,1872 @@ TypeError: switch_service() missing 1 required positional argument: 'event'
 [2021-03-15 18:59:22,700 nonebot] INFO: 2021-03-15 18:59:22.700 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1139963897 from 296432694@[群:1128254624] "[CQ:at,qq=1351495774]  空格后接要启用的服务名"
 [2021-03-15 18:59:22,701 nonebot] DEBUG: 2021-03-15 18:59:22.701 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
 [2021-03-15 19:23:13,375 nonebot] ERROR: 2021-03-15 19:23:13.375 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+[2021-03-16 09:54:36,904 nonebot] INFO: 2021-03-16 09:54:36.904 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 09:54:36,907 nonebot] INFO: 2021-03-16 09:54:36.906 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 09:54:36,909 nonebot] DEBUG: 2021-03-16 09:54:36.909 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'tencent_app_key': '', 'tencent_app_id': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True}
+[2021-03-16 09:54:37,030 nonebot] DEBUG: 2021-03-16 09:54:37.030 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 09:54:37,032 nonebot] INFO: 2021-03-16 09:54:37.032 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 09:54:37,034 nonebot] INFO: 2021-03-16 09:54:37.034 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 09:54:37,039 nonebot] INFO: 2021-03-16 09:54:37.039 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 09:54:37,040 nonebot] INFO: 2021-03-16 09:54:37.039 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 09:54:37,040 nonebot] DEBUG: 2021-03-16 09:54:37.040 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 09:54:37,075 uvicorn] INFO: 2021-03-16 09:54:37.075 | INFO     | uvicorn:serve:405 - Started server process [10148]
+[2021-03-16 09:54:37,076 uvicorn] INFO: 2021-03-16 09:54:37.076 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 09:54:37,076 uvicorn] INFO: 2021-03-16 09:54:37.076 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 09:54:37,077 uvicorn] INFO: 2021-03-16 09:54:37.077 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 09:54:38,909 uvicorn] INFO: 2021-03-16 09:54:38.909 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 50870) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 09:54:38,910 nonebot] INFO: 2021-03-16 09:54:38.910 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 09:55:12,449 nonebot] INFO: 2021-03-16 09:55:12.447 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1873993763 from 1351495774@[群:1128254624] "禁用"
+[2021-03-16 09:55:12,450 nonebot] DEBUG: 2021-03-16 09:55:12.449 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 09:55:12,451 nonebot] INFO: 2021-03-16 09:55:12.451 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 09:55:12,452 nonebot] DEBUG: 2021-03-16 09:55:12.452 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 09:55:12,453 nonebot] DEBUG: 2021-03-16 09:55:12.452 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 09:55:12,548 nonebot] INFO: 2021-03-16 09:55:12.548 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -2118352625 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  空格后接要禁用的服务名"
+[2021-03-16 09:55:12,549 nonebot] DEBUG: 2021-03-16 09:55:12.548 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 09:55:12,619 nonebot] INFO: 2021-03-16 09:55:12.619 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -155471463 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  空格后接要禁用的服务名"
+[2021-03-16 09:55:12,620 nonebot] DEBUG: 2021-03-16 09:55:12.620 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 09:55:12,622 nonebot] INFO: 2021-03-16 09:55:12.622 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 09:55:12,623 nonebot] DEBUG: 2021-03-16 09:55:12.623 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:00:03,824 nonebot] INFO: 2021-03-16 10:00:03.824 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 10:00:03,825 nonebot] INFO: 2021-03-16 10:00:03.825 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 10:00:03,827 nonebot] DEBUG: 2021-03-16 10:00:03.827 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'tencent_app_id': '', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev'}
+[2021-03-16 10:00:03,907 nonebot] DEBUG: 2021-03-16 10:00:03.907 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 10:00:03,909 nonebot] INFO: 2021-03-16 10:00:03.909 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 10:00:03,916 nonebot] ERROR: 2021-03-16 10:00:03.912 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "service_manage"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000024D91EEBCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='service_manage', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000024DB4529040>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000024DB2164680>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='service_manage', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000024DB4533BB0>, origin='...
+             └ <function _load at 0x0000024D8F20F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\service_manage.py", line 3, in <module>
+    from nonebot.typing import T_State, Message
+                               └ typing.Dict[typing.Any, typing.Any]
+
+ImportError: cannot import name 'Message' from 'nonebot.typing' (C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\typing.py)
+
+
+[2021-03-16 10:00:03,918 nonebot] INFO: 2021-03-16 10:00:03.918 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 10:00:03,918 nonebot] INFO: 2021-03-16 10:00:03.918 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 10:00:03,918 nonebot] DEBUG: 2021-03-16 10:00:03.918 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 10:00:03,935 uvicorn] INFO: 2021-03-16 10:00:03.935 | INFO     | uvicorn:serve:405 - Started server process [13872]
+[2021-03-16 10:00:03,936 uvicorn] INFO: 2021-03-16 10:00:03.936 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 10:00:03,936 uvicorn] INFO: 2021-03-16 10:00:03.936 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 10:00:03,937 uvicorn] INFO: 2021-03-16 10:00:03.937 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 10:00:05,056 uvicorn] INFO: 2021-03-16 10:00:05.056 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51002) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 10:00:05,057 nonebot] INFO: 2021-03-16 10:00:05.057 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 10:00:22,437 nonebot] INFO: 2021-03-16 10:00:22.430 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1908675963 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十六・一〇〇〇
+
+【Happy Birthday♪】
+本日「3月16日」は「ユカリ」(CV：#今井麻美 さん)のお誕生日です！
+ゲームにログインすると、誕生日をお祝いする特別な物語が読めますよ！
+本日限定ですので、ぜひお祝いしてあげてくださいね♪
+#プリコネR #ユカリ誕生日 https://t.co/mpM2jmRsvC
+[CQ:image,file=7aba3bad988f81c2fb7492647191ef79.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2631392286-7ABA3BAD988F81C2FB7492647191EF79/0?term=3]"
+[2021-03-16 10:00:22,437 nonebot] DEBUG: 2021-03-16 10:00:22.437 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:01:28,972 nonebot] INFO: 2021-03-16 10:01:28.972 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 10:01:28,973 nonebot] INFO: 2021-03-16 10:01:28.973 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 10:01:28,975 nonebot] DEBUG: 2021-03-16 10:01:28.975 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_key': ''}
+[2021-03-16 10:01:29,057 nonebot] DEBUG: 2021-03-16 10:01:29.057 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 10:01:29,058 nonebot] INFO: 2021-03-16 10:01:29.058 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 10:01:29,060 nonebot] INFO: 2021-03-16 10:01:29.060 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 10:01:29,064 nonebot] INFO: 2021-03-16 10:01:29.064 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 10:01:29,064 nonebot] INFO: 2021-03-16 10:01:29.064 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 10:01:29,064 nonebot] DEBUG: 2021-03-16 10:01:29.064 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 10:01:29,081 uvicorn] INFO: 2021-03-16 10:01:29.080 | INFO     | uvicorn:serve:405 - Started server process [2844]
+[2021-03-16 10:01:29,081 uvicorn] INFO: 2021-03-16 10:01:29.081 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 10:01:29,081 uvicorn] INFO: 2021-03-16 10:01:29.081 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 10:01:29,082 uvicorn] INFO: 2021-03-16 10:01:29.082 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 10:01:29,584 uvicorn] INFO: 2021-03-16 10:01:29.584 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51061) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 10:01:29,585 nonebot] INFO: 2021-03-16 10:01:29.584 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 10:02:39,415 nonebot] INFO: 2021-03-16 10:02:39.415 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1614121897 from 1351495774@[群:1128254624] "禁用"
+[2021-03-16 10:02:39,416 nonebot] DEBUG: 2021-03-16 10:02:39.416 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:02:39,417 nonebot] INFO: 2021-03-16 10:02:39.417 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:02:39,418 nonebot] DEBUG: 2021-03-16 10:02:39.418 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:02:39,419 nonebot] DEBUG: 2021-03-16 10:02:39.419 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 10:02:39,486 nonebot] INFO: 2021-03-16 10:02:39.485 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 28238324 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  空格后接要禁用的服务名"
+[2021-03-16 10:02:39,486 nonebot] DEBUG: 2021-03-16 10:02:39.486 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:02:39,557 nonebot] INFO: 2021-03-16 10:02:39.557 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:02:39,559 nonebot] DEBUG: 2021-03-16 10:02:39.558 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:02:39,560 nonebot] INFO: 2021-03-16 10:02:39.559 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1990840674 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  空格后接要禁用的服务名"
+[2021-03-16 10:02:39,560 nonebot] DEBUG: 2021-03-16 10:02:39.560 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:02:51,361 nonebot] INFO: 2021-03-16 10:02:51.361 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1733840818 from 1351495774@[群:1128254624] "禁用 啊啊啊"
+[2021-03-16 10:02:51,362 nonebot] DEBUG: 2021-03-16 10:02:51.362 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:02:51,363 nonebot] INFO: 2021-03-16 10:02:51.363 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:02:51,364 nonebot] DEBUG: 2021-03-16 10:02:51.364 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:02:51,380 nonebot] INFO: 2021-03-16 10:02:51.380 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:02:51,381 nonebot] DEBUG: 2021-03-16 10:02:51.381 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:02:51,485 nonebot] INFO: 2021-03-16 10:02:51.484 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 135835103 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：啊啊啊"
+[2021-03-16 10:02:51,485 nonebot] DEBUG: 2021-03-16 10:02:51.485 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:02:51,556 nonebot] INFO: 2021-03-16 10:02:51.556 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 2132778313 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：啊啊啊"
+[2021-03-16 10:02:51,557 nonebot] DEBUG: 2021-03-16 10:02:51.557 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:03:26,202 nonebot] INFO: 2021-03-16 10:03:26.202 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1233302314 from 296432694@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：啊啊啊"
+[2021-03-16 10:03:26,203 nonebot] DEBUG: 2021-03-16 10:03:26.202 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:03:55,651 nonebot] INFO: 2021-03-16 10:03:55.650 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 10:03:55,652 nonebot] INFO: 2021-03-16 10:03:55.652 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 10:03:55,654 nonebot] DEBUG: 2021-03-16 10:03:55.654 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_key': '', 'tencent_app_id': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 10:03:55,738 nonebot] DEBUG: 2021-03-16 10:03:55.738 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 10:03:55,740 nonebot] INFO: 2021-03-16 10:03:55.739 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 10:03:55,741 nonebot] INFO: 2021-03-16 10:03:55.741 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 10:03:55,746 nonebot] INFO: 2021-03-16 10:03:55.745 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 10:03:55,746 nonebot] INFO: 2021-03-16 10:03:55.746 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 10:03:55,746 nonebot] DEBUG: 2021-03-16 10:03:55.746 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 10:03:55,765 uvicorn] INFO: 2021-03-16 10:03:55.764 | INFO     | uvicorn:serve:405 - Started server process [6248]
+[2021-03-16 10:03:55,765 uvicorn] INFO: 2021-03-16 10:03:55.765 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 10:03:55,766 uvicorn] INFO: 2021-03-16 10:03:55.766 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 10:03:55,766 uvicorn] INFO: 2021-03-16 10:03:55.766 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 10:03:57,127 uvicorn] INFO: 2021-03-16 10:03:57.126 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51141) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 10:03:57,127 nonebot] INFO: 2021-03-16 10:03:57.127 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 10:04:02,566 nonebot] INFO: 2021-03-16 10:04:02.565 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1048937404 from 1351495774@[群:1128254624] "禁用 啊啊啊"
+[2021-03-16 10:04:02,566 nonebot] DEBUG: 2021-03-16 10:04:02.566 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:04:02,568 nonebot] INFO: 2021-03-16 10:04:02.567 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:04:02,568 nonebot] DEBUG: 2021-03-16 10:04:02.568 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:04:02,569 nonebot] DEBUG: 2021-03-16 10:04:02.569 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 10:04:02,657 nonebot] INFO: 2021-03-16 10:04:02.656 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1483943418 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：啊啊啊"
+[2021-03-16 10:04:02,658 nonebot] DEBUG: 2021-03-16 10:04:02.657 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:04:02,727 nonebot] INFO: 2021-03-16 10:04:02.726 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:04:02,728 nonebot] DEBUG: 2021-03-16 10:04:02.727 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:04:02,798 nonebot] INFO: 2021-03-16 10:04:02.797 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1324316467 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：啊啊啊"
+[2021-03-16 10:04:02,798 nonebot] DEBUG: 2021-03-16 10:04:02.798 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:06:45,017 nonebot] INFO: 2021-03-16 10:06:45.017 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 10:06:45,018 nonebot] INFO: 2021-03-16 10:06:45.018 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 10:06:45,020 nonebot] DEBUG: 2021-03-16 10:06:45.020 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev', 'tencent_app_key': ''}
+[2021-03-16 10:06:45,101 nonebot] DEBUG: 2021-03-16 10:06:45.101 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 10:06:45,103 nonebot] INFO: 2021-03-16 10:06:45.102 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 10:06:45,107 nonebot] INFO: 2021-03-16 10:06:45.107 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 10:06:45,108 nonebot] INFO: 2021-03-16 10:06:45.108 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 10:06:45,108 nonebot] INFO: 2021-03-16 10:06:45.108 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 10:06:45,109 nonebot] DEBUG: 2021-03-16 10:06:45.109 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 10:06:45,125 uvicorn] INFO: 2021-03-16 10:06:45.125 | INFO     | uvicorn:serve:405 - Started server process [7520]
+[2021-03-16 10:06:45,125 uvicorn] INFO: 2021-03-16 10:06:45.125 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 10:06:45,126 uvicorn] INFO: 2021-03-16 10:06:45.125 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 10:06:45,126 uvicorn] INFO: 2021-03-16 10:06:45.126 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 10:06:47,176 uvicorn] INFO: 2021-03-16 10:06:47.176 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51207) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 10:06:47,177 nonebot] INFO: 2021-03-16 10:06:47.177 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 10:06:54,918 nonebot] INFO: 2021-03-16 10:06:54.917 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 971524005 from 1351495774@[群:1128254624] "禁用 我我我"
+[2021-03-16 10:06:54,919 nonebot] DEBUG: 2021-03-16 10:06:54.918 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:06:54,920 nonebot] INFO: 2021-03-16 10:06:54.920 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:06:54,921 nonebot] DEBUG: 2021-03-16 10:06:54.921 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:06:54,922 nonebot] INFO: 2021-03-16 10:06:54.921 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:06:54,954 nonebot] ERROR: 2021-03-16 10:06:54.922 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000016A38084C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000016A35838A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000016A5A755DB0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000016A35827F70>
+    │       │   └ None
+    │       └ <function run at 0x0000016A5A5D24C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000016A5A5F31F0>
+    └ <uvicorn.main.Server object at 0x0000016A5A770880>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000016A5A5F3280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000016A5A770880>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000016A37F4D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000016A37F4D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000016A37F4F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000016A37EEC4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000016A5A835FD0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000016A5A835FD0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000016A5A835FD0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000016A5A835FD0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615860414, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016A5A81F4F0>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000016A38436670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615860414, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016A5A81F4F0>
+          │       └ <function Matcher.run at 0x0000016A381079D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615860414, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016A5A81F4F0>
+          │    │           └ <function disable_service at 0x0000016A5A779040>
+          │    └ <function Matcher.run_handler at 0x0000016A38107940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000016A5A779040>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 135, in disable_service
+    await bot.send(event, '\n'.join(msg))
+          │   │    │                └ [[MessageSegment(type='at', data={'qq': '1351495774'})], '未找到服务：我我我']
+          │   │    └ GroupMessageEvent(time=1615860414, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │   └ <function Bot.send at 0x0000016A38440430>
+          └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016A5A81F4F0>
+
+TypeError: sequence item 0: expected str instance, Message found
+
+
+[2021-03-16 10:06:54,956 nonebot] DEBUG: 2021-03-16 10:06:54.956 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:06:55,008 nonebot] INFO: 2021-03-16 10:06:55.007 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1595861473 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：我我我"
+[2021-03-16 10:06:55,008 nonebot] DEBUG: 2021-03-16 10:06:55.008 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:06:55,080 nonebot] INFO: 2021-03-16 10:06:55.079 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -672782711 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：我我我"
+[2021-03-16 10:06:55,080 nonebot] DEBUG: 2021-03-16 10:06:55.080 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:08:48,669 nonebot] INFO: 2021-03-16 10:08:48.669 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 10:08:48,670 nonebot] INFO: 2021-03-16 10:08:48.670 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 10:08:48,672 nonebot] DEBUG: 2021-03-16 10:08:48.672 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_id': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': ''}
+[2021-03-16 10:08:48,753 nonebot] DEBUG: 2021-03-16 10:08:48.753 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 10:08:48,755 nonebot] INFO: 2021-03-16 10:08:48.754 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 10:08:48,759 nonebot] INFO: 2021-03-16 10:08:48.759 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 10:08:48,760 nonebot] INFO: 2021-03-16 10:08:48.760 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 10:08:48,761 nonebot] INFO: 2021-03-16 10:08:48.760 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 10:08:48,761 nonebot] DEBUG: 2021-03-16 10:08:48.761 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 10:08:48,778 uvicorn] INFO: 2021-03-16 10:08:48.778 | INFO     | uvicorn:serve:405 - Started server process [12348]
+[2021-03-16 10:08:48,778 uvicorn] INFO: 2021-03-16 10:08:48.778 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 10:08:48,779 uvicorn] INFO: 2021-03-16 10:08:48.779 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 10:08:48,779 uvicorn] INFO: 2021-03-16 10:08:48.779 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 10:08:51,217 uvicorn] INFO: 2021-03-16 10:08:51.217 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51272) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 10:08:51,218 nonebot] INFO: 2021-03-16 10:08:51.218 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 10:08:54,029 nonebot] INFO: 2021-03-16 10:08:54.029 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1197030168 from 1351495774@[群:1128254624] "禁用 我我我"
+[2021-03-16 10:08:54,030 nonebot] DEBUG: 2021-03-16 10:08:54.030 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:08:54,031 nonebot] INFO: 2021-03-16 10:08:54.031 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:08:54,032 nonebot] DEBUG: 2021-03-16 10:08:54.032 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:08:54,033 nonebot] DEBUG: 2021-03-16 10:08:54.032 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 10:08:54,204 nonebot] INFO: 2021-03-16 10:08:54.204 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 811469710 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：我我我"
+[2021-03-16 10:08:54,205 nonebot] DEBUG: 2021-03-16 10:08:54.205 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:08:54,207 nonebot] INFO: 2021-03-16 10:08:54.207 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1352237675 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：我我我"
+[2021-03-16 10:08:54,208 nonebot] DEBUG: 2021-03-16 10:08:54.208 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:08:54,209 nonebot] INFO: 2021-03-16 10:08:54.209 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:08:54,210 nonebot] DEBUG: 2021-03-16 10:08:54.210 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:09:06,899 nonebot] INFO: 2021-03-16 10:09:06.898 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1097342137 from 1351495774@[群:1128254624] "禁用 每日签到"
+[2021-03-16 10:09:06,900 nonebot] DEBUG: 2021-03-16 10:09:06.899 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:09:06,901 nonebot] INFO: 2021-03-16 10:09:06.900 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:09:06,901 nonebot] DEBUG: 2021-03-16 10:09:06.901 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:09:06,902 nonebot] INFO: 2021-03-16 10:09:06.902 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:09:06,949 nonebot] ERROR: 2021-03-16 10:09:06.903 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000021FF0243C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000021FED9F8A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000021F92917B30>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000021FED9E7F70>
+    │       │   └ None
+    │       └ <function run at 0x0000021F927924C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000021F927B31F0>
+    └ <uvicorn.main.Server object at 0x0000021F92930880>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000021F927B3280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000021F92930880>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000021FF010C8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000021FF010C820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000021FF010F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000021FF00AC4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000021F929F5EE0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000021F929F5EE0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000021F929F5EE0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000021F929F5EE0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615860546, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021F929DF4F0>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000021FF05F6670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615860546, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021F929DF4F0>
+          │       └ <function Matcher.run at 0x0000021FF02C79D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615860546, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021F929DF4F0>
+          │    │           └ <function disable_service at 0x0000021F92939040>
+          │    └ <function Matcher.run_handler at 0x0000021FF02C7940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000021F92939040>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 119, in disable_service
+    u_priv = priv.get_user_priv(event)
+             │    │             └ GroupMessageEvent(time=1615860546, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+             │    └ <function get_user_priv at 0x0000021FF06EF550>
+             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
+
+  File "C:\bot\SalmonBot\salmon\priv.py", line 51, in get_user_priv
+    if uid in SUPERUSER:
+       │      └ <nonebot.permission.Permission object at 0x0000021FF02C4040>
+       └ 1351495774
+
+TypeError: argument of type 'Permission' is not iterable
+
+
+[2021-03-16 10:09:06,955 nonebot] DEBUG: 2021-03-16 10:09:06.955 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:09:06,990 nonebot] INFO: 2021-03-16 10:09:06.990 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -913255471 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  已禁用服务：每日签到"
+[2021-03-16 10:09:06,991 nonebot] DEBUG: 2021-03-16 10:09:06.991 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:09:07,062 nonebot] INFO: 2021-03-16 10:09:07.062 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1475626610 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：每日签到"
+[2021-03-16 10:09:07,062 nonebot] DEBUG: 2021-03-16 10:09:07.062 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:13:22,799 nonebot] INFO: 2021-03-16 10:13:22.798 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 10:13:22,800 nonebot] INFO: 2021-03-16 10:13:22.800 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 10:13:22,802 nonebot] DEBUG: 2021-03-16 10:13:22.802 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'tencent_app_id': '', 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': ''}
+[2021-03-16 10:13:22,900 nonebot] DEBUG: 2021-03-16 10:13:22.900 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 10:13:22,902 nonebot] INFO: 2021-03-16 10:13:22.901 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 10:13:22,903 nonebot] INFO: 2021-03-16 10:13:22.903 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 10:13:22,905 nonebot] INFO: 2021-03-16 10:13:22.905 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 10:13:22,906 nonebot] INFO: 2021-03-16 10:13:22.905 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 10:13:22,906 nonebot] DEBUG: 2021-03-16 10:13:22.906 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 10:13:22,928 uvicorn] INFO: 2021-03-16 10:13:22.928 | INFO     | uvicorn:serve:405 - Started server process [12232]
+[2021-03-16 10:13:22,929 uvicorn] INFO: 2021-03-16 10:13:22.929 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 10:13:22,930 uvicorn] INFO: 2021-03-16 10:13:22.930 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 10:13:22,930 uvicorn] INFO: 2021-03-16 10:13:22.930 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 10:13:23,295 uvicorn] INFO: 2021-03-16 10:13:23.294 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51389) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 10:13:23,295 nonebot] INFO: 2021-03-16 10:13:23.295 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 10:13:31,587 nonebot] INFO: 2021-03-16 10:13:31.586 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 552826596 from 1351495774@[群:1128254624] "禁用 每日签到"
+[2021-03-16 10:13:31,588 nonebot] DEBUG: 2021-03-16 10:13:31.587 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:13:31,589 nonebot] INFO: 2021-03-16 10:13:31.589 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:13:31,590 nonebot] DEBUG: 2021-03-16 10:13:31.590 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 10:13:31,591 nonebot] INFO: 2021-03-16 10:13:31.590 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 10:13:31,617 nonebot] ERROR: 2021-03-16 10:13:31.591 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x00000235478A4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000023545048A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000023569F75C20>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000023545037F70>
+    │       │   └ None
+    │       └ <function run at 0x0000023569E114C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000023569DE71F0>
+    └ <uvicorn.main.Server object at 0x0000023569F9CDF0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000023569DE7280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000023569F9CDF0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000002354776D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000002354776D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002354776F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002354770C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002356A054DF0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002356A054DF0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002356A054DF0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002356A054DF0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615860811, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002356A03D370>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000023547C56670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615860811, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002356A03D370>
+          │       └ <function Matcher.run at 0x00000235479269D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615860811, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002356A03D370>
+          │    │           └ <function disable_service at 0x0000023569F9D430>
+          │    └ <function Matcher.run_handler at 0x0000023547926940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000023569F9D430>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 119, in disable_service
+    u_priv = priv.get_user_priv(event)
+             │    │             └ GroupMessageEvent(time=1615860811, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+             │    └ <function get_user_priv at 0x0000023547D4F4C0>
+             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
+
+  File "C:\bot\SalmonBot\salmon\priv.py", line 51, in get_user_priv
+    if uid in SUPERUSER:
+       │      └ <nonebot.permission.Permission object at 0x0000023547924040>
+       └ 1351495774
+
+TypeError: argument of type 'Permission' is not iterable
+
+
+[2021-03-16 10:13:31,620 nonebot] DEBUG: 2021-03-16 10:13:31.620 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 10:13:31,703 nonebot] INFO: 2021-03-16 10:13:31.702 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1174788258 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  已禁用服务：每日签到"
+[2021-03-16 10:13:31,703 nonebot] DEBUG: 2021-03-16 10:13:31.703 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 10:13:31,780 nonebot] INFO: 2021-03-16 10:13:31.779 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -822274104 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：每日签到"
+[2021-03-16 10:13:31,780 nonebot] DEBUG: 2021-03-16 10:13:31.780 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:01:54,587 nonebot] INFO: 2021-03-16 11:01:54.586 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 11:01:54,588 nonebot] INFO: 2021-03-16 11:01:54.588 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 11:01:54,590 nonebot] DEBUG: 2021-03-16 11:01:54.590 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'apscheduler_autostart': True, 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': ''}
+[2021-03-16 11:01:54,678 nonebot] DEBUG: 2021-03-16 11:01:54.678 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 11:01:54,679 nonebot] INFO: 2021-03-16 11:01:54.679 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 11:01:54,681 nonebot] INFO: 2021-03-16 11:01:54.681 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 11:01:54,683 nonebot] INFO: 2021-03-16 11:01:54.683 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 11:01:54,684 nonebot] INFO: 2021-03-16 11:01:54.683 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 11:01:54,684 nonebot] DEBUG: 2021-03-16 11:01:54.684 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 11:01:54,704 uvicorn] INFO: 2021-03-16 11:01:54.704 | INFO     | uvicorn:serve:405 - Started server process [4644]
+[2021-03-16 11:01:54,704 uvicorn] INFO: 2021-03-16 11:01:54.704 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 11:01:54,705 uvicorn] INFO: 2021-03-16 11:01:54.705 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 11:01:54,705 uvicorn] INFO: 2021-03-16 11:01:54.705 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 11:01:56,195 uvicorn] INFO: 2021-03-16 11:01:56.195 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 52455) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 11:01:56,195 nonebot] INFO: 2021-03-16 11:01:56.195 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 11:02:08,918 nonebot] INFO: 2021-03-16 11:02:08.917 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1581386329 from 1351495774@[群:1128254624] "禁用 每日签到"
+[2021-03-16 11:02:08,918 nonebot] DEBUG: 2021-03-16 11:02:08.918 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:08,919 nonebot] INFO: 2021-03-16 11:02:08.919 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:02:08,920 nonebot] DEBUG: 2021-03-16 11:02:08.920 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:02:08,921 nonebot] DEBUG: 2021-03-16 11:02:08.921 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:02:09,005 nonebot] INFO: 2021-03-16 11:02:09.004 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 692402895 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  已禁用服务：每日签到"
+[2021-03-16 11:02:09,005 nonebot] DEBUG: 2021-03-16 11:02:09.005 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:09,076 nonebot] INFO: 2021-03-16 11:02:09.075 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:02:09,076 nonebot] DEBUG: 2021-03-16 11:02:09.076 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:02:09,078 nonebot] INFO: 2021-03-16 11:02:09.077 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 2075447720 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：每日签到"
+[2021-03-16 11:02:09,078 nonebot] DEBUG: 2021-03-16 11:02:09.078 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:31,063 nonebot] INFO: 2021-03-16 11:02:31.063 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1782927228 from 1351495774@[群:1128254624] "签到"
+[2021-03-16 11:02:31,064 nonebot] DEBUG: 2021-03-16 11:02:31.063 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:40,166 nonebot] INFO: 2021-03-16 11:02:40.165 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -490897390 from 1351495774@[群:1128254624] "启用 每日签到"
+[2021-03-16 11:02:40,166 nonebot] DEBUG: 2021-03-16 11:02:40.166 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:40,167 nonebot] INFO: 2021-03-16 11:02:40.167 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:02:40,168 nonebot] DEBUG: 2021-03-16 11:02:40.168 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:02:40,170 nonebot] DEBUG: 2021-03-16 11:02:40.169 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:02:40,267 nonebot] INFO: 2021-03-16 11:02:40.267 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 2094601649 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：每日签到"
+[2021-03-16 11:02:40,268 nonebot] DEBUG: 2021-03-16 11:02:40.267 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:40,338 nonebot] INFO: 2021-03-16 11:02:40.337 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:02:40,338 nonebot] DEBUG: 2021-03-16 11:02:40.338 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:02:40,409 nonebot] INFO: 2021-03-16 11:02:40.409 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1831373667 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  已启用服务：每日签到"
+[2021-03-16 11:02:40,410 nonebot] DEBUG: 2021-03-16 11:02:40.410 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:44,831 nonebot] INFO: 2021-03-16 11:02:44.831 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -439335925 from 1351495774@[群:1128254624] "签到"
+[2021-03-16 11:02:44,832 nonebot] DEBUG: 2021-03-16 11:02:44.832 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:44,832 nonebot] INFO: 2021-03-16 11:02:44.832 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-16 11:02:44,833 nonebot] DEBUG: 2021-03-16 11:02:44.833 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from login_bonus, type=message, priority=1, temp=False>
+[2021-03-16 11:02:44,833 nonebot] DEBUG: 2021-03-16 11:02:44.833 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:02:45,154 nonebot] INFO: 2021-03-16 11:02:45.151 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 40397068 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  
+おかえりなさいませ、主さま[CQ:image,file=85fbe298713266d11ed8113b622f1bde.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-3117521619-85FBE298713266D11ED8113B622F1BDE/0?term=3]
+宝石×100を獲得しました
+私からのプレゼントです
+主人今天要购买黄金保值吗？"
+[2021-03-16 11:02:45,155 nonebot] DEBUG: 2021-03-16 11:02:45.154 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:45,555 nonebot] INFO: 2021-03-16 11:02:45.555 | INFO     | nonebot:run:561 - Matcher <Matcher from login_bonus, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:02:45,556 nonebot] DEBUG: 2021-03-16 11:02:45.556 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:02:54,165 nonebot] INFO: 2021-03-16 11:02:54.165 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -72961709 from 1351495774@[群:1128254624] "禁用 每日签到"
+[2021-03-16 11:02:54,166 nonebot] DEBUG: 2021-03-16 11:02:54.166 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:54,167 nonebot] INFO: 2021-03-16 11:02:54.167 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:02:54,168 nonebot] DEBUG: 2021-03-16 11:02:54.168 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:02:54,170 nonebot] DEBUG: 2021-03-16 11:02:54.170 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:02:54,265 nonebot] INFO: 2021-03-16 11:02:54.264 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 314905702 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  已禁用服务：每日签到"
+[2021-03-16 11:02:54,265 nonebot] DEBUG: 2021-03-16 11:02:54.265 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:54,337 nonebot] INFO: 2021-03-16 11:02:54.337 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:02:54,338 nonebot] INFO: 2021-03-16 11:02:54.338 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1707222256 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：每日签到"
+[2021-03-16 11:02:54,339 nonebot] DEBUG: 2021-03-16 11:02:54.339 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:02:54,339 nonebot] DEBUG: 2021-03-16 11:02:54.339 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:06:24,675 nonebot] INFO: 2021-03-16 11:06:24.675 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -53775030 from 3224889915@[群:1128254624] "启用 每日签到"
+[2021-03-16 11:06:24,676 nonebot] DEBUG: 2021-03-16 11:06:24.676 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:06:24,677 nonebot] INFO: 2021-03-16 11:06:24.677 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:06:24,678 nonebot] DEBUG: 2021-03-16 11:06:24.678 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:06:24,680 nonebot] DEBUG: 2021-03-16 11:06:24.680 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:06:24,775 nonebot] INFO: 2021-03-16 11:06:24.774 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1819568347 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  已启用服务：每日签到"
+[2021-03-16 11:06:24,775 nonebot] DEBUG: 2021-03-16 11:06:24.775 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:06:24,845 nonebot] INFO: 2021-03-16 11:06:24.844 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:06:24,845 nonebot] DEBUG: 2021-03-16 11:06:24.845 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:10:04,936 nonebot] INFO: 2021-03-16 11:10:04.935 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -449315802 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 11:10:04,936 nonebot] DEBUG: 2021-03-16 11:10:04.936 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:10:04,937 nonebot] INFO: 2021-03-16 11:10:04.937 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:10:04,938 nonebot] DEBUG: 2021-03-16 11:10:04.938 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:10:04,939 nonebot] DEBUG: 2021-03-16 11:10:04.939 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:10:05,140 nonebot] INFO: 2021-03-16 11:10:05.139 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 188325130 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  已禁用服务：每日签到"
+[2021-03-16 11:10:05,141 nonebot] DEBUG: 2021-03-16 11:10:05.140 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:10:05,142 nonebot] INFO: 2021-03-16 11:10:05.142 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:10:05,142 nonebot] DEBUG: 2021-03-16 11:10:05.142 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:32:09,145 nonebot] INFO: 2021-03-16 11:32:09.144 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 11:32:09,146 nonebot] INFO: 2021-03-16 11:32:09.146 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 11:32:09,148 nonebot] DEBUG: 2021-03-16 11:32:09.148 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_id': '', 'tencent_app_key': ''}
+[2021-03-16 11:32:09,233 nonebot] DEBUG: 2021-03-16 11:32:09.233 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 11:32:09,235 nonebot] INFO: 2021-03-16 11:32:09.234 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 11:32:09,236 nonebot] INFO: 2021-03-16 11:32:09.236 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 11:32:09,238 nonebot] INFO: 2021-03-16 11:32:09.238 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 11:32:09,238 nonebot] INFO: 2021-03-16 11:32:09.238 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 11:32:09,239 nonebot] DEBUG: 2021-03-16 11:32:09.239 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 11:32:09,265 uvicorn] INFO: 2021-03-16 11:32:09.264 | INFO     | uvicorn:serve:405 - Started server process [4108]
+[2021-03-16 11:32:09,265 uvicorn] INFO: 2021-03-16 11:32:09.265 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 11:32:09,266 uvicorn] INFO: 2021-03-16 11:32:09.266 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 11:32:09,266 uvicorn] INFO: 2021-03-16 11:32:09.266 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 11:32:10,739 uvicorn] INFO: 2021-03-16 11:32:10.738 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 53552) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 11:32:10,740 nonebot] INFO: 2021-03-16 11:32:10.739 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 11:32:57,630 nonebot] INFO: 2021-03-16 11:32:57.630 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 2084482460 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 11:32:57,631 nonebot] DEBUG: 2021-03-16 11:32:57.631 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:32:57,632 nonebot] INFO: 2021-03-16 11:32:57.632 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:32:57,633 nonebot] DEBUG: 2021-03-16 11:32:57.633 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:32:57,635 nonebot] DEBUG: 2021-03-16 11:32:57.635 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 11:32:57,813 nonebot] INFO: 2021-03-16 11:32:57.813 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:32:57,814 nonebot] DEBUG: 2021-03-16 11:32:57.814 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:32:57,894 nonebot] INFO: 2021-03-16 11:32:57.894 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1789065047 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 11:32:57,895 nonebot] DEBUG: 2021-03-16 11:32:57.895 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:51:55,823 nonebot] INFO: 2021-03-16 11:51:55.822 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 11:51:55,825 nonebot] INFO: 2021-03-16 11:51:55.825 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 11:51:55,829 nonebot] DEBUG: 2021-03-16 11:51:55.829 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'/', ''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev'}
+[2021-03-16 11:51:55,921 nonebot] DEBUG: 2021-03-16 11:51:55.921 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 11:51:55,922 nonebot] INFO: 2021-03-16 11:51:55.922 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 11:51:55,924 nonebot] INFO: 2021-03-16 11:51:55.924 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 11:51:55,926 nonebot] INFO: 2021-03-16 11:51:55.925 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 11:51:55,926 nonebot] INFO: 2021-03-16 11:51:55.926 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 11:51:55,926 nonebot] DEBUG: 2021-03-16 11:51:55.926 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 11:51:55,944 uvicorn] INFO: 2021-03-16 11:51:55.944 | INFO     | uvicorn:serve:405 - Started server process [10580]
+[2021-03-16 11:51:55,946 uvicorn] INFO: 2021-03-16 11:51:55.945 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 11:51:55,946 uvicorn] INFO: 2021-03-16 11:51:55.946 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 11:51:55,947 uvicorn] INFO: 2021-03-16 11:51:55.946 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 11:51:57,083 uvicorn] INFO: 2021-03-16 11:51:57.083 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 53966) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 11:51:57,084 nonebot] INFO: 2021-03-16 11:51:57.084 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 11:52:01,807 nonebot] INFO: 2021-03-16 11:52:01.806 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 2069064069 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 11:52:01,808 nonebot] DEBUG: 2021-03-16 11:52:01.807 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:52:01,809 nonebot] INFO: 2021-03-16 11:52:01.809 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:52:01,810 nonebot] DEBUG: 2021-03-16 11:52:01.809 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:52:01,811 nonebot] INFO: 2021-03-16 11:52:01.810 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:52:01,870 nonebot] ERROR: 2021-03-16 11:52:01.811 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000017729FF4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000177277A9A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001774C6C7D10>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000017727797F70>
+    │       │   └ None
+    │       └ <function run at 0x000001774C5434C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001774C5651F0>
+    └ <uvicorn.main.Server object at 0x000001774C6EAA60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001774C565280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001774C6EAA60>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000017729EBC8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000017729EBC820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000017729EBF3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000017729E5C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001774C79D910>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001774C79D910>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001774C79D910>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001774C79D910>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615866721, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001774C786520>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001772A3A5670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615866721, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001774C786520>
+          │       └ <function Matcher.run at 0x000001772A0779D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615866721, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001774C786520>
+          │    │           └ <function disable_service at 0x000001774C6E7160>
+          │    └ <function Matcher.run_handler at 0x000001772A077940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x000001774C6E7160>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 119, in disable_service
+    u_priv = priv.get_user_priv(event)
+             │    │             └ GroupMessageEvent(time=1615866721, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+             │    └ <function get_user_priv at 0x000001772A49E550>
+             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
+
+TypeError: get_user_priv() missing 1 required positional argument: 'event'
+
+
+[2021-03-16 11:52:01,872 nonebot] DEBUG: 2021-03-16 11:52:01.872 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:52:01,971 nonebot] INFO: 2021-03-16 11:52:01.970 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -336825324 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 11:52:01,971 nonebot] DEBUG: 2021-03-16 11:52:01.971 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:57:10,837 nonebot] INFO: 2021-03-16 11:57:10.836 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 11:57:10,838 nonebot] INFO: 2021-03-16 11:57:10.838 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 11:57:10,840 nonebot] DEBUG: 2021-03-16 11:57:10.840 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'tencent_app_key': '', 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True}
+[2021-03-16 11:57:10,924 nonebot] DEBUG: 2021-03-16 11:57:10.924 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 11:57:10,926 nonebot] INFO: 2021-03-16 11:57:10.926 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 11:57:10,930 nonebot] INFO: 2021-03-16 11:57:10.930 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 11:57:10,932 nonebot] INFO: 2021-03-16 11:57:10.932 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 11:57:10,932 nonebot] INFO: 2021-03-16 11:57:10.932 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 11:57:10,933 nonebot] DEBUG: 2021-03-16 11:57:10.933 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 11:57:10,951 uvicorn] INFO: 2021-03-16 11:57:10.951 | INFO     | uvicorn:serve:405 - Started server process [7096]
+[2021-03-16 11:57:10,952 uvicorn] INFO: 2021-03-16 11:57:10.952 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 11:57:10,952 uvicorn] INFO: 2021-03-16 11:57:10.952 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 11:57:10,953 uvicorn] INFO: 2021-03-16 11:57:10.953 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 11:57:11,178 uvicorn] INFO: 2021-03-16 11:57:11.178 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54100) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 11:57:11,179 nonebot] INFO: 2021-03-16 11:57:11.179 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 11:57:15,507 nonebot] INFO: 2021-03-16 11:57:15.506 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -64172697 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 11:57:15,508 nonebot] DEBUG: 2021-03-16 11:57:15.507 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:57:15,509 nonebot] INFO: 2021-03-16 11:57:15.509 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:57:15,510 nonebot] DEBUG: 2021-03-16 11:57:15.510 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:57:15,511 nonebot] INFO: 2021-03-16 11:57:15.510 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:57:15,550 nonebot] ERROR: 2021-03-16 11:57:15.511 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x00000160343D4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000016031BA8A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000016056AA6C70>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000016031B97F70>
+    │       │   └ None
+    │       └ <function run at 0x00000160569224C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x00000160569431F0>
+    └ <uvicorn.main.Server object at 0x0000016056AC0880>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000016056943280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000016056AC0880>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001603429D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001603429D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001603429F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001603423C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000016056B86970>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000016056B86970>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000016056B86970>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000016056B86970>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1615867035, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016056B6F4F0>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000016034786670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1615867035, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016056B6F4F0>
+          │       └ <function Matcher.run at 0x00000160344579D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1615867035, self_id=3235657949, post_type='message', sub_type='normal', user_id=3224889915, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000016056B6F4F0>
+          │    │           └ <function disable_service at 0x0000016056ACA040>
+          │    └ <function Matcher.run_handler at 0x0000016034457940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000016056ACA040>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 119, in disable_service
+    u_priv = priv.get_user_priv()
+             │    └ <function get_user_priv at 0x000001603487F550>
+             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
+
+TypeError: get_user_priv() missing 2 required positional arguments: 'bot' and 'event'
+
+
+[2021-03-16 11:57:15,553 nonebot] DEBUG: 2021-03-16 11:57:15.553 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:57:15,732 nonebot] INFO: 2021-03-16 11:57:15.731 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1960051215 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 11:57:15,732 nonebot] DEBUG: 2021-03-16 11:57:15.732 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:58:04,901 nonebot] INFO: 2021-03-16 11:58:04.901 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 11:58:04,903 nonebot] INFO: 2021-03-16 11:58:04.902 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 11:58:04,905 nonebot] DEBUG: 2021-03-16 11:58:04.904 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 11:58:04,991 nonebot] DEBUG: 2021-03-16 11:58:04.991 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 11:58:04,993 nonebot] INFO: 2021-03-16 11:58:04.993 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 11:58:04,994 nonebot] INFO: 2021-03-16 11:58:04.994 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 11:58:04,999 nonebot] INFO: 2021-03-16 11:58:04.999 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 11:58:05,000 nonebot] INFO: 2021-03-16 11:58:04.999 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 11:58:05,000 nonebot] DEBUG: 2021-03-16 11:58:05.000 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 11:58:05,017 uvicorn] INFO: 2021-03-16 11:58:05.017 | INFO     | uvicorn:serve:405 - Started server process [3192]
+[2021-03-16 11:58:05,018 uvicorn] INFO: 2021-03-16 11:58:05.018 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 11:58:05,018 uvicorn] INFO: 2021-03-16 11:58:05.018 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 11:58:05,019 uvicorn] INFO: 2021-03-16 11:58:05.019 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 11:58:07,195 uvicorn] INFO: 2021-03-16 11:58:07.194 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54120) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 11:58:07,196 nonebot] INFO: 2021-03-16 11:58:07.195 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 11:58:19,106 nonebot] INFO: 2021-03-16 11:58:19.105 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1688111012 from 3224889915 "禁用"
+[2021-03-16 11:58:19,106 nonebot] DEBUG: 2021-03-16 11:58:19.106 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:58:19,106 nonebot] INFO: 2021-03-16 11:58:19.106 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:58:19,107 nonebot] DEBUG: 2021-03-16 11:58:19.107 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:58:19,107 nonebot] INFO: 2021-03-16 11:58:19.107 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:58:19,156 nonebot] ERROR: 2021-03-16 11:58:19.107 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000021A32C14C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000021A303B8A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000021A552E5D60>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000021A303A7F70>
+    │       │   └ None
+    │       └ <function run at 0x0000021A551624C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000021A551831F0>
+    └ <uvicorn.main.Server object at 0x0000021A55307F40>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000021A55183280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000021A55307F40>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000021A32ADD8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000021A32ADD820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000021A32ADF3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000021A32A7C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000021A553C68E0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000021A553C68E0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000021A553C68E0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000021A553C68E0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615867099, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021A553B04F0>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000021A32FC6670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615867099, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021A553B04F0>
+          │       └ <function Matcher.run at 0x0000021A32C969D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615867099, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021A553B04F0>
+          │    │           └ <function disable_service at 0x0000021A55309280>
+          │    └ <function Matcher.run_handler at 0x0000021A32C96940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000021A55309280>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 136, in disable_service
+    if event.group_id not in bot.config.SUPERUSERS:
+       │                     │   └ Config(driver='nonebot.drivers.fastapi', host=IPv4Address('127.0.0.1'), port=8080, debug=False, api_root={}, api_timeout=30.0...
+       │                     └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000021A553B04F0>
+       └ PrivateMessageEvent(time=1615867099, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+
+AttributeError: 'PrivateMessageEvent' object has no attribute 'group_id'
+
+
+[2021-03-16 11:58:19,159 nonebot] DEBUG: 2021-03-16 11:58:19.158 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 11:59:21,625 nonebot] INFO: 2021-03-16 11:59:21.625 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 11:59:21,626 nonebot] INFO: 2021-03-16 11:59:21.626 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 11:59:21,628 nonebot] DEBUG: 2021-03-16 11:59:21.627 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'/', ''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'tencent_app_id': ''}
+[2021-03-16 11:59:21,711 nonebot] DEBUG: 2021-03-16 11:59:21.711 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 11:59:21,713 nonebot] INFO: 2021-03-16 11:59:21.713 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 11:59:21,715 nonebot] INFO: 2021-03-16 11:59:21.714 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 11:59:21,719 nonebot] INFO: 2021-03-16 11:59:21.719 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 11:59:21,720 nonebot] INFO: 2021-03-16 11:59:21.720 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 11:59:21,720 nonebot] DEBUG: 2021-03-16 11:59:21.720 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 11:59:21,737 uvicorn] INFO: 2021-03-16 11:59:21.737 | INFO     | uvicorn:serve:405 - Started server process [13288]
+[2021-03-16 11:59:21,738 uvicorn] INFO: 2021-03-16 11:59:21.738 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 11:59:21,738 uvicorn] INFO: 2021-03-16 11:59:21.738 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 11:59:21,739 uvicorn] INFO: 2021-03-16 11:59:21.739 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 11:59:22,220 uvicorn] INFO: 2021-03-16 11:59:22.220 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54147) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 11:59:22,221 nonebot] INFO: 2021-03-16 11:59:22.220 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 11:59:27,364 nonebot] INFO: 2021-03-16 11:59:27.364 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 328841010 from 3224889915 "禁用"
+[2021-03-16 11:59:27,364 nonebot] DEBUG: 2021-03-16 11:59:27.364 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 11:59:27,365 nonebot] INFO: 2021-03-16 11:59:27.365 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:59:27,365 nonebot] DEBUG: 2021-03-16 11:59:27.365 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 11:59:27,365 nonebot] INFO: 2021-03-16 11:59:27.365 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 11:59:27,409 nonebot] ERROR: 2021-03-16 11:59:27.365 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000017A515D4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000017A4ED68A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000017A73CA6B80>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000017A4ED57F70>
+    │       │   └ None
+    │       └ <function run at 0x0000017A73B224C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000017A73B431F0>
+    └ <uvicorn.main.Server object at 0x0000017A73CC7F40>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000017A73B43280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000017A73CC7F40>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000017A5149C8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000017A5149C820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000017A5149F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000017A5143C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000017A73D86D30>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000017A73D86D30>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000017A73D86D30>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000017A73D86D30>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615867167, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000017A73D704F0>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000017A51985670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615867167, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000017A73D704F0>
+          │       └ <function Matcher.run at 0x0000017A516579D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615867167, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000017A73D704F0>
+          │    │           └ <function disable_service at 0x0000017A73CD3280>
+          │    └ <function Matcher.run_handler at 0x0000017A51657940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000017A73CD3280>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 136, in disable_service
+    if event.user_id not in bot.config.SUPERUSERS:
+       │     │              │   └ Config(driver='nonebot.drivers.fastapi', host=IPv4Address('127.0.0.1'), port=8080, debug=False, api_root={}, api_timeout=30.0...
+       │     │              └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000017A73D704F0>
+       │     └ 3224889915
+       └ PrivateMessageEvent(time=1615867167, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+[2021-03-16 11:59:27,412 nonebot] DEBUG: 2021-03-16 11:59:27.411 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:12:13,040 nonebot] INFO: 2021-03-16 12:12:13.039 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 12:12:13,043 nonebot] INFO: 2021-03-16 12:12:13.042 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 12:12:13,047 nonebot] DEBUG: 2021-03-16 12:12:13.047 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'tencent_app_id': '', 'apscheduler_autostart': True}
+[2021-03-16 12:12:13,140 nonebot] DEBUG: 2021-03-16 12:12:13.140 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 12:12:13,141 nonebot] INFO: 2021-03-16 12:12:13.141 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 12:12:13,143 nonebot] INFO: 2021-03-16 12:12:13.143 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 12:12:13,145 nonebot] INFO: 2021-03-16 12:12:13.144 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 12:12:13,145 nonebot] INFO: 2021-03-16 12:12:13.145 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 12:12:13,145 nonebot] DEBUG: 2021-03-16 12:12:13.145 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 12:12:13,167 uvicorn] INFO: 2021-03-16 12:12:13.167 | INFO     | uvicorn:serve:405 - Started server process [3660]
+[2021-03-16 12:12:13,168 uvicorn] INFO: 2021-03-16 12:12:13.168 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 12:12:13,168 uvicorn] INFO: 2021-03-16 12:12:13.168 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 12:12:13,169 uvicorn] INFO: 2021-03-16 12:12:13.169 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 12:12:15,472 uvicorn] INFO: 2021-03-16 12:12:15.472 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54447) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 12:12:15,473 nonebot] INFO: 2021-03-16 12:12:15.473 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 12:12:18,974 nonebot] INFO: 2021-03-16 12:12:18.973 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1912790383 from 3224889915 "禁用"
+[2021-03-16 12:12:18,974 nonebot] DEBUG: 2021-03-16 12:12:18.974 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:12:18,976 nonebot] INFO: 2021-03-16 12:12:18.975 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:12:18,976 nonebot] DEBUG: 2021-03-16 12:12:18.976 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:12:18,977 nonebot] INFO: 2021-03-16 12:12:18.977 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:12:19,030 nonebot] ERROR: 2021-03-16 12:12:18.977 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000017117BF4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000017115398A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001713A2C6CC0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000017115387F70>
+    │       │   └ None
+    │       └ <function run at 0x000001713A1434C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001713A1651F0>
+    └ <uvicorn.main.Server object at 0x000001713A2EAA60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001713A165280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001713A2EAA60>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000017117ABD8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000017117ABD820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000017117ABF3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000017117A5C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001713A39D910>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001713A39D910>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001713A39D910>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001713A39D910>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615867938, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001713A386520>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000017117FA6670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615867938, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001713A386520>
+          │       └ <function Matcher.run at 0x0000017117C779D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615867938, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001713A386520>
+          │    │           └ <function disable_service at 0x000001713A2E7160>
+          │    └ <function Matcher.run_handler at 0x0000017117C77940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x000001713A2E7160>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 136, in disable_service
+    if event.user_id not in bot.config.SUPERUSERS:
+       │     │              │   └ Config(driver='nonebot.drivers.fastapi', host=IPv4Address('127.0.0.1'), port=8080, debug=False, api_root={}, api_timeout=30.0...
+       │     │              └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001713A386520>
+       │     └ 3224889915
+       └ PrivateMessageEvent(time=1615867938, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+
+TypeError: argument of type 'NoneType' is not iterable
+
+
+[2021-03-16 12:12:19,032 nonebot] DEBUG: 2021-03-16 12:12:19.032 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:12:55,911 nonebot] INFO: 2021-03-16 12:12:55.911 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 12:12:55,912 nonebot] INFO: 2021-03-16 12:12:55.912 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 12:12:55,914 nonebot] DEBUG: 2021-03-16 12:12:55.914 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'/', ''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'tencent_app_key': '', 'environment': 'dev', 'apscheduler_autostart': True}
+[2021-03-16 12:12:56,000 nonebot] DEBUG: 2021-03-16 12:12:56.000 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 12:12:56,001 nonebot] INFO: 2021-03-16 12:12:56.001 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 12:12:56,006 nonebot] INFO: 2021-03-16 12:12:56.005 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 12:12:56,007 nonebot] INFO: 2021-03-16 12:12:56.007 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 12:12:56,008 nonebot] INFO: 2021-03-16 12:12:56.007 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 12:12:56,008 nonebot] DEBUG: 2021-03-16 12:12:56.008 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 12:12:56,025 uvicorn] INFO: 2021-03-16 12:12:56.025 | INFO     | uvicorn:serve:405 - Started server process [7504]
+[2021-03-16 12:12:56,025 uvicorn] INFO: 2021-03-16 12:12:56.025 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 12:12:56,026 uvicorn] INFO: 2021-03-16 12:12:56.026 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 12:12:56,026 uvicorn] INFO: 2021-03-16 12:12:56.026 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 12:12:57,488 uvicorn] INFO: 2021-03-16 12:12:57.487 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54467) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 12:12:57,489 nonebot] INFO: 2021-03-16 12:12:57.488 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 12:13:01,247 nonebot] INFO: 2021-03-16 12:13:01.247 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -84274681 from 3224889915 "禁用"
+[2021-03-16 12:13:01,248 nonebot] DEBUG: 2021-03-16 12:13:01.247 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:13:01,249 nonebot] INFO: 2021-03-16 12:13:01.249 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:13:01,250 nonebot] DEBUG: 2021-03-16 12:13:01.250 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:13:01,250 nonebot] DEBUG: 2021-03-16 12:13:01.250 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:13:01,253 nonebot] INFO: 2021-03-16 12:13:01.253 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:13:01,254 nonebot] DEBUG: 2021-03-16 12:13:01.253 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:13:11,339 nonebot] INFO: 2021-03-16 12:13:11.338 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1696963805 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 12:13:11,339 nonebot] DEBUG: 2021-03-16 12:13:11.339 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:13:11,340 nonebot] INFO: 2021-03-16 12:13:11.340 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:13:11,341 nonebot] DEBUG: 2021-03-16 12:13:11.341 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:13:11,342 nonebot] DEBUG: 2021-03-16 12:13:11.341 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:13:11,472 nonebot] INFO: 2021-03-16 12:13:11.472 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -79623810 from 2842117629@[群:1128254624] "禁用 每日签到"
+[2021-03-16 12:13:11,472 nonebot] DEBUG: 2021-03-16 12:13:11.472 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:13:11,473 nonebot] INFO: 2021-03-16 12:13:11.472 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:13:11,473 nonebot] DEBUG: 2021-03-16 12:13:11.473 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:13:11,474 nonebot] DEBUG: 2021-03-16 12:13:11.474 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:13:11,551 nonebot] INFO: 2021-03-16 12:13:11.551 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1941554712 from 3224889915@[群:1128254624] "[CQ:at,qq=2842117629]  未找到服务：每日签到"
+[2021-03-16 12:13:11,552 nonebot] DEBUG: 2021-03-16 12:13:11.552 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:13:11,625 nonebot] INFO: 2021-03-16 12:13:11.625 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:13:11,625 nonebot] DEBUG: 2021-03-16 12:13:11.625 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:13:11,665 nonebot] INFO: 2021-03-16 12:13:11.664 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -218675883 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 12:13:11,666 nonebot] DEBUG: 2021-03-16 12:13:11.665 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:13:11,856 nonebot] INFO: 2021-03-16 12:13:11.856 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:13:11,857 nonebot] DEBUG: 2021-03-16 12:13:11.857 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:14:20,220 nonebot] INFO: 2021-03-16 12:14:20.219 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 12:14:20,221 nonebot] INFO: 2021-03-16 12:14:20.221 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 12:14:20,222 nonebot] DEBUG: 2021-03-16 12:14:20.222 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'tencent_app_key': '', 'tencent_app_id': '', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 12:14:20,306 nonebot] DEBUG: 2021-03-16 12:14:20.306 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 12:14:20,308 nonebot] INFO: 2021-03-16 12:14:20.308 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 12:14:20,309 nonebot] INFO: 2021-03-16 12:14:20.309 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 12:14:20,316 nonebot] INFO: 2021-03-16 12:14:20.315 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 12:14:20,316 nonebot] INFO: 2021-03-16 12:14:20.316 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 12:14:20,317 nonebot] DEBUG: 2021-03-16 12:14:20.316 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 12:14:20,339 uvicorn] INFO: 2021-03-16 12:14:20.338 | INFO     | uvicorn:serve:405 - Started server process [3412]
+[2021-03-16 12:14:20,339 uvicorn] INFO: 2021-03-16 12:14:20.339 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 12:14:20,340 uvicorn] INFO: 2021-03-16 12:14:20.340 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 12:14:20,340 uvicorn] INFO: 2021-03-16 12:14:20.340 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 12:14:21,514 uvicorn] INFO: 2021-03-16 12:14:21.514 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54504) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 12:14:21,514 nonebot] INFO: 2021-03-16 12:14:21.514 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 12:14:27,296 nonebot] INFO: 2021-03-16 12:14:27.295 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 649212179 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 12:14:27,296 nonebot] DEBUG: 2021-03-16 12:14:27.296 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:14:27,297 nonebot] INFO: 2021-03-16 12:14:27.297 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:14:27,297 nonebot] DEBUG: 2021-03-16 12:14:27.297 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:14:27,297 nonebot] DEBUG: 2021-03-16 12:14:27.297 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:14:27,459 nonebot] INFO: 2021-03-16 12:14:27.459 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1370816901 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 12:14:27,460 nonebot] DEBUG: 2021-03-16 12:14:27.459 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:14:27,935 nonebot] INFO: 2021-03-16 12:14:27.935 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:14:27,936 nonebot] DEBUG: 2021-03-16 12:14:27.936 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:14:52,103 nonebot] INFO: 2021-03-16 12:14:52.103 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1629383945 from 1351495774 "禁用 每日签到"
+[2021-03-16 12:14:52,104 nonebot] DEBUG: 2021-03-16 12:14:52.104 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:14:52,105 nonebot] INFO: 2021-03-16 12:14:52.104 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:14:52,105 nonebot] DEBUG: 2021-03-16 12:14:52.105 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:14:52,106 nonebot] DEBUG: 2021-03-16 12:14:52.105 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:14:52,108 nonebot] INFO: 2021-03-16 12:14:52.108 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:14:52,109 nonebot] DEBUG: 2021-03-16 12:14:52.109 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:16:47,640 nonebot] INFO: 2021-03-16 12:16:47.640 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 568325386 from 1351495774@[群:1128254624] "禁用 每日签到"
+[2021-03-16 12:16:47,641 nonebot] DEBUG: 2021-03-16 12:16:47.640 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:16:47,642 nonebot] INFO: 2021-03-16 12:16:47.641 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:16:47,642 nonebot] DEBUG: 2021-03-16 12:16:47.642 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:16:47,644 nonebot] DEBUG: 2021-03-16 12:16:47.643 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:16:47,731 nonebot] INFO: 2021-03-16 12:16:47.730 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1457046940 from 3224889915@[群:1128254624] "[CQ:at,qq=1351495774]  未找到服务：每日签到"
+[2021-03-16 12:16:47,731 nonebot] DEBUG: 2021-03-16 12:16:47.731 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:16:47,807 nonebot] INFO: 2021-03-16 12:16:47.806 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1193892688 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  已禁用服务：每日签到"
+[2021-03-16 12:16:47,807 nonebot] DEBUG: 2021-03-16 12:16:47.807 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:16:47,808 nonebot] INFO: 2021-03-16 12:16:47.808 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:16:47,809 nonebot] DEBUG: 2021-03-16 12:16:47.809 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:19:58,476 nonebot] INFO: 2021-03-16 12:19:58.475 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 370761119 from 1351495774 "启用"
+[2021-03-16 12:19:58,476 nonebot] DEBUG: 2021-03-16 12:19:58.476 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:19:58,476 nonebot] INFO: 2021-03-16 12:19:58.476 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:19:58,476 nonebot] DEBUG: 2021-03-16 12:19:58.476 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:19:58,477 nonebot] DEBUG: 2021-03-16 12:19:58.477 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:19:58,480 nonebot] INFO: 2021-03-16 12:19:58.479 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:19:58,480 nonebot] DEBUG: 2021-03-16 12:19:58.480 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:23:16,450 nonebot] INFO: 2021-03-16 12:23:16.450 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 12:23:16,451 nonebot] INFO: 2021-03-16 12:23:16.451 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 12:23:16,453 nonebot] DEBUG: 2021-03-16 12:23:16.453 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'apscheduler_autostart': True, 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': ''}
+[2021-03-16 12:23:16,537 nonebot] DEBUG: 2021-03-16 12:23:16.537 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 12:23:16,539 nonebot] INFO: 2021-03-16 12:23:16.538 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 12:23:16,540 nonebot] INFO: 2021-03-16 12:23:16.540 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 12:23:16,542 nonebot] INFO: 2021-03-16 12:23:16.542 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 12:23:16,543 nonebot] INFO: 2021-03-16 12:23:16.542 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 12:23:16,543 nonebot] DEBUG: 2021-03-16 12:23:16.543 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 12:23:16,562 uvicorn] INFO: 2021-03-16 12:23:16.562 | INFO     | uvicorn:serve:405 - Started server process [6492]
+[2021-03-16 12:23:16,563 uvicorn] INFO: 2021-03-16 12:23:16.563 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 12:23:16,563 uvicorn] INFO: 2021-03-16 12:23:16.563 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 12:23:16,564 uvicorn] INFO: 2021-03-16 12:23:16.564 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 12:23:16,680 uvicorn] INFO: 2021-03-16 12:23:16.679 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54822) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 12:23:16,681 nonebot] INFO: 2021-03-16 12:23:16.680 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 12:23:24,981 nonebot] INFO: 2021-03-16 12:23:24.981 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -2035924978 from 1351495774 "禁用 每日签到"
+[2021-03-16 12:23:24,981 nonebot] DEBUG: 2021-03-16 12:23:24.981 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:23:24,981 nonebot] INFO: 2021-03-16 12:23:24.981 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:23:24,982 nonebot] DEBUG: 2021-03-16 12:23:24.982 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 12:23:24,982 nonebot] DEBUG: 2021-03-16 12:23:24.982 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 12:23:24,985 nonebot] INFO: 2021-03-16 12:23:24.984 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 12:23:24,986 nonebot] DEBUG: 2021-03-16 12:23:24.986 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 12:25:02,276 nonebot] INFO: 2021-03-16 12:25:02.275 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 678017313 from 2842117629@[群:1128254624] "[CQ:image,file=ab5139c99f0a70ea3b59ae4b5ab5c893.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2361155639-AB5139C99F0A70EA3B59AE4B5AB5C893/0?term=3]"
+[2021-03-16 12:25:02,276 nonebot] DEBUG: 2021-03-16 12:25:02.276 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 12:41:31,556 nonebot] ERROR: 2021-03-16 12:41:31.556 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+[2021-03-16 13:19:06,499 nonebot] INFO: 2021-03-16 13:19:06.499 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 13:19:06,501 nonebot] INFO: 2021-03-16 13:19:06.500 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 13:19:06,503 nonebot] DEBUG: 2021-03-16 13:19:06.502 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774', '3224889915'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'apscheduler_autostart': True, 'environment': 'dev', 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 13:19:06,590 nonebot] DEBUG: 2021-03-16 13:19:06.590 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 13:19:06,591 nonebot] INFO: 2021-03-16 13:19:06.591 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 13:19:06,593 nonebot] INFO: 2021-03-16 13:19:06.593 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 13:19:06,595 nonebot] INFO: 2021-03-16 13:19:06.594 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 13:19:06,595 nonebot] INFO: 2021-03-16 13:19:06.595 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 13:19:06,595 nonebot] DEBUG: 2021-03-16 13:19:06.595 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 13:19:06,613 uvicorn] INFO: 2021-03-16 13:19:06.613 | INFO     | uvicorn:serve:405 - Started server process [3064]
+[2021-03-16 13:19:06,614 uvicorn] INFO: 2021-03-16 13:19:06.614 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 13:19:06,614 uvicorn] INFO: 2021-03-16 13:19:06.614 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 13:19:06,615 uvicorn] INFO: 2021-03-16 13:19:06.615 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 13:19:17,847 uvicorn] INFO: 2021-03-16 13:19:17.847 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 55967) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 13:19:17,848 nonebot] INFO: 2021-03-16 13:19:17.847 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 13:19:53,604 nonebot] INFO: 2021-03-16 13:19:53.603 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1601079735 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 13:19:53,604 nonebot] DEBUG: 2021-03-16 13:19:53.604 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:19:53,604 nonebot] INFO: 2021-03-16 13:19:53.604 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 13:19:53,605 nonebot] DEBUG: 2021-03-16 13:19:53.605 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 13:19:53,605 nonebot] DEBUG: 2021-03-16 13:19:53.605 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 13:19:53,842 nonebot] INFO: 2021-03-16 13:19:53.842 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1068040274 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 13:19:53,842 nonebot] DEBUG: 2021-03-16 13:19:53.842 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:19:54,150 nonebot] INFO: 2021-03-16 13:19:54.150 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 13:19:54,151 nonebot] DEBUG: 2021-03-16 13:19:54.151 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 13:20:29,552 nonebot] INFO: 2021-03-16 13:20:29.552 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 321926455 from 3224889915 "禁用 每日签到"
+[2021-03-16 13:20:29,552 nonebot] DEBUG: 2021-03-16 13:20:29.552 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:20:29,553 nonebot] INFO: 2021-03-16 13:20:29.553 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 13:20:29,553 nonebot] DEBUG: 2021-03-16 13:20:29.553 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 13:20:29,553 nonebot] DEBUG: 2021-03-16 13:20:29.553 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 13:20:29,556 nonebot] INFO: 2021-03-16 13:20:29.556 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 13:20:29,556 nonebot] DEBUG: 2021-03-16 13:20:29.556 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 13:36:57,730 nonebot] INFO: 2021-03-16 13:36:57.729 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1499442712 from 296432694@[群:1128254624] "[CQ:at,qq=1351495774] 鱼姐，超炮联动的是哪些角色"
+[2021-03-16 13:36:57,731 nonebot] DEBUG: 2021-03-16 13:36:57.730 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:38:30,912 nonebot] INFO: 2021-03-16 13:38:30.911 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 952419403 from 3224889915@[群:1128254624] "ppp五人，卡池2个四星1个3星，活动1个3星和一个2星"
+[2021-03-16 13:38:30,912 nonebot] DEBUG: 2021-03-16 13:38:30.912 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:40:12,500 nonebot] INFO: 2021-03-16 13:40:12.499 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1338242269 from 296432694@[群:1128254624] "[CQ:image,file=5d313afe19ca913af168dcd60e358125.image,url=http://gchat.qpic.cn/gchatpic_new/296432694/1128254624-2375652462-5D313AFE19CA913AF168DCD60E358125/0?term=3]"
+[2021-03-16 13:40:12,501 nonebot] DEBUG: 2021-03-16 13:40:12.500 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:51:03,966 nonebot] INFO: 2021-03-16 13:51:03.966 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 13:51:03,967 nonebot] INFO: 2021-03-16 13:51:03.967 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 13:51:03,969 nonebot] DEBUG: 2021-03-16 13:51:03.969 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'3224889915', '1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'apscheduler_autostart': True, 'tencent_app_id': '', 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 13:51:04,053 nonebot] DEBUG: 2021-03-16 13:51:04.053 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 13:51:04,055 nonebot] INFO: 2021-03-16 13:51:04.055 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 13:51:04,057 nonebot] INFO: 2021-03-16 13:51:04.056 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 13:51:04,061 nonebot] INFO: 2021-03-16 13:51:04.060 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 13:51:04,061 nonebot] INFO: 2021-03-16 13:51:04.061 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 13:51:04,061 nonebot] DEBUG: 2021-03-16 13:51:04.061 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 13:51:04,079 uvicorn] INFO: 2021-03-16 13:51:04.079 | INFO     | uvicorn:serve:405 - Started server process [9504]
+[2021-03-16 13:51:04,080 uvicorn] INFO: 2021-03-16 13:51:04.079 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 13:51:04,080 uvicorn] INFO: 2021-03-16 13:51:04.080 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 13:51:04,080 uvicorn] INFO: 2021-03-16 13:51:04.080 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 13:51:05,350 uvicorn] INFO: 2021-03-16 13:51:05.350 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 56653) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 13:51:05,351 nonebot] INFO: 2021-03-16 13:51:05.351 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 13:51:12,451 nonebot] INFO: 2021-03-16 13:51:12.451 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1681327521 from 3224889915 "禁用 每日签到"
+[2021-03-16 13:51:12,452 nonebot] DEBUG: 2021-03-16 13:51:12.452 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 13:51:12,452 nonebot] INFO: 2021-03-16 13:51:12.452 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 13:51:12,452 nonebot] DEBUG: 2021-03-16 13:51:12.452 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 13:51:12,453 nonebot] INFO: 2021-03-16 13:51:12.453 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 13:51:12,479 nonebot] ERROR: 2021-03-16 13:51:12.453 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000024AF5A14C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000024AF31D9A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000024A98287CC0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000024AF31C7F70>
+    │       │   └ None
+    │       └ <function run at 0x0000024A981034C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000024A981251F0>
+    └ <uvicorn.main.Server object at 0x0000024A982A4CA0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000024A98125280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000024A982A4CA0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000024AF58DD8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000024AF58DD820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000024AF58DF3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000024AF587C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000024A983659D0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000024A983659D0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000024A983659D0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000024A983659D0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615873872, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024A9834F520>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000024AF5DC5670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615873872, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024A9834F520>
+          │       └ <function Matcher.run at 0x0000024AF5A979D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615873872, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024A9834F520>
+          │    │           └ <function disable_service at 0x0000024A982A9280>
+          │    └ <function Matcher.run_handler at 0x0000024AF5A97940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000024A982A9280>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 136, in disable_service
+    if event.get_type() == "message" and event.user_id() in bot.config.superusers:
+       │     │                           │     │            │   │      └ {'3224889915', '1351495774'}
+       │     │                           │     │            │   └ Config(driver='nonebot.drivers.fastapi', host=IPv4Address('127.0.0.1'), port=8080, debug=False, api_root={}, api_timeout=30.0...
+       │     │                           │     │            └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024A9834F520>
+       │     │                           │     └ 3224889915
+       │     │                           └ PrivateMessageEvent(time=1615873872, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+       │     └ <function Event.get_type at 0x0000024AF5AB39D0>
+       └ PrivateMessageEvent(time=1615873872, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+
+TypeError: 'int' object is not callable
+
+
+[2021-03-16 13:51:12,485 nonebot] DEBUG: 2021-03-16 13:51:12.485 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:00:42,054 nonebot] INFO: 2021-03-16 14:00:42.052 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 829589600 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十六・一四〇〇
+
+2021/03/16(火) 15:00にアップデートを行いました。
+メインクエスト エリア44「スクァーマ氷脈・西壁」と、メインストーリー第2部 第7章の第1話から第5話を追加！
+アップデートの詳細は、公式サイト内のニュースやゲーム内のお知らせをご確認ください。
+https://t.co/Ny5RC6t6NO
+#プリコネR https://t.co/b3xs8Udy2i
+[CQ:image,file=dae1aa0f58bbd07538babef7fb2c273b.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2874202917-DAE1AA0F58BBD07538BABEF7FB2C273B/0?term=3]"
+[2021-03-16 14:00:42,055 nonebot] DEBUG: 2021-03-16 14:00:42.055 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:01:46,024 nonebot] INFO: 2021-03-16 14:01:46.023 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 344216465 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十六・一四〇一
+
+【コラボ復刻】
+本日03/16(火) 15:00から、復刻ストーリーイベント「スターライトプリンセス　Re:M@STER！」後編が開催中です！
+後編では、新たに限定ストーリーやクエストなどが追加されています！
+詳細はお知らせをご確認ください。
+https://t.co/cUVvvy2MSE
+#プリコネR #デレステ https://t.co/9CZWCWrwy8
+[CQ:image,file=494d40090c511645b0bbec81f57b40b4.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2241702649-494D40090C511645B0BBEC81F57B40B4/0?term=3]"
+[2021-03-16 14:01:46,025 nonebot] DEBUG: 2021-03-16 14:01:46.025 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:02:15,785 nonebot] INFO: 2021-03-16 14:02:15.785 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 14:02:15,788 nonebot] INFO: 2021-03-16 14:02:15.788 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 14:02:15,792 nonebot] DEBUG: 2021-03-16 14:02:15.792 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774', '3224889915'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'apscheduler_autostart': True, 'tencent_app_key': '', 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 14:02:15,885 nonebot] DEBUG: 2021-03-16 14:02:15.885 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 14:02:15,887 nonebot] INFO: 2021-03-16 14:02:15.887 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 14:02:15,894 nonebot] INFO: 2021-03-16 14:02:15.893 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 14:02:15,897 nonebot] INFO: 2021-03-16 14:02:15.897 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 14:02:15,898 nonebot] INFO: 2021-03-16 14:02:15.898 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 14:02:15,898 nonebot] DEBUG: 2021-03-16 14:02:15.898 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 14:02:15,917 uvicorn] INFO: 2021-03-16 14:02:15.917 | INFO     | uvicorn:serve:405 - Started server process [3688]
+[2021-03-16 14:02:15,918 uvicorn] INFO: 2021-03-16 14:02:15.918 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 14:02:15,918 uvicorn] INFO: 2021-03-16 14:02:15.918 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 14:02:15,918 uvicorn] INFO: 2021-03-16 14:02:15.918 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 14:02:17,558 uvicorn] INFO: 2021-03-16 14:02:17.558 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 56932) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 14:02:17,559 nonebot] INFO: 2021-03-16 14:02:17.559 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 14:02:28,459 nonebot] INFO: 2021-03-16 14:02:28.458 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -46246885 from 3224889915 "禁用 每日签到"
+[2021-03-16 14:02:28,460 nonebot] DEBUG: 2021-03-16 14:02:28.459 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:02:28,461 nonebot] INFO: 2021-03-16 14:02:28.461 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:02:28,462 nonebot] DEBUG: 2021-03-16 14:02:28.462 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:02:28,463 nonebot] INFO: 2021-03-16 14:02:28.463 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:02:28,503 nonebot] ERROR: 2021-03-16 14:02:28.463 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x000001D096EB4C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x000001D094648A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001D0B9587B80>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001D094637F70>
+    │       │   └ None
+    │       └ <function run at 0x000001D0B94034C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001D0B94251F0>
+    └ <uvicorn.main.Server object at 0x000001D0B95A83D0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001D0B9425280>
+    │    │                  └ <uvicorn.main.Server object at 0x000001D0B95A83D0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001D096D7D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001D096D7D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001D096D7F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001D096D1C4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001D0B9666D00>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001D0B9666D00>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001D0B9666D00>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001D0B9666D00>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615874548, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001D0B964F520>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001D097265670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615874548, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001D0B964F520>
+          │       └ <function Matcher.run at 0x000001D096F379D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615874548, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001D0B964F520>
+          │    │           └ <function disable_service at 0x000001D0B95AF040>
+          │    └ <function Matcher.run_handler at 0x000001D096F37940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x000001D0B95AF040>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 136, in disable_service
+    if event.user_id in permission._superuser:
+       │     │          │          └ <function _superuser at 0x000001D096F2DE50>
+       │     │          └ <module 'nonebot.permission' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\no...
+       │     └ 3224889915
+       └ PrivateMessageEvent(time=1615874548, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+
+TypeError: argument of type 'function' is not iterable
+
+
+[2021-03-16 14:02:28,506 nonebot] DEBUG: 2021-03-16 14:02:28.506 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:02:50,142 nonebot] INFO: 2021-03-16 14:02:50.141 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1693361950 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十六・一四〇二
+
+2021/03/16(火) 15:00から、一部ショップのラインナップに装備アイテムを追加しました！
+詳細は公式サイト内のニュースや、ゲーム内のお知らせをご確認ください。
+https://t.co/lq9tYt4BVk
+#プリコネR https://t.co/8qOVxvDpOy
+[CQ:image,file=a48c2658f611eb210890cc3bbe3400b8.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2979617570-A48C2658F611EB210890CC3BBE3400B8/0?term=3]"
+[2021-03-16 14:02:50,143 nonebot] DEBUG: 2021-03-16 14:02:50.143 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:03:54,101 nonebot] INFO: 2021-03-16 14:03:54.100 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 442489763 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生十六・一四〇三
+
+2021/03/16(火) 15:00から「マスターショップ」の限定ラインナップに「キャル（プリンセス）」「リン（デレマス）」「ウヅキ（デレマス）」のメモリーピースを追加しました！
+詳細は公式サイト内のニュースや、ゲーム内のお知らせをご確認ください。
+https://t.co/OnZd7Z7lQo
+#プリコネR https://t.co/SeJRjEG7m6
+[CQ:image,file=c72ce09353cb0d388517cafb1eab7217.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2583111888-C72CE09353CB0D388517CAFB1EAB7217/0?term=3]"
+[2021-03-16 14:03:54,102 nonebot] DEBUG: 2021-03-16 14:03:54.102 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:26:46,569 nonebot] INFO: 2021-03-16 14:26:46.568 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 14:26:46,571 nonebot] INFO: 2021-03-16 14:26:46.571 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 14:26:46,576 nonebot] DEBUG: 2021-03-16 14:26:46.575 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'1351495774', '3224889915'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'tencent_app_key': '', 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': ''}
+[2021-03-16 14:26:46,674 nonebot] DEBUG: 2021-03-16 14:26:46.674 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 14:26:46,676 nonebot] INFO: 2021-03-16 14:26:46.675 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 14:26:46,677 nonebot] INFO: 2021-03-16 14:26:46.677 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 14:26:46,682 nonebot] INFO: 2021-03-16 14:26:46.682 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 14:26:46,683 nonebot] INFO: 2021-03-16 14:26:46.682 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 14:26:46,683 nonebot] DEBUG: 2021-03-16 14:26:46.683 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 14:26:46,702 uvicorn] INFO: 2021-03-16 14:26:46.702 | INFO     | uvicorn:serve:405 - Started server process [12792]
+[2021-03-16 14:26:46,703 uvicorn] INFO: 2021-03-16 14:26:46.703 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 14:26:46,703 uvicorn] INFO: 2021-03-16 14:26:46.703 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 14:26:46,704 uvicorn] INFO: 2021-03-16 14:26:46.704 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 14:26:48,004 uvicorn] INFO: 2021-03-16 14:26:48.003 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 57371) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 14:26:48,004 nonebot] INFO: 2021-03-16 14:26:48.004 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 14:27:28,151 nonebot] INFO: 2021-03-16 14:27:28.150 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1975950195 from 3224889915 "禁用 每日签到"
+[2021-03-16 14:27:28,151 nonebot] DEBUG: 2021-03-16 14:27:28.151 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:27:28,152 nonebot] INFO: 2021-03-16 14:27:28.152 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:27:28,153 nonebot] DEBUG: 2021-03-16 14:27:28.153 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:27:28,154 nonebot] INFO: 2021-03-16 14:27:28.153 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:27:28,238 nonebot] ERROR: 2021-03-16 14:27:28.154 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000019BCDC43C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000019BCB3D8A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000019BF0317C70>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000019BCB3C7F70>
+    │       │   └ None
+    │       └ <function run at 0x0000019BF01934C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000019BF01B51F0>
+    └ <uvicorn.main.Server object at 0x0000019BF0344940>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000019BF01B5280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000019BF0344940>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000019BCDB0D8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000019BCDB0D820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000019BCDB0F3A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000019BCDAAC4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000019BF03EB5B0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000019BF03EB5B0>(<_GatheringFu...result=[None]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000019BF03EB5B0>(<_GatheringFu...result=[None]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000019BF03EB5B0>(<_GatheringFu...result=[None]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ PrivateMessageEvent(time=1615876048, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000019BF03D4340>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000019BCDFF6670>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ PrivateMessageEvent(time=1615876048, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000019BF03D4340>
+          │       └ <function Matcher.run at 0x0000019BCDCC79D0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ PrivateMessageEvent(time=1615876048, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000019BF03D4340>
+          │    │           └ <function disable_service at 0x0000019BF033A280>
+          │    └ <function Matcher.run_handler at 0x0000019BCDCC7940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000019BF033A280>
+
+  File "salmon/plugins/botmanage\service_manage.py", line 135, in disable_service
+    if event.user_id() in bot.config.superusers:
+       │     │            │   │      └ {'1351495774', '3224889915'}
+       │     │            │   └ Config(driver='nonebot.drivers.fastapi', host=IPv4Address('127.0.0.1'), port=8080, debug=False, api_root={}, api_timeout=30.0...
+       │     │            └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000019BF03D4340>
+       │     └ 3224889915
+       └ PrivateMessageEvent(time=1615876048, self_id=3235657949, post_type='message', sub_type='friend', user_id=3224889915, message_...
+
+TypeError: 'int' object is not callable
+
+
+[2021-03-16 14:27:28,242 nonebot] DEBUG: 2021-03-16 14:27:28.242 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:28:10,704 nonebot] INFO: 2021-03-16 14:28:10.704 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 14:28:10,706 nonebot] INFO: 2021-03-16 14:28:10.706 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 14:28:10,709 nonebot] DEBUG: 2021-03-16 14:28:10.709 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'3224889915', '1351495774'}, 'nickname': {'测试机', '测试'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev', 'apscheduler_autostart': True, 'tencent_app_id': ''}
+[2021-03-16 14:28:10,795 nonebot] DEBUG: 2021-03-16 14:28:10.795 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 14:28:10,796 nonebot] INFO: 2021-03-16 14:28:10.796 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 14:28:10,802 nonebot] INFO: 2021-03-16 14:28:10.802 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 14:28:10,805 nonebot] INFO: 2021-03-16 14:28:10.804 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 14:28:10,806 nonebot] INFO: 2021-03-16 14:28:10.805 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 14:28:10,806 nonebot] DEBUG: 2021-03-16 14:28:10.806 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-16 14:28:10,835 uvicorn] INFO: 2021-03-16 14:28:10.835 | INFO     | uvicorn:serve:405 - Started server process [2612]
+[2021-03-16 14:28:10,836 uvicorn] INFO: 2021-03-16 14:28:10.836 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-16 14:28:10,836 uvicorn] INFO: 2021-03-16 14:28:10.836 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-16 14:28:10,837 uvicorn] INFO: 2021-03-16 14:28:10.836 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-16 14:28:11,032 uvicorn] INFO: 2021-03-16 14:28:11.032 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 57402) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-16 14:28:11,032 nonebot] INFO: 2021-03-16 14:28:11.032 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-16 14:28:14,507 nonebot] INFO: 2021-03-16 14:28:14.506 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 445020444 from 3224889915 "禁用 每日签到"
+[2021-03-16 14:28:14,507 nonebot] DEBUG: 2021-03-16 14:28:14.507 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:28:14,508 nonebot] INFO: 2021-03-16 14:28:14.508 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:28:14,509 nonebot] DEBUG: 2021-03-16 14:28:14.509 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:28:14,510 nonebot] DEBUG: 2021-03-16 14:28:14.510 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 14:28:14,512 nonebot] INFO: 2021-03-16 14:28:14.512 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:28:14,512 nonebot] DEBUG: 2021-03-16 14:28:14.512 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:28:46,694 nonebot] INFO: 2021-03-16 14:28:46.694 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1837189514 from 3224889915 "禁用"
+[2021-03-16 14:28:46,695 nonebot] DEBUG: 2021-03-16 14:28:46.694 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:28:46,695 nonebot] INFO: 2021-03-16 14:28:46.695 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:28:46,695 nonebot] DEBUG: 2021-03-16 14:28:46.695 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:28:46,696 nonebot] DEBUG: 2021-03-16 14:28:46.695 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 14:28:46,698 nonebot] INFO: 2021-03-16 14:28:46.698 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:28:46,698 nonebot] DEBUG: 2021-03-16 14:28:46.698 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:28:55,037 nonebot] INFO: 2021-03-16 14:28:55.037 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -477035524 from 3224889915@[群:1128254624] "禁用 每日签到"
+[2021-03-16 14:28:55,038 nonebot] DEBUG: 2021-03-16 14:28:55.038 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:28:55,039 nonebot] INFO: 2021-03-16 14:28:55.039 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:28:55,040 nonebot] DEBUG: 2021-03-16 14:28:55.039 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:28:55,040 nonebot] DEBUG: 2021-03-16 14:28:55.040 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 14:28:55,215 nonebot] INFO: 2021-03-16 14:28:55.214 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 183674569 from 2842117629@[群:1128254624] "[CQ:at,qq=3224889915]  权限不足！禁用每日签到需要：21，您的：1
+群主=22 群管=21 群员=1 bot维护组=999"
+[2021-03-16 14:28:55,216 nonebot] DEBUG: 2021-03-16 14:28:55.215 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:28:55,688 nonebot] INFO: 2021-03-16 14:28:55.687 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:28:55,689 nonebot] DEBUG: 2021-03-16 14:28:55.689 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:29:39,023 nonebot] INFO: 2021-03-16 14:29:39.023 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1064346349 from 3224889915 "禁用 每日签到 1128254624"
+[2021-03-16 14:29:39,024 nonebot] DEBUG: 2021-03-16 14:29:39.024 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-16 14:29:39,026 nonebot] INFO: 2021-03-16 14:29:39.025 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:29:39,026 nonebot] DEBUG: 2021-03-16 14:29:39.026 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False>
+[2021-03-16 14:29:39,028 nonebot] DEBUG: 2021-03-16 14:29:39.028 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-16 14:29:39,032 nonebot] INFO: 2021-03-16 14:29:39.031 | INFO     | nonebot:run:561 - Matcher <Matcher from service_manage, type=message, priority=1, temp=False> running complete
+[2021-03-16 14:29:39,032 nonebot] DEBUG: 2021-03-16 14:29:39.032 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-16 14:30:27,851 nonebot] INFO: 2021-03-16 14:30:27.851 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-16 14:30:27,852 nonebot] INFO: 2021-03-16 14:30:27.852 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-16 14:30:27,854 nonebot] DEBUG: 2021-03-16 14:30:27.854 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': {'3224889915', '1351495774'}, 'nickname': {'测试', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'environment': 'dev', 'tencent_app_key': '', 'apscheduler_autostart': True, 'tencent_app_id': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-16 14:30:27,939 nonebot] DEBUG: 2021-03-16 14:30:27.939 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-16 14:30:27,941 nonebot] INFO: 2021-03-16 14:30:27.941 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-16 14:30:27,942 nonebot] INFO: 2021-03-16 14:30:27.942 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-16 14:30:27,949 nonebot] INFO: 2021-03-16 14:30:27.949 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-16 14:30:27,950 nonebot] INFO: 2021-03-16 14:30:27.949 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-16 14:30:27,950 nonebot] DEBUG: 2021-03-16 14:30:27.950 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp

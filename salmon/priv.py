@@ -7,9 +7,9 @@ WHITE = 5
 SUPER = 9
 
 from datetime import datetime
+from nonebot.adapters.cqhttp import Bot
 from nonebot.adapters.cqhttp.permission import GROUP, GROUP_ADMIN, GROUP_OWNER, PRIVATE
 from nonebot.permission import SUPERUSER, Permission
-import salmon
 from salmon.typing import CQEvent
 
 OWNERS = SUPERUSER | GROUP_OWNER
@@ -20,14 +20,12 @@ NORMALS = SUPERUSER | GROUP | PRIVATE
 _black_group = {}  # Dict[group_id, expr_time]
 _black_user = {}  # Dict[user_id, expr_time]
 
-
 def set_block_group(group_id, time):
     _black_group[group_id] = datetime.now() + time
 
 
 def set_block_user(user_id, time):
-    if user_id not in SUPERUSER:
-        _black_user[user_id] = datetime.now() + time
+    _black_user[user_id] = datetime.now() + time
 
 
 def check_block_group(group_id):
@@ -44,20 +42,24 @@ def check_block_user(user_id):
     return bool(user_id in _black_user)
 
 
-def get_user_priv(ev: CQEvent):
-    uid = ev.user_id
+def get_user_priv(bot: Bot, event: CQEvent):
+    uid = event.user_id
+    if uid in bot.config.superusers:
+        return SUPER
     if check_block_user(uid):
         return BLACK
-    if uid in SUPERUSER:
-        return SUPER
-    elif uid in GROUP_OWNER:
-        return OWNER
-    elif uid in GROUP_ADMIN:
-        return ADMIN
-    elif uid in GROUP or PRIVATE:
+    role = event.sender.role
+    if role == 'member':
         return NORMAL
+    elif role == 'owner':
+        return OWNER
+    elif role == 'admin':
+        return ADMIN
+    elif role == 'administrator':
+        return ADMIN    # for cqhttpmirai
+    else:
+        return NORMAL
+            
 
-
-def check_priv(ev: CQEvent, require: int) -> bool:
-    if ev['message_type'] == 'group':
-        return bool(get_user_priv(ev) >= require)
+def check_priv(bot: Bot, event: CQEvent, require: int) -> bool:
+    return bool(get_user_priv(bot, event) >= require)

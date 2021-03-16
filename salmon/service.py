@@ -102,8 +102,8 @@ def _save_service_config(service):
             indent=2)
 
 
-async def parse_gid(bot: Bot, ev: CQEvent, state: T_State):
-    msgs = ev.get_plaintext().split(' ')
+async def parse_gid(bot: Bot, event: CQEvent, state: T_State):
+    msgs = event.get_plaintext().split(' ')
     glist = list(g['group_id'] for g in await bot.get_group_list())
     failure = set()
     illegal = set()
@@ -119,9 +119,9 @@ async def parse_gid(bot: Bot, ev: CQEvent, state: T_State):
         elif msg != '':
             illegal.add(msg)
     if illegal:
-        await bot.send(ev, f'"{"、".join(illegal)}"无效，群ID只能为纯数字')
+        await bot.send(event, f'"{"、".join(illegal)}"无效，群ID只能为纯数字')
     if failure:
-        await bot.send(ev, f'Bot未入群 {"、".join(failure)}')
+        await bot.send(event, f'Bot未入群 {"、".join(failure)}')
     if len(gids) != 0:
         state['gids'] = gids.copy()
 
@@ -200,8 +200,8 @@ class Service:
     def check_enabled(self, group_id):
         return bool( (group_id in self.enable_group) or (self.enable_on_default and group_id not in self.disable_group))
 
-    def _check_all(self, ev: CQEvent):
-        gid = ev.group_id
+    def _check_all(self, event: CQEvent):
+        gid = event.group_id
         return self.check_enabled(gid) and not priv.check_block_group(gid) and priv.check_priv(ev, self.use_priv)
 
     def check_service(self, only_to_me: bool = False, only_group: bool = True) -> Rule:
