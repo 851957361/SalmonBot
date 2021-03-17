@@ -73,7 +73,7 @@ help_bundle = sv.on_fullmatch('help_bundle', aliases={'帮助分组'}, only_grou
 
 @send_help.handle()
 async def help_handle(bot: Bot, event: CQEvent):
-    name = event.get_plaintext().split()
+    name = event.get_plaintext().strip()
     bundles = Service.get_bundles()
     svs = Service.get_loaded_services()
     info = Service.get_help()
