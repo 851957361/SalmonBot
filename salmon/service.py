@@ -25,7 +25,7 @@ except:
     import json
 
 # service management
-_loaded_services: Dict[str, "Service"] = {}  # {name: service}
+_loaded_services: Dict[str, "Service"] = {}
 _loaded_matchers: Dict["Type[Matcher]", "matcher_wrapper"] = {}
 _service_bundle: Dict[str, List["Service"]] = defaultdict(list)
 _service_info: Dict[str, List["Service"]] = defaultdict(list)
@@ -138,11 +138,11 @@ class ServiceFunc:
 
 
 class Service:
-    def __init__(self, name: str, manage_priv: str =None, enable_on_default: bool =None, visible: bool =None, help_: str = None, bundle: str = None):
+    def __init__(self, name: str, bundle: str = None, help_: str = None, manage_priv: str = None, enable_on_default: bool = None, visible: bool = None):
         assert not _re_illegal_char.search(
             name), r'Service name cannot contain character in `\/:*?"<>|.`'
+        config = _load_service_config(name)
         self.name = name
-        config = _load_service_config(self.name)
         self.manage_priv = config.get(
             'manage_priv') or manage_priv or priv.ADMIN
         self.enable_on_default = config.get('enable_on_default')
