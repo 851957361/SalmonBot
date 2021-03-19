@@ -190,6 +190,7 @@ class Chara:
 reload_chara = on_command('reload-pcr-chara', aliases={'重载花名册'})
 downdoad_icon = on_command('download-pcr-chara-icon', aliases={'下载角色头像'})
 
+
 @reload_chara.handle()
 async def _(bot: Bot, event: CQEvent):
     try:
@@ -199,10 +200,11 @@ async def _(bot: Bot, event: CQEvent):
         logger.exception(e)
         await reload_chara.send(f'Error: {type(e)}')
 
+
 @downdoad_icon.handle()
 async def _(bot: Bot, event: CQEvent):
     try:
-        id_ = roster.get_id(event.current_arg_text.strip())
+        id_ = roster.get_id(event.get_plaintext.strip())
         assert id_ != UNKNOWN, '未知角色名'
         download_chara_icon(id_, 6)
         download_chara_icon(id_, 3)
