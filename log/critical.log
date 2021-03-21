@@ -1,0 +1,47 @@
+[2021-03-20 14:50:15,390 nonebot] INFO: 2021-03-20 14:50:15.390 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-20 14:50:15,392 nonebot] INFO: 2021-03-20 14:50:15.391 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-20 14:50:15,394 nonebot] DEBUG: 2021-03-20 14:50:15.393 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {'', '/'}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'environment': 'dev', 'tencent_app_id': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True}
+[2021-03-20 14:50:15,503 nonebot] DEBUG: 2021-03-20 14:50:15.503 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-20 14:50:15,591 nonebot] ERROR: 2021-03-20 14:50:15.585 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "chara"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x000001596420DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='chara', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000159066A01F0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001590684FFC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='chara', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000015906853580>, origin='salmon/pl...
+             └ <function _load at 0x00000159611EF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\chara.py", line 11, in <module>
+    from . import _pcr_data
+
+ImportError: attempted relative import with no known parent package
+
+
+[2021-03-20 14:50:15,595 nonebot] INFO: 2021-03-20 14:50:15.595 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-20 14:50:15,599 nonebot] INFO: 2021-03-20 14:50:15.598 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-20 14:50:15,606 nonebot] INFO: 2021-03-20 14:50:15.605 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-20 14:50:15,606 nonebot] INFO: 2021-03-20 14:50:15.606 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-20 14:50:15,606 nonebot] DEBUG: 2021-03-20 14:50:15.606 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-20 14:50:15,639 uvicorn] INFO: 2021-03-20 14:50:15.638 | INFO     | uvicorn:serve:405 - Started server process [3632]
+[2021-03-20 14:50:15,639 uvicorn] INFO: 2021-03-20 14:50:15.639 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-20 14:50:15,639 uvicorn] INFO: 2021-03-20 14:50:15.639 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-20 14:50:15,640 uvicorn] INFO: 2021-03-20 14:50:15.640 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-20 14:50:15,751 uvicorn] INFO: 2021-03-20 14:50:15.750 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 64041) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-20 14:50:15,752 nonebot] INFO: 2021-03-20 14:50:15.751 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
