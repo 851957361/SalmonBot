@@ -6,7 +6,7 @@ from PIL import Image
 from io import BytesIO
 from nonebot.plugin import on_command
 import salmon
-from salmon import R, log, util, Bot, aiohttpx
+from salmon import R, log, util, Bot
 from salmon.typing import CQEvent
 from salmon.plugins.priconne import _pcr_data
 
@@ -208,7 +208,7 @@ async def _(bot: Bot, event: CQEvent):
     if event.user_id not in salmon.configs.SUPERUSERS:
         await downdoad_icon.finish('Insufficient authority.')
     try:
-        id_ = roster.get_id(event.get_plaintext.strip())
+        id_ = roster.get_id(event.get_plaintext().strip())
         assert id_ != UNKNOWN, '未知角色名'
         download_chara_icon(id_, 6)
         download_chara_icon(id_, 3)
@@ -216,4 +216,4 @@ async def _(bot: Bot, event: CQEvent):
         await downdoad_icon.send('OK.')
     except Exception as e:
         logger.exception(e)
-        await downdoad_icon.send(f'Error: {type(e)}')
+        await downdoad_icon.finish(f'Error: {type(e)}')
