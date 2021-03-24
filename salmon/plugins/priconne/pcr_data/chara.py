@@ -5,10 +5,11 @@ from fuzzywuzzy import process
 from PIL import Image
 from io import BytesIO
 from nonebot.plugin import on_command
+from nonebot.exception import FinishedException
 import salmon
 from salmon import R, log, util, Bot
 from salmon.typing import CQEvent
-from salmon.plugins.priconne import _pcr_data
+from salmon.plugins.priconne.pcr_data import _pcr_data
 
 logger = log.new_logger('chara', salmon.configs.DEBUG)
 UNKNOWN = 1000
@@ -192,28 +193,32 @@ downdoad_icon = on_command('download-pcr-chara-icon', aliases={'下载角色头�
 
 
 @reload_chara.handle()
-async def _(bot: Bot, event: CQEvent):
+async def reload(bot: Bot, event: CQEvent):
     if event.user_id not in salmon.configs.SUPERUSERS:
-        await reload_chara.finish('Insufficient authority.')
+        await bot.send(event, 'Insufficient authority.')
+        raise FinishedException
     try:
         roster.update()
-        await reload_chara.send('OK.')
+        await bot.send(event, 'OK.')
     except Exception as e:
         logger.exception(e)
-        await reload_chara.finish(f'Error: {type(e)}')
+        await bot.send(event, f'Error: {type(e)}')
+        raise FinishedException
 
 
 @downdoad_icon.handle()
-async def _(bot: Bot, event: CQEvent):
+async def download(bot: Bot, event: CQEvent):
     if event.user_id not in salmon.configs.SUPERUSERS:
-        await downdoad_icon.finish('Insufficient authority.')
+        await bot.send(event, 'Insufficient authority.')
+        raise FinishedException
     try:
         id_ = roster.get_id(event.get_plaintext().strip())
         assert id_ != UNKNOWN, '未知角色名'
         download_chara_icon(id_, 6)
         download_chara_icon(id_, 3)
         download_chara_icon(id_, 1)
-        await downdoad_icon.send('OK.')
+        await bot.send(event, 'OK.')
     except Exception as e:
         logger.exception(e)
-        await downdoad_icon.finish(f'Error: {type(e)}')
+        await bot.send(event, f'Error: {type(e)}')
+        raise FinishedException

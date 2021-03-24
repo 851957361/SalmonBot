@@ -2,6 +2,7 @@ from salmon import Service, priv, Bot
 from salmon.typing import CQEvent
 from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 
+
 sv = Service('_help_', manage_priv=priv.SUPER, visible=False)
 
 TOP_MANUAL = '''

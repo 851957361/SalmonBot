@@ -1,4 +1,3 @@
-import nonebot
 from functools import cmp_to_key
 from nonebot.rule import ArgumentParser
 from nonebot.typing import T_State
@@ -10,6 +9,7 @@ from nonebot.exception import FinishedException
 import salmon
 from salmon import Service, priv, Bot
 from salmon.service import parse_gid
+
 
 PRIV_TIP = f'群主={priv.OWNER}\n群管理={priv.ADMIN}\n群员/私聊={priv.NORMAL}\nbot维护组={priv.SUPER}'
 parser = ArgumentParser()
@@ -82,7 +82,7 @@ async def enable_service(bot: Bot, event: CQEvent):
             await bot.send(event, at_sender + '\n'.join(msg))
     elif isinstance(event, PrivateMessageEvent):
         if event.user_id not in salmon.configs.SUPERUSERS:
-            await bot.send(event, f'请在群聊中启用服务')
+            await bot.send(event, '请在群聊中启用服务')
             raise FinishedException
         args = event.get_plaintext().split()
         if len(args) < 2:
@@ -140,7 +140,7 @@ async def disable_service(bot: Bot, event: CQEvent):
             await bot.send(event, at_sender + '\n'.join(msg))
     elif isinstance(event, PrivateMessageEvent):
         if event.user_id not in salmon.configs.SUPERUSERS:
-            await bot.send(event, f'请在群聊中禁用服务')
+            await bot.send(event, '请在群聊中禁用服务')
             raise FinishedException
         args = event.get_plaintext().split()
         if len(args) < 2:

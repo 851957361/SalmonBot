@@ -24,6 +24,7 @@ RES_URL = 'http://127.0.0.1:5000/static/'
 PLUGINS_ON = {
     'botmanage',
     'priconne',
+    'gacha',
     # 'setu',
     # 'translate',
     # 'twitter',

@@ -4,7 +4,8 @@ from salmon import Service, R, Bot
 from salmon.typing import CQEvent, Message
 from salmon.util import DailyNumberLimiter
 
-sv = Service('每日签到', bundle='pcr娱乐', help_='[签到] 给主さま盖章章')
+
+sv = Service('pcr-login-bonus', bundle='pcr娱乐', help_='[签到] 给主さま盖章章')
 
 lmt = DailyNumberLimiter(1)
 login_presents = [

@@ -6,7 +6,6 @@ Thanks to @Akiraxie dalao！
 import os
 import re
 import asyncio
-from functools import wraps
 from collections import defaultdict
 from nonebot.adapters.cqhttp.utils import escape
 from nonebot.adapters.cqhttp.message import MessageSegment, Message
@@ -89,7 +88,6 @@ def _save_service_config(service):
         json.dump(
             {
                 "name": service.name,
-                "use_priv": service.use_priv,
                 "manage_priv": service.manage_priv,
                 "enable_on_default": service.enable_on_default,
                 "visible": service.visible,
@@ -125,6 +123,23 @@ async def parse_gid(bot: Bot, event: CQEvent, state: T_State):
         state['gids'] = gids.copy()
 
 
+async def parse_uid(bot: Bot, event: CQEvent, state: T_State):
+    ids = []
+    if isinstance(event, GroupMessageEvent):
+        for m in event.get_message():
+            if m.type == 'at' and m.data['qq'] != 'all':
+                ids.append(int(m.data['qq']))
+        for m in event.get_plaintext().split():
+            if m.isdigit():
+                ids.append(int(m))
+    elif isinstance(event, PrivateMessageEvent):
+        for m in event.get_plaintext().split():
+            if m.isdigit():
+                ids.append(int(m))
+    if ids:
+        state['ids'] = ids.copy()
+
+
 class ServiceFunc:
     def __init__(self, sv: "Service", func: Callable, only_to_me: bool, normalize_text: bool=False):
         self.sv = sv
@@ -141,8 +156,8 @@ class Service:
     def __init__(self, name: str, bundle: str = None, help_: str = None, manage_priv: str = None, enable_on_default: bool = None, visible: bool = None):
         assert not _re_illegal_char.search(
             name), r'Service name cannot contain character in `\/:*?"<>|.`'
-        config = _load_service_config(name)
         self.name = name
+        config = _load_service_config(self.name)
         self.manage_priv = config.get(
             'manage_priv') or manage_priv or priv.ADMIN
         self.enable_on_default = config.get('enable_on_default')
@@ -159,8 +174,8 @@ class Service:
         self.enable_group = set(config.get('enable_group', []))
         self.disable_group = set(config.get('disable_group', []))
         self.logger = log.new_logger(name, salmon.configs.DEBUG)
-        self.matchers = []
         assert self.name not in _loaded_services, f'Service name "{self.name}" already exist!'
+        self.matchers = []
         _loaded_services[self.name] = self
         _service_info[name].append(self)
         _service_bundle[bundle or "通用"].append(self)
