@@ -3522,3 +3522,345 @@ UP角色合计=0.7% 3★出率=3.0%
 [2021-03-24 17:09:21,515 nonebot] DEBUG: 2021-03-24 17:09:21.515 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
 [2021-03-24 17:09:21,963 nonebot] INFO: 2021-03-24 17:09:21.962 | INFO     | nonebot:run:561 - Matcher <Matcher from gacha, type=message, priority=1, temp=False> running complete
 [2021-03-24 17:09:21,964 nonebot] DEBUG: 2021-03-24 17:09:21.963 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-30 23:08:12,867 nonebot] INFO: 2021-03-30 23:08:12.866 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-30 23:08:12,873 nonebot] INFO: 2021-03-30 23:08:12.872 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-30 23:08:12,875 nonebot] DEBUG: 2021-03-30 23:08:12.875 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'environment': 'dev', 'apscheduler_autostart': True, 'tencent_app_id': ''}
+[2021-03-30 23:08:13,054 nonebot] DEBUG: 2021-03-30 23:08:13.053 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-30 23:08:13,177 nonebot] INFO: 2021-03-30 23:08:13.176 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-30 23:08:13,178 nonebot] INFO: 2021-03-30 23:08:13.178 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-30 23:08:13,179 nonebot] INFO: 2021-03-30 23:08:13.179 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-30 23:08:13,181 nonebot] INFO: 2021-03-30 23:08:13.181 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-30 23:08:13,183 nonebot] INFO: 2021-03-30 23:08:13.183 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-30 23:08:13,184 nonebot] INFO: 2021-03-30 23:08:13.183 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-30 23:08:13,184 nonebot] DEBUG: 2021-03-30 23:08:13.184 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-30 23:08:13,218 uvicorn] INFO: 2021-03-30 23:08:13.217 | INFO     | uvicorn:serve:405 - Started server process [8728]
+[2021-03-30 23:08:13,218 uvicorn] INFO: 2021-03-30 23:08:13.218 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-30 23:08:13,219 uvicorn] INFO: 2021-03-30 23:08:13.219 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-30 23:08:13,219 uvicorn] INFO: 2021-03-30 23:08:13.219 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-30 23:08:13,617 uvicorn] INFO: 2021-03-30 23:08:13.616 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 62463) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-30 23:08:13,617 nonebot] INFO: 2021-03-30 23:08:13.617 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-30 23:08:42,451 nonebot] INFO: 2021-03-30 23:08:42.450 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-30 23:08:42,455 nonebot] INFO: 2021-03-30 23:08:42.455 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-30 23:08:42,457 nonebot] DEBUG: 2021-03-30 23:08:42.457 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'tencent_app_key': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev', 'apscheduler_autostart': True}
+[2021-03-30 23:08:42,525 nonebot] DEBUG: 2021-03-30 23:08:42.525 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-30 23:08:42,620 nonebot] ERROR: 2021-03-30 23:08:42.606 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "arena"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/arena'
+    │       └ <function load_plugins at 0x0000012EFFADDCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/arena'), name='arena', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000012EA1D1CF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000012EA1FD5E40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='arena', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000012EA1FD6430>, origin='salmon/pl...
+             └ <function _load at 0x0000012EFE20F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/arena\arena.py", line 6, in <module>
+    from salmon.plugins.priconne.arena import sv
+
+ModuleNotFoundError: No module named 'salmon.plugins.priconne.arena'
+
+
+[2021-03-30 23:08:42,627 nonebot] INFO: 2021-03-30 23:08:42.626 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-30 23:08:42,630 nonebot] INFO: 2021-03-30 23:08:42.629 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-30 23:08:42,632 nonebot] INFO: 2021-03-30 23:08:42.631 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-30 23:08:42,635 nonebot] INFO: 2021-03-30 23:08:42.634 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-30 23:08:42,638 nonebot] INFO: 2021-03-30 23:08:42.638 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-30 23:08:42,639 nonebot] INFO: 2021-03-30 23:08:42.639 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-30 23:08:42,640 nonebot] DEBUG: 2021-03-30 23:08:42.639 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-30 23:08:42,693 uvicorn] INFO: 2021-03-30 23:08:42.693 | INFO     | uvicorn:serve:405 - Started server process [12164]
+[2021-03-30 23:08:42,694 uvicorn] INFO: 2021-03-30 23:08:42.693 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-30 23:08:42,694 uvicorn] INFO: 2021-03-30 23:08:42.694 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-30 23:08:42,694 uvicorn] INFO: 2021-03-30 23:08:42.694 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-30 23:08:43,015 uvicorn] INFO: 2021-03-30 23:08:43.014 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 62495) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-30 23:08:43,016 nonebot] INFO: 2021-03-30 23:08:43.015 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-30 23:09:46,541 nonebot] INFO: 2021-03-30 23:09:46.541 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-30 23:09:46,545 nonebot] INFO: 2021-03-30 23:09:46.544 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-30 23:09:46,546 nonebot] DEBUG: 2021-03-30 23:09:46.546 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'测试机', 'ako'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'tencent_app_id': '', 'environment': 'dev', 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}}
+[2021-03-30 23:09:46,614 nonebot] DEBUG: 2021-03-30 23:09:46.613 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-30 23:09:46,714 nonebot] ERROR: 2021-03-30 23:09:46.709 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "arena"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/arena'
+    │       └ <function load_plugins at 0x0000022300A3DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/arena'), name='arena', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002232187CF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000022321B2F9C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='arena', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000022321B353D0>, origin='salmon/pl...
+             └ <function _load at 0x000002237DD9F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/arena\arena.py", line 6, in <module>
+    from salmon.plugins.arena import sv
+
+  File "C:\bot\SalmonBot\salmon\plugins\arena\__init__.py", line 9, in <module>
+    from salmon.plugins.arena import arena
+         │      └ <module 'salmon.plugins' (namespace)>
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\plugins\arena\arena.py", line 6, in <module>
+    from salmon.plugins.arena import sv
+
+ImportError: cannot import name 'sv' from partially initialized module 'salmon.plugins.arena' (most likely due to a circular import) (C:\bot\SalmonBot\salmon\plugins\arena\__init__.py)
+
+
+[2021-03-30 23:09:46,717 nonebot] INFO: 2021-03-30 23:09:46.716 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-30 23:09:46,718 nonebot] INFO: 2021-03-30 23:09:46.717 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-30 23:09:46,719 nonebot] INFO: 2021-03-30 23:09:46.718 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-30 23:09:46,720 nonebot] INFO: 2021-03-30 23:09:46.720 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-30 23:09:46,722 nonebot] INFO: 2021-03-30 23:09:46.722 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-30 23:09:46,722 nonebot] INFO: 2021-03-30 23:09:46.722 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-30 23:09:46,722 nonebot] DEBUG: 2021-03-30 23:09:46.722 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-30 23:09:46,771 uvicorn] INFO: 2021-03-30 23:09:46.771 | INFO     | uvicorn:serve:405 - Started server process [1796]
+[2021-03-30 23:09:46,771 uvicorn] INFO: 2021-03-30 23:09:46.771 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-30 23:09:46,772 uvicorn] INFO: 2021-03-30 23:09:46.772 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-30 23:09:46,772 uvicorn] INFO: 2021-03-30 23:09:46.772 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-30 23:09:48,044 uvicorn] INFO: 2021-03-30 23:09:48.043 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 62584) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-30 23:09:48,044 nonebot] INFO: 2021-03-30 23:09:48.044 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-30 23:13:08,684 nonebot] INFO: 2021-03-30 23:13:08.683 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-30 23:13:08,687 nonebot] INFO: 2021-03-30 23:13:08.687 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-30 23:13:08,689 nonebot] DEBUG: 2021-03-30 23:13:08.689 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'tencent_app_id': '', 'apscheduler_autostart': True, 'environment': 'dev'}
+[2021-03-30 23:13:08,758 nonebot] DEBUG: 2021-03-30 23:13:08.757 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-30 23:13:08,759 nonebot] INFO: 2021-03-30 23:13:08.759 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-30 23:13:08,761 nonebot] INFO: 2021-03-30 23:13:08.760 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-30 23:13:08,845 nonebot] INFO: 2021-03-30 23:13:08.845 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-30 23:13:08,846 nonebot] INFO: 2021-03-30 23:13:08.846 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-30 23:13:08,847 nonebot] INFO: 2021-03-30 23:13:08.847 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-30 23:13:08,896 nonebot] ERROR: 2021-03-30 23:13:08.891 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "arena"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/arena'
+    │       └ <function load_plugins at 0x000001C1A441DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/arena'), name='arena', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001C1C524CF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001C1C53FAA00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='arena', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001C1C68B9520>, origin='salmon/pl...
+             └ <function _load at 0x000001C1A13EF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/arena\arena.py", line 6, in <module>
+    from . import sv
+
+ImportError: attempted relative import with no known parent package
+
+
+[2021-03-30 23:13:08,897 nonebot] INFO: 2021-03-30 23:13:08.897 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-30 23:13:08,897 nonebot] DEBUG: 2021-03-30 23:13:08.897 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-30 23:13:08,916 uvicorn] INFO: 2021-03-30 23:13:08.915 | INFO     | uvicorn:serve:405 - Started server process [14252]
+[2021-03-30 23:13:08,916 uvicorn] INFO: 2021-03-30 23:13:08.916 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-30 23:13:08,916 uvicorn] INFO: 2021-03-30 23:13:08.916 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-30 23:13:08,917 uvicorn] INFO: 2021-03-30 23:13:08.917 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-30 23:13:09,106 uvicorn] INFO: 2021-03-30 23:13:09.105 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 62657) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-30 23:13:09,106 nonebot] INFO: 2021-03-30 23:13:09.106 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-31 12:39:25,390 nonebot] INFO: 2021-03-31 12:39:25.389 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-31 12:39:25,398 nonebot] INFO: 2021-03-31 12:39:25.398 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-31 12:39:25,402 nonebot] DEBUG: 2021-03-31 12:39:25.401 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_key': '', 'environment': 'dev', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_id': '', 'apscheduler_autostart': True}
+[2021-03-31 12:39:25,512 nonebot] DEBUG: 2021-03-31 12:39:25.511 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-31 12:39:25,515 nonebot] INFO: 2021-03-31 12:39:25.514 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-31 12:39:25,517 nonebot] INFO: 2021-03-31 12:39:25.517 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-31 12:39:25,689 nonebot] ERROR: 2021-03-31 12:39:25.684 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "arena"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/priconne'
+    │       └ <function load_plugins at 0x00000264C2ABDCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/priconne'), name='arena', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000264E38EBF70>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000264E3B9FB80>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='arena', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000264E3BB8070>, origin='salmon/pl...
+             └ <function _load at 0x00000264BFA7F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/priconne\arena.py", line 211, in <module>
+    arena_query = sv.on_fullmatch(aliases=aliases, only_group=False)
+                  │  │                    └ ('怎么拆', '怎么解', '怎么打', '如何拆', '如何解', '如何打', 'jjc查询')
+                  │  └ <function Service.on_fullmatch at 0x00000264E2813E50>
+                  └ <salmon.service.Service object at 0x00000264E3BB5070>
+
+TypeError: on_fullmatch() missing 1 required positional argument: 'name'
+
+
+[2021-03-31 12:39:25,693 nonebot] INFO: 2021-03-31 12:39:25.693 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-31 12:39:25,695 nonebot] INFO: 2021-03-31 12:39:25.694 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-31 12:39:25,696 nonebot] INFO: 2021-03-31 12:39:25.695 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-31 12:39:25,696 nonebot] INFO: 2021-03-31 12:39:25.696 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-31 12:39:25,696 nonebot] DEBUG: 2021-03-31 12:39:25.696 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-31 12:39:25,759 uvicorn] INFO: 2021-03-31 12:39:25.758 | INFO     | uvicorn:serve:405 - Started server process [3720]
+[2021-03-31 12:39:25,759 uvicorn] INFO: 2021-03-31 12:39:25.759 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-31 12:39:25,760 uvicorn] INFO: 2021-03-31 12:39:25.759 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-31 12:39:25,760 uvicorn] INFO: 2021-03-31 12:39:25.760 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-31 12:39:26,081 uvicorn] INFO: 2021-03-31 12:39:26.081 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 64501) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-31 12:39:26,082 nonebot] INFO: 2021-03-31 12:39:26.081 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-31 12:45:47,172 nonebot] INFO: 2021-03-31 12:45:47.167 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1278817323 from 2842117629@[群:1128254624] "@ウマ娘攻略@GameWith
+弥生卅一・一二四五
+
+4月中旬レジェンドレースの優勝馬(ウマ娘)まとめてみました。
+
+・サクラバクシンオー
+・タイキシャトル
+がレジェンドウマ娘となる可能性高いです。
+
+ジャパンカップのときは中距離適性の高いビワハヤヒデがガチャ登場だったので、4/15のガチャでは「短距離適性」の高いウマ娘が来る可能性も…？ https://t.co/7J16dBoceL
+[CQ:image,file=446e47a73a52f595ec6868f4aa9595c4.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2766585157-446E47A73A52F595EC6868F4AA9595C4/0?term=3]"
+[2021-03-31 12:45:47,173 nonebot] DEBUG: 2021-03-31 12:45:47.172 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 12:46:39,489 nonebot] INFO: 2021-03-31 12:46:39.489 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-31 12:46:39,493 nonebot] INFO: 2021-03-31 12:46:39.492 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-31 12:46:39,495 nonebot] DEBUG: 2021-03-31 12:46:39.494 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'tencent_app_id': '', 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True, 'tencent_app_key': '', 'environment': 'dev'}
+[2021-03-31 12:46:39,562 nonebot] DEBUG: 2021-03-31 12:46:39.562 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-31 12:46:39,564 nonebot] INFO: 2021-03-31 12:46:39.564 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-31 12:46:39,566 nonebot] INFO: 2021-03-31 12:46:39.565 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-31 12:46:39,654 nonebot] INFO: 2021-03-31 12:46:39.653 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+[2021-03-31 12:46:39,656 nonebot] INFO: 2021-03-31 12:46:39.656 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-31 12:46:39,657 nonebot] INFO: 2021-03-31 12:46:39.657 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-31 12:46:39,658 nonebot] INFO: 2021-03-31 12:46:39.658 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-31 12:46:39,658 nonebot] INFO: 2021-03-31 12:46:39.658 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-31 12:46:39,659 nonebot] DEBUG: 2021-03-31 12:46:39.658 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-31 12:46:39,676 uvicorn] INFO: 2021-03-31 12:46:39.675 | INFO     | uvicorn:serve:405 - Started server process [8328]
+[2021-03-31 12:46:39,676 uvicorn] INFO: 2021-03-31 12:46:39.676 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-31 12:46:39,677 uvicorn] INFO: 2021-03-31 12:46:39.677 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-31 12:46:39,677 uvicorn] INFO: 2021-03-31 12:46:39.677 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-31 12:46:42,456 uvicorn] INFO: 2021-03-31 12:46:42.456 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 64624) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-31 12:46:42,457 nonebot] INFO: 2021-03-31 12:46:42.456 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-31 12:51:18,128 nonebot] INFO: 2021-03-31 12:51:18.128 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-31 12:51:18,132 nonebot] INFO: 2021-03-31 12:51:18.132 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-31 12:51:18,134 nonebot] DEBUG: 2021-03-31 12:51:18.134 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'environment': 'dev', 'apscheduler_autostart': True, 'tencent_app_id': '', 'tencent_app_key': ''}
+[2021-03-31 12:51:18,202 nonebot] DEBUG: 2021-03-31 12:51:18.202 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-31 12:51:18,290 nonebot] INFO: 2021-03-31 12:51:18.289 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+[2021-03-31 12:51:18,292 nonebot] INFO: 2021-03-31 12:51:18.292 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-31 12:51:18,293 nonebot] INFO: 2021-03-31 12:51:18.292 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-31 12:51:18,294 nonebot] INFO: 2021-03-31 12:51:18.293 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-31 12:51:18,295 nonebot] INFO: 2021-03-31 12:51:18.295 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-31 12:51:18,296 nonebot] INFO: 2021-03-31 12:51:18.296 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-31 12:51:18,297 nonebot] INFO: 2021-03-31 12:51:18.296 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-31 12:51:18,297 nonebot] DEBUG: 2021-03-31 12:51:18.297 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-31 12:51:18,314 uvicorn] INFO: 2021-03-31 12:51:18.314 | INFO     | uvicorn:serve:405 - Started server process [15244]
+[2021-03-31 12:51:18,315 uvicorn] INFO: 2021-03-31 12:51:18.314 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-31 12:51:18,315 uvicorn] INFO: 2021-03-31 12:51:18.315 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-31 12:51:18,315 uvicorn] INFO: 2021-03-31 12:51:18.315 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-31 12:51:18,540 uvicorn] INFO: 2021-03-31 12:51:18.540 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 64733) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-31 12:51:18,541 nonebot] INFO: 2021-03-31 12:51:18.541 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-31 12:51:42,046 nonebot] INFO: 2021-03-31 12:51:42.046 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -633298897 from 3224889915 "怎么拆"
+[2021-03-31 12:51:42,047 nonebot] DEBUG: 2021-03-31 12:51:42.047 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 12:51:42,049 nonebot] INFO: 2021-03-31 12:51:42.049 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 12:51:42,050 nonebot] DEBUG: 2021-03-31 12:51:42.049 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 12:51:42,050 nonebot] DEBUG: 2021-03-31 12:51:42.050 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-31 12:51:42,054 nonebot] INFO: 2021-03-31 12:51:42.054 | INFO     | nonebot:run:561 - Matcher <Matcher from arena, type=message, priority=1, temp=False> running complete
+[2021-03-31 12:51:42,055 nonebot] DEBUG: 2021-03-31 12:51:42.055 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-31 12:52:39,783 nonebot] INFO: 2021-03-31 12:52:39.782 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 343948157 from 1351495774 "怎么拆"
+[2021-03-31 12:52:39,783 nonebot] DEBUG: 2021-03-31 12:52:39.783 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 12:52:39,785 nonebot] INFO: 2021-03-31 12:52:39.784 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 12:52:39,785 nonebot] DEBUG: 2021-03-31 12:52:39.785 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 12:52:39,787 nonebot] DEBUG: 2021-03-31 12:52:39.787 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-31 12:52:39,791 nonebot] INFO: 2021-03-31 12:52:39.790 | INFO     | nonebot:run:561 - Matcher <Matcher from arena, type=message, priority=1, temp=False> running complete
+[2021-03-31 12:52:39,791 nonebot] DEBUG: 2021-03-31 12:52:39.791 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-31 13:11:22,446 nonebot] INFO: 2021-03-31 13:11:22.444 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -605295197 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生卅一・一三一〇
+
+【メンテナンス終了のお知らせ】
+2021/03/31(水) 14:00ごろに、ガチャメンテナンスが終了いたしました。
+メンテナンス終了直後はアクセスが集中し、ゲームに接続しにくい場合があります。
+ゲームに接続しにくい現象が発生している場合、時間をおいて再度ログインをお試しください。
+#プリコネR"
+[2021-03-31 13:11:22,447 nonebot] DEBUG: 2021-03-31 13:11:22.446 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 13:17:46,585 nonebot] INFO: 2021-03-31 13:17:46.584 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -869575472 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+弥生卅一・一三一七
+
+【新キャラ登場】
+本日03/31(水) 14:00から、世界の美少女ちぇるフェスモード★3チエル（聖学祭）(CV：#佐倉綾音 さん)が登場！
+さらに、ピックアップガチャでは★3チエル（聖学祭）の出現率がUPし、獲得するとおまけとしてメモリーピースが付いてきます！
+#プリコネR https://t.co/VaF29KD6Mi
+[CQ:image,file=86958989b806f2a360397cdd9ee58bb6.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-3077291681-86958989B806F2A360397CDD9EE58BB6/0?term=3]"
+[2021-03-31 13:17:46,586 nonebot] DEBUG: 2021-03-31 13:17:46.586 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 16:03:27,624 nonebot] INFO: 2021-03-31 16:03:27.623 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-03-31 16:03:27,632 nonebot] INFO: 2021-03-31 16:03:27.631 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-03-31 16:03:27,634 nonebot] DEBUG: 2021-03-31 16:03:27.633 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'测试机', 'ako'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_autostart': True, 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'tencent_app_key': '', 'environment': 'dev', 'tencent_app_id': ''}
+[2021-03-31 16:03:27,742 nonebot] DEBUG: 2021-03-31 16:03:27.742 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-03-31 16:03:27,898 nonebot] INFO: 2021-03-31 16:03:27.898 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+[2021-03-31 16:03:27,902 nonebot] INFO: 2021-03-31 16:03:27.902 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-03-31 16:03:27,903 nonebot] INFO: 2021-03-31 16:03:27.903 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-03-31 16:03:27,904 nonebot] INFO: 2021-03-31 16:03:27.904 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-03-31 16:03:27,906 nonebot] INFO: 2021-03-31 16:03:27.906 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-03-31 16:03:27,908 nonebot] INFO: 2021-03-31 16:03:27.908 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-03-31 16:03:27,908 nonebot] INFO: 2021-03-31 16:03:27.908 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-03-31 16:03:27,908 nonebot] DEBUG: 2021-03-31 16:03:27.908 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-03-31 16:03:27,936 uvicorn] INFO: 2021-03-31 16:03:27.935 | INFO     | uvicorn:serve:405 - Started server process [6652]
+[2021-03-31 16:03:27,936 uvicorn] INFO: 2021-03-31 16:03:27.936 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-03-31 16:03:27,937 uvicorn] INFO: 2021-03-31 16:03:27.937 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-03-31 16:03:27,939 uvicorn] INFO: 2021-03-31 16:03:27.938 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-03-31 16:03:30,141 uvicorn] INFO: 2021-03-31 16:03:30.140 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 53027) - "WebSocket /cqhttp/ws" [accepted]
+[2021-03-31 16:03:30,142 nonebot] INFO: 2021-03-31 16:03:30.141 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-03-31 16:03:43,667 nonebot] INFO: 2021-03-31 16:03:43.666 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 294942319 from 1351495774 "[CQ:forward,id=KjJShSHUYIvsXDuwEB54DJvLxNirUeucz9jJxh8Qc5N9WXtF+IsL9TnLipWX2Kf6]"
+[2021-03-31 16:03:43,667 nonebot] DEBUG: 2021-03-31 16:03:43.667 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 16:03:43,671 nonebot] INFO: 2021-03-31 16:03:43.670 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -2002966571 from 1351495774 "怎么拆妹法"
+[2021-03-31 16:03:43,672 nonebot] DEBUG: 2021-03-31 16:03:43.671 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 16:03:43,673 nonebot] INFO: 2021-03-31 16:03:43.673 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 16:03:43,674 nonebot] DEBUG: 2021-03-31 16:03:43.673 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 16:03:43,675 nonebot] DEBUG: 2021-03-31 16:03:43.675 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-31 16:03:43,678 nonebot] INFO: 2021-03-31 16:03:43.678 | INFO     | nonebot:run:561 - Matcher <Matcher from arena, type=message, priority=1, temp=False> running complete
+[2021-03-31 16:03:43,679 nonebot] DEBUG: 2021-03-31 16:03:43.679 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-31 16:04:03,835 nonebot] INFO: 2021-03-31 16:04:03.834 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -884567863 from 1351495774@[群:1128254624] "怎么拆妹法"
+[2021-03-31 16:04:03,836 nonebot] DEBUG: 2021-03-31 16:04:03.836 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 16:04:03,838 nonebot] INFO: 2021-03-31 16:04:03.837 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 16:04:03,839 nonebot] DEBUG: 2021-03-31 16:04:03.838 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from arena, type=message, priority=1, temp=False>
+[2021-03-31 16:04:03,839 nonebot] DEBUG: 2021-03-31 16:04:03.839 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-03-31 16:04:04,031 nonebot] INFO: 2021-03-31 16:04:04.029 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1136549793 from 2842117629@[群:1128254624] "[CQ:at,qq=1351495774]  由于数据库限制，少于5名角色的检索条件请移步pcrdfans.com进行查询"
+[2021-03-31 16:04:04,032 nonebot] DEBUG: 2021-03-31 16:04:04.031 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-03-31 16:04:04,433 nonebot] INFO: 2021-03-31 16:04:04.432 | INFO     | nonebot:run:561 - Matcher <Matcher from arena, type=message, priority=1, temp=False> running complete
+[2021-03-31 16:04:04,433 nonebot] DEBUG: 2021-03-31 16:04:04.433 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-03-31 16:04:14,259 nonebot] INFO: 2021-03-31 16:04:14.258 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1024402206 from 296432694@[群:1128254624] "[CQ:image,file=d1c7848c5305c18e51cfb33b990d554f.image,url=http://gchat.qpic.cn/gchatpic_new/296432694/1128254624-2427830496-D1C7848C5305C18E51CFB33B990D554F/0?term=3]"
+[2021-03-31 16:04:14,259 nonebot] DEBUG: 2021-03-31 16:04:14.259 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...

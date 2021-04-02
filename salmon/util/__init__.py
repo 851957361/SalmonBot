@@ -6,13 +6,13 @@ import zhconv
 from io import BytesIO
 from collections import defaultdict
 from datetime import datetime, timedelta
-from nonebot import require
+from functools import wraps
+from nonebot_plugin_apscheduler import scheduler
 import pytz
-from nonebot.adapters.cqhttp import Event as CQEvent
 from matplotlib import pyplot as plt
 from PIL import Image
 import salmon
-from salmon.typing import Message, Union
+from salmon.typing import Message, Union, Any, Callable
 try:
     import ujson as json
 except:
@@ -55,6 +55,25 @@ def concat_pic(pics, border=5):
     for i, pic in enumerate(pics):
         des.paste(pic, (0, i * (h + border)), pic)
     return des
+
+
+def scheduled_job(self, *args, **kwargs) -> Callable:
+    kwargs.setdefault('timezone', pytz.timezone('Asia/Shanghai'))
+    kwargs.setdefault('misfire_grace_time', 60)
+    kwargs.setdefault('coalesce', True)
+    def deco(func: Callable[[], Any]) -> Callable:
+        @wraps(func)
+        async def wrapper():
+            try:
+                self.logger.info(f'Scheduled job {func.__name__} start.')
+                ret = await func()
+                self.logger.info(f'Scheduled job {func.__name__} completed.')
+                return ret
+            except Exception as e:
+                self.logger.error(f'{type(e)} occured when doing scheduled job {func.__name__}.')
+                self.logger.exception(e)
+        return scheduler.scheduled_job(*args, **kwargs)(wrapper)
+    return deco
 
 
 def normalize_str(string) -> str:
