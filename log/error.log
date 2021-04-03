@@ -3887,3 +3887,488 @@ TypeError: on_fullmatch() missing 1 required positional argument: 'name'
 [2021-03-31 16:04:04,433 nonebot] DEBUG: 2021-03-31 16:04:04.433 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
 [2021-03-31 16:04:14,258 nonebot] INFO: 2021-03-31 16:04:14.258 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1024402206 from 296432694@[群:1128254624] "[CQ:image,file=d1c7848c5305c18e51cfb33b990d554f.image,url=http://gchat.qpic.cn/gchatpic_new/296432694/1128254624-2427830496-D1C7848C5305C18E51CFB33B990D554F/0?term=3]"
 [2021-03-31 16:04:14,259 nonebot] DEBUG: 2021-03-31 16:04:14.259 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:23:15,120 nonebot] INFO: 2021-04-03 16:23:15.120 | INFO     | nonebot:init:174 - NoneBot is initializing...
+[2021-04-03 16:23:15,127 nonebot] INFO: 2021-04-03 16:23:15.126 | INFO     | nonebot:init:176 - Current Env: dev
+[2021-04-03 16:23:15,129 nonebot] DEBUG: 2021-04-03 16:23:15.129 | DEBUG    | nonebot:init:183 - Loaded Config: {'driver': 'nonebot.drivers.fastapi', 'host': IPv4Address('127.0.0.1'), 'port': 8080, 'debug': False, 'api_root': {}, 'api_timeout': 30.0, 'access_token': None, 'secret': None, 'superusers': set(), 'nickname': {'ako', '测试机'}, 'command_start': {''}, 'command_sep': {'.'}, 'session_expire_timeout': datetime.timedelta(seconds=120), 'apscheduler_config': {'apscheduler.timezone': 'Asia/Shanghai'}, 'apscheduler_autostart': True, 'tencent_app_id': '', 'tencent_app_key': '', 'environment': 'dev'}
+[2021-04-03 16:23:15,236 nonebot] DEBUG: 2021-04-03 16:23:15.236 | DEBUG    | nonebot:register_adapter:78 - Succeeded to load adapter "cqhttp"
+[2021-04-03 16:23:15,373 nonebot] INFO: 2021-04-03 16:23:15.373 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+[2021-04-03 16:23:15,376 nonebot] INFO: 2021-04-03 16:23:15.376 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+[2021-04-03 16:23:15,398 nonebot] INFO: 2021-04-03 16:23:15.398 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+[2021-04-03 16:23:15,399 nonebot] INFO: 2021-04-03 16:23:15.399 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+[2021-04-03 16:23:15,400 nonebot] INFO: 2021-04-03 16:23:15.400 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+[2021-04-03 16:23:15,402 nonebot] INFO: 2021-04-03 16:23:15.402 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+[2021-04-03 16:23:15,404 nonebot] INFO: 2021-04-03 16:23:15.404 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+[2021-04-03 16:23:15,404 nonebot] INFO: 2021-04-03 16:23:15.404 | INFO     | nonebot:run:218 - Running NoneBot...
+[2021-04-03 16:23:15,404 nonebot] DEBUG: 2021-04-03 16:23:15.404 | DEBUG    | nonebot:run:207 - Loaded adapters: cqhttp
+[2021-04-03 16:23:15,434 uvicorn] INFO: 2021-04-03 16:23:15.434 | INFO     | uvicorn:serve:405 - Started server process [14552]
+[2021-04-03 16:23:15,435 uvicorn] INFO: 2021-04-03 16:23:15.434 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+[2021-04-03 16:23:15,435 uvicorn] INFO: 2021-04-03 16:23:15.435 | INFO     | uvicorn:startup:34 - Application startup complete.
+[2021-04-03 16:23:15,436 uvicorn] INFO: 2021-04-03 16:23:15.435 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+[2021-04-03 16:23:15,838 uvicorn] INFO: 2021-04-03 16:23:15.838 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 63252) - "WebSocket /cqhttp/ws" [accepted]
+[2021-04-03 16:23:15,839 nonebot] INFO: 2021-04-03 16:23:15.838 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+[2021-04-03 16:23:37,888 nonebot] INFO: 2021-04-03 16:23:37.884 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -958116719 from 1351495774 "⣿⣆⠱⣝⡵⣝⢅⠙⣿⢕⢕⢕⢕⢝⣥⢒⠅⣿⣿⣿⡿⣳⣌⠪⡪⣡⢑
+⣿⣿⣦⠹⣳⣳⣕⢅⠈⢗⢕⢕⢕⢕⢕⢈⢆⠟⠋⠉⠁⠉⠉⠁⠈⠼⢐
+⢰⣶⣶⣦⣝⢝⢕⢕⠅⡆⢕⢕⢕⢕⢕⣴⠏⣠⡶⠛⡉⡉⡛⢶⣦⡀⠐
+⡄⢻⢟⣿⣿⣷⣕⣕⣅⣿⣔⣕⣵⣵⣿⣿⢠⣿⢠⣮⡈⣌⠨⠅⠹⣷⡀
+⡵⠟⠈⢀⣀⣀⡀⠉⢿⣿⣿⣿⣿⣿⣿⣿⣼⣿⢈⡋⠴⢿⡟⣡⡇⣿⡇
+⠁⣠⣾⠟⡉⡉⡉⠻⣦⣻⣿⣿⣿⣿⣿⣿⣿⣿⣧⠸⣿⣦⣥⣿⡇⡿⣰
+⢰⣿⡏⣴⣌⠈⣌⠡⠈⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣬⣉⣉⣁⣄⢖⢕
+⢻⣿⡇⢙⠁⠴⢿⡟⣡⡆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣵
+⣄⣻⣿⣌⠘⢿⣷⣥⣿⠇⣿⣿⣿⣿⣿⣿⠛⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢄⠻⣿⣟⠿⠦⠍⠉⣡⣾⣿⣿⣿⣿⣿⣿⢸⣿⣦⠙⣿⣿⣿⣿⣿⣿⣿
+⡑⣑⣈⣻⢗⢟⢞⢝⣻⣿⣿⣿⣿⣿⣿⣿⠸⣿⠿⠃⣿⣿⣿⣿⣿⣿⡿
+⡵⡈⢟⢕⢕⢕⢕⣵⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣿⣿⣿⣿⣿⠿⠋⣀
+⣿⣿⣿⢻⣿⣿⣿⣿⠻⣿⣿⡿⠿⠿⠿⣿⠻⡿⠻⠿⣿⡟⠛⠛⢛⣿⣿
+⣿⠏⣼⢸⡄⢿⢋⢸⣷⣇⢻⣿⣿⣿⣿⣿⡗⣥⠂⢦⣿⣭⢩⡍⣭⣽⣿
+⣿⣾⣛⣸⣿⣾⣾⣈⣛⣠⣿⣤⣤⣤⣤⣼⣴⣫⣶⣌⣻⣋⣼⣇⣋⣼⣿"
+[2021-04-03 16:23:37,889 nonebot] DEBUG: 2021-04-03 16:23:37.889 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:23:37,893 nonebot] INFO: 2021-04-03 16:23:37.892 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 476524537 from 1351495774 "猜头像"
+[2021-04-03 16:23:37,894 nonebot] DEBUG: 2021-04-03 16:23:37.894 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:23:37,897 nonebot] INFO: 2021-04-03 16:23:37.896 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:23:37,897 nonebot] DEBUG: 2021-04-03 16:23:37.897 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:23:37,898 nonebot] DEBUG: 2021-04-03 16:23:37.898 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:23:37,902 nonebot] INFO: 2021-04-03 16:23:37.902 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:23:37,903 nonebot] DEBUG: 2021-04-03 16:23:37.902 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:24:05,605 nonebot] INFO: 2021-04-03 16:24:05.604 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -2056356285 from 1351495774 "猜头像"
+[2021-04-03 16:24:05,605 nonebot] DEBUG: 2021-04-03 16:24:05.605 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:24:05,608 nonebot] INFO: 2021-04-03 16:24:05.607 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:05,608 nonebot] DEBUG: 2021-04-03 16:24:05.608 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:05,609 nonebot] DEBUG: 2021-04-03 16:24:05.609 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:24:05,612 nonebot] INFO: 2021-04-03 16:24:05.612 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:24:05,613 nonebot] DEBUG: 2021-04-03 16:24:05.613 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:24:14,591 nonebot] INFO: 2021-04-03 16:24:14.590 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -227979563 from 1351495774 "猜头像排行"
+[2021-04-03 16:24:14,591 nonebot] DEBUG: 2021-04-03 16:24:14.591 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:24:14,594 nonebot] INFO: 2021-04-03 16:24:14.594 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:14,594 nonebot] DEBUG: 2021-04-03 16:24:14.594 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:14,595 nonebot] DEBUG: 2021-04-03 16:24:14.595 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:24:14,597 nonebot] INFO: 2021-04-03 16:24:14.597 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:24:14,598 nonebot] DEBUG: 2021-04-03 16:24:14.598 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:24:54,349 nonebot] INFO: 2021-04-03 16:24:54.349 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -810581826 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:24:54,350 nonebot] DEBUG: 2021-04-03 16:24:54.349 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:24:54,352 nonebot] INFO: 2021-04-03 16:24:54.352 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:54,352 nonebot] DEBUG: 2021-04-03 16:24:54.352 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:54,358 nonebot] DEBUG: 2021-04-03 16:24:54.358 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:24:54,359 nonebot] INFO: 2021-04-03 16:24:54.359 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:54,360 nonebot] DEBUG: 2021-04-03 16:24:54.360 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:54,361 nonebot] INFO: 2021-04-03 16:24:54.360 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:24:54,361 nonebot] INFO: 2021-04-03 16:24:54.361 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:54,362 nonebot] DEBUG: 2021-04-03 16:24:54.362 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:54,362 nonebot] INFO: 2021-04-03 16:24:54.362 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:24:55,049 nonebot] INFO: 2021-04-03 16:24:55.048 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1196904408 from 2842117629@[群:1128254624] "猜猜这个图片是哪位角色头像的一部分?(20s后公布答案) [CQ:image,file=1b0ddc847525711d06f6b38e7a444d7a.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-3074934706-1B0DDC847525711D06F6B38E7A444D7A/0?term=3]"
+[2021-04-03 16:24:55,050 nonebot] DEBUG: 2021-04-03 16:24:55.049 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:24:55,052 nonebot] INFO: 2021-04-03 16:24:55.052 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:55,053 nonebot] DEBUG: 2021-04-03 16:24:55.053 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:55,054 nonebot] INFO: 2021-04-03 16:24:55.053 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:24:55,054 nonebot] INFO: 2021-04-03 16:24:55.054 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:55,055 nonebot] DEBUG: 2021-04-03 16:24:55.055 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:24:55,055 nonebot] INFO: 2021-04-03 16:24:55.055 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:24:55,056 nonebot] DEBUG: 2021-04-03 16:24:55.056 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:14,113 nonebot] INFO: 2021-04-03 16:25:14.112 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -926792537 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:25:14,113 nonebot] DEBUG: 2021-04-03 16:25:14.113 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:14,116 nonebot] INFO: 2021-04-03 16:25:14.116 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,116 nonebot] DEBUG: 2021-04-03 16:25:14.116 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,117 nonebot] DEBUG: 2021-04-03 16:25:14.117 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:25:14,118 nonebot] INFO: 2021-04-03 16:25:14.118 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,119 nonebot] DEBUG: 2021-04-03 16:25:14.118 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,119 nonebot] INFO: 2021-04-03 16:25:14.119 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:14,120 nonebot] INFO: 2021-04-03 16:25:14.120 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,120 nonebot] DEBUG: 2021-04-03 16:25:14.120 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,121 nonebot] INFO: 2021-04-03 16:25:14.121 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:14,217 nonebot] INFO: 2021-04-03 16:25:14.216 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1077578703 from 2842117629@[群:1128254624] "游戏仍在进行中…"
+[2021-04-03 16:25:14,218 nonebot] DEBUG: 2021-04-03 16:25:14.218 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:14,220 nonebot] INFO: 2021-04-03 16:25:14.220 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,221 nonebot] DEBUG: 2021-04-03 16:25:14.221 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,222 nonebot] INFO: 2021-04-03 16:25:14.221 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:14,222 nonebot] INFO: 2021-04-03 16:25:14.222 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,223 nonebot] DEBUG: 2021-04-03 16:25:14.223 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:14,223 nonebot] INFO: 2021-04-03 16:25:14.223 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:14,224 nonebot] DEBUG: 2021-04-03 16:25:14.224 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:14,290 nonebot] INFO: 2021-04-03 16:25:14.289 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:14,291 nonebot] DEBUG: 2021-04-03 16:25:14.290 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:15,444 nonebot] INFO: 2021-04-03 16:25:15.443 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1049360244 from 2842117629@[群:1128254624] "正确答案是：怜(新年) [CQ:image,file=a6db5d2bdf239c6c1c5b71ce0051f702.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2591555974-A6DB5D2BDF239C6C1C5B71CE0051F702/0?term=3]
+很遗憾，没有人答对~"
+[2021-04-03 16:25:15,444 nonebot] DEBUG: 2021-04-03 16:25:15.444 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:15,447 nonebot] INFO: 2021-04-03 16:25:15.446 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:15,447 nonebot] DEBUG: 2021-04-03 16:25:15.447 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:15,448 nonebot] INFO: 2021-04-03 16:25:15.448 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:15,449 nonebot] INFO: 2021-04-03 16:25:15.448 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:15,449 nonebot] DEBUG: 2021-04-03 16:25:15.449 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:15,450 nonebot] INFO: 2021-04-03 16:25:15.449 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:15,450 nonebot] DEBUG: 2021-04-03 16:25:15.450 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:15,605 nonebot] DEBUG: 2021-04-03 16:25:15.605 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:25:16,382 nonebot] INFO: 2021-04-03 16:25:16.382 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:16,382 nonebot] DEBUG: 2021-04-03 16:25:16.382 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:32,059 nonebot] INFO: 2021-04-03 16:25:32.058 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1060154599 from 1351495774@[群:1128254624] "猜头像排行"
+[2021-04-03 16:25:32,059 nonebot] DEBUG: 2021-04-03 16:25:32.059 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:32,062 nonebot] INFO: 2021-04-03 16:25:32.061 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,062 nonebot] DEBUG: 2021-04-03 16:25:32.062 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,087 nonebot] DEBUG: 2021-04-03 16:25:32.087 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:25:32,088 nonebot] INFO: 2021-04-03 16:25:32.088 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,089 nonebot] DEBUG: 2021-04-03 16:25:32.088 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,089 nonebot] INFO: 2021-04-03 16:25:32.089 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:32,090 nonebot] INFO: 2021-04-03 16:25:32.090 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,090 nonebot] DEBUG: 2021-04-03 16:25:32.090 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,091 nonebot] INFO: 2021-04-03 16:25:32.091 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:32,163 nonebot] INFO: 2021-04-03 16:25:32.162 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1506149027 from 2842117629@[群:1128254624] "【猜头像小游戏排行榜】"
+[2021-04-03 16:25:32,163 nonebot] DEBUG: 2021-04-03 16:25:32.163 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:32,166 nonebot] INFO: 2021-04-03 16:25:32.166 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,166 nonebot] DEBUG: 2021-04-03 16:25:32.166 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,167 nonebot] INFO: 2021-04-03 16:25:32.167 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:32,168 nonebot] INFO: 2021-04-03 16:25:32.167 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,168 nonebot] DEBUG: 2021-04-03 16:25:32.168 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:32,169 nonebot] INFO: 2021-04-03 16:25:32.169 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:32,170 nonebot] DEBUG: 2021-04-03 16:25:32.170 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:32,236 nonebot] INFO: 2021-04-03 16:25:32.236 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:32,237 nonebot] DEBUG: 2021-04-03 16:25:32.237 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:40,692 nonebot] INFO: 2021-04-03 16:25:40.692 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1331320936 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:25:40,693 nonebot] DEBUG: 2021-04-03 16:25:40.692 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:40,695 nonebot] INFO: 2021-04-03 16:25:40.695 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:40,696 nonebot] DEBUG: 2021-04-03 16:25:40.695 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:40,701 nonebot] DEBUG: 2021-04-03 16:25:40.701 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:25:40,702 nonebot] INFO: 2021-04-03 16:25:40.702 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:40,703 nonebot] DEBUG: 2021-04-03 16:25:40.703 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:40,704 nonebot] INFO: 2021-04-03 16:25:40.703 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:40,704 nonebot] INFO: 2021-04-03 16:25:40.704 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:40,705 nonebot] DEBUG: 2021-04-03 16:25:40.705 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:40,705 nonebot] INFO: 2021-04-03 16:25:40.705 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:41,425 nonebot] INFO: 2021-04-03 16:25:41.424 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1588315836 from 2842117629@[群:1128254624] "猜猜这个图片是哪位角色头像的一部分?(20s后公布答案) [CQ:image,file=67d089f1a2463ff1cc4b851a1f3b5437.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2828772445-67D089F1A2463FF1CC4B851A1F3B5437/0?term=3]"
+[2021-04-03 16:25:41,425 nonebot] DEBUG: 2021-04-03 16:25:41.425 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:41,428 nonebot] INFO: 2021-04-03 16:25:41.428 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:41,428 nonebot] DEBUG: 2021-04-03 16:25:41.428 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:41,429 nonebot] INFO: 2021-04-03 16:25:41.429 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:41,430 nonebot] INFO: 2021-04-03 16:25:41.429 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:41,430 nonebot] DEBUG: 2021-04-03 16:25:41.430 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:41,431 nonebot] INFO: 2021-04-03 16:25:41.431 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:41,432 nonebot] DEBUG: 2021-04-03 16:25:41.431 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:57,420 nonebot] INFO: 2021-04-03 16:25:57.419 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1189876803 from 1351495774@[群:1128254624] "水狗"
+[2021-04-03 16:25:57,420 nonebot] DEBUG: 2021-04-03 16:25:57.420 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:57,423 nonebot] INFO: 2021-04-03 16:25:57.422 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,423 nonebot] DEBUG: 2021-04-03 16:25:57.423 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,424 nonebot] INFO: 2021-04-03 16:25:57.424 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:57,425 nonebot] INFO: 2021-04-03 16:25:57.424 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,425 nonebot] DEBUG: 2021-04-03 16:25:57.425 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,426 nonebot] INFO: 2021-04-03 16:25:57.425 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:57,426 nonebot] DEBUG: 2021-04-03 16:25:57.426 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:25:57,728 nonebot] INFO: 2021-04-03 16:25:57.728 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1088238564 from 2842117629@[群:1128254624] "正确答案是：Kaori(Summer)[CQ:image,file=bee2f8b4b38d6edeb3428b4865efcca8.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2396499404-BEE2F8B4B38D6EDEB3428B4865EFCCA8/0?term=3]
+[CQ:at,qq=1351495774] 猜对了，真厉害！TA已经猜对1次了~
+(此轮游戏将在几秒后自动结束，请耐心等待)"
+[2021-04-03 16:25:57,729 nonebot] DEBUG: 2021-04-03 16:25:57.729 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:25:57,731 nonebot] INFO: 2021-04-03 16:25:57.731 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,732 nonebot] DEBUG: 2021-04-03 16:25:57.732 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,732 nonebot] INFO: 2021-04-03 16:25:57.732 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:57,733 nonebot] INFO: 2021-04-03 16:25:57.733 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,734 nonebot] DEBUG: 2021-04-03 16:25:57.733 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:25:57,734 nonebot] INFO: 2021-04-03 16:25:57.734 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:25:57,735 nonebot] DEBUG: 2021-04-03 16:25:57.735 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:26:01,770 nonebot] DEBUG: 2021-04-03 16:26:01.770 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:26:02,622 nonebot] INFO: 2021-04-03 16:26:02.621 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:02,622 nonebot] DEBUG: 2021-04-03 16:26:02.622 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:26:11,293 nonebot] INFO: 2021-04-03 16:26:11.292 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 558258623 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:26:11,293 nonebot] DEBUG: 2021-04-03 16:26:11.293 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:26:11,295 nonebot] INFO: 2021-04-03 16:26:11.295 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:11,296 nonebot] DEBUG: 2021-04-03 16:26:11.296 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:11,301 nonebot] DEBUG: 2021-04-03 16:26:11.301 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:26:11,303 nonebot] INFO: 2021-04-03 16:26:11.302 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:11,303 nonebot] DEBUG: 2021-04-03 16:26:11.303 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:11,304 nonebot] INFO: 2021-04-03 16:26:11.304 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:11,305 nonebot] INFO: 2021-04-03 16:26:11.304 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:11,305 nonebot] DEBUG: 2021-04-03 16:26:11.305 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:11,306 nonebot] INFO: 2021-04-03 16:26:11.305 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:25,433 nonebot] INFO: 2021-04-03 16:26:25.432 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 686822804 from 1351495774@[群:1128254624] "万圣怜"
+[2021-04-03 16:26:25,433 nonebot] DEBUG: 2021-04-03 16:26:25.433 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:26:25,436 nonebot] INFO: 2021-04-03 16:26:25.435 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:25,436 nonebot] DEBUG: 2021-04-03 16:26:25.436 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:25,437 nonebot] INFO: 2021-04-03 16:26:25.437 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:25,438 nonebot] INFO: 2021-04-03 16:26:25.437 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:25,438 nonebot] DEBUG: 2021-04-03 16:26:25.438 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:25,439 nonebot] INFO: 2021-04-03 16:26:25.439 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:25,439 nonebot] DEBUG: 2021-04-03 16:26:25.439 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:26:32,377 nonebot] INFO: 2021-04-03 16:26:32.376 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1806655952 from 2842117629@[群:1128254624] "正确答案是：🐰 [CQ:image,file=e50076b4a97f7f3d0e77bfab9fd67d11.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2162221085-E50076B4A97F7F3D0E77BFAB9FD67D11/0?term=3]
+很遗憾，没有人答对~"
+[2021-04-03 16:26:32,378 nonebot] DEBUG: 2021-04-03 16:26:32.378 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:26:32,380 nonebot] INFO: 2021-04-03 16:26:32.380 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:32,381 nonebot] DEBUG: 2021-04-03 16:26:32.381 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:32,382 nonebot] INFO: 2021-04-03 16:26:32.381 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:32,382 nonebot] INFO: 2021-04-03 16:26:32.382 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:32,383 nonebot] DEBUG: 2021-04-03 16:26:32.383 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:32,383 nonebot] INFO: 2021-04-03 16:26:32.383 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:32,384 nonebot] DEBUG: 2021-04-03 16:26:32.384 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:26:32,487 nonebot] DEBUG: 2021-04-03 16:26:32.487 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:26:33,360 nonebot] INFO: 2021-04-03 16:26:33.359 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:33,360 nonebot] DEBUG: 2021-04-03 16:26:33.360 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:26:47,314 nonebot] INFO: 2021-04-03 16:26:47.313 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -2100509467 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:26:47,314 nonebot] DEBUG: 2021-04-03 16:26:47.314 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:26:47,317 nonebot] INFO: 2021-04-03 16:26:47.316 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:47,317 nonebot] DEBUG: 2021-04-03 16:26:47.317 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:47,323 nonebot] DEBUG: 2021-04-03 16:26:47.322 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:26:47,324 nonebot] INFO: 2021-04-03 16:26:47.323 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:47,324 nonebot] DEBUG: 2021-04-03 16:26:47.324 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:47,325 nonebot] INFO: 2021-04-03 16:26:47.325 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:47,326 nonebot] INFO: 2021-04-03 16:26:47.325 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:47,326 nonebot] DEBUG: 2021-04-03 16:26:47.326 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:47,327 nonebot] INFO: 2021-04-03 16:26:47.327 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:48,071 nonebot] INFO: 2021-04-03 16:26:48.071 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -171182989 from 2842117629@[群:1128254624] "猜猜这个图片是哪位角色头像的一部分?(20s后公布答案) [CQ:image,file=b689474285a5ba405450bff168fa6acc.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2238496581-B689474285A5BA405450BFF168FA6ACC/0?term=3]"
+[2021-04-03 16:26:48,072 nonebot] DEBUG: 2021-04-03 16:26:48.072 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:26:48,074 nonebot] INFO: 2021-04-03 16:26:48.074 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:48,075 nonebot] DEBUG: 2021-04-03 16:26:48.075 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:48,076 nonebot] INFO: 2021-04-03 16:26:48.075 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:48,076 nonebot] INFO: 2021-04-03 16:26:48.076 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:48,077 nonebot] DEBUG: 2021-04-03 16:26:48.077 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:26:48,077 nonebot] INFO: 2021-04-03 16:26:48.077 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:26:48,078 nonebot] DEBUG: 2021-04-03 16:26:48.078 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:08,353 nonebot] DEBUG: 2021-04-03 16:27:08.352 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:27:08,530 nonebot] INFO: 2021-04-03 16:27:08.530 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -58869672 from 2842117629@[群:1128254624] "正确答案是：年糕环奈 [CQ:image,file=9bf522f02b45818e9b66e13d35e4e690.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2732415752-9BF522F02B45818E9B66E13D35E4E690/0?term=3]
+很遗憾，没有人答对~"
+[2021-04-03 16:27:08,531 nonebot] DEBUG: 2021-04-03 16:27:08.531 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:08,533 nonebot] INFO: 2021-04-03 16:27:08.533 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:08,534 nonebot] DEBUG: 2021-04-03 16:27:08.534 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:08,534 nonebot] INFO: 2021-04-03 16:27:08.534 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:08,535 nonebot] INFO: 2021-04-03 16:27:08.535 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:08,535 nonebot] DEBUG: 2021-04-03 16:27:08.535 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:08,536 nonebot] INFO: 2021-04-03 16:27:08.536 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:08,537 nonebot] DEBUG: 2021-04-03 16:27:08.537 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:09,354 nonebot] INFO: 2021-04-03 16:27:09.354 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:09,355 nonebot] DEBUG: 2021-04-03 16:27:09.355 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:21,628 nonebot] INFO: 2021-04-03 16:27:21.627 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1924419729 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:27:21,629 nonebot] DEBUG: 2021-04-03 16:27:21.628 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:21,631 nonebot] INFO: 2021-04-03 16:27:21.631 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:21,632 nonebot] DEBUG: 2021-04-03 16:27:21.631 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:21,637 nonebot] DEBUG: 2021-04-03 16:27:21.637 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:27:21,639 nonebot] INFO: 2021-04-03 16:27:21.638 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:21,639 nonebot] DEBUG: 2021-04-03 16:27:21.639 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:21,640 nonebot] INFO: 2021-04-03 16:27:21.639 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:21,640 nonebot] INFO: 2021-04-03 16:27:21.640 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:21,641 nonebot] DEBUG: 2021-04-03 16:27:21.641 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:21,641 nonebot] INFO: 2021-04-03 16:27:21.641 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:22,306 nonebot] INFO: 2021-04-03 16:27:22.306 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 95641607 from 2842117629@[群:1128254624] "猜猜这个图片是哪位角色头像的一部分?(20s后公布答案) [CQ:image,file=4c0c8b9bbcecd1415943010ab10c0c20.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2573448485-4C0C8B9BBCECD1415943010AB10C0C20/0?term=3]"
+[2021-04-03 16:27:22,307 nonebot] DEBUG: 2021-04-03 16:27:22.306 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:22,309 nonebot] INFO: 2021-04-03 16:27:22.309 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:22,310 nonebot] DEBUG: 2021-04-03 16:27:22.310 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:22,311 nonebot] INFO: 2021-04-03 16:27:22.310 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:22,311 nonebot] INFO: 2021-04-03 16:27:22.311 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:22,312 nonebot] DEBUG: 2021-04-03 16:27:22.312 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:22,312 nonebot] INFO: 2021-04-03 16:27:22.312 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:22,313 nonebot] DEBUG: 2021-04-03 16:27:22.313 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:40,055 nonebot] INFO: 2021-04-03 16:27:40.055 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1977193608 from 1351495774@[群:1128254624] "奶牛骑士"
+[2021-04-03 16:27:40,055 nonebot] DEBUG: 2021-04-03 16:27:40.055 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:40,057 nonebot] INFO: 2021-04-03 16:27:40.057 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:40,058 nonebot] DEBUG: 2021-04-03 16:27:40.057 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:40,058 nonebot] INFO: 2021-04-03 16:27:40.058 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:40,059 nonebot] INFO: 2021-04-03 16:27:40.058 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:40,059 nonebot] DEBUG: 2021-04-03 16:27:40.059 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:40,059 nonebot] INFO: 2021-04-03 16:27:40.059 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:40,060 nonebot] DEBUG: 2021-04-03 16:27:40.060 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:42,630 nonebot] INFO: 2021-04-03 16:27:42.630 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 48145438 from 2842117629@[群:1128254624] "正确答案是：护林奶牛 [CQ:image,file=b53d0a24e4619b1c595397581e138ddf.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2537040673-B53D0A24E4619B1C595397581E138DDF/0?term=3]
+很遗憾，没有人答对~"
+[2021-04-03 16:27:42,631 nonebot] DEBUG: 2021-04-03 16:27:42.631 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:42,633 nonebot] INFO: 2021-04-03 16:27:42.633 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:42,634 nonebot] DEBUG: 2021-04-03 16:27:42.634 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:42,635 nonebot] INFO: 2021-04-03 16:27:42.634 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:42,635 nonebot] INFO: 2021-04-03 16:27:42.635 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:42,636 nonebot] DEBUG: 2021-04-03 16:27:42.635 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:42,636 nonebot] INFO: 2021-04-03 16:27:42.636 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:42,637 nonebot] DEBUG: 2021-04-03 16:27:42.637 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:42,822 nonebot] DEBUG: 2021-04-03 16:27:42.822 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:27:43,785 nonebot] INFO: 2021-04-03 16:27:43.785 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:43,786 nonebot] DEBUG: 2021-04-03 16:27:43.785 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:27:50,681 nonebot] INFO: 2021-04-03 16:27:50.680 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1064283416 from 1351495774@[群:1128254624] "猜头像"
+[2021-04-03 16:27:50,682 nonebot] DEBUG: 2021-04-03 16:27:50.681 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:50,684 nonebot] INFO: 2021-04-03 16:27:50.684 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:50,685 nonebot] DEBUG: 2021-04-03 16:27:50.684 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:50,690 nonebot] DEBUG: 2021-04-03 16:27:50.690 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:27:50,691 nonebot] INFO: 2021-04-03 16:27:50.691 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:50,692 nonebot] DEBUG: 2021-04-03 16:27:50.692 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:50,693 nonebot] INFO: 2021-04-03 16:27:50.692 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:50,693 nonebot] INFO: 2021-04-03 16:27:50.693 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:50,694 nonebot] DEBUG: 2021-04-03 16:27:50.694 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:50,695 nonebot] INFO: 2021-04-03 16:27:50.694 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:51,431 nonebot] INFO: 2021-04-03 16:27:51.431 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1503200082 from 2842117629@[群:1128254624] "猜猜这个图片是哪位角色头像的一部分?(20s后公布答案) [CQ:image,file=08da53f4eec07747c68efd16b5cbff7e.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-3167379449-08DA53F4EEC07747C68EFD16B5CBFF7E/0?term=3]"
+[2021-04-03 16:27:51,432 nonebot] DEBUG: 2021-04-03 16:27:51.432 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:27:51,435 nonebot] INFO: 2021-04-03 16:27:51.434 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:51,435 nonebot] DEBUG: 2021-04-03 16:27:51.435 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:51,436 nonebot] INFO: 2021-04-03 16:27:51.436 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:51,437 nonebot] INFO: 2021-04-03 16:27:51.436 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:51,437 nonebot] DEBUG: 2021-04-03 16:27:51.437 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:27:51,438 nonebot] INFO: 2021-04-03 16:27:51.437 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:27:51,438 nonebot] DEBUG: 2021-04-03 16:27:51.438 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:28:00,467 nonebot] INFO: 2021-04-03 16:28:00.466 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -939682063 from 1351495774@[群:1128254624] "克"
+[2021-04-03 16:28:00,468 nonebot] DEBUG: 2021-04-03 16:28:00.467 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:28:00,470 nonebot] INFO: 2021-04-03 16:28:00.470 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:00,470 nonebot] DEBUG: 2021-04-03 16:28:00.470 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:00,485 nonebot] DEBUG: 2021-04-03 16:28:00.485 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:28:00,486 nonebot] INFO: 2021-04-03 16:28:00.486 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:00,487 nonebot] DEBUG: 2021-04-03 16:28:00.487 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:00,488 nonebot] INFO: 2021-04-03 16:28:00.487 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:01,327 nonebot] INFO: 2021-04-03 16:28:01.326 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:01,328 nonebot] DEBUG: 2021-04-03 16:28:01.327 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:28:11,664 nonebot] INFO: 2021-04-03 16:28:11.664 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:11,665 nonebot] DEBUG: 2021-04-03 16:28:11.665 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:28:11,883 nonebot] INFO: 2021-04-03 16:28:11.883 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1186141620 from 2842117629@[群:1128254624] "正确答案是：Rin [CQ:image,file=3b95cebd12359a7c803038a795a1a111.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2351689256-3B95CEBD12359A7C803038A795A1A111/0?term=3]
+很遗憾，没有人答对~"
+[2021-04-03 16:28:11,884 nonebot] DEBUG: 2021-04-03 16:28:11.884 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:28:11,887 nonebot] INFO: 2021-04-03 16:28:11.886 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:11,887 nonebot] DEBUG: 2021-04-03 16:28:11.887 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:11,888 nonebot] INFO: 2021-04-03 16:28:11.887 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:11,888 nonebot] INFO: 2021-04-03 16:28:11.888 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:11,889 nonebot] DEBUG: 2021-04-03 16:28:11.889 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:11,890 nonebot] INFO: 2021-04-03 16:28:11.889 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:11,890 nonebot] DEBUG: 2021-04-03 16:28:11.890 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:28:16,924 nonebot] INFO: 2021-04-03 16:28:16.923 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1366535361 from 1351495774@[群:1128254624] "猜头像排行"
+[2021-04-03 16:28:16,924 nonebot] DEBUG: 2021-04-03 16:28:16.924 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:28:16,927 nonebot] INFO: 2021-04-03 16:28:16.927 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:16,927 nonebot] DEBUG: 2021-04-03 16:28:16.927 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:16,930 nonebot] DEBUG: 2021-04-03 16:28:16.930 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API get_group_member_info
+[2021-04-03 16:28:16,931 nonebot] INFO: 2021-04-03 16:28:16.931 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:16,932 nonebot] DEBUG: 2021-04-03 16:28:16.931 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:16,932 nonebot] INFO: 2021-04-03 16:28:16.932 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:16,933 nonebot] INFO: 2021-04-03 16:28:16.933 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:16,933 nonebot] DEBUG: 2021-04-03 16:28:16.933 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:16,934 nonebot] INFO: 2021-04-03 16:28:16.934 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:16,936 nonebot] DEBUG: 2021-04-03 16:28:16.935 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:28:17,133 nonebot] INFO: 2021-04-03 16:28:17.133 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1082274323 from 2842117629@[群:1128254624] "【猜头像小游戏排行榜】
+第1名：生煎三文魚 猜对1次"
+[2021-04-03 16:28:17,134 nonebot] DEBUG: 2021-04-03 16:28:17.134 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:28:17,137 nonebot] INFO: 2021-04-03 16:28:17.136 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:17,137 nonebot] DEBUG: 2021-04-03 16:28:17.137 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:17,138 nonebot] INFO: 2021-04-03 16:28:17.138 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:17,138 nonebot] INFO: 2021-04-03 16:28:17.138 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:17,139 nonebot] DEBUG: 2021-04-03 16:28:17.139 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:28:17,140 nonebot] INFO: 2021-04-03 16:28:17.139 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:17,140 nonebot] DEBUG: 2021-04-03 16:28:17.140 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:28:17,141 nonebot] INFO: 2021-04-03 16:28:17.141 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:28:17,142 nonebot] DEBUG: 2021-04-03 16:28:17.142 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:02,859 nonebot] INFO: 2021-04-03 16:29:02.858 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 931463813 from 1351495774@[群:1128254624] "猜角色"
+[2021-04-03 16:29:02,859 nonebot] DEBUG: 2021-04-03 16:29:02.859 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:02,862 nonebot] INFO: 2021-04-03 16:29:02.861 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,862 nonebot] DEBUG: 2021-04-03 16:29:02.862 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,863 nonebot] DEBUG: 2021-04-03 16:29:02.863 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:29:02,864 nonebot] INFO: 2021-04-03 16:29:02.864 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,865 nonebot] DEBUG: 2021-04-03 16:29:02.864 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,865 nonebot] INFO: 2021-04-03 16:29:02.865 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:02,866 nonebot] INFO: 2021-04-03 16:29:02.866 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,866 nonebot] DEBUG: 2021-04-03 16:29:02.866 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,867 nonebot] INFO: 2021-04-03 16:29:02.867 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:02,981 nonebot] INFO: 2021-04-03 16:29:02.981 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1444833498 from 2842117629@[群:1128254624] "5秒后每隔12秒我会给出某位角色的一个描述，根据这些描述猜猜她是谁~"
+[2021-04-03 16:29:02,982 nonebot] DEBUG: 2021-04-03 16:29:02.982 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:02,984 nonebot] INFO: 2021-04-03 16:29:02.984 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,985 nonebot] DEBUG: 2021-04-03 16:29:02.985 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,986 nonebot] INFO: 2021-04-03 16:29:02.985 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:02,986 nonebot] INFO: 2021-04-03 16:29:02.986 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,987 nonebot] DEBUG: 2021-04-03 16:29:02.987 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:02,987 nonebot] INFO: 2021-04-03 16:29:02.987 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:02,988 nonebot] DEBUG: 2021-04-03 16:29:02.988 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:08,061 nonebot] DEBUG: 2021-04-03 16:29:08.061 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:29:08,181 nonebot] INFO: 2021-04-03 16:29:08.181 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 1206908426 from 2842117629@[群:1128254624] "提示1/5:
+她的身份是 某谜之国度的公主"
+[2021-04-03 16:29:08,182 nonebot] DEBUG: 2021-04-03 16:29:08.182 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:08,184 nonebot] INFO: 2021-04-03 16:29:08.184 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:08,185 nonebot] DEBUG: 2021-04-03 16:29:08.185 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:08,185 nonebot] INFO: 2021-04-03 16:29:08.185 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:08,186 nonebot] INFO: 2021-04-03 16:29:08.186 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:08,186 nonebot] DEBUG: 2021-04-03 16:29:08.186 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:08,187 nonebot] INFO: 2021-04-03 16:29:08.187 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:08,188 nonebot] DEBUG: 2021-04-03 16:29:08.188 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:15,617 nonebot] INFO: 2021-04-03 16:29:15.616 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1604855027 from 1351495774@[群:1128254624] "兔子"
+[2021-04-03 16:29:15,617 nonebot] DEBUG: 2021-04-03 16:29:15.617 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:15,620 nonebot] INFO: 2021-04-03 16:29:15.619 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:15,620 nonebot] DEBUG: 2021-04-03 16:29:15.620 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:15,621 nonebot] INFO: 2021-04-03 16:29:15.620 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:15,621 nonebot] INFO: 2021-04-03 16:29:15.621 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:15,622 nonebot] DEBUG: 2021-04-03 16:29:15.622 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:15,651 nonebot] DEBUG: 2021-04-03 16:29:15.650 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:29:16,514 nonebot] INFO: 2021-04-03 16:29:16.513 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:16,514 nonebot] DEBUG: 2021-04-03 16:29:16.514 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:20,249 nonebot] INFO: 2021-04-03 16:29:20.249 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:20,250 nonebot] DEBUG: 2021-04-03 16:29:20.250 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:20,327 nonebot] INFO: 2021-04-03 16:29:20.326 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -506608136 from 2842117629@[群:1128254624] "提示2/5:
+她的身高是 155cm"
+[2021-04-03 16:29:20,327 nonebot] DEBUG: 2021-04-03 16:29:20.327 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:20,330 nonebot] INFO: 2021-04-03 16:29:20.329 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:20,330 nonebot] DEBUG: 2021-04-03 16:29:20.330 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:20,331 nonebot] INFO: 2021-04-03 16:29:20.331 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:20,332 nonebot] INFO: 2021-04-03 16:29:20.331 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:20,332 nonebot] DEBUG: 2021-04-03 16:29:20.332 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:20,333 nonebot] INFO: 2021-04-03 16:29:20.332 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:20,333 nonebot] DEBUG: 2021-04-03 16:29:20.333 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:25,654 nonebot] INFO: 2021-04-03 16:29:25.654 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1765083794 from 1351495774@[群:1128254624] "安"
+[2021-04-03 16:29:25,655 nonebot] DEBUG: 2021-04-03 16:29:25.655 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:25,657 nonebot] INFO: 2021-04-03 16:29:25.657 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:25,658 nonebot] DEBUG: 2021-04-03 16:29:25.657 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:25,658 nonebot] INFO: 2021-04-03 16:29:25.658 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:25,659 nonebot] INFO: 2021-04-03 16:29:25.659 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:25,659 nonebot] DEBUG: 2021-04-03 16:29:25.659 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:25,660 nonebot] INFO: 2021-04-03 16:29:25.660 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:25,661 nonebot] DEBUG: 2021-04-03 16:29:25.660 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:32,454 nonebot] INFO: 2021-04-03 16:29:32.453 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 264479956 from 2842117629@[群:1128254624] "提示3/5:
+她的喜好是 幻想、收集玩偶"
+[2021-04-03 16:29:32,454 nonebot] DEBUG: 2021-04-03 16:29:32.454 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:32,457 nonebot] INFO: 2021-04-03 16:29:32.457 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:32,458 nonebot] DEBUG: 2021-04-03 16:29:32.457 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:32,458 nonebot] INFO: 2021-04-03 16:29:32.458 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:32,459 nonebot] INFO: 2021-04-03 16:29:32.459 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:32,459 nonebot] DEBUG: 2021-04-03 16:29:32.459 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:32,460 nonebot] INFO: 2021-04-03 16:29:32.460 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:32,461 nonebot] DEBUG: 2021-04-03 16:29:32.460 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:37,596 nonebot] INFO: 2021-04-03 16:29:37.596 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 2026148930 from 1351495774@[群:1128254624] "环奈"
+[2021-04-03 16:29:37,597 nonebot] DEBUG: 2021-04-03 16:29:37.597 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:37,599 nonebot] INFO: 2021-04-03 16:29:37.599 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:37,600 nonebot] DEBUG: 2021-04-03 16:29:37.600 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:37,601 nonebot] INFO: 2021-04-03 16:29:37.600 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:37,601 nonebot] INFO: 2021-04-03 16:29:37.601 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:37,602 nonebot] DEBUG: 2021-04-03 16:29:37.602 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:37,602 nonebot] INFO: 2021-04-03 16:29:37.602 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:37,603 nonebot] DEBUG: 2021-04-03 16:29:37.603 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:44,551 nonebot] INFO: 2021-04-03 16:29:44.551 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -425721375 from 2842117629@[群:1128254624] "提示4/5:
+她的种族是 兽人族"
+[2021-04-03 16:29:44,552 nonebot] DEBUG: 2021-04-03 16:29:44.551 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:44,554 nonebot] INFO: 2021-04-03 16:29:44.554 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,554 nonebot] DEBUG: 2021-04-03 16:29:44.554 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,555 nonebot] INFO: 2021-04-03 16:29:44.555 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:44,556 nonebot] INFO: 2021-04-03 16:29:44.555 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,556 nonebot] DEBUG: 2021-04-03 16:29:44.556 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,557 nonebot] INFO: 2021-04-03 16:29:44.556 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:44,558 nonebot] DEBUG: 2021-04-03 16:29:44.557 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:44,625 nonebot] INFO: 2021-04-03 16:29:44.624 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1851313801 from 1351495774@[群:1128254624] "真布"
+[2021-04-03 16:29:44,625 nonebot] DEBUG: 2021-04-03 16:29:44.625 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:44,628 nonebot] INFO: 2021-04-03 16:29:44.628 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,628 nonebot] DEBUG: 2021-04-03 16:29:44.628 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,628 nonebot] INFO: 2021-04-03 16:29:44.628 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:44,629 nonebot] INFO: 2021-04-03 16:29:44.628 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,629 nonebot] DEBUG: 2021-04-03 16:29:44.629 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:44,629 nonebot] INFO: 2021-04-03 16:29:44.629 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:44,629 nonebot] DEBUG: 2021-04-03 16:29:44.629 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:45,078 nonebot] INFO: 2021-04-03 16:29:45.077 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1743684260 from 2842117629@[群:1128254624] "正确答案是：マホ[CQ:image,file=ee82fe61612035cc27f427f4facc7dbf.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2829662458-EE82FE61612035CC27F427F4FACC7DBF/0?term=3]
+[CQ:at,qq=1351495774] 猜对了，真厉害！TA已经猜对2次了~
+(此轮游戏将在几秒后自动结束，请耐心等待)"
+[2021-04-03 16:29:45,078 nonebot] DEBUG: 2021-04-03 16:29:45.078 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:45,080 nonebot] INFO: 2021-04-03 16:29:45.080 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:45,081 nonebot] DEBUG: 2021-04-03 16:29:45.081 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:45,082 nonebot] INFO: 2021-04-03 16:29:45.081 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:45,082 nonebot] INFO: 2021-04-03 16:29:45.082 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:45,083 nonebot] DEBUG: 2021-04-03 16:29:45.083 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:45,083 nonebot] INFO: 2021-04-03 16:29:45.083 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:45,084 nonebot] DEBUG: 2021-04-03 16:29:45.084 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:54,177 nonebot] INFO: 2021-04-03 16:29:54.176 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1882078161 from 1351495774@[群:1128254624] "猜角色排行"
+[2021-04-03 16:29:54,177 nonebot] DEBUG: 2021-04-03 16:29:54.177 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:54,180 nonebot] INFO: 2021-04-03 16:29:54.179 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,180 nonebot] DEBUG: 2021-04-03 16:29:54.180 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,183 nonebot] DEBUG: 2021-04-03 16:29:54.182 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API get_group_member_info
+[2021-04-03 16:29:54,184 nonebot] INFO: 2021-04-03 16:29:54.184 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,184 nonebot] DEBUG: 2021-04-03 16:29:54.184 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,185 nonebot] INFO: 2021-04-03 16:29:54.185 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:54,186 nonebot] INFO: 2021-04-03 16:29:54.185 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,186 nonebot] DEBUG: 2021-04-03 16:29:54.186 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,187 nonebot] INFO: 2021-04-03 16:29:54.186 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:54,188 nonebot] DEBUG: 2021-04-03 16:29:54.188 | DEBUG    | nonebot:log:82 - CQHTTP | Calling API send_msg
+[2021-04-03 16:29:54,278 nonebot] INFO: 2021-04-03 16:29:54.278 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 383292821 from 2842117629@[群:1128254624] "【猜角色小游戏排行榜】
+第1名：生煎三文魚 猜对2次"
+[2021-04-03 16:29:54,279 nonebot] DEBUG: 2021-04-03 16:29:54.279 | DEBUG    | nonebot:handle_event:229 - Checking for matchers in priority 1...
+[2021-04-03 16:29:54,282 nonebot] INFO: 2021-04-03 16:29:54.281 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,282 nonebot] DEBUG: 2021-04-03 16:29:54.282 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,283 nonebot] INFO: 2021-04-03 16:29:54.283 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:54,283 nonebot] INFO: 2021-04-03 16:29:54.283 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,284 nonebot] DEBUG: 2021-04-03 16:29:54.284 | DEBUG    | nonebot:_run_matcher:153 - Running matcher <Matcher from games, type=message, priority=1, temp=False>
+[2021-04-03 16:29:54,285 nonebot] INFO: 2021-04-03 16:29:54.284 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:54,285 nonebot] DEBUG: 2021-04-03 16:29:54.285 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
+[2021-04-03 16:29:54,351 nonebot] INFO: 2021-04-03 16:29:54.351 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+[2021-04-03 16:29:54,352 nonebot] DEBUG: 2021-04-03 16:29:54.352 | DEBUG    | nonebot:handle_event:242 - Stop event propagation
