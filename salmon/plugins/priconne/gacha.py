@@ -1,12 +1,10 @@
 import os
 import random
 from collections import defaultdict
-from nonebot.typing import T_State
-from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 import salmon
 from salmon import Service, Bot, priv, util
 from salmon.util import DailyNumberLimiter, concat_pic, pic2b64
-from salmon.typing import CQEvent, Message, MessageSegment
+from salmon.typing import CQEvent, Message, MessageSegment, T_State, GroupMessageEvent, PrivateMessageEvent
 from salmon.service import matcher_wrapper, parse_uid
 from salmon.plugins.priconne.pcr_data import chara
 from salmon.plugins.priconne.pool import Gacha

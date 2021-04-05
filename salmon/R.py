@@ -6,7 +6,7 @@ from nonebot.adapters.cqhttp.message import MessageSegment
 from PIL import Image
 
 import salmon
-from salmon import logger, util
+from salmon import util
 
 class ResObj:
     def __init__(self, res_path):

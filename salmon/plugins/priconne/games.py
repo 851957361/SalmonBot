@@ -2,9 +2,8 @@ import os
 import sqlite3
 import asyncio
 import random
-from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 from salmon import Service, Bot, util
-from salmon.typing import MessageSegment, Message, CQEvent
+from salmon.typing import MessageSegment, Message, CQEvent, GroupMessageEvent, PrivateMessageEvent
 from salmon.plugins.priconne.pcr_data import _pcr_data, chara
 
 

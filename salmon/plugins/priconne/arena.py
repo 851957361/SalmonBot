@@ -3,12 +3,10 @@ import os
 import time
 import re
 from PIL import Image, ImageDraw, ImageFont
-from nonebot.exception import FinishedException
-from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 import salmon
 from salmon import aiohttpx, configs, Service, R, Bot
-from salmon.typing import CQEvent, Message, MessageSegment
-from salmon.util import FreqLimiter, concat_pic, pic2b64
+from salmon.typing import CQEvent, Message, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException
+from salmon.util import FreqLimiter, pic2b64
 from salmon.plugins.priconne.pcr_data import chara
 try:
     import ujson as json

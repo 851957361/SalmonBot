@@ -1,7 +1,6 @@
 import random
-from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 from salmon import Service, R, Bot
-from salmon.typing import CQEvent, Message
+from salmon.typing import CQEvent, Message, GroupMessageEvent, PrivateMessageEvent
 from salmon.util import DailyNumberLimiter
 
 
