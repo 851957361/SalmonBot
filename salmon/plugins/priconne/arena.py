@@ -5,7 +5,7 @@ import re
 from PIL import Image, ImageDraw, ImageFont
 import salmon
 from salmon import aiohttpx, configs, Service, R, Bot
-from salmon.typing import CQEvent, Message, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException
+from salmon.typing import CQEvent, Message, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException, T_State
 from salmon.util import FreqLimiter, pic2b64
 from salmon.plugins.priconne.pcr_data import chara
 try:
@@ -213,20 +213,29 @@ arena_query_tw = sv.on_fullmatch('台竞技场', aliases=aliases_tw, only_group=
 arena_query_jp = sv.on_fullmatch('日竞技场', aliases=aliases_jp, only_group=False)
 
 @arena_query.handle()
-async def arena_query(bot: Bot, event: CQEvent):
-    await _arena_query(bot, event, region=1)
-
 @arena_query_b.handle()
-async def arena_query(bot: Bot, event: CQEvent):
-    await _arena_query(bot, event, region=2)
-
 @arena_query_tw.handle()
-async def arena_query(bot: Bot, event: CQEvent):
-    await _arena_query(bot, event, region=3)
-
 @arena_query_jp.handle()
-async def arena_query(bot: Bot, event: CQEvent):
-    await _arena_query(bot, event, region=4)
+async def arena_rec(bot: Bot, event: CQEvent, state: T_State):
+    args = event.message.extract_plain_text()
+    if args:
+        state['defen'] = args
+
+@arena_query.got('defen', prompt='请发送竞技场防守队伍')
+async def arena_query(bot: Bot, event: CQEvent, state: T_State):
+    await _arena_query(bot, event, state, region=1)
+
+@arena_query_b.got('defen', prompt='请发送竞技场防守队伍')
+async def arena_query(bot: Bot, event: CQEvent, state: T_State):
+    await _arena_query(bot, event, state, region=2)
+
+@arena_query_tw.got('defen', prompt='请发送竞技场防守队伍')
+async def arena_query(bot: Bot, event: CQEvent, state: T_State):
+    await _arena_query(bot, event, state, region=3)
+
+@arena_query_jp.got('defen', prompt='请发送竞技场防守队伍')
+async def arena_query(bot: Bot, event: CQEvent, state: T_State):
+    await _arena_query(bot, event, state, region=4)
 
 
 def render_atk_def_teams(entries, border_pix=5):
@@ -255,7 +264,7 @@ def render_atk_def_teams(entries, border_pix=5):
     return im
 
 
-async def _arena_query(bot: Bot, event: CQEvent, region: int):
+async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
     uid = event.user_id
     if isinstance(event, PrivateMessageEvent):
         if uid not in salmon.configs.SUPERUSERS:
@@ -271,7 +280,7 @@ async def _arena_query(bot: Bot, event: CQEvent, region: int):
         raise FinishedException
     lmt.start_cd(uid)
     # 处理输入数据
-    defen = event.message.extract_plain_text()
+    defen = state['defen']
     defen = re.sub(r'[?？，,_]', '', defen)
     defen, unknown = chara.roster.parse_team(defen)
     if unknown:

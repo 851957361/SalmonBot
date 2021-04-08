@@ -68,7 +68,7 @@ class Gacha(object):
         s3 = self.s3_prob
         s2 = self.s2_prob
         s1 = 1000 - s3 - s2
-        for i in range(9 * 30):
+        for i in range(9 * 20):
             c, y = self.gacha_one(up, s3, s2, s1)
             if 100 == y:
                 result['up'].append(c)
@@ -81,7 +81,7 @@ class Gacha(object):
                 result['s1'].append(c)
             else:
                 pass    # should never reach here
-        for i in range(30):
+        for i in range(20):
             c, y = self.gacha_one(up, s3, s2 + s1, 0)
             if 100 == y:
                 result['up'].append(c)

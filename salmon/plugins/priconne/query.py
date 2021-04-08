@@ -1,8 +1,7 @@
-import itertools
-from re import M
+import re
 import numpy as np
-from salmon import Service, Bot, R
-from salmon.typing import CQEvent, Message, MessageSegment, T_State, GroupMessageEvent, PrivateMessageEvent
+from salmon import Service, Bot, R, util
+from salmon.typing import CQEvent, Message, T_State, GroupMessageEvent, PrivateMessageEvent
 
 
 this_season = np.zeros(15001, dtype=int)
@@ -58,9 +57,9 @@ YUKARI_SHEET = Message(f'''
 
 
 sv_help = '''
-[日rank] rank推荐表
-[台rank] rank推荐表
-[陆rank] rank推荐表
+[rank日服] rank推荐表
+[rank台服] rank推荐表
+[rank陆服] rank推荐表
 [挖矿15001] 矿场余钻
 [黄骑充电表] 黄骑1动规律
 [谁是霸瞳] 角色别称查询
@@ -69,15 +68,21 @@ sv_help = '''
 sv = Service('pcr-query', help_=sv_help, bundle='pcr查询')
 
 miner = sv.on_fullmatch('挖矿', aliases={'jjc钻石', '竞技场钻石', 'jjc钻石查询', '竞技场钻石查询'}, only_group=False)
-rank = sv.on_rex(r'^(\*?([日台国陆b])服?([前中后]*)卫?)?rank(表|推荐|指南)?$', only_group=False)
+rank = sv.on_fullmatch('rank', aliases={'Rank', 'rank表', 'Rank表'}, only_group=False)
 yukari = sv.on_fullmatch('yukari-sheet', aliases={'黄骑充电', '酒鬼充电', '酒鬼充电表', '黄骑充电表'}, only_group=False)
 
 @miner.handle()
-async def arena_miner(bot: Bot, event: CQEvent):
+async def miner_rec(bot: Bot, event: CQEvent, state: T_State):
     try:
-        rank = int(event.message.extract_plain_text())
+        args = int(event.message.extract_plain_text())
+        if args:
+            state['rank'] = args
     except:
-        return
+        pass
+
+@miner.got('rank', prompt='请发送当前竞技场排名')
+async def arena_miner(bot: Bot, event: CQEvent, state: T_State):
+    rank = int(state['rank'])
     rank = np.clip(rank, 1, 15001)
     s_all = all_season[1:rank].sum()
     s_this = this_season[1:rank].sum()
@@ -98,7 +103,8 @@ async def arena_miner(bot: Bot, event: CQEvent):
         msg3 = "请输入15001以内的正整数"
         await miner.finish(msg3)
     if isinstance(event, GroupMessageEvent):
-        msg1 = f"{MessageSegment.at(event.user_id)}\n最高排名奖励还剩{s_this}钻\n历届最高排名还剩{s_all}钻\n推荐挖矿路径:\n"
+        at_sender = f'[CQ:at,qq={event.user_id}]'
+        msg1 = Message(f"{at_sender}\n最高排名奖励还剩{s_this}钻\n历届最高排名还剩{s_all}钻\n推荐挖矿路径:\n")
     elif isinstance(event, PrivateMessageEvent):
         msg1 = f"最高排名奖励还剩{s_this}钻\n历届最高排名还剩{s_all}钻\n推荐挖矿路径:\n"
     msg2 = ''.join('%s' %id for id in lst)
@@ -106,21 +112,30 @@ async def arena_miner(bot: Bot, event: CQEvent):
 
 
 @rank.handle()
+async def rank_rec(bot: Bot, event: CQEvent, state: T_State):
+    args = util.normalize_str(event.get_plaintext().strip())
+    if args:
+        state['name'] = args
+
+@rank.got('name', prompt='请发送需要查询rank表的区服')
 async def rank_sheet(bot: Bot, event: CQEvent, state: T_State):
-    match = state['match']
-    is_jp = match.group(2) == '日'
-    is_tw = match.group(2) == '台'
-    is_cn = match.group(2) and match.group(2) in '国陆b'
-    if not is_jp and not is_tw and not is_cn:
+    name = util.normalize_str(state['name'])
+    at_sender = f'[CQ:at,qq={event.user_id}]'
+    if name in ('国', '国服', 'cn'):
+        await rank.finish('请选择详细区服\n※例:"rank表b服"或"rank表台服"')
+    elif name in ('b', 'b服', 'bl', 'bilibili', '陆', '陆服'):
+        name = 'BL'
+    elif name in ('台', '台服', 'tw', 'sonet'):
+        name = 'TW'
+    elif name in ('日', '日服', 'jp', 'cy', 'cygames'):
+        name = 'JP'
+    else:
         if isinstance(event, GroupMessageEvent):
-            await rank.finish(f'{MessageSegment.at(event.user_id)}\n请问您要查询哪个服务器的rank表？\n*日rank表\n*台rank表\n*陆rank表')
+            await rank.finish(Message(f'{at_sender}\n未知区服，请重新选择\n*rank表日服\n*rank表台服\n*rank表b服'))
         elif isinstance(event, PrivateMessageEvent):
-            await rank.finish('请问您要查询哪个服务器的rank表？\n*日rank表\n*台rank表\n*陆rank表')
-    msg = []
-    if isinstance(event, GroupMessageEvent):
-        msg.append(MessageSegment.at(event.user_id))
-    msg.append('表格仅供参考')
-    if is_jp:
+            await rank.finish('未知区服，请重新选择\n*rank表日服\n*rank表台服\n*rank表b服')
+    msg = ['表格仅供参考']
+    if name == 'JP':
         msg.append(f'※不定期搬运自图中Q群\n※广告为原作者推广，与本bot无关\nR{rank_jp} rank表：\n{pjp}')
         # pos = match.group(3)
         # if not pos or '前' in pos:
@@ -130,10 +145,10 @@ async def rank_sheet(bot: Bot, event: CQEvent, state: T_State):
         # if not pos or '后' in pos:
         #     msg.append(str(p6))
         await bot.send(event, Message('\n'.join(msg)))
-    elif is_tw:
+    elif name == 'TW':
         msg.append(f'※不定期搬运自漪夢奈特\n※详见油管频道\nR{rank_tw} rank表：\n{ptw}')
         await bot.send(event, Message('\n'.join(msg)))
-    elif is_cn:
+    elif name == 'BL':
         msg.append(f'※不定期搬运自B站专栏\n※制作by席巴鸽\nR{rank_cn} rank表：\n{pcn}')
         await bot.send(event, Message('\n'.join(msg)))
 

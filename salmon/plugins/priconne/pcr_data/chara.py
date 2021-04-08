@@ -14,6 +14,7 @@ from salmon.plugins.priconne.pcr_data import _pcr_data
 logger = log.new_logger('chara', salmon.configs.DEBUG)
 UNKNOWN = 1000
 UnavailableChara = {
+    1000,   # 未知角色
     1067,   # 穗希
     1069,   # 霸瞳
     1072,   # 可萝爹

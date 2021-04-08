@@ -1,5 +1,6 @@
 import httpx
 from httpx import Response
+from requests import *
 
 
 async def get(url: str, *args, **kwargs) -> Response:
