@@ -23,13 +23,19 @@ disable = on_command('disable', aliases={'禁用', '关闭'})
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, GroupMessageEvent):
         state['gids'] = [event.group_id]
+    elif isinstance(event, PrivateMessageEvent):
+        try:
+            gid = int(event.message.extract_plain_text())
+            state['gids'] = [gid]
+        except:
+            pass
 
 @lssv.got('gids', prompt='请输入需要查询的群号', args_parser=parse_gid)
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if not 'gids' in state:
         await bot.send(event, 'Invalid input.')
         raise FinishedException
-    verbose_all = state['args'].all
+    verbose_all = state['args']
     svs = Service.get_loaded_services().values()
     u_priv = priv.get_user_priv(bot, event)
     if u_priv >= 2:
@@ -55,7 +61,7 @@ async def enable_service(bot: Bot, event: CQEvent):
         uid = event.user_id
         at_sender = Message(f'[CQ:at,qq={uid}]')
         if not names:
-            msg = at_sender + '请在空格后接要启用的服务名'
+            msg = at_sender + '\n服务开关不支持连续会话\n请在空格后接要启用的服务名'
             await bot.send(event, msg)
             raise FinishedException
         group_id = event.group_id
@@ -86,7 +92,7 @@ async def enable_service(bot: Bot, event: CQEvent):
             raise FinishedException
         args = event.get_plaintext().split()
         if len(args) < 2:
-            await bot.send(event, 'Usage: <service_name> <group_id1> [<group_id2>, ...]')
+            await bot.send(event, 'Input not supported.\nUsage: <service_name> <group_id1> [<group_id2>, ...]')
             raise FinishedException
         name, *group_ids = args
         svs = Service.get_loaded_services()
@@ -113,7 +119,7 @@ async def disable_service(bot: Bot, event: CQEvent):
         uid = event.user_id
         at_sender = Message(f'[CQ:at,qq={uid}]')
         if not names:
-            msg = at_sender + '请在空格后接要禁用的服务名'
+            msg = at_sender + '\n服务开关不支持连续会话\n请在空格后接要启用的服务名'
             await bot.send(event, msg)
             raise FinishedException
         group_id = event.group_id
@@ -144,7 +150,7 @@ async def disable_service(bot: Bot, event: CQEvent):
             raise FinishedException
         args = event.get_plaintext().split()
         if len(args) < 2:
-            await bot.send(event, 'Usage: <service_name> <group_id1> [<group_id2>, ...]')
+            await bot.send(event, 'Input not supported.\nUsage: <service_name> <group_id1> [<group_id2>, ...]')
             raise FinishedException
         name, *group_ids = args
         svs = Service.get_loaded_services()
