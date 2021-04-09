@@ -1,7 +1,7 @@
 import abc
 from dataclasses import dataclass
 from bs4 import BeautifulSoup
-from salmon import aiohttpx, Service, scheduler, Bot
+from salmon import aiohttpx, Service, scheduler, Bot, log
 from salmon.typing import List, Union, CQEvent
 
 
@@ -83,13 +83,13 @@ class BiliSpider(BaseSpider):
 async def news_poller(spider:BaseSpider, sv:Service, TAG):
     if not spider.item_cache:
         await spider.get_update()
-        sv.logger.info(f'{TAG}新闻缓存为空，已加载至最新')
+        log.logger.info(f'{TAG}新闻缓存为空，已加载至最新')
         return
     news = await spider.get_update()
     if not news:
-        sv.logger.info(f'未检索到{TAG}新闻更新')
+        log.logger.info(f'未检索到{TAG}新闻更新')
         return
-    sv.logger.info(f'检索到{len(news)}条{TAG}新闻更新！')
+    log.logger.info(f'检索到{len(news)}条{TAG}新闻更新！')
     await sv.broadcast(await spider.format_items(news), TAG, interval_time=0.5)
 
 

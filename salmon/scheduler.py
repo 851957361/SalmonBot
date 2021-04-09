@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import Callable, Any, Awaitable
 from nonebot_plugin_apscheduler import scheduler
-import salmon
+from salmon import log
 
 
 def scheduled_job(trigger: str, **kwargs) -> Callable:
@@ -12,13 +12,13 @@ def scheduled_job(trigger: str, **kwargs) -> Callable:
             @wraps(func)
             async def wrapper() -> Awaitable[Any]:
                 try:
-                    salmon.logger.info(f'Scheduled job {func.__name__} start.')
+                    log.logger.info(f'Scheduled job {func.__name__} start.')
                     ret = await func()
-                    salmon.logger.info(f'Scheduled job {func.__name__} completed.')
+                    log.logger.info(f'Scheduled job {func.__name__} completed.')
                     return ret
                 except Exception as e:
-                    salmon.logger.error(f'{type(e)} occured when doing scheduled job {func.__name__}.')
-                    salmon.logger.exception(e)
+                    log.logger.error(f'{type(e)} occured when doing scheduled job {func.__name__}.')
+                    log.logger.exception(e)
             return wrapper
         return scheduler.scheduled_job(trigger, **kwargs)(wrapper(func, id))
     return deco

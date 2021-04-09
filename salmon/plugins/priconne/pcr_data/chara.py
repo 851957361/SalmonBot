@@ -5,13 +5,12 @@ from fuzzywuzzy import process
 from PIL import Image
 from io import BytesIO
 from nonebot.plugin import on_command
-from nonebot.exception import FinishedException
 import salmon
-from salmon import R, log, util, Bot
-from salmon.typing import CQEvent
+from salmon import R, util, Bot
+from salmon.typing import CQEvent, FinishedException
 from salmon.plugins.priconne.pcr_data import _pcr_data
 
-logger = log.new_logger('chara', salmon.configs.DEBUG)
+
 UNKNOWN = 1000
 UnavailableChara = {
     1000,   # 未知角色
@@ -29,7 +28,7 @@ try:
     gadget_star_pink = R.img('priconne/gadget/star_pink.png').open()
     unknown_chara_icon = R.img(f'priconne/unit/icon_unit_{UNKNOWN}31.png').open()
 except Exception as e:
-    logger.exception(e)
+    salmon.logger.exception(e)
 
 
 class Roster:
@@ -46,7 +45,7 @@ class Roster:
                 if n not in self._roster:
                     self._roster[n] = idx
                 else:
-                    logger.warning(f'priconne.chara.Roster: 出现重名{n}于id{idx}与id{self._roster[n]}')
+                    salmon.logger.warning(f'priconne.chara.Roster: 出现重名{n}于id{idx}与id{self._roster[n]}')
         self._all_name_list = self._roster.keys()
 
     def get_id(self, name):
@@ -107,18 +106,18 @@ def gen_team_pic(team, size=64, star_slot_verbose=True):
 def download_chara_icon(id_, star):
     url = f'https://redive.estertion.win/icon/unit/{id_}{star}1.webp'
     save_path = R.img(f'priconne/unit/icon_unit_{id_}{star}1.png').path
-    logger.info(f'Downloading chara icon from {url}')
+    salmon.logger.info(f'Downloading chara icon from {url}')
     try:
         rsp = requests.get(url, stream=True, timeout=5)
     except Exception as e:
-        logger.error(f'Failed to download {url}. {type(e)}')
-        logger.exception(e)
+        salmon.logger.error(f'Failed to download {url}. {type(e)}')
+        salmon.logger.exception(e)
     if 200 == rsp.status_code:
         img = Image.open(BytesIO(rsp.content))
         img.save(save_path)
-        logger.info(f'Saved to {save_path}')
+        salmon.logger.info(f'Saved to {save_path}')
     else:
-        logger.error(f'Failed to download {url}. HTTP {rsp.status_code}')
+        salmon.logger.error(f'Failed to download {url}. HTTP {rsp.status_code}')
 
 
 class Chara:
@@ -161,7 +160,7 @@ class Chara:
         try:
             pic = self.icon.open().convert('RGBA').resize((size, size), Image.LANCZOS)
         except FileNotFoundError:
-            logger.error(f'File not found: {self.icon.path}')
+            salmon.logger.error(f'File not found: {self.icon.path}')
             pic = unknown_chara_icon.convert('RGBA').resize((size, size), Image.LANCZOS)
         l = size // 6
         star_lap = round(l * 0.15)
@@ -202,7 +201,7 @@ async def reload(bot: Bot, event: CQEvent):
         roster.update()
         await bot.send(event, 'OK.')
     except Exception as e:
-        logger.exception(e)
+        salmon.logger.exception(e)
         await bot.send(event, f'Error: {type(e)}')
         raise FinishedException
 
@@ -220,6 +219,6 @@ async def download(bot: Bot, event: CQEvent):
         download_chara_icon(id_, 1)
         await bot.send(event, 'OK.')
     except Exception as e:
-        logger.exception(e)
+        salmon.logger.exception(e)
         await bot.send(event, f'Error: {type(e)}')
         raise FinishedException

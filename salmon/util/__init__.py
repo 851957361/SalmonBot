@@ -11,7 +11,7 @@ import pytz
 from matplotlib import pyplot as plt
 from PIL import Image
 from aiocqhttp.exceptions import ActionFailed
-import salmon
+from salmon import log
 from salmon.typing import Message, Union, CQEvent
 try:
     import ujson as json
@@ -30,7 +30,7 @@ def load_config(inbuilt_file_var):
             config = json.load(f)
             return config
     except Exception as e:
-        salmon.logger.exception(e)
+        log.logger.exception(e)
         return {}
 
 
@@ -38,20 +38,20 @@ async def delete_msg(ev: CQEvent):
     try:
         await nonebot.get_bots().delete_msg(self_id=ev.self_id, message_id=ev.message_id)
     except ActionFailed as e:
-        salmon.logger.error(f'撤回失败 retcode={e.retcode}')
+        log.logger.error(f'撤回失败 retcode={e.retcode}')
     except Exception as e:
-        salmon.logger.exception(e)
+        log.logger.exception(e)
 
 
 async def silence(event: CQEvent, ban_time, skip_su=True):
     try:
-        if skip_su and event.user_id in salmon.configs.SUPERUSERS:
+        if skip_su and event.user_id in log.configs.SUPERUSERS:
             return
         await nonebot.get_bots().set_group_ban(self_id=event.self_id, group_id=event.group_id, user_id=event.user_id, duration=ban_time)
     except ActionFailed as e:
-        salmon.logger.error(f'禁言失败 retcode={e.retcode}')
+        log.logger.error(f'禁言失败 retcode={e.retcode}')
     except Exception as e:
-        salmon.logger.exception(e)
+        log.logger.exception(e)
 
 
 def pic2b64(pic:Image) -> str:

@@ -7,7 +7,7 @@ import os
 import re
 import asyncio
 from collections import defaultdict
-from nonebot.adapters.cqhttp.utils import escape
+from loguru import logger
 from nonebot.adapters.cqhttp.message import MessageSegment, Message
 from nonebot.matcher import Matcher, matchers, current_bot, current_event
 from nonebot.rule import ArgumentParser, Rule, to_me
@@ -15,9 +15,10 @@ from nonebot.typing import T_State, T_ArgsParser, T_Handler
 from nonebot.plugin import on_command, on_message, on_startswith, on_endswith, on_notice, on_request, on_shell_command
 from nonebot.exception import FinishedException, PausedException, RejectedException
 import salmon
-from salmon.typing import *
+from salmon import priv, Bot
 from salmon.util import normalize_str
-from salmon import log, priv, Bot
+from salmon.typing import *
+from salmon.log import wrap_logger
 try:
     import ujson as json
 except:
@@ -45,7 +46,6 @@ def keyword(*keywords: str, normal: bool = True) -> Rule:
         if normal:
             text = normalize_str(text)
         return bool(text and any(keyword in text for keyword in keywords))
-
     return Rule(_keyword)
 
 
@@ -78,7 +78,7 @@ def _load_service_config(service_name):
             config = json.load(f)
             return config
     except Exception as e:
-        salmon.logger.exception(e)
+        logger.exception(e)
         return {}
 
 
@@ -173,7 +173,7 @@ class Service:
         self.help = help_
         self.enable_group = set(config.get('enable_group', []))
         self.disable_group = set(config.get('disable_group', []))
-        self.logger = log.new_logger(name, salmon.configs.DEBUG)
+        self.logger = wrap_logger(self.name)
         assert self.name not in _loaded_services, f'Service name "{self.name}" already exist!'
         self.matchers = []
         _loaded_services[self.name] = self
@@ -467,9 +467,7 @@ class matcher_wrapper:
                 user_id=event.user_id,
                 no_cache=True
             )
-            nickname = escape(
-                info['title'] if info['title'] else info['card'] if info['card'] else info['nickname']
-            )
+            nickname = info['title'] if info['title'] else info['card'] if info['card'] else info['nickname']
             header = f'>{nickname}\n'
         return await bot.send(event, header+message, at_sender=at_sender, **kwargs)
 

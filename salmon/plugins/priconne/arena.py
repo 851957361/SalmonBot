@@ -4,7 +4,7 @@ import time
 import re
 from PIL import Image, ImageDraw, ImageFont
 import salmon
-from salmon import aiohttpx, configs, Service, R, Bot
+from salmon import aiohttpx, configs, Service, R, Bot, log
 from salmon.typing import CQEvent, Message, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException, T_State
 from salmon.util import FreqLimiter, pic2b64
 from salmon.plugins.priconne.pcr_data import chara
@@ -37,7 +37,7 @@ try:
             "dislike": set(DB[k].get("dislike", set())),
         }
 except FileNotFoundError:
-    sv.logger.warning(f"arena_db.json not found, will create when needed.")
+    log.logger.warning(f"arena_db.json not found, will create when needed.")
 
 
 def dump_db():
@@ -136,7 +136,7 @@ async def do_query(id_list, user_id, region=1):
         "ts": int(time.time()),
         "region": region,
     }
-    sv.logger.debug(f"Arena query {payload=}")
+    log.logger.debug(f"Arena query {payload=}")
     try:
         resp = await aiohttpx.post(
             "https://api.pcrdfans.com/x/v1/search",
@@ -145,12 +145,12 @@ async def do_query(id_list, user_id, region=1):
             timeout=10,
         )
         res = resp.json
-        sv.logger.debug(f"len(res)={len(res)}")
+        log.logger.debug(f"len(res)={len(res)}")
     except Exception as e:
-        sv.logger.exception(e)
+        log.logger.exception(e)
         return None
     if res["code"]:
-        sv.logger.error(f"Arena query failed.\nResponse={res}\nPayload={payload}")
+        log.logger.error(f"Arena query failed.\nResponse={res}\nPayload={payload}")
         raise aiohttpx.HTTPError(response=res)
     result = res.get("data", {}).get("result")
     if result is None:
@@ -205,7 +205,7 @@ try:
     thumb_down_i = R.img('priconne/gadget/thumb-down-i.png').open().resize((16, 16), Image.LANCZOS)
     thumb_down_a = R.img('priconne/gadget/thumb-down-a.png').open().resize((16, 16), Image.LANCZOS)
 except Exception as e:
-    sv.logger.exception(e)
+    log.logger.exception(e)
 
 arena_query = sv.on_fullmatch('查竞技场', aliases=aliases, only_group=False)
 arena_query_b = sv.on_fullmatch('b竞技场', aliases=aliases_b, only_group=False)
@@ -327,7 +327,7 @@ async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
         await bot.send(event, msg)
         raise FinishedException
     # 执行查询
-    sv.logger.info('Doing query...')
+    log.logger.info('Doing query...')
     res = None
     try:
         res = await do_query(defen, uid, region)
@@ -338,7 +338,7 @@ async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
         else:
             await bot.send(event, at_sender + f'CODE{code} 查询出错，请联系维护组调教\n请先前往pcrdfans.com进行查询')
         raise FinishedException
-    sv.logger.info('Got response!')
+    log.logger.info('Got response!')
     # 处理查询结果
     if res is None:
         msg = '数据库未返回数据，请再次尝试查询或前往pcrdfans.com'
@@ -354,11 +354,11 @@ async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
         raise FinishedException
     res = res[:min(6, len(res))]    # 限制显示数量，截断结果
     # 发送回复
-    sv.logger.info('Arena generating picture...')
+    log.logger.info('Arena generating picture...')
     teams = render_atk_def_teams(res)
     teams = pic2b64(teams)
     teams = MessageSegment.image(teams)
-    sv.logger.info('Arena picture ready!')
+    log.logger.info('Arena picture ready!')
     # 纯文字版
     # atk_team = '\n'.join(map(lambda entry: ' '.join(map(lambda x: f"{x.name}{x.star if x.star else ''}{'专' if x.equip else ''}" , entry['atk'])) , res))
     # details = [" ".join([
@@ -381,7 +381,7 @@ async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
     if region == 1:
         msg.append('※使用"b怎么拆"或"台怎么拆"可按服过滤')
     msg.append('Support by pcrdfans_com')
-    sv.logger.debug('Arena sending result...')
+    log.logger.debug('Arena sending result...')
     await bot.send(event, '\n'.join(msg))
-    sv.logger.debug('Arena result sent!')
+    log.logger.debug('Arena result sent!')
     raise FinishedException

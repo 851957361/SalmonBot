@@ -1,4 +1,3 @@
-import re
 import numpy as np
 from salmon import Service, Bot, R, util
 from salmon.typing import CQEvent, Message, T_State, GroupMessageEvent, PrivateMessageEvent

@@ -2,7 +2,7 @@ import os
 import random
 from collections import defaultdict
 import salmon
-from salmon import Service, Bot, priv, util
+from salmon import Service, Bot, priv, util, log
 from salmon.util import DailyNumberLimiter, concat_pic, pic2b64
 from salmon.typing import CQEvent, Message, MessageSegment, T_State, GroupMessageEvent, PrivateMessageEvent
 from salmon.service import matcher_wrapper, parse_uid
@@ -38,7 +38,7 @@ try:
     with open(_pool_config_file, encoding='utf8') as f:
         _group_pool = json.load(f)
 except FileNotFoundError as e:
-    sv.logger.warning('group_pool_config.json not found, will create when needed.')
+    log.logger.warning('group_pool_config.json not found, will create when needed.')
 _group_pool = defaultdict(lambda: DEFAULT_POOL, _group_pool)
 
 def dump_pool_config():
