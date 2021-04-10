@@ -7,7 +7,7 @@ import salmon
 from salmon import aiohttpx, configs, Service, R, Bot, log
 from salmon.typing import CQEvent, Message, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException, T_State
 from salmon.util import FreqLimiter, pic2b64
-from salmon.plugins.priconne.pcr_data import chara
+from salmon.modules.priconne.pcr_data import chara
 try:
     import ujson as json
 except:

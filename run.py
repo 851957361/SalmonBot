@@ -3,16 +3,16 @@ import nonebot
 from nonebot.adapters.cqhttp import Bot as CQHTTPBot
 from salmon import configs
 
-plugins = 'salmon/plugins/'
+modules = 'salmon/modules/'
 
 nonebot.init()
 driver = nonebot.get_driver()
 app = nonebot.get_asgi()
 driver.register_adapter('cqhttp', CQHTTPBot)
 config = driver.config
-for plugin_name in configs.PLUGINS_ON:
-    plugin_name = os.path.join(plugins, plugin_name)
-    nonebot.load_plugins(plugin_name)
+for module_name in configs.MODULES_ON:
+    module_name = os.path.join(modules, module_name)
+    nonebot.load_plugins(module_name)
 
 
 if __name__ == "__main__":

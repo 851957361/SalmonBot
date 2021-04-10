@@ -1,0 +1,404 @@
+2021-04-10 14:19:22.976 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000015C40ACDCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000015C63D625E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000015C63135CC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000015C6312A7F0>, origin='salmon/pl...
+             └ <function _load at 0x0000015C3DABF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:30:47.758 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000002604770ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002606A9A75E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026069D791C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026069D68550>, origin='salmon/pl...
+             └ <function _load at 0x00000260446CF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(event: NoticeEvent):
+                                   └ <class 'nonebot.adapters.cqhttp.event.NoticeEvent'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:32:45.158 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001D39A62DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001D3BCADC4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001D3BCC95D00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001D3BCC94280>, origin='salmon/pl...
+             └ <function _load at 0x000001D3975EF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(event: CQEvent):
+                                   └ <class 'nonebot.adapters.cqhttp.event.Event'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:56:22.997 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "arena"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='arena', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000267357E6E00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='arena', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000267357E4280>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\arena.py", line 10, in <module>
+    from salmon.plugins.priconne.pcr_data import chara
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.099 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "gacha"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='gacha', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026731F7EBC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='gacha', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026731F96D30>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\gacha.py", line 9, in <module>
+    from salmon.plugins.priconne.pcr_data import chara
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.105 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "games"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='games', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000267357E6E00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='games', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026731F81F40>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\games.py", line 7, in <module>
+    from salmon.plugins.priconne.pcr_data import _pcr_data, chara
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.169 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "pool"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='pool', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026731F7EBC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='pool', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026731FE9790>, origin='salmon/mod...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\pool.py", line 3, in <module>
+    from salmon.plugins.priconne.pcr_data import chara
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.176 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026735EDFC10>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000267357DFD80>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026735EE1430>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:58:41.803 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x0000022BF4EEECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000022B9739C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000022B97554C00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000022B97555280>, origin='salmon/mo...
+             └ <function _load at 0x0000022BF222F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:59:20.644 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000001C35A05ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001C37D2F25E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001C37C6CA040>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001C37C6B8550>, origin='salmon/mo...
+             └ <function _load at 0x000001C35701F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(event):
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 15:02:47.608 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000001ED2B2ADCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001ED4E293EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001ED4D917800>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001ED289B7F10>, origin='salmon/mo...
+             └ <function _load at 0x000001ED285CF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 15:04:20.768 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000002874103CCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000287634EC4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000287636A5C40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000287636A4280>, origin='salmon/mo...
+             └ <function _load at 0x000002873E36F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert():
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 15:06:57.720 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000002C17888DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002C11BC705E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002C11AEF5CC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002C11AEE8880>, origin='salmon/mo...
+             └ <function _load at 0x000002C17585F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given

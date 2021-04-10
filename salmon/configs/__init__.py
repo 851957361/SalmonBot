@@ -9,9 +9,9 @@ RES_DIR = os.path.expanduser(RES_DIR)
 assert RES_PROTOCOL in ('http', 'file', 'base64')
 
 # load module configs
-for plugins in PLUGINS_ON:
+for modules in MODULES_ON:
     try:
-        importlib.import_module('salmon.config.' + plugins)
-        log.logger.info(f'Succeeded to load config of "{plugins}"')
+        importlib.import_module('salmon.config.' + modules)
+        log.logger.info(f'Succeeded to load config of "{modules}"')
     except ModuleNotFoundError:
-        log.logger.warning(f'Not found config of "{plugins}"')
+        log.logger.warning(f'Not found config of "{modules}"')

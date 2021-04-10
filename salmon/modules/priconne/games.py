@@ -4,7 +4,7 @@ import asyncio
 import random
 from salmon import Service, Bot, util
 from salmon.typing import MessageSegment, Message, CQEvent, GroupMessageEvent, PrivateMessageEvent
-from salmon.plugins.priconne.pcr_data import _pcr_data, chara
+from salmon.modules.priconne.pcr_data import _pcr_data, chara
 
 
 PATCH_SIZE = 32

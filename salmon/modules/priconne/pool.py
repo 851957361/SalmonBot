@@ -1,6 +1,6 @@
 import random
 from salmon import util
-from salmon.plugins.priconne.pcr_data import chara
+from salmon.modules.priconne.pcr_data import chara
 
 
 class Gacha(object):

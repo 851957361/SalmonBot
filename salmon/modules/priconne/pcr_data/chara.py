@@ -8,7 +8,7 @@ from nonebot.plugin import on_command
 import salmon
 from salmon import R, util, Bot
 from salmon.typing import CQEvent, FinishedException
-from salmon.plugins.priconne.pcr_data import _pcr_data
+from salmon.modules.priconne.pcr_data import _pcr_data
 
 
 UNKNOWN = 1000

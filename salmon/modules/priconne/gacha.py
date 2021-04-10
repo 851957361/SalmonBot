@@ -6,8 +6,8 @@ from salmon import Service, Bot, priv, util, log
 from salmon.util import DailyNumberLimiter, concat_pic, pic2b64
 from salmon.typing import CQEvent, Message, MessageSegment, T_State, GroupMessageEvent, PrivateMessageEvent
 from salmon.service import matcher_wrapper, parse_uid
-from salmon.plugins.priconne.pcr_data import chara
-from salmon.plugins.priconne.pool import Gacha
+from salmon.modules.priconne.pcr_data import chara
+from salmon.modules.priconne.pool import Gacha
 try:
     import ujson as json
 except:
