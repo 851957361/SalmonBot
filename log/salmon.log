@@ -687,3 +687,1136 @@ TypeError: __init__() takes 1 positional argument but 2 were given
 2021-04-10 15:06:57.756 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
 2021-04-10 15:06:59.969 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 60656) - "WebSocket /cqhttp/ws" [accepted]
 2021-04-10 15:06:59.970 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-04-10 18:43:00.102 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-04-10 18:43:00.103 | INFO     | nonebot:init:176 - Current Env: dev
+2021-04-10 18:43:00.297 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-04-10 18:43:00.301 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-04-10 18:43:00.354 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-04-10 18:43:00.355 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-04-10 18:43:00.356 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-04-10 18:43:00.358 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-04-10 18:43:00.362 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-04-10 18:43:00.363 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-04-10 18:43:00.447 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-04-10 18:43:00.448 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-04-10 18:43:00.449 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-04-10 18:43:00.453 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000001645C3EECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001647F3D2EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001647EA57A40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001647F64F610>, origin='salmon/mo...
+             └ <function _load at 0x000001645970F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me(event: CQEvent):
+                             └ <class 'nonebot.adapters.cqhttp.event.Event'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 18:43:00.472 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-04-10 18:43:00.479 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-04-10 18:43:00.488 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-04-10 18:43:00.489 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-04-10 18:43:00.512 | INFO     | uvicorn:serve:405 - Started server process [17944]
+2021-04-10 18:43:00.513 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-04-10 18:43:00.514 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-04-10 18:43:00.514 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-04-10 18:43:00.515 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-04-10 18:43:00.761 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 65407) - "WebSocket /cqhttp/ws" [accepted]
+2021-04-10 18:43:00.761 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-04-10 18:45:10.769 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 18:45:11.394 | INFO     | news:news_poller:86 - 台服官网新闻缓存为空，已加载至最新
+2021-04-10 18:45:11.472 | INFO     | news:news_poller:86 - B服官网新闻缓存为空，已加载至最新
+2021-04-10 18:45:11.472 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 18:45:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 18:45:25.365 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 18:45:25.368 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 18:50:19.044 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 18:50:19.829 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 18:50:19.913 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 18:50:19.913 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 18:50:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 18:50:25.420 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 18:50:25.422 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 18:55:08.963 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 18:55:09.569 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 18:55:09.668 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 18:55:09.669 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 18:55:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 18:55:25.417 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 18:55:25.419 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 19:00:03.973 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 19:00:04.722 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 19:00:04.808 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 19:00:04.808 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 19:00:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 19:00:25.492 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 19:00:25.495 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 19:05:07.388 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 19:05:07.987 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 19:05:08.075 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 19:05:08.075 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 19:05:25.007 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 19:05:25.531 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 19:05:25.533 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 19:10:03.038 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 19:10:03.630 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 19:10:03.712 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 19:10:03.713 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 19:10:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 19:10:25.552 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 19:10:25.555 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 19:15:01.172 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 19:15:01.751 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 19:15:01.841 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 19:15:01.841 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 19:15:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 19:15:25.323 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 19:15:25.326 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 19:20:07.552 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 19:20:08.246 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 19:20:08.359 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 19:20:08.359 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 19:20:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 19:20:25.470 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 19:20:25.472 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 20:27:04.968 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-04-10 20:27:04.970 | INFO     | nonebot:init:176 - Current Env: dev
+2021-04-10 20:27:05.155 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-04-10 20:27:05.157 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-04-10 20:27:05.211 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-04-10 20:27:05.213 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-04-10 20:27:05.214 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-04-10 20:27:05.216 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-04-10 20:27:05.226 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-04-10 20:27:05.227 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-04-10 20:27:05.287 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-04-10 20:27:05.287 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-04-10 20:27:05.289 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-04-10 20:27:05.291 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x0000027522C8DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000027545CB5EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000275452F6D00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002754513C8E0>, origin='salmon/mo...
+             └ <function _load at 0x000002751FC4F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 8, in <module>
+    async def kick_me(event: NoticeEvent):
+                             └ <class 'nonebot.adapters.cqhttp.event.NoticeEvent'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 20:27:05.297 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-04-10 20:27:05.298 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-04-10 20:27:05.299 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-04-10 20:27:05.299 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-04-10 20:27:05.319 | INFO     | uvicorn:serve:405 - Started server process [19076]
+2021-04-10 20:27:05.320 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-04-10 20:27:05.321 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-04-10 20:27:05.322 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-04-10 20:27:05.323 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-04-10 20:27:05.818 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 51355) - "WebSocket /cqhttp/ws" [accepted]
+2021-04-10 20:27:05.819 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-04-10 20:30:10.930 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 20:30:11.585 | INFO     | news:news_poller:86 - 台服官网新闻缓存为空，已加载至最新
+2021-04-10 20:30:11.689 | INFO     | news:news_poller:86 - B服官网新闻缓存为空，已加载至最新
+2021-04-10 20:30:11.689 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 20:30:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 20:30:25.418 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 20:30:25.420 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 20:35:15.056 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 20:35:15.820 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 20:35:15.932 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 20:35:15.932 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 20:35:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 20:35:25.563 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 20:35:25.566 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 20:40:06.970 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 20:40:07.555 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 20:40:07.616 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 20:40:07.616 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 20:40:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 20:40:25.317 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 20:40:25.319 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 20:45:01.888 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 20:45:02.614 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 20:45:02.696 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 20:45:02.696 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 20:45:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 20:45:25.450 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 20:45:25.452 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 20:50:00.862 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 20:50:01.469 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 20:50:01.598 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 20:50:01.598 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 20:50:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 20:50:25.290 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 20:50:25.293 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 20:55:12.971 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 20:55:13.660 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 20:55:13.769 | INFO     | news:news_poller:90 - 未检索到B服官网新闻更新
+2021-04-10 20:55:13.770 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-10 20:55:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 20:55:25.603 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 20:55:25.605 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 21:00:15.628 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 21:00:20.836 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job pcr_news_poller.
+2021-04-10 21:00:20.837 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x0000027546070550>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000027522DB5E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000027522DB5EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000027522D7A160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x0000027546070F40>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000027522D5C900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x0000027546070F40>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x0000027546139DC0>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x0000027546147040>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546176A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000027522C05C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000275203A9A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x00000275452E3DB0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000027520397F70>
+    │       │   └ None
+    │       └ <function run at 0x00000275451464C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002754518C1F0>
+    └ <uvicorn.main.Server object at 0x0000027545F648E0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002754518C280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000027545F648E0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000027522AAF8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000027522AAF820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000027522AB33A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000027522A4E4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function pcr_news_poller at 0x0000027545F21E50>
+
+  File "salmon/modules/priconne\news.py", line 98, in pcr_news_poller
+    await news_poller(SonetSpider, svtw, '台服官网')
+          │           │            └ <salmon.service.Service object at 0x00000275459CD190>
+          │           └ <class 'news.SonetSpider'>
+          └ <function news_poller at 0x0000027545CBE0D0>
+
+  File "salmon/modules/priconne\news.py", line 88, in news_poller
+    news = await spider.get_update()
+                 │      └ <classmethod object at 0x00000275459DDDF0>
+                 └ <class 'news.SonetSpider'>
+
+  File "salmon/modules/priconne\news.py", line 39, in get_update
+    resp = await cls.get_response()
+                 │   └ <classmethod object at 0x0000027545CB6790>
+                 └ <class 'news.SonetSpider'>
+
+  File "salmon/modules/priconne\news.py", line 28, in get_response
+    resp = await aiohttpx.get(cls.url)
+                 │        │   │   └ 'http://www.princessconnect.so-net.tw/news/'
+                 │        │   └ <class 'news.SonetSpider'>
+                 │        └ <function get at 0x000002754531C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {}
+                 │      │   │     └ ()
+                 │      │   └ 'http://www.princessconnect.so-net.tw/news/'
+                 │      └ <function AsyncClient.get at 0x0000027522FB4550>
+                 └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x0000027522FB4280>
+                 └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x0000027522FB4310>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x0000027522FB43A0>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x0000027522FB4430>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=5.0)
+                     │    │                    └ <Request('GET', 'http://www.princessconnect.so-net.tw/news')>
+                     │    └ <function AsyncClient._send_single_request at 0x0000027522FB44C0>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x0000027546070550>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x0000027546139500>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x00000275461AE3C0>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546108820>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'http://www.princessconnect.so-net.tw/news')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:00:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 21:00:34.329 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 21:00:34.331 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 21:02:37.027 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1028001414 from 1351495774 "B服新闻"
+2021-04-10 21:02:37.030 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from news, type=message, priority=1, temp=False>
+2021-04-10 21:02:37.036 | INFO     | nonebot:run:561 - Matcher <Matcher from news, type=message, priority=1, temp=False> running complete
+2021-04-10 21:02:44.342 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message -1245789716 from 1351495774 "台服新闻"
+2021-04-10 21:02:44.345 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from news, type=message, priority=1, temp=False>
+2021-04-10 21:02:44.348 | INFO     | nonebot:run:561 - Matcher <Matcher from news, type=message, priority=1, temp=False> running complete
+2021-04-10 21:05:05.193 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 21:05:05.951 | INFO     | news:news_poller:90 - 未检索到台服官网新闻更新
+2021-04-10 21:05:10.960 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job pcr_news_poller.
+2021-04-10 21:05:10.961 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x00000275460A0040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000027522DB5E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000027522DB5EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000027522D7A160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x00000275460A04C0>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000027522D5C900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x00000275460A04C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x00000275461B6800>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x0000027546147120>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546070040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000027522C05C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000275203A9A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x00000275452E3DB0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000027520397F70>
+    │       │   └ None
+    │       └ <function run at 0x00000275451464C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002754518C1F0>
+    └ <uvicorn.main.Server object at 0x0000027545F648E0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002754518C280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000027545F648E0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000027522AAF8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000027522AAF820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000027522AB33A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000027522A4E4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function pcr_news_poller at 0x0000027545F21E50>
+
+  File "salmon/modules/priconne\news.py", line 99, in pcr_news_poller
+    await news_poller(BiliSpider, svbl, 'B服官网')
+          │           │           └ <salmon.service.Service object at 0x00000275459CD700>
+          │           └ <class 'news.BiliSpider'>
+          └ <function news_poller at 0x0000027545CBE0D0>
+
+  File "salmon/modules/priconne\news.py", line 88, in news_poller
+    news = await spider.get_update()
+                 │      └ <classmethod object at 0x00000275459DDDF0>
+                 └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 39, in get_update
+    resp = await cls.get_response()
+                 │   └ <classmethod object at 0x0000027545CB6790>
+                 └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 28, in get_response
+    resp = await aiohttpx.get(cls.url)
+                 │        │   │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │        │   └ <class 'news.BiliSpider'>
+                 │        └ <function get at 0x000002754531C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {}
+                 │      │   │     └ ()
+                 │      │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │      └ <function AsyncClient.get at 0x0000027522FB4550>
+                 └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x0000027522FB4280>
+                 └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x0000027522FB4310>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x0000027522FB43A0>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x0000027522FB4430>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=5.0)
+                     │    │                    └ <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>
+                     │    └ <function AsyncClient._send_single_request at 0x0000027522FB44C0>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x00000275460A0040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x00000275462AB080>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x00000275462EB4A0>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546070AC0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:05:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 21:05:25.632 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-10 21:05:25.634 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-10 21:09:59.152 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-04-10 21:09:59.153 | INFO     | nonebot:init:176 - Current Env: dev
+2021-04-10 21:09:59.318 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-04-10 21:09:59.321 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-04-10 21:09:59.372 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-04-10 21:09:59.374 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-04-10 21:09:59.375 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-04-10 21:09:59.378 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-04-10 21:09:59.381 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-04-10 21:09:59.382 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-04-10 21:09:59.442 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-04-10 21:09:59.443 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-04-10 21:09:59.445 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-04-10 21:09:59.448 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x0000025749DFDCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002576CE25EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002576C465F40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000025747537F10>, origin='salmon/mo...
+             └ <function _load at 0x0000025746DCF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 6, in <module>
+    @Bot.on_notice('group_decrease.kick_me')
+     └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+AttributeError: type object 'Bot' has no attribute 'on_notice'
+2021-04-10 21:09:59.454 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-04-10 21:09:59.455 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-04-10 21:09:59.456 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-04-10 21:09:59.456 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-04-10 21:09:59.476 | INFO     | uvicorn:serve:405 - Started server process [15200]
+2021-04-10 21:09:59.476 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-04-10 21:09:59.478 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-04-10 21:09:59.478 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-04-10 21:09:59.479 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-04-10 21:10:00.793 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 52042) - "WebSocket /cqhttp/ws" [accepted]
+2021-04-10 21:10:00.794 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-04-10 21:10:16.240 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-10 21:10:16.894 | INFO     | news:news_poller:86 - 台服官网新闻缓存为空，已加载至最新
+2021-04-10 21:10:21.916 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job pcr_news_poller.
+2021-04-10 21:10:21.917 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1ACB50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000025749F24E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000025749F24EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000025749EEA160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1AC040>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000025749ECC900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1AC040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D199E80>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D2305F0>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D1BD4C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000025749D75C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000025747549A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000002576C4539F0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000002574A131400>
+    │       │   └ None
+    │       └ <function run at 0x000002576C2D14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002576C2F41F0>
+    └ <uvicorn.main.Server object at 0x000002576D0D5940>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002576C2F4280>
+    │    │                  └ <uvicorn.main.Server object at 0x000002576D0D5940>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000025749C1F8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000025749C1F820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000025749C233A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000025749BBE4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function pcr_news_poller at 0x000002576D091E50>
+
+  File "salmon/modules/priconne\news.py", line 99, in pcr_news_poller
+    await news_poller(BiliSpider, svbl, 'B服官网')
+          │           │           └ <salmon.service.Service object at 0x000002576CAFA2B0>
+          │           └ <class 'news.BiliSpider'>
+          └ <function news_poller at 0x000002576CE220D0>
+
+  File "salmon/modules/priconne\news.py", line 85, in news_poller
+    await spider.get_update()
+          │      └ <classmethod object at 0x000002576CB07730>
+          └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 39, in get_update
+    resp = await cls.get_response()
+                 │   └ <classmethod object at 0x000002576CE265E0>
+                 └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 28, in get_response
+    resp = await aiohttpx.get(cls.url)
+                 │        │   │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │        │   └ <class 'news.BiliSpider'>
+                 │        └ <function get at 0x000002576C48C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {}
+                 │      │   │     └ ()
+                 │      │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │      └ <function AsyncClient.get at 0x000002574A124550>
+                 └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x000002574A124280>
+                 └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x000002574A124310>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x000002574A1243A0>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x000002574A124430>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=5.0)
+                     │    │                    └ <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>
+                     │    └ <function AsyncClient._send_single_request at 0x000002574A1244C0>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1ACB50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D237440>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D230430>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D1BDFD0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:10:25.016 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-10 21:10:35.044 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job update_seeker.
+2021-04-10 21:10:35.045 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1E7130>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000025749F24E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 10, 'read': 10, 'write': 10, 'pool': 10}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000025749F24EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000025749EEA160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1E70D0>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000025749ECC900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1E70D0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D37EC40>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D358970>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D19AC70>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000025749D75C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000025747549A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000002576C4539F0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000002574A131400>
+    │       │   └ None
+    │       └ <function run at 0x000002576C2D14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002576C2F41F0>
+    └ <uvicorn.main.Server object at 0x000002576D0D5940>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002576C2F4280>
+    │    │                  └ <uvicorn.main.Server object at 0x000002576D0D5940>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000025749C1F8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000025749C1F820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000025749C233A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000025749BBE4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=官漫更新 name=update_seeker)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=官漫更新 name=update_seeker)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=官漫更新 name=update_seeker)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function update_seeker at 0x000002576CDFDEE0>
+
+  File "salmon/modules/priconne\comic.py", line 108, in update_seeker
+    resp = await aiohttpx.get(index_api, timeout=10)
+                 │        │   └ 'https://comic.priconne-redive.jp/api/index'
+                 │        └ <function get at 0x000002576C48C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {'timeout': 10}
+                 │      │   │     └ ()
+                 │      │   └ 'https://comic.priconne-redive.jp/api/index'
+                 │      └ <function AsyncClient.get at 0x000002574A124550>
+                 └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x000002574A124280>
+                 └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x000002574A124310>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x000002574A1243A0>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x000002574A124430>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=10)
+                     │    │                    └ <Request('GET', 'https://comic.priconne-redive.jp/api/index')>
+                     │    └ <function AsyncClient._send_single_request at 0x000002574A1244C0>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1E7130>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D37ED40>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D358900>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D1E72B0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'https://comic.priconne-redive.jp/api/index')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:19:45.617 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-04-10 21:19:45.620 | INFO     | nonebot:init:176 - Current Env: dev
+2021-04-10 21:19:45.862 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-04-10 21:19:45.869 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-04-10 21:19:45.941 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-04-10 21:19:45.945 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-04-10 21:19:45.947 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-04-10 21:19:45.952 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-04-10 21:19:45.969 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-04-10 21:19:45.971 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-04-10 21:19:46.079 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-04-10 21:19:46.079 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-04-10 21:19:46.082 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-04-10 21:19:46.085 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "alert"
+2021-04-10 21:19:46.086 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-04-10 21:19:46.088 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-04-10 21:19:46.090 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-04-10 21:19:46.090 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-04-10 21:19:46.117 | INFO     | uvicorn:serve:405 - Started server process [11688]
+2021-04-10 21:19:46.117 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-04-10 21:19:46.119 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-04-10 21:19:46.119 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-04-10 21:19:46.120 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-04-10 21:19:49.109 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 50166) - "WebSocket /cqhttp/ws" [accepted]
+2021-04-10 21:19:49.110 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!

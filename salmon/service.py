@@ -100,7 +100,7 @@ def _save_service_config(service):
 
 
 async def parse_gid(bot: Bot, event: CQEvent, state: T_State):
-    msgs = event.get_plaintext().split(' ')
+    msgs = event.get_plaintext().split()
     glist = list(g['group_id'] for g in await bot.get_group_list())
     failure = set()
     illegal = set()
@@ -116,9 +116,9 @@ async def parse_gid(bot: Bot, event: CQEvent, state: T_State):
         elif msg != '':
             illegal.add(msg)
     if illegal:
-        await bot.send(event, f'"{"、".join(illegal)}"无效，群ID只能为纯数字')
+        await bot.send(event, f'"{"，".join(illegal)}"无效，群ID只能为纯数字')
     if failure:
-        await bot.send(event, f'Bot未入群 {"、".join(failure)}')
+        await bot.send(event, f'bot未入群 {"，".join(failure)}')
     if len(gids) != 0:
         state['gids'] = gids.copy()
 
