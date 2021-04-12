@@ -3277,3 +3277,5 @@ Traceback (most recent call last):
        └ PrivateMessageEvent(time=1618247136, self_id=3235657949, post_type='message', sub_type='friend', user_id=1351495774, message_...
 
 TypeError: argument of type 'int' is not iterable
+2021-04-13 01:12:12.965 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+2021-04-13 01:12:12.968 | ERROR    | alert:disconnect:23 - WebSocket连接已断开

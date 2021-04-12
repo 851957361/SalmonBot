@@ -4862,3 +4862,5 @@ TypeError: argument of type 'int' is not iterable
 2021-04-13 01:10:25.013 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
 2021-04-13 01:10:25.903 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
 2021-04-13 01:10:25.906 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-13 01:12:12.965 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+2021-04-13 01:12:12.968 | ERROR    | alert:disconnect:23 - WebSocket连接已断开
