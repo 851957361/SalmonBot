@@ -4808,3 +4808,57 @@ TypeError: argument of type 'int' is not iterable
 2021-04-13 01:05:49.570 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1701382850 from 1351495774 "1351495774"
 2021-04-13 01:05:49.571 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from gacha, type=message, priority=0, temp=True>
 2021-04-13 01:05:49.575 | INFO     | nonebot:run:561 - Matcher <Matcher from gacha, type=message, priority=0, temp=True> running complete
+2021-04-13 01:06:38.077 | WARNING  | salmon:<module>:17 - Not found config of "botmanage"
+2021-04-13 01:06:38.078 | WARNING  | salmon:<module>:17 - Not found config of "fal"
+2021-04-13 01:06:38.078 | INFO     | salmon:<module>:15 - Succeeded to load config of "priconne"
+2021-04-13 01:06:38.567 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-04-13 01:06:38.568 | INFO     | nonebot:init:176 - Current Env: dev
+2021-04-13 01:06:38.654 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "alert"
+2021-04-13 01:06:38.654 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-04-13 01:06:38.655 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "feedback"
+2021-04-13 01:06:38.656 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_invite"
+2021-04-13 01:06:38.657 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_leave"
+2021-04-13 01:06:38.659 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-04-13 01:06:38.662 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "ls"
+2021-04-13 01:06:38.664 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-04-13 01:06:38.750 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-04-13 01:06:38.752 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-04-13 01:06:38.806 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-04-13 01:06:38.808 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-04-13 01:06:38.809 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-04-13 01:06:38.812 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-04-13 01:06:38.816 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-04-13 01:06:38.817 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-04-13 01:06:38.876 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-04-13 01:06:38.877 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-04-13 01:06:38.879 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-04-13 01:06:38.879 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-04-13 01:06:38.902 | INFO     | uvicorn:serve:405 - Started server process [3372]
+2021-04-13 01:06:38.902 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-04-13 01:06:38.903 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-04-13 01:06:38.904 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-04-13 01:06:38.904 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-04-13 01:06:41.439 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 59616) - "WebSocket /cqhttp/ws" [accepted]
+2021-04-13 01:06:41.440 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-04-13 01:06:45.183 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 309213780 from 1351495774 "ls -f"
+2021-04-13 01:06:45.187 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from ls, type=message, priority=1, temp=False>
+2021-04-13 01:06:45.191 | INFO     | nonebot:run:561 - Matcher <Matcher from ls, type=message, priority=1, temp=False> running complete
+2021-04-13 01:07:49.337 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1889728219 from 1351495774@[群:1128254624] "[CQ:image,file=5b6b4e747b7be2ba89d2739b8ac47657.image,url=http://gchat.qpic.cn/gchatpic_new/1351495774/1128254624-2481389365-5B6B4E747B7BE2BA89D2739B8AC47657/0?term=3]"
+2021-04-13 01:07:49.341 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-13 01:07:49.342 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-13 01:07:49.342 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-13 01:07:49.342 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-13 01:08:04.483 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 1084215603 from 1351495774 "ls -g"
+2021-04-13 01:08:11.011 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.private.friend]: Message 932766117 from 1351495774 "ls -g"
+2021-04-13 01:08:21.737 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 534910132 from 296432694@[群:1128254624] "cdd"
+2021-04-13 01:08:21.742 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-13 01:08:21.743 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-13 01:08:21.743 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-13 01:08:21.743 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-13 01:10:09.937 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-13 01:10:10.607 | INFO     | news:news_poller:86 - 台服官网新闻缓存为空，已加载至最新
+2021-04-13 01:10:10.734 | INFO     | news:news_poller:86 - B服官网新闻缓存为空，已加载至最新
+2021-04-13 01:10:10.735 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-13 01:10:25.013 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-13 01:10:25.903 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-13 01:10:25.906 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
