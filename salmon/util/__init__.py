@@ -11,7 +11,7 @@ import pytz
 from matplotlib import pyplot as plt
 from PIL import Image
 from aiocqhttp.exceptions import ActionFailed
-from salmon import log
+from salmon import log, Bot
 from salmon.typing import Message, Union, CQEvent
 try:
     import ujson as json
@@ -34,20 +34,20 @@ def load_config(inbuilt_file_var):
         return {}
 
 
-async def delete_msg(ev: CQEvent):
+async def delete_msg(bot: Bot, event: CQEvent):
     try:
-        await nonebot.get_bots().delete_msg(self_id=ev.self_id, message_id=ev.message_id)
+        await bot.delete_msg(self_id=event.self_id, message_id=event.message_id)
     except ActionFailed as e:
         log.logger.error(f'撤回失败 retcode={e.retcode}')
     except Exception as e:
         log.logger.exception(e)
 
 
-async def silence(event: CQEvent, ban_time, skip_su=True):
+async def silence(bot: Bot, event: CQEvent, ban_time, skip_su=True):
     try:
         if skip_su and event.user_id in log.configs.SUPERUSERS:
             return
-        await nonebot.get_bots().set_group_ban(self_id=event.self_id, group_id=event.group_id, user_id=event.user_id, duration=ban_time)
+        await bot.set_group_ban(self_id=event.self_id, group_id=event.group_id, user_id=event.user_id, duration=ban_time)
     except ActionFailed as e:
         log.logger.error(f'禁言失败 retcode={e.retcode}')
     except Exception as e:

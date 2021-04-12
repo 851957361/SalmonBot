@@ -4,7 +4,7 @@ NORMAL = 1
 ADMIN = 2
 OWNER = 3
 WHITE = 5
-SUPER = 9
+SUPERUSER = 9
 
 from datetime import datetime
 from nonebot.adapters.cqhttp import Bot
@@ -42,7 +42,7 @@ def check_block_user(user_id):
 def get_user_priv(bot: Bot, event: CQEvent):
     uid = event.user_id
     if uid in salmon.configs.SUPERUSERS:
-        return SUPER
+        return SUPERUSER
     if check_block_user(uid):
         return BLACK
     role = event.sender.role

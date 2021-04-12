@@ -1,0 +1,1324 @@
+2021-04-10 14:19:22.976 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x0000015C40ACDCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000015C63D625E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000015C63135CC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000015C6312A7F0>, origin='salmon/pl...
+             └ <function _load at 0x0000015C3DABF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:30:47.758 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000002604770ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002606A9A75E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026069D791C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026069D68550>, origin='salmon/pl...
+             └ <function _load at 0x00000260446CF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(event: NoticeEvent):
+                                   └ <class 'nonebot.adapters.cqhttp.event.NoticeEvent'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:32:45.158 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(plugin_name)
+    │       │            └ 'salmon/plugins/botmanage'
+    │       └ <function load_plugins at 0x000001D39A62DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/plugins/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001D3BCADC4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001D3BCC95D00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001D3BCC94280>, origin='salmon/pl...
+             └ <function _load at 0x000001D3975EF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/plugins/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(event: CQEvent):
+                                   └ <class 'nonebot.adapters.cqhttp.event.Event'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:56:22.997 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "arena"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='arena', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000267357E6E00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='arena', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000267357E4280>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\arena.py", line 10, in <module>
+    from salmon.plugins.priconne.pcr_data import chara
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.099 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "gacha"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='gacha', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026731F7EBC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='gacha', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026731F96D30>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\gacha.py", line 9, in <module>
+    from salmon.plugins.priconne.pcr_data import chara
+         └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.105 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "games"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='games', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000267357E6E00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='games', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026731F81F40>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\games.py", line 7, in <module>
+    from salmon.plugins.priconne.pcr_data import _pcr_data, chara
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.169 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "pool"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/priconne'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/priconne'), name='pool', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002673562C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000026731F7EBC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='pool', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026731FE9790>, origin='salmon/mod...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/priconne\pool.py", line 3, in <module>
+    from salmon.plugins.priconne.pcr_data import chara
+
+ModuleNotFoundError: No module named 'salmon.plugins'
+2021-04-10 14:56:23.176 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000002671317ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000026735EDFC10>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000267357DFD80>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000026735EE1430>, origin='salmon/mo...
+             └ <function _load at 0x000002671013F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:58:41.803 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x0000022BF4EEECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000022B9739C4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000022B97554C00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000022B97555280>, origin='salmon/mo...
+             └ <function _load at 0x0000022BF222F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 14:59:20.644 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000001C35A05ECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001C37D2F25E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001C37C6CA040>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001C37C6B8550>, origin='salmon/mo...
+             └ <function _load at 0x000001C35701F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(event):
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 15:02:47.608 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000001ED2B2ADCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001ED4E293EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001ED4D917800>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001ED289B7F10>, origin='salmon/mo...
+             └ <function _load at 0x000001ED285CF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 15:04:20.768 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000002874103CCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x00000287634EC4C0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000287636A5C40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x00000287636A4280>, origin='salmon/mo...
+             └ <function _load at 0x000002873E36F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert():
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 15:06:57.720 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000002C17888DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002C11BC705E0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002C11AEF5CC0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002C11AEE8880>, origin='salmon/mo...
+             └ <function _load at 0x000002C17585F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me_alert(bot: Bot, event: CQEvent):
+                                 │           └ <class 'nonebot.adapters.cqhttp.event.Event'>
+                                 └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 18:43:00.453 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x000001645C3EECA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000001647F3D2EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000001647EA57A40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000001647F64F610>, origin='salmon/mo...
+             └ <function _load at 0x000001645970F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 7, in <module>
+    async def kick_me(event: CQEvent):
+                             └ <class 'nonebot.adapters.cqhttp.event.Event'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 20:27:05.291 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x0000027522C8DCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000027545CB5EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x00000275452F6D00>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x000002754513C8E0>, origin='salmon/mo...
+             └ <function _load at 0x000002751FC4F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 8, in <module>
+    async def kick_me(event: NoticeEvent):
+                             └ <class 'nonebot.adapters.cqhttp.event.NoticeEvent'>
+
+TypeError: __init__() takes 1 positional argument but 2 were given
+2021-04-10 21:00:20.836 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job pcr_news_poller.
+2021-04-10 21:00:20.837 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x0000027546070550>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000027522DB5E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000027522DB5EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000027522D7A160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x0000027546070F40>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000027522D5C900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x0000027546070F40>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x0000027546139DC0>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x0000027546147040>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546176A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000027522C05C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000275203A9A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x00000275452E3DB0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000027520397F70>
+    │       │   └ None
+    │       └ <function run at 0x00000275451464C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002754518C1F0>
+    └ <uvicorn.main.Server object at 0x0000027545F648E0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002754518C280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000027545F648E0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000027522AAF8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000027522AAF820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000027522AB33A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000027522A4E4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000027546176C40>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function pcr_news_poller at 0x0000027545F21E50>
+
+  File "salmon/modules/priconne\news.py", line 98, in pcr_news_poller
+    await news_poller(SonetSpider, svtw, '台服官网')
+          │           │            └ <salmon.service.Service object at 0x00000275459CD190>
+          │           └ <class 'news.SonetSpider'>
+          └ <function news_poller at 0x0000027545CBE0D0>
+
+  File "salmon/modules/priconne\news.py", line 88, in news_poller
+    news = await spider.get_update()
+                 │      └ <classmethod object at 0x00000275459DDDF0>
+                 └ <class 'news.SonetSpider'>
+
+  File "salmon/modules/priconne\news.py", line 39, in get_update
+    resp = await cls.get_response()
+                 │   └ <classmethod object at 0x0000027545CB6790>
+                 └ <class 'news.SonetSpider'>
+
+  File "salmon/modules/priconne\news.py", line 28, in get_response
+    resp = await aiohttpx.get(cls.url)
+                 │        │   │   └ 'http://www.princessconnect.so-net.tw/news/'
+                 │        │   └ <class 'news.SonetSpider'>
+                 │        └ <function get at 0x000002754531C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {}
+                 │      │   │     └ ()
+                 │      │   └ 'http://www.princessconnect.so-net.tw/news/'
+                 │      └ <function AsyncClient.get at 0x0000027522FB4550>
+                 └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x0000027522FB4280>
+                 └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x0000027522FB4310>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x0000027522FB43A0>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x0000027522FB4430>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=5.0)
+                     │    │                    └ <Request('GET', 'http://www.princessconnect.so-net.tw/news')>
+                     │    └ <function AsyncClient._send_single_request at 0x0000027522FB44C0>
+                     └ <httpx.AsyncClient object at 0x0000027546032A90>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x0000027546070550>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x0000027546139500>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x00000275461AE3C0>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546108820>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'http://www.princessconnect.so-net.tw/news')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:05:10.960 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job pcr_news_poller.
+2021-04-10 21:05:10.961 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x00000275460A0040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000027522DB5E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000027522DB5EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000027522D7A160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x00000275460A04C0>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000027522D5C900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x00000275460A04C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x00000275461B6800>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x0000027546147120>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546070040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000027522C05C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000275203A9A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x00000275452E3DB0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000027520397F70>
+    │       │   └ None
+    │       └ <function run at 0x00000275451464C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002754518C1F0>
+    └ <uvicorn.main.Server object at 0x0000027545F648E0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002754518C280>
+    │    │                  └ <uvicorn.main.Server object at 0x0000027545F648E0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000027522AAF8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000027522AAF820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000027522AB33A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000027522A4E4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000275460706A0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function pcr_news_poller at 0x0000027545F21E50>
+
+  File "salmon/modules/priconne\news.py", line 99, in pcr_news_poller
+    await news_poller(BiliSpider, svbl, 'B服官网')
+          │           │           └ <salmon.service.Service object at 0x00000275459CD700>
+          │           └ <class 'news.BiliSpider'>
+          └ <function news_poller at 0x0000027545CBE0D0>
+
+  File "salmon/modules/priconne\news.py", line 88, in news_poller
+    news = await spider.get_update()
+                 │      └ <classmethod object at 0x00000275459DDDF0>
+                 └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 39, in get_update
+    resp = await cls.get_response()
+                 │   └ <classmethod object at 0x0000027545CB6790>
+                 └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 28, in get_response
+    resp = await aiohttpx.get(cls.url)
+                 │        │   │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │        │   └ <class 'news.BiliSpider'>
+                 │        └ <function get at 0x000002754531C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {}
+                 │      │   │     └ ()
+                 │      │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │      └ <function AsyncClient.get at 0x0000027522FB4550>
+                 └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x0000027522FB4280>
+                 └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x0000027522FB4310>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x0000027522FB43A0>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x0000027522FB4430>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=5.0)
+                     │    │                    └ <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>
+                     │    └ <function AsyncClient._send_single_request at 0x0000027522FB44C0>
+                     └ <httpx.AsyncClient object at 0x00000275461541C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000027522DB78B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x00000275460A0040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x00000275462AB080>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x00000275462EB4A0>
+    └ <contextlib._GeneratorContextManager object at 0x0000027546070AC0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:09:59.448 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "alert"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 15, in <module>
+    nonebot.load_plugins(module_name)
+    │       │            └ 'salmon/modules/botmanage'
+    │       └ <function load_plugins at 0x0000025749DFDCA0>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('salmon/modules/botmanage'), name='alert', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x000002576CE25EE0>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x000002576C465F40>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='alert', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000025747537F10>, origin='salmon/mo...
+             └ <function _load at 0x0000025746DCF040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "salmon/modules/botmanage\alert.py", line 6, in <module>
+    @Bot.on_notice('group_decrease.kick_me')
+     └ <class 'nonebot.adapters.cqhttp.bot.Bot'>
+
+AttributeError: type object 'Bot' has no attribute 'on_notice'
+2021-04-10 21:10:21.916 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job pcr_news_poller.
+2021-04-10 21:10:21.917 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1ACB50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000025749F24E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000025749F24EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000025749EEA160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1AC040>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000025749ECC900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1AC040>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D199E80>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D2305F0>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D1BD4C0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000025749D75C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000025747549A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000002576C4539F0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000002574A131400>
+    │       │   └ None
+    │       └ <function run at 0x000002576C2D14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002576C2F41F0>
+    └ <uvicorn.main.Server object at 0x000002576D0D5940>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002576C2F4280>
+    │    │                  └ <uvicorn.main.Server object at 0x000002576D0D5940>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000025749C1F8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000025749C1F820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000025749C233A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000025749BBE4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D1BD7F0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function pcr_news_poller at 0x000002576D091E50>
+
+  File "salmon/modules/priconne\news.py", line 99, in pcr_news_poller
+    await news_poller(BiliSpider, svbl, 'B服官网')
+          │           │           └ <salmon.service.Service object at 0x000002576CAFA2B0>
+          │           └ <class 'news.BiliSpider'>
+          └ <function news_poller at 0x000002576CE220D0>
+
+  File "salmon/modules/priconne\news.py", line 85, in news_poller
+    await spider.get_update()
+          │      └ <classmethod object at 0x000002576CB07730>
+          └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 39, in get_update
+    resp = await cls.get_response()
+                 │   └ <classmethod object at 0x000002576CE265E0>
+                 └ <class 'news.BiliSpider'>
+
+  File "salmon/modules/priconne\news.py", line 28, in get_response
+    resp = await aiohttpx.get(cls.url)
+                 │        │   │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │        │   └ <class 'news.BiliSpider'>
+                 │        └ <function get at 0x000002576C48C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {}
+                 │      │   │     └ ()
+                 │      │   └ 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId='
+                 │      └ <function AsyncClient.get at 0x000002574A124550>
+                 └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x000002574A124280>
+                 └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x000002574A124310>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x000002574A1243A0>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x000002574A124430>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=5.0)
+                     │    │                    └ <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>
+                     │    └ <function AsyncClient._send_single_request at 0x000002574A1244C0>
+                     └ <httpx.AsyncClient object at 0x000002576D163610>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1ACB50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D237440>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D230430>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D1BDFD0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'http://api.biligame.com/news/list?gameExtensionId=267&positionId=2&pageNum=1&pageSize=7&typeId=')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout
+2021-04-10 21:10:35.044 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job update_seeker.
+2021-04-10 21:10:35.045 | ERROR    | salmon:wrapper:21 - 
+Traceback (most recent call last):
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
+    yield
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1E7130>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
+    response = await connection.arequest(
+                     │          └ <function AsyncHTTPConnection.arequest at 0x0000025749F24E50>
+                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
+    self.socket = await self._open_socket(timeout)
+    │    │              │    │            └ {'connect': 10, 'read': 10, 'write': 10, 'pool': 10}
+    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x0000025749F24EE0>
+    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+    │    └ None
+    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
+    return await self.backend.open_tcp_stream(
+                 │    │       └ <function AutoBackend.open_tcp_stream at 0x0000025749EEA160>
+                 │    └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1E70D0>
+                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
+    return await self.backend.open_tcp_stream(
+                 │    └ <property object at 0x0000025749ECC900>
+                 └ <httpcore._backends.auto.AutoBackend object at 0x000002576D1E70D0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
+    return SocketStream(
+           └ <class 'httpcore._backends.asyncio.SocketStream'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D37EC40>
+    │    │   │     │     └ TimeoutError()
+    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D358970>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D19AC70>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
+    raise to_exc(exc) from None
+          └ <class 'httpcore.ConnectTimeout'>
+
+httpcore.ConnectTimeout
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 19, in <module>
+    nonebot.run()
+    │       └ <function run at 0x0000025749D75C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000025747549A60>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000002576C4539F0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000002574A131400>
+    │       │   └ None
+    │       └ <function run at 0x000002576C2D14C0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000002576C2F41F0>
+    └ <uvicorn.main.Server object at 0x000002576D0D5940>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000002576C2F4280>
+    │    │                  └ <uvicorn.main.Server object at 0x000002576D0D5940>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000025749C1F8B0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000025749C1F820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000025749C233A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000025749BBE4C0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002576D163970>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
+    retval = await job.func(*job.args, **job.kwargs)
+                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
+                   │   │     │   │       └ <Job (id=官漫更新 name=update_seeker)>
+                   │   │     │   └ <member 'args' of 'Job' objects>
+                   │   │     └ <Job (id=官漫更新 name=update_seeker)>
+                   │   └ <member 'func' of 'Job' objects>
+                   └ <Job (id=官漫更新 name=update_seeker)>
+
+> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
+    ret = await func()
+                └ <function update_seeker at 0x000002576CDFDEE0>
+
+  File "salmon/modules/priconne\comic.py", line 108, in update_seeker
+    resp = await aiohttpx.get(index_api, timeout=10)
+                 │        │   └ 'https://comic.priconne-redive.jp/api/index'
+                 │        └ <function get at 0x000002576C48C8B0>
+                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+
+  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
+    resp = await client.get(url, *args, **kwargs)
+                 │      │   │     │       └ {'timeout': 10}
+                 │      │   │     └ ()
+                 │      │   └ 'https://comic.priconne-redive.jp/api/index'
+                 │      └ <function AsyncClient.get at 0x000002574A124550>
+                 └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
+    return await self.request(
+                 │    └ <function AsyncClient.request at 0x000002574A124280>
+                 └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
+    response = await self.send(
+                     │    └ <function AsyncClient.send at 0x000002574A124310>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
+    response = await self._send_handling_auth(
+                     │    └ <function AsyncClient._send_handling_auth at 0x000002574A1243A0>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
+    response = await self._send_handling_redirects(
+                     │    └ <function AsyncClient._send_handling_redirects at 0x000002574A124430>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
+    response = await self._send_single_request(request, timeout)
+                     │    │                    │        └ Timeout(timeout=10)
+                     │    │                    └ <Request('GET', 'https://comic.priconne-redive.jp/api/index')>
+                     │    └ <function AsyncClient._send_single_request at 0x000002574A1244C0>
+                     └ <httpx.AsyncClient object at 0x000002576D163A00>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
+    (status_code, headers, stream, ext,) = await transport.arequest(
+                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000025749F278B0>
+                                                 └ <httpcore.AsyncConnectionPool object at 0x000002576D1E7130>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
+    self.gen.throw(type, value, traceback)
+    │    │   │     │     │      └ <traceback object at 0x000002576D37ED40>
+    │    │   │     │     └ ConnectTimeout(TimeoutError())
+    │    │   │     └ <class 'httpcore.ConnectTimeout'>
+    │    │   └ <method 'throw' of 'generator' objects>
+    │    └ <generator object map_exceptions at 0x000002576D358900>
+    └ <contextlib._GeneratorContextManager object at 0x000002576D1E72B0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
+    raise mapped_exc(message, **kwargs) from exc  # type: ignore
+          │          │          └ {'request': <Request('GET', 'https://comic.priconne-redive.jp/api/index')>}
+          │          └ ''
+          └ <class 'httpx.ConnectTimeout'>
+
+httpx.ConnectTimeout

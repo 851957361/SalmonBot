@@ -11,7 +11,7 @@ assert RES_PROTOCOL in ('http', 'file', 'base64')
 # load module configs
 for modules in MODULES_ON:
     try:
-        importlib.import_module('salmon.config.' + modules)
+        importlib.import_module('salmon.configs.' + modules)
         log.logger.info(f'Succeeded to load config of "{modules}"')
     except ModuleNotFoundError:
         log.logger.warning(f'Not found config of "{modules}"')

@@ -11,7 +11,7 @@ from salmon import Service, priv, Bot
 from salmon.service import parse_gid
 
 
-PRIV_TIP = f'群主={priv.OWNER}\n群管理={priv.ADMIN}\n群员/私聊={priv.NORMAL}\nbot维护组={priv.SUPER}'
+PRIV_TIP = f'群主={priv.OWNER}\n群管理={priv.ADMIN}\n群员/私聊={priv.NORMAL}\nbot维护组={priv.SUPERUSER}'
 parser = ArgumentParser()
 parser.add_argument('-a', '--all', action='store_true')
 
@@ -24,11 +24,9 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, GroupMessageEvent):
         state['gids'] = [event.group_id]
     elif isinstance(event, PrivateMessageEvent):
-        try:
-            gid = int(event.message.extract_plain_text())
-            state['gids'] = [gid]
-        except:
-            pass
+        gid = event.get_plaintext().split()
+        if gid:
+            state['gids'] = gid
 
 @lssv.got('gids', prompt='请输入需要查询的群号', args_parser=parse_gid)
 async def _(bot: Bot, event: CQEvent, state: T_State):
