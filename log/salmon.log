@@ -20740,3 +20740,16 @@ nonebot.adapters.cqhttp.exception.ActionFailed: <ActionFailed data=None, echo={'
 2021-04-14 04:00:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
 2021-04-14 04:00:26.077 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
 2021-04-14 04:00:26.079 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-04-14 04:01:05.207 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message 165726192 from 2842117629@[群:1128254624] "@プリンセスコネクト！Re:Dive公式
+卯月十四・〇四〇〇
+
+本日04/14(水) 05:00から「探索」ドロップ量2倍キャンペーンを開催！
+探索の「経験値クエスト」と「マナクエスト」の報酬が通常の2倍にアップ！
+この機会にキャラ強化に必要なマナやEXPアイテムを大量に獲得してください！
+https://t.co/I7anGM6utA
+#プリコネR https://t.co/1V6wGpVcmy
+[CQ:image,file=402c832d19e2bc752224526ab494054a.image,url=http://gchat.qpic.cn/gchatpic_new/2842117629/1128254624-2840972045-402C832D19E2BC752224526AB494054A/0?term=3]"
+2021-04-14 04:01:05.214 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-14 04:01:05.214 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-14 04:01:05.214 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-14 04:01:05.214 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
