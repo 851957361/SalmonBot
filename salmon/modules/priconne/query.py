@@ -1,7 +1,11 @@
 import numpy as np
 from salmon import Service, Bot, R, util
+from salmon.util import FreqLimiter
 from salmon.typing import CQEvent, Message, T_State, GroupMessageEvent, PrivateMessageEvent
+from salmon.modules.priconne.pcr_data import chara
 
+
+lmt = FreqLimiter(5)
 
 this_season = np.zeros(15001, dtype=int)
 all_season = np.zeros(15001, dtype=int)
@@ -69,6 +73,8 @@ sv = Service('pcr-query', help_=sv_help, bundle='pcr查询')
 miner = sv.on_fullmatch('挖矿', aliases={'jjc钻石', '竞技场钻石', 'jjc钻石查询', '竞技场钻石查询'}, only_group=False)
 rank = sv.on_fullmatch('rank', aliases={'Rank', 'rank表', 'Rank表'}, only_group=False)
 yukari = sv.on_fullmatch('yukari-sheet', aliases={'黄骑充电', '酒鬼充电', '酒鬼充电表', '黄骑充电表'}, only_group=False)
+who_is = sv.on_prefix('谁是', only_group=False)
+is_who = sv.on_suffix('是谁', only_group=False)
 
 @miner.handle()
 async def miner_rec(bot: Bot, event: CQEvent, state: T_State):
@@ -159,3 +165,33 @@ async def yukari_sheet(bot: Bot, event: CQEvent):
         await bot.send(event, at_sender + YUKARI_SHEET)
     elif isinstance(event, PrivateMessageEvent):
         await bot.send(event, YUKARI_SHEET)
+
+    
+@who_is.handle()
+@is_who.handle()
+async def whois(bot: Bot, event: CQEvent, state: T_State):
+    name = event.get_plaintext().strip()
+    if not name:
+        return
+    id_ = chara.name2id(name)
+    confi = 100
+    guess = False
+    if id_ == chara.UNKNOWN:
+        id_, guess_name, confi = chara.guess_id(name)
+        guess = True
+    c = chara.fromid(id_)
+    if confi < 60:
+        return
+    uid = event.user_id
+    at_sender = f'[CQ:at,qq={uid}]'
+    if not lmt.check(uid):
+        if isinstance(event, GroupMessageEvent):
+            await bot.send(event, f'{at_sender}\n兰德索尔花名册冷却中(剩余 {int(lmt.left_time(uid)) + 1}秒)')
+            return
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, f'兰德索尔花名册冷却中(剩余 {int(lmt.left_time(uid)) + 1}秒)')
+            return
+    lmt.start_cd(uid, 120 if guess else 0)
+    if guess:
+        msg = f'您有{confi}%的可能在找{guess_name} {c.icon.cqcode} {c.name}'
+        await bot.send(event, Message(msg))

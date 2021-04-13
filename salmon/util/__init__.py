@@ -11,7 +11,7 @@ import pytz
 from matplotlib import pyplot as plt
 from PIL import Image
 from aiocqhttp.exceptions import ActionFailed
-from salmon import log, Bot
+from salmon import log, Bot, configs
 from salmon.typing import Message, Union, CQEvent
 try:
     import ujson as json
@@ -37,21 +37,17 @@ def load_config(inbuilt_file_var):
 async def delete_msg(bot: Bot, event: CQEvent):
     try:
         await bot.delete_msg(self_id=event.self_id, message_id=event.message_id)
-    except ActionFailed as e:
-        log.logger.error(f'撤回失败 retcode={e.retcode}')
     except Exception as e:
-        log.logger.exception(e)
+        log.logger.error(f'撤回失败. {type(e)}')
 
 
 async def silence(bot: Bot, event: CQEvent, ban_time, skip_su=True):
     try:
-        if skip_su and event.user_id in log.configs.SUPERUSERS:
+        if skip_su and event.user_id in configs.SUPERUSERS:
             return
         await bot.set_group_ban(self_id=event.self_id, group_id=event.group_id, user_id=event.user_id, duration=ban_time)
-    except ActionFailed as e:
-        log.logger.error(f'禁言失败 retcode={e.retcode}')
     except Exception as e:
-        log.logger.exception(e)
+        log.logger.error(f'禁言失败. {type(e)}')
 
 
 def pic2b64(pic:Image) -> str:

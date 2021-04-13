@@ -153,11 +153,12 @@ class ServiceFunc:
 
 
 class Service:
-    def __init__(self, name: str, bundle: str = None, help_: str = None, manage_priv: str = None, enable_on_default: bool = None, visible: bool = None):
+    def __init__(self, name: str, use_priv: str = None, bundle: str = None, help_: str = None, manage_priv: str = None, enable_on_default: bool = None, visible: bool = None):
         assert not _re_illegal_char.search(
             name), r'Service name cannot contain character in `\/:*?"<>|.`'
         self.name = name
         config = _load_service_config(self.name)
+        self.use_priv = config.get('use_priv') or use_priv or priv.NORMAL
         self.manage_priv = config.get(
             'manage_priv') or manage_priv or priv.ADMIN
         self.enable_on_default = config.get('enable_on_default')
@@ -218,7 +219,7 @@ class Service:
                 return not only_group
             else:
                 group_id = event.group_id
-                return self.check_enabled(group_id)
+                return self.check_enabled(group_id) and not priv.check_block_group(group_id) and priv.check_priv(event, self.use_priv)
         rule = Rule(_cs)
         if only_to_me:
             rule = rule & (to_me())
@@ -255,7 +256,8 @@ class Service:
         priority = kwargs.get('priority', 1)
         mw = matcher_wrapper(self,
                              'Message.startswith', priority, startswith=msg, only_group=only_group)
-        mw.load_matcher(on_startswith(msg, **kwargs))
+        matcher = on_startswith(msg, **kwargs)
+        mw.load_matcher(matcher)
         self.matchers.append(str(mw))
         _loaded_matchers[mw.matcher] = mw
         return mw
@@ -289,7 +291,8 @@ class Service:
         priority = kwargs.get('priority', 1)
         mw = matcher_wrapper(self,
                              'Message.endswith', priority, endswith=msg, only_group=only_group)
-        mw.load_matcher(on_endswith(msg, **kwargs))
+        matcher = on_endswith(msg, **kwargs)
+        mw.load_matcher(matcher)
         self.matchers.append(str(mw))
         _loaded_matchers[mw.matcher] = mw
         return mw

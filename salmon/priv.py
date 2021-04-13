@@ -39,7 +39,7 @@ def check_block_user(user_id):
     return bool(user_id in _black_user)
 
 
-def get_user_priv(bot: Bot, event: CQEvent):
+def get_user_priv(event: CQEvent):
     uid = event.user_id
     if uid in salmon.configs.SUPERUSERS:
         return SUPERUSER
@@ -58,5 +58,5 @@ def get_user_priv(bot: Bot, event: CQEvent):
         return NORMAL
             
 
-def check_priv(bot: Bot, event: CQEvent, require: int) -> bool:
-    return bool(get_user_priv(bot, event) >= require)
+def check_priv(event: CQEvent, require: int) -> bool:
+    return bool(get_user_priv(event) >= require)
