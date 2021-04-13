@@ -19309,3 +19309,5 @@ Traceback (most recent call last):
           └ <class 'nonebot.adapters.cqhttp.exception.ActionFailed'>
 
 nonebot.adapters.cqhttp.exception.ActionFailed: <ActionFailed data=None, echo={'seq': 3}, msg=NOT_MANAGEABLE, retcode=100, status=failed, wording=机器人权限不足>
+2021-04-14 03:58:23.062 | CRITICAL | anti_abuse:ban_word:20 - Self: 3235657949, Message -877776634 from 3224889915: 
+2021-04-14 03:58:23.949 | ERROR    | salmon:silence:50 - 禁言失败. <class 'nonebot.adapters.cqhttp.exception.ActionFailed'>

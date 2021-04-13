@@ -20688,3 +20688,55 @@ nonebot.adapters.cqhttp.exception.ActionFailed: <ActionFailed data=None, echo={'
 2021-04-14 03:57:29.414 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
 2021-04-14 03:57:29.415 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
 2021-04-14 03:57:29.415 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-14 03:58:18.948 | INFO     | salmon:<module>:15 - Succeeded to load config of "priconne"
+2021-04-14 03:58:18.949 | WARNING  | salmon:<module>:17 - Not found config of "dice"
+2021-04-14 03:58:18.949 | WARNING  | salmon:<module>:17 - Not found config of "groupmaster"
+2021-04-14 03:58:18.949 | WARNING  | salmon:<module>:17 - Not found config of "botmanage"
+2021-04-14 03:58:19.426 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-04-14 03:58:19.427 | INFO     | nonebot:init:176 - Current Env: dev
+2021-04-14 03:58:19.589 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-04-14 03:58:19.591 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-04-14 03:58:19.641 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-04-14 03:58:19.642 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-04-14 03:58:19.643 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-04-14 03:58:19.644 | WARNING  | gacha:<module>:41 - group_pool_config.json not found, will create when needed.
+2021-04-14 03:58:19.645 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-04-14 03:58:19.648 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-04-14 03:58:19.650 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-04-14 03:58:19.703 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-04-14 03:58:19.704 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-04-14 03:58:19.705 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-04-14 03:58:19.707 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "dice"
+2021-04-14 03:58:19.710 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "anti_abuse"
+2021-04-14 03:58:19.711 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "alert"
+2021-04-14 03:58:19.711 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-04-14 03:58:19.712 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "feedback"
+2021-04-14 03:58:19.712 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_invite"
+2021-04-14 03:58:19.713 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_leave"
+2021-04-14 03:58:19.713 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-04-14 03:58:19.714 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "ls"
+2021-04-14 03:58:19.716 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-04-14 03:58:19.716 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-04-14 03:58:19.737 | INFO     | uvicorn:serve:405 - Started server process [14864]
+2021-04-14 03:58:19.737 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-04-14 03:58:19.738 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-04-14 03:58:19.739 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-04-14 03:58:19.739 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-04-14 03:58:21.486 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54325) - "WebSocket /cqhttp/ws" [accepted]
+2021-04-14 03:58:21.486 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-04-14 03:58:23.056 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -877776634 from 3224889915@[群:1128254624] "爬"
+2021-04-14 03:58:23.060 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-14 03:58:23.060 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-14 03:58:23.060 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-04-14 03:58:23.061 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-04-14 03:58:23.061 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from anti_abuse, type=message, priority=1, temp=False>
+2021-04-14 03:58:23.062 | CRITICAL | anti_abuse:ban_word:20 - Self: 3235657949, Message -877776634 from 3224889915: 
+2021-04-14 03:58:23.949 | ERROR    | salmon:silence:50 - 禁言失败. <class 'nonebot.adapters.cqhttp.exception.ActionFailed'>
+2021-04-14 03:58:23.949 | INFO     | nonebot:run:561 - Matcher <Matcher from anti_abuse, type=message, priority=1, temp=False> running complete
+2021-04-14 04:00:11.738 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-04-14 04:00:12.927 | INFO     | news:news_poller:86 - 台服官网新闻缓存为空，已加载至最新
+2021-04-14 04:00:13.088 | INFO     | news:news_poller:86 - B服官网新闻缓存为空，已加载至最新
+2021-04-14 04:00:13.089 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-04-14 04:00:25.000 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-04-14 04:00:26.077 | INFO     | comic:update_seeker:120 - 未检测到官漫更新
+2021-04-14 04:00:26.079 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
