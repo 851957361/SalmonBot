@@ -21,7 +21,7 @@ async def feed_rec(bot: Bot, event: CQEvent, state: T_State):
             await feed_back.finish(at_sender + EXCEED_NOTICE)
         elif isinstance(event, PrivateMessageEvent):
             await feed_back.finish(EXCEED_NOTICE)
-    args = event.message.extract_plain_text()
+    args = event.get_message()
     if args:
         state['text'] = args
 
@@ -30,10 +30,12 @@ async def feedback(bot: Bot, event: CQEvent, state: T_State):
     text = state['text']
     uid = event.user_id
     su = salmon.configs.SUPERUSERS[0]
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     if isinstance(event, GroupMessageEvent):
         at_sender = f'[CQ:at,qq={uid}]'
-        await bot.send_private_msg(self_id=event.self_id, user_id=su, message=f'群聊{event.group_id}@用户{uid}：\n{text}')
+        await bot.send_private_msg(self_id=event.self_id, user_id=su, message=f'来自群聊{event.group_id}的{nickname}({uid})：\n{text}')
         await bot.send(event, Message(f'{at_sender}\n您的反馈已发送至维护组！\n======\n{text}'))
     elif isinstance(event, PrivateMessageEvent):
-        await bot.send_private_msg(self_id=event.self_id, user_id=su, message=f'@用户{uid}：\n{text}')
+        await bot.send_private_msg(self_id=event.self_id, user_id=su, message=f'{nickname}({uid})：\n{text}')
         await bot.send(event, f'您的反馈已发送至维护组！\n======\n{text}')

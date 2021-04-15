@@ -45,7 +45,7 @@ def keyword(*keywords: str, normal: bool = True) -> Rule:
         text = event.get_plaintext()
         if normal:
             text = normalize_str(text)
-        return bool(text and any(keyword in text for keyword in keywords))
+        return bool(text and any(kw in text for kw in keywords))
     return Rule(_keyword)
 
 
@@ -308,7 +308,7 @@ class Service:
             else:
                 keywords = set()
         rule = self.check_service(only_to_me, only_group)
-        kwargs['rule'] = keyword(*keywords, normal) & rule
+        kwargs['rule'] = keyword(*keywords, normal=normal) & rule
         priority = kwargs.get('priority', 1)
         mw = matcher_wrapper(self,
                              'Message.keyword', priority, keywords=str(keywords), only_group=only_group)

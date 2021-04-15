@@ -28,9 +28,11 @@ async def kick_me_alert(bot: Bot, event: GroupDecreaseNoticeEvent):
     if event.is_tome():
         group_id = event.group_id
         operator_id = event.operator_id
-        if operator_id != event.self_id:
+        if operator_id != event.self_id:    # ignore myself
             feed_back = configs.SUPERUSERS[0]
-            await bot.send_private_msg(self_id=event.self_id, user_id=feed_back, message=f'已被用户{operator_id}移出群聊{group_id}')
+            user_info = await bot.get_stranger_info(user_id=operator_id)
+            nickname = user_info.get('nickname', '未知用户')
+            await bot.send_private_msg(self_id=event.self_id, user_id=feed_back, message=f'已被用户{nickname}({operator_id})移出群聊{group_id}')
 
 
 @ban_me.handle()
@@ -41,9 +43,13 @@ async def ban_me_alert(bot: Bot, event: GroupBanNoticeEvent):
         group_id = event.group_id
         operator_id = event.operator_id
         feed_back = configs.SUPERUSERS[0]
-        await bot.send_private_msg(self_id=event.self_id, user_id=feed_back, message=f'已被群聊{group_id}的用户{operator_id}禁言{event.duration}秒')
+        user_info = await bot.get_stranger_info(user_id=operator_id)
+        nickname = user_info.get('nickname', '未知用户')
+        await bot.send_private_msg(self_id=event.self_id, user_id=feed_back, message=f'已被群聊{group_id}的用户{nickname}({operator_id})禁言{event.duration}秒')
     else:
         group_id = event.group_id
         operator_id = event.operator_id
         feed_back = configs.SUPERUSERS[0]
-        await bot.send_private_msg(self_id=event.self_id, user_id=feed_back, message=f'已被解除群聊{group_id}的用户{operator_id}的禁言')
+        user_info = await bot.get_stranger_info(user_id=operator_id)
+        nickname = user_info.get('nickname', '未知用户')
+        await bot.send_private_msg(self_id=event.self_id, user_id=feed_back, message=f'已被解除群聊{group_id}的用户{nickname}({operator_id})的禁言')

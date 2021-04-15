@@ -32,4 +32,4 @@ async def bc(bot: Bot, event: CQEvent, state: T_State):
                 await bot.send(event, f'群{g} 投递广播失败：{type(e)}')
             except Exception as e:
                 log.logger.error(f'向广播发起者进行错误回报时发生错误：{type(e)}')
-    await bot.send(event, f'广播完成！')
+    await bot.send(event, '广播完成！')
