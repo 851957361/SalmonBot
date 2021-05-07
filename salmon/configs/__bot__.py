@@ -26,6 +26,7 @@ MODULES_ON = {
     'priconne',
     'dice',
     'groupmaster',
+    # 'hourcall',
     # 'setu',
     # 'translate',
     # 'twitter',

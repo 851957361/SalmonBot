@@ -1,5 +1,5 @@
 from nonebot.plugin import on_notice
-from nonebot.adapters.cqhttp import GroupDecreaseNoticeEvent, GroupBanNoticeEvent, Event as CQEvent
+from nonebot.adapters.cqhttp import GroupDecreaseNoticeEvent, GroupBanNoticeEvent
 import salmon
 from salmon import configs, Bot, log 
 

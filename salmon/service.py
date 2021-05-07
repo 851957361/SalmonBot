@@ -154,8 +154,7 @@ class ServiceFunc:
 
 class Service:
     def __init__(self, name: str, use_priv: str = None, bundle: str = None, help_: str = None, manage_priv: str = None, enable_on_default: bool = None, visible: bool = None):
-        assert not _re_illegal_char.search(
-            name), r'Service name cannot contain character in `\/:*?"<>|.`'
+        assert not _re_illegal_char.search(name), r'Service name cannot contain character in `\/:*?"<>|.`'
         self.name = name
         config = _load_service_config(self.name)
         self.use_priv = config.get('use_priv') or use_priv or priv.NORMAL
@@ -319,11 +318,6 @@ class Service:
 
 
     def on_rex(self, pattern: str, flags: Union[int, re.RegexFlag] = 0, normal: bool = True, only_to_me: bool = False, only_group: bool = True, **kwargs) -> "matcher_wrapper":
-        '''
-        根据正则表达式进行匹配。
-        可以通过 ``state["_matched"]`` 获取正则表达式匹配成功的文本。
-        可以通过 ``state["match"]`` 获取正则表达式匹配成功后的`match`
-        '''
         rule = self.check_service(only_to_me, only_group)
         rule = regex(pattern, flags, normal) & rule
         priority = kwargs.get('priority', 1)
