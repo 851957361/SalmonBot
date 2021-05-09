@@ -758,3 +758,235 @@ KeyError: 'id'
 2021-05-09 20:52:49.803 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from setu, type=message, priority=1, temp=False>
 2021-05-09 20:53:04.183 | ERROR    | setu:online_setu:113 - 发送图片https://i.pixiv.cat/img-original/img/2020/09/25/20/41/32/84604392_p0.jpg失败
 2021-05-09 20:53:04.396 | INFO     | nonebot:run:561 - Matcher <Matcher from setu, type=message, priority=1, temp=False> running complete
+2021-05-09 20:54:12.798 | INFO     | salmon:<module>:15 - Succeeded to load config of "priconne"
+2021-05-09 20:54:12.799 | INFO     | salmon:<module>:15 - Succeeded to load config of "mikan"
+2021-05-09 20:54:12.799 | INFO     | salmon:<module>:15 - Succeeded to load config of "setu"
+2021-05-09 20:54:12.799 | WARNING  | salmon:<module>:17 - Not found config of "botmanage"
+2021-05-09 20:54:12.800 | INFO     | salmon:<module>:15 - Succeeded to load config of "groupmaster"
+2021-05-09 20:54:12.800 | WARNING  | salmon:<module>:17 - Not found config of "dice"
+2021-05-09 20:54:12.800 | WARNING  | salmon:<module>:17 - Not found config of "hourcall"
+2021-05-09 20:54:13.282 | INFO     | nonebot:init:174 - NoneBot is initializing...
+2021-05-09 20:54:13.282 | INFO     | nonebot:init:176 - Current Env: dev
+2021-05-09 20:54:13.446 | WARNING  | arena:<module>:40 - arena_db.json not found, will create when needed.
+2021-05-09 20:54:13.448 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena"
+2021-05-09 20:54:13.499 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "arena_reminder"
+2021-05-09 20:54:13.500 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "cherugo"
+2021-05-09 20:54:13.501 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "comic"
+2021-05-09 20:54:13.502 | WARNING  | gacha:<module>:41 - group_pool_config.json not found, will create when needed.
+2021-05-09 20:54:13.504 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "gacha"
+2021-05-09 20:54:13.507 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "games"
+2021-05-09 20:54:13.508 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "login_bonus"
+2021-05-09 20:54:13.563 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "news"
+2021-05-09 20:54:13.564 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "pool"
+2021-05-09 20:54:13.566 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "query"
+2021-05-09 20:54:13.567 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "mikan"
+2021-05-09 20:54:13.571 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "setu"
+2021-05-09 20:54:13.572 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "alert"
+2021-05-09 20:54:13.572 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "broadcast"
+2021-05-09 20:54:13.573 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "feedback"
+2021-05-09 20:54:13.574 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_leave"
+2021-05-09 20:54:13.574 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "help"
+2021-05-09 20:54:13.575 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "ls"
+2021-05-09 20:54:13.576 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "service_manage"
+2021-05-09 20:54:13.577 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "anti_abuse"
+2021-05-09 20:54:13.578 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "antiqks"
+2021-05-09 20:54:13.579 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "chat"
+2021-05-09 20:54:13.580 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_notice"
+2021-05-09 20:54:13.580 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "group_request"
+2021-05-09 20:54:13.581 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "random_repeater"
+2021-05-09 20:54:13.582 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "sleeping_set"
+2021-05-09 20:54:13.583 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "dice"
+2021-05-09 20:54:13.642 | INFO     | nonebot:_load_plugin:1034 - Succeeded to import "hourcall"
+2021-05-09 20:54:13.642 | INFO     | nonebot:run:218 - Running NoneBot...
+2021-05-09 20:54:13.664 | INFO     | uvicorn:serve:405 - Started server process [7620]
+2021-05-09 20:54:13.664 | INFO     | uvicorn:startup:22 - Waiting for application startup.
+2021-05-09 20:54:13.666 | INFO     | nonebot_plugin_apscheduler:_start_scheduler:21 - Scheduler Started
+2021-05-09 20:54:13.666 | INFO     | uvicorn:startup:34 - Application startup complete.
+2021-05-09 20:54:13.666 | INFO     | uvicorn:startup:492 - Uvicorn running on http://127.0.0.1:8080 (Press CTRL+C to quit)
+2021-05-09 20:54:15.001 | INFO     | salmon:wrapper:15 - Scheduled job mikan_poller start.
+2021-05-09 20:54:15.757 | INFO     | uvicorn:asgi_send:182 - ('127.0.0.1', 54671) - "WebSocket /cqhttp/ws" [accepted]
+2021-05-09 20:54:15.757 | INFO     | nonebot:_handle_ws_reverse:234 - WebSocket Connection from CQHTTP Bot 3235657949 Accepted!
+2021-05-09 20:54:16.706 | INFO     | mikan:mikan_poller:84 - 订阅缓存为空，已加载至最新
+2021-05-09 20:54:16.706 | INFO     | salmon:wrapper:17 - Scheduled job mikan_poller completed.
+2021-05-09 20:54:19.002 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -2133001596 from 1351495774@[群:961581611] "来点涩图"
+2021-05-09 20:54:19.008 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-05-09 20:54:19.008 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-05-09 20:54:19.009 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-05-09 20:54:19.009 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-05-09 20:54:19.010 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from setu, type=message, priority=1, temp=False>
+2021-05-09 20:54:21.337 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from random_repeater, type=message, priority=1, temp=False>
+2021-05-09 20:54:21.337 | INFO     | nonebot:run:561 - Matcher <Matcher from random_repeater, type=message, priority=1, temp=False> running complete
+2021-05-09 20:54:26.839 | INFO     | nonebot:run:561 - Matcher <Matcher from setu, type=message, priority=1, temp=False> running complete
+2021-05-09 20:55:05.613 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-05-09 20:55:06.260 | INFO     | news:news_poller:87 - 台服官网新闻缓存为空，已加载至最新
+2021-05-09 20:55:06.320 | INFO     | news:news_poller:87 - B服官网新闻缓存为空，已加载至最新
+2021-05-09 20:55:06.320 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-05-09 20:55:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-05-09 20:55:26.216 | INFO     | comic:update_seeker:121 - 未检测到官漫更新
+2021-05-09 20:55:26.218 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-05-09 20:55:31.729 | INFO     | nonebot:handle_event:202 - CQHTTP 3235657949 | [message.group.normal]: Message -1759755273 from 1351495774@[群:961581611] "来点凯露涩图"
+2021-05-09 20:55:31.734 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-05-09 20:55:31.735 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-05-09 20:55:31.735 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from games, type=message, priority=1, temp=False>
+2021-05-09 20:55:31.736 | INFO     | nonebot:run:561 - Matcher <Matcher from games, type=message, priority=1, temp=False> running complete
+2021-05-09 20:55:31.736 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from setu, type=message, priority=1, temp=False>
+2021-05-09 20:55:32.436 | INFO     | nonebot:_run_matcher:131 - Event will be handled by <Matcher from random_repeater, type=message, priority=1, temp=False>
+2021-05-09 20:55:32.437 | INFO     | nonebot:run:561 - Matcher <Matcher from random_repeater, type=message, priority=1, temp=False> running complete
+2021-05-09 20:56:02.435 | INFO     | nonebot:run:561 - Matcher <Matcher from setu, type=message, priority=1, temp=False> running complete
+2021-05-09 20:56:02.435 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from setu, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 8, in <module>
+    salmon.run('run:app')
+    │      └ <function run at 0x000001BF2C0429D0>
+    └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
+    nonebot.run(app=app)
+    │       │       └ 'run:app'
+    │       └ <function run at 0x000001BF2BC77B80>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {'app': 'run:app'}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x000001BF29409C10>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x000001BF4E35CC20>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001BF2BC69C40>
+    │       │   └ 'run:app'
+    │       └ <function run at 0x000001BF4E1D98B0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x000001BF4E1FB5E0>
+    └ <uvicorn.main.Server object at 0x000001BF4F287670>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x000001BF4E1FB670>
+    │    │                  └ <uvicorn.main.Server object at 0x000001BF4F287670>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001BF2BB41820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001BF2BB41790>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001BF2BB43310>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001BF2BAE2430>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001BF4F4C17F0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001BF4F4C17F0>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001BF4F4C17F0>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001BF4F4C17F0>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
+          │            │        │    └ GroupMessageEvent(time=1620564931, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BF4F37B580>
+          │            └ <Matcher from setu, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001BF2C01C5E0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
+          │       │   │    └ GroupMessageEvent(time=1620564931, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BF4F37B580>
+          │       └ <function Matcher.run at 0x000001BF2BCFD940>
+          └ <Matcher from setu, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
+          │    │           │        │    └ GroupMessageEvent(time=1620564931, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BF4F37B580>
+          │    │           └ <function random_setu at 0x000001BF4EFAC550>
+          │    └ <function Matcher.run_handler at 0x000001BF2BCFD8B0>
+          └ <Matcher from setu, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function random_setu at 0x000001BF4EFAC550>
+
+  File "C:\bot\SalmonBot\salmon\modules\setu\setu.py", line 65, in random_setu
+    await online_setu(bot, event, keyword)
+          │           │    │      └ '凯露'
+          │           │    └ GroupMessageEvent(time=1620564931, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │           └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BF4F37B580>
+          └ <function online_setu at 0x000001BF4EFAC4C0>
+
+  File "C:\bot\SalmonBot\salmon\modules\setu\setu.py", line 110, in online_setu
+    await bot.send(event, Message(msg))
+          │   │    │      │       └ '「楽しんでやろうじゃないっ！」/「J_Young」\nPID:74877535\n[CQ:image,timeout=30,file=https://i.pixiv.cat/img-original/img/2019/05/24/14/48/31/...
+          │   │    │      └ <class 'nonebot.adapters.cqhttp.message.Message'>
+          │   │    └ GroupMessageEvent(time=1620564931, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │   └ <function Bot.send at 0x000001BF2C0313A0>
+          └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BF4F37B580>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\adapters\cqhttp\bot.py", line 454, in send
+    return await self.send_msg(**params)
+                 │               └ {'user_id': 1351495774, 'group_id': 961581611, 'message_type': 'group', 'message': [MessageSegment(type='text', data={'text':...
+                 └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001BF4F37B580>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\adapters\cqhttp\bot.py", line 368, in call_api
+    return _handle_api_result(await ResultStore.fetch(
+           │                        │           └ <classmethod object at 0x000001BF2BD8C610>
+           │                        └ <class 'nonebot.adapters.cqhttp.bot.ResultStore'>
+           └ <function _handle_api_result at 0x000001BF2C01CCA0>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\adapters\cqhttp\bot.py", line 212, in fetch
+    raise NetworkError("WebSocket API call timeout") from None
+          └ <class 'nonebot.adapters.cqhttp.exception.NetworkError'>
+
+nonebot.adapters.cqhttp.exception.NetworkError: <NetWorkError message=WebSocket API call timeout>
+2021-05-09 20:57:15.000 | INFO     | salmon:wrapper:15 - Scheduled job mikan_poller start.
+2021-05-09 20:57:19.882 | INFO     | mikan:mikan_poller:88 - 未检索到番剧更新！
+2021-05-09 20:57:19.882 | INFO     | salmon:wrapper:17 - Scheduled job mikan_poller completed.
+2021-05-09 21:00:00.006 | INFO     | salmon:wrapper:15 - Scheduled job hour_call start.
+2021-05-09 21:00:00.222 | INFO     | salmon:wrapper:17 - Scheduled job hour_call completed.
+2021-05-09 21:00:08.818 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-05-09 21:00:09.442 | INFO     | news:news_poller:91 - 未检索到台服官网新闻更新
+2021-05-09 21:00:09.539 | INFO     | news:news_poller:91 - 未检索到B服官网新闻更新
+2021-05-09 21:00:09.540 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-05-09 21:00:15.001 | INFO     | salmon:wrapper:15 - Scheduled job mikan_poller start.
+2021-05-09 21:00:16.759 | INFO     | mikan:mikan_poller:88 - 未检索到番剧更新！
+2021-05-09 21:00:16.759 | INFO     | salmon:wrapper:17 - Scheduled job mikan_poller completed.
+2021-05-09 21:00:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-05-09 21:00:25.564 | INFO     | comic:update_seeker:121 - 未检测到官漫更新
+2021-05-09 21:00:25.566 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-05-09 21:03:15.001 | INFO     | salmon:wrapper:15 - Scheduled job mikan_poller start.
+2021-05-09 21:03:20.177 | INFO     | mikan:mikan_poller:88 - 未检索到番剧更新！
+2021-05-09 21:03:20.177 | INFO     | salmon:wrapper:17 - Scheduled job mikan_poller completed.
+2021-05-09 21:05:04.930 | INFO     | salmon:wrapper:15 - Scheduled job pcr_news_poller start.
+2021-05-09 21:05:05.621 | INFO     | news:news_poller:91 - 未检索到台服官网新闻更新
+2021-05-09 21:05:05.682 | INFO     | news:news_poller:91 - 未检索到B服官网新闻更新
+2021-05-09 21:05:05.682 | INFO     | salmon:wrapper:17 - Scheduled job pcr_news_poller completed.
+2021-05-09 21:05:25.001 | INFO     | salmon:wrapper:15 - Scheduled job update_seeker start.
+2021-05-09 21:05:26.489 | INFO     | comic:update_seeker:121 - 未检测到官漫更新
+2021-05-09 21:05:26.491 | INFO     | salmon:wrapper:17 - Scheduled job update_seeker completed.
+2021-05-09 21:06:15.001 | INFO     | salmon:wrapper:15 - Scheduled job mikan_poller start.
+2021-05-09 21:06:18.181 | INFO     | mikan:mikan_poller:88 - 未检索到番剧更新！
+2021-05-09 21:06:18.182 | INFO     | salmon:wrapper:17 - Scheduled job mikan_poller completed.
+2021-05-09 21:06:43.796 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+2021-05-09 21:06:43.796 | ERROR    | alert:disconnect:23 - WebSocket连接已断开
