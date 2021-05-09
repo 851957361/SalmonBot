@@ -5,7 +5,8 @@ try:
     import ujson as json
 except:
     import json
-from salmon import aiohttpx, R, Service, Bot, scheduler, log
+import salmon
+from salmon import aiohttpx, R, Service, Bot, scheduler
 from salmon.typing import CQEvent, T_State, FinishedException, Message
 
 
@@ -54,15 +55,15 @@ async def download_img(save_path, link):
     从link下载图片保存至save_path（目录+文件名）
     会覆盖原有文件，需保证目录存在
     '''
-    log.logger.info(f'download_img from {link}')
+    salmon.logger.info(f'download_img from {link}')
     resp = await aiohttpx.get(link, timeout=10)
-    log.logger.info(f'status_code={resp.status_code}')
+    salmon.logger.info(f'status_code={resp.status_code}')
     if 200 == resp.status_code:
         if re.search(r'image', resp.headers['content-type'], re.I):
-            log.logger.info(f'is image, saving to {save_path}')
+            salmon.logger.info(f'is image, saving to {save_path}')
             with open(save_path, 'wb') as f:
                 f.write(resp.content)
-                log.logger.info('saved!')
+                salmon.logger.info('saved!')
 
 
 async def download_comic(id_):
@@ -75,11 +76,11 @@ async def download_comic(id_):
     index = load_index()
 
     # 先从api获取detail，其中包含图片真正的链接
-    log.logger.info(f'getting comic {id_} ...')
+    salmon.logger.info(f'getting comic {id_} ...')
     url = base + id_
-    log.logger.info(f'url={url}')
+    salmon.logger.info(f'url={url}')
     resp = await aiohttpx.get(url)
-    log.logger.info(f'status_code={resp.status_code}')
+    salmon.logger.info(f'status_code={resp.status_code}')
     if 200 != resp.status_code:
         return
     data = resp.json()
@@ -88,7 +89,7 @@ async def download_comic(id_):
     title = data['title']
     link = data['cartoon']
     index[episode] = {'title': title, 'link': link}
-    log.logger.info(f'episode={index[episode]}')
+    salmon.logger.info(f'episode={index[episode]}')
     # 下载图片并保存
     await download_img(os.path.join(save_dir, get_pic_name(episode)), link)
     # 保存官漫目录信息
@@ -117,10 +118,10 @@ async def update_seeker():
         qs = urlparse(index[episode]['link']).query
         old_id = parse_qs(qs)['id'][0]
         if id_ == old_id:
-            log.logger.info('未检测到官漫更新')
+            salmon.logger.info('未检测到官漫更新')
             return
     # 确定已有更新，下载图片
-    log.logger.info(f'发现更新 id={id_}')
+    salmon.logger.info(f'发现更新 id={id_}')
     await download_comic(id_)
     # 推送至各个订阅群
     pic = R.img('priconne/comic', get_pic_name(episode)).cqcode

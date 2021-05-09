@@ -2,7 +2,8 @@ import random
 from datetime import timedelta
 from nonebot.plugin import on_command
 from nonebot.rule import to_me
-from salmon import Bot, R, util, log, priv
+from salmon import Bot, R, util, priv
+import salmon
 from salmon.typing import CQEvent, GroupMessageEvent, PrivateMessageEvent, Message
 
 
@@ -17,7 +18,7 @@ anti_crit = on_command('ban_word', to_me(), aliases=BANNED_WORD)
 @anti_crit.handle()
 async def ban_word(bot: Bot, event: CQEvent):
     user_id = event.user_id
-    log.logger.critical(f'Self: {event.self_id}, Message {event.message_id} from {user_id}: {event.message}')
+    salmon.logger.critical(f'Self: {event.self_id}, Message {event.message_id} from {user_id}: {event.message}')
     priv.set_block_user(user_id, timedelta(hours=8))
     pic = R.img(f"chieri{random.randint(1, 4)}.jpg").cqcode
     if isinstance(event, GroupMessageEvent):

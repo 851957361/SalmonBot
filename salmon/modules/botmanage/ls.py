@@ -1,6 +1,4 @@
 from nonebot.plugin import on_command
-from nonebot.rule import ArgumentParser
-from nonebot.exception import FinishedException
 from salmon import Bot, Service, configs
 from salmon.typing import CQEvent, T_State
 

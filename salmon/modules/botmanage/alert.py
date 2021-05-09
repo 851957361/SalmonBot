@@ -1,7 +1,7 @@
 from nonebot.plugin import on_notice
 from nonebot.adapters.cqhttp import GroupDecreaseNoticeEvent, GroupBanNoticeEvent
 import salmon
-from salmon import configs, Bot, log 
+from salmon import configs, Bot
 
 
 driver = salmon.driver()
@@ -20,7 +20,7 @@ async def disconnect(bot: Bot):
     try:
         await bot.send_private_msg(user_id=feed_back, message='连接已断开，请检查服务器')
     except:
-        log.logger.error("WebSocket连接已断开")
+        salmon.logger.error("WebSocket连接已断开")
 
 
 @kick_me.handle()

@@ -68,7 +68,7 @@ async def enable_service(bot: Bot, event: CQEvent):
         for name in names:
             if name in svs:
                 sv = svs[name]
-                u_priv = priv.get_user_priv(bot, event)
+                u_priv = priv.get_user_priv(event)
                 if u_priv >= sv.manage_priv:
                     sv.set_enable(group_id)
                     succ.append(name)

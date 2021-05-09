@@ -1,5 +1,6 @@
 import random
-from salmon import Bot, Service, util, log
+import salmon
+from salmon import Bot, Service, util
 from salmon.typing import CQEvent
 
 
@@ -25,8 +26,8 @@ async def rd(bot: Bot, event: CQEvent):
                     group_stat[group_id] = (msg, True, 0)
                     await bot.send(event, util.filt_message(event.message))
                 except Exception as e:
-                    log.logger.error(f'复读失败: {type(e)}')
-                    log.logger.exception(e)
+                    salmon.logger.error(f'复读失败: {type(e)}')
+                    salmon.logger.exception(e)
             else:                      # 概率测试失败，蓄力
                 p = 1 - (1 - p) / PROB_A
                 group_stat[group_id] = (msg, False, p)

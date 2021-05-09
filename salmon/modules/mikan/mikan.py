@@ -2,7 +2,7 @@ import random
 from datetime import datetime
 from lxml import etree
 import salmon
-from salmon import Service, aiohttpx, log, scheduler, Bot
+from salmon import Service, aiohttpx, scheduler, Bot
 from salmon.typing import CQEvent
 
 
@@ -23,7 +23,7 @@ class Mikan:
             resp = await aiohttpx.get('https://mikanani.me/RSS/MyBangumi', params={'token': Mikan.get_token()}, timeout=10)
             rss = etree.XML(resp.content)
         except Exception as e:
-            log.logger.error(f'[get_rss] Error: {e}')
+            salmon.logger.error(f'[get_rss] Error: {e}')
             return []
         for i in rss.xpath('/rss/channel/item'):
             link = i.find('./link').text
@@ -81,13 +81,13 @@ DEVICES = [
 async def mikan_poller():
     if not Mikan.rss_cache:
         await Mikan.update_cache()
-        log.logger.info(f'订阅缓存为空，已加载至最新')
+        salmon.logger.info(f'订阅缓存为空，已加载至最新')
         return
     new_bangumi = await Mikan.update_cache()
     if not new_bangumi:
-        log.logger.info(f'未检索到番剧更新！')
+        salmon.logger.info(f'未检索到番剧更新！')
     else:
-        log.logger.info(f'检索到{len(new_bangumi)}条番剧更新！')
+        salmon.logger.info(f'检索到{len(new_bangumi)}条番剧更新！')
         msg = [ f'{i[1]} 【{i[2].strftime(r"%Y-%m-%d %H:%M")}】\n▲下载 {i[0]}' for i in new_bangumi ]
         randomiser = lambda m: f'{random.choice(DEVICES)}监测到番剧更新!{"!"*random.randint(0,4)}\n{m}'
         await sv.broadcast(msg, '蜜柑番剧', 0.5, randomiser)

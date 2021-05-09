@@ -1,73 +1,15 @@
-2021-04-15 23:35:35.027 | ERROR    | salmon:wrapper:20 - <class 'httpx.ConnectTimeout'> occured when doing scheduled job update_seeker.
-2021-04-15 23:35:35.037 | ERROR    | salmon:wrapper:21 - 
-Traceback (most recent call last):
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
-    yield
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
-    (status_code, headers, stream, ext,) = await transport.arequest(
-                                                 │         └ <function AsyncConnectionPool.arequest at 0x00000233683AE700>
-                                                 └ <httpcore.AsyncConnectionPool object at 0x000002330B9AFDC0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
-    response = await connection.arequest(
-                     │          └ <function AsyncHTTPConnection.arequest at 0x00000233683AACA0>
-                     └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 93, in arequest
-    self.socket = await self._open_socket(timeout)
-    │    │              │    │            └ {'connect': 10, 'read': 10, 'write': 10, 'pool': 10}
-    │    │              │    └ <function AsyncHTTPConnection._open_socket at 0x00000233683AAD30>
-    │    │              └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
-    │    └ None
-    └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 119, in _open_socket
-    return await self.backend.open_tcp_stream(
-                 │    │       └ <function AutoBackend.open_tcp_stream at 0x000002336836AF70>
-                 │    └ <httpcore._backends.auto.AutoBackend object at 0x000002330B9AFF10>
-                 └ <AsyncHTTPConnection http_version=UNKNOWN state=5>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\auto.py", line 44, in open_tcp_stream
-    return await self.backend.open_tcp_stream(
-                 │    └ <property object at 0x0000023368356D10>
-                 └ <httpcore._backends.auto.AutoBackend object at 0x000002330B9AFF10>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_backends\asyncio.py", line 270, in open_tcp_stream
-    return SocketStream(
-           └ <class 'httpcore._backends.asyncio.SocketStream'>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
-    self.gen.throw(type, value, traceback)
-    │    │   │     │     │      └ <traceback object at 0x000002330BB78240>
-    │    │   │     │     └ TimeoutError()
-    │    │   │     └ <class 'asyncio.exceptions.TimeoutError'>
-    │    │   └ <method 'throw' of 'generator' objects>
-    │    └ <generator object map_exceptions at 0x000002330BAD0900>
-    └ <contextlib._GeneratorContextManager object at 0x000002330BAA9D00>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
-    raise to_exc(exc) from None
-          └ <class 'httpcore.ConnectTimeout'>
-
-httpcore.ConnectTimeout
-
-
-The above exception was the direct cause of the following exception:
-
-
+2021-05-09 20:29:14.789 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
 Traceback (most recent call last):
 
   File "C:\bot\SalmonBot\run.py", line 8, in <module>
     salmon.run('run:app')
-    │      └ <function run at 0x00000233685C98B0>
+    │      └ <function run at 0x0000020DD61249D0>
     └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
 
   File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
     nonebot.run(app=app)
     │       │       └ 'run:app'
-    │       └ <function run at 0x00000233681FDA60>
+    │       └ <function run at 0x0000020DD5D57B80>
     └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
@@ -76,140 +18,102 @@ Traceback (most recent call last):
     │                │     │      └ ()
     │                │     └ None
     │                └ None
-    └ <function get_driver at 0x00000233659C8AF0>
+    └ <function get_driver at 0x0000020DD34F9C10>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
     uvicorn.run(app or self.server_app,
-    │       │   │      │    └ <property object at 0x000002330A952950>
-    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x00000233682050A0>
+    │       │   │      │    └ <property object at 0x0000020DF844DBD0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000020DD5D4AC40>
     │       │   └ 'run:app'
-    │       └ <function run at 0x000002330A7CE790>
+    │       └ <function run at 0x0000020DF82C88B0>
     └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
     server.run()
-    │      └ <function Server.run at 0x000002330A7F34C0>
-    └ <uvicorn.main.Server object at 0x000002330B73B9D0>
+    │      └ <function Server.run at 0x0000020DF82EB5E0>
+    └ <uvicorn.main.Server object at 0x0000020DF9378550>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
     loop.run_until_complete(self.serve(sockets=sockets))
     │    │                  │    │             └ None
-    │    │                  │    └ <function Server.serve at 0x000002330A7F3550>
-    │    │                  └ <uvicorn.main.Server object at 0x000002330B73B9D0>
-    │    └ <function BaseEventLoop.run_until_complete at 0x00000233680C9700>
+    │    │                  │    └ <function Server.serve at 0x0000020DF82EB670>
+    │    │                  └ <uvicorn.main.Server object at 0x0000020DF9378550>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000020DD5C21820>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x00000233680C9670>
+    │    └ <function BaseEventLoop.run_forever at 0x0000020DD5C21790>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x00000233680CB1F0>
+    │    └ <function BaseEventLoop._run_once at 0x0000020DD5C23310>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x000002336806B310>
-    └ <Handle <TaskWakeupMethWrapper object at 0x000002330BAAE850>(<Future finished result=None>)>
+    │      └ <function Handle._run at 0x0000020DD5BC2430>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000020DF94876D0>(<_GatheringFu...result=[True]>)>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
     self._context.run(self._callback, *self._args)
     │    │            │    │           │    └ <member '_args' of 'Handle' objects>
-    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002330BAAE850>(<Future finished result=None>)>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000020DF94876D0>(<_GatheringFu...result=[True]>)>
     │    │            │    └ <member '_callback' of 'Handle' objects>
-    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002330BAAE850>(<Future finished result=None>)>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000020DF94876D0>(<_GatheringFu...result=[True]>)>
     │    └ <member '_context' of 'Handle' objects>
-    └ <Handle <TaskWakeupMethWrapper object at 0x000002330BAAE850>(<Future finished result=None>)>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000020DF94876D0>(<_GatheringFu...result=[True]>)>
 
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
-    retval = await job.func(*job.args, **job.kwargs)
-                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
-                   │   │     │   │       └ <Job (id=官漫更新 name=update_seeker)>
-                   │   │     │   └ <member 'args' of 'Job' objects>
-                   │   │     └ <Job (id=官漫更新 name=update_seeker)>
-                   │   └ <member 'func' of 'Job' objects>
-                   └ <Job (id=官漫更新 name=update_seeker)>
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '启用', 'command': ('启用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1620563354, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020DF941A250>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000020DD60FC5E0>
 
-> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
-    ret = await func()
-                └ <function update_seeker at 0x000002330B4755E0>
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '启用', 'command': ('启用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1620563354, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020DF941A250>
+          │       └ <function Matcher.run at 0x0000020DD5DDD940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
 
-  File "C:\bot\SalmonBot\salmon\modules\priconne\comic.py", line 108, in update_seeker
-    resp = await aiohttpx.get(index_api, timeout=10)
-                 │        │   └ 'https://comic.priconne-redive.jp/api/index'
-                 │        └ <function get at 0x000002330A9D3B80>
-                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '启用', 'command': ('启用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1620563354, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020DF941A250>
+          │    │           └ <function enable_service at 0x0000020DF8489040>
+          │    └ <function Matcher.run_handler at 0x0000020DD5DDD8B0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
 
-  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
-    resp = await client.get(url, *args, **kwargs)
-                 │      │   │     │       └ {'timeout': 10}
-                 │      │   │     └ ()
-                 │      │   └ 'https://comic.priconne-redive.jp/api/index'
-                 │      └ <function AsyncClient.get at 0x00000233685AD3A0>
-                 └ <httpx.AsyncClient object at 0x000002330BAAE3D0>
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function enable_service at 0x0000020DF8489040>
 
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
-    return await self.request(
-                 │    └ <function AsyncClient.request at 0x00000233685AD0D0>
-                 └ <httpx.AsyncClient object at 0x000002330BAAE3D0>
+  File "C:\bot\SalmonBot\salmon\modules\botmanage\service_manage.py", line 71, in enable_service
+    u_priv = priv.get_user_priv(bot, event)
+             │    │             │    └ GroupMessageEvent(time=1620563354, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+             │    │             └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020DF941A250>
+             │    └ <function get_user_priv at 0x0000020DD6212790>
+             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
 
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
-    response = await self.send(
-                     │    └ <function AsyncClient.send at 0x00000233685AD160>
-                     └ <httpx.AsyncClient object at 0x000002330BAAE3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
-    response = await self._send_handling_auth(
-                     │    └ <function AsyncClient._send_handling_auth at 0x00000233685AD1F0>
-                     └ <httpx.AsyncClient object at 0x000002330BAAE3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
-    response = await self._send_handling_redirects(
-                     │    └ <function AsyncClient._send_handling_redirects at 0x00000233685AD280>
-                     └ <httpx.AsyncClient object at 0x000002330BAAE3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
-    response = await self._send_single_request(request, timeout)
-                     │    │                    │        └ Timeout(timeout=10)
-                     │    │                    └ <Request('GET', 'https://comic.priconne-redive.jp/api/index')>
-                     │    └ <function AsyncClient._send_single_request at 0x00000233685AD310>
-                     └ <httpx.AsyncClient object at 0x000002330BAAE3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
-    (status_code, headers, stream, ext,) = await transport.arequest(
-                                                 │         └ <function AsyncConnectionPool.arequest at 0x00000233683AE700>
-                                                 └ <httpcore.AsyncConnectionPool object at 0x000002330B9AFDC0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
-    self.gen.throw(type, value, traceback)
-    │    │   │     │     │      └ <traceback object at 0x000002330BADAE80>
-    │    │   │     │     └ ConnectTimeout(TimeoutError())
-    │    │   │     └ <class 'httpcore.ConnectTimeout'>
-    │    │   └ <method 'throw' of 'generator' objects>
-    │    └ <generator object map_exceptions at 0x000002330BAD06D0>
-    └ <contextlib._GeneratorContextManager object at 0x000002330B9A74F0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
-    raise mapped_exc(message, **kwargs) from exc  # type: ignore
-          │          │          └ {'request': <Request('GET', 'https://comic.priconne-redive.jp/api/index')>}
-          │          └ ''
-          └ <class 'httpx.ConnectTimeout'>
-
-httpx.ConnectTimeout
-2021-04-15 23:55:16.878 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from sleeping_set, type=message, priority=1, temp=False> failed.
+TypeError: get_user_priv() takes 1 positional argument but 2 were given
+2021-05-09 20:40:49.521 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from setu, type=message, priority=1, temp=False> failed.
 Traceback (most recent call last):
 
   File "C:\bot\SalmonBot\run.py", line 8, in <module>
     salmon.run('run:app')
-    │      └ <function run at 0x0000020BCAF598B0>
+    │      └ <function run at 0x000002C279A729D0>
     └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
 
   File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
     nonebot.run(app=app)
     │       │       └ 'run:app'
-    │       └ <function run at 0x0000020BCAB8DA60>
+    │       └ <function run at 0x000002C2796A7B80>
     └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
@@ -218,163 +122,105 @@ Traceback (most recent call last):
     │                │     │      └ ()
     │                │     └ None
     │                └ None
-    └ <function get_driver at 0x0000020BC8379AF0>
+    └ <function get_driver at 0x000002C276E58C10>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
     uvicorn.run(app or self.server_app,
-    │       │   │      │    └ <property object at 0x0000020BED272860>
-    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000020BCAB950A0>
+    │       │   │      │    └ <property object at 0x000002C21BD8CD60>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000002C27969AC40>
     │       │   └ 'run:app'
-    │       └ <function run at 0x0000020BED0EA790>
+    │       └ <function run at 0x000002C21BC0A8B0>
     └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
     server.run()
-    │      └ <function Server.run at 0x0000020BED1134C0>
-    └ <uvicorn.main.Server object at 0x0000020BEDF156D0>
+    │      └ <function Server.run at 0x000002C21BC2B5E0>
+    └ <uvicorn.main.Server object at 0x000002C21CE0C1F0>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
     loop.run_until_complete(self.serve(sockets=sockets))
     │    │                  │    │             └ None
-    │    │                  │    └ <function Server.serve at 0x0000020BED113550>
-    │    │                  └ <uvicorn.main.Server object at 0x0000020BEDF156D0>
-    │    └ <function BaseEventLoop.run_until_complete at 0x0000020BCAA59700>
+    │    │                  │    └ <function Server.serve at 0x000002C21BC2B670>
+    │    │                  └ <uvicorn.main.Server object at 0x000002C21CE0C1F0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000002C279571820>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x0000020BCAA59670>
+    │    └ <function BaseEventLoop.run_forever at 0x000002C279571790>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x0000020BCAA5B1F0>
+    │    └ <function BaseEventLoop._run_once at 0x000002C279573310>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x0000020BCA9FB310>
-    └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0B7CD0>(<_GatheringFu...=[True, True]>)>
+    │      └ <function Handle._run at 0x000002C279512430>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002C21CF2CF40>(<_GatheringFu...=[True, True]>)>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
     self._context.run(self._callback, *self._args)
     │    │            │    │           │    └ <member '_args' of 'Handle' objects>
-    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0B7CD0>(<_GatheringFu...=[True, True]>)>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002C21CF2CF40>(<_GatheringFu...=[True, True]>)>
     │    │            │    └ <member '_callback' of 'Handle' objects>
-    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0B7CD0>(<_GatheringFu...=[True, True]>)>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002C21CF2CF40>(<_GatheringFu...=[True, True]>)>
     │    └ <member '_context' of 'Handle' objects>
-    └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0B7CD0>(<_GatheringFu...=[True, True]>)>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002C21CF2CF40>(<_GatheringFu...=[True, True]>)>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
     await _run_matcher(Matcher, bot, event, state)
           │            │        │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
-          │            │        │    └ GroupMessageEvent(time=1618502116, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
-          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020BEDFBA490>
-          │            └ <Matcher from sleeping_set, type=message, priority=1, temp=False>
-          └ <function _run_matcher at 0x0000020BCAF364C0>
+          │            │        │    └ GroupMessageEvent(time=1620564047, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002C21CEAED00>
+          │            └ <Matcher from setu, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000002C279A4C5E0>
 
 > File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
     await matcher.run(bot, event, state)
           │       │   │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
-          │       │   │    └ GroupMessageEvent(time=1618502116, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
-          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020BEDFBA490>
-          │       └ <function Matcher.run at 0x0000020BCAC13820>
-          └ <Matcher from sleeping_set, type=message, priority=1, temp=False>
+          │       │   │    └ GroupMessageEvent(time=1620564047, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002C21CEAED00>
+          │       └ <function Matcher.run at 0x000002C27972D940>
+          └ <Matcher from setu, type=message, priority=1, temp=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
     await self.run_handler(handler, bot, event, state_)
           │    │           │        │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
-          │    │           │        │    └ GroupMessageEvent(time=1618502116, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
-          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000020BEDFBA490>
-          │    │           └ <function koucha at 0x0000020BED2CBEE0>
-          │    └ <function Matcher.run_handler at 0x0000020BCAC13790>
-          └ <Matcher from sleeping_set, type=message, priority=1, temp=False>
+          │    │           │        │    └ GroupMessageEvent(time=1620564047, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002C21CEAED00>
+          │    │           └ <function random_setu at 0x000002C21CDE48B0>
+          │    └ <function Matcher.run_handler at 0x000002C27972D8B0>
+          └ <Matcher from setu, type=message, priority=1, temp=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
     await handler(
-          └ <function koucha at 0x0000020BED2CBEE0>
+          └ <function random_setu at 0x000002C21CDE48B0>
 
-  File "C:\bot\SalmonBot\salmon\modules\groupmaster\sleeping_set.py", line 21, in koucha
-    base = 0 if '午' in event.plain_text else 5*60*60
-                       └ GroupMessageEvent(time=1618502116, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+  File "C:\bot\SalmonBot\salmon\modules\setu\setu.py", line 67, in random_setu
+    await online_setu(bot, event, keyword)
+          │           │    │      └ None
+          │           │    └ GroupMessageEvent(time=1620564047, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │           └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000002C21CEAED00>
+          └ <function online_setu at 0x000002C21CDE4820>
 
-AttributeError: 'GroupMessageEvent' object has no attribute 'plain_text'
-2021-04-16 00:00:07.510 | ERROR    | salmon:wrapper:20 - <class 'httpx.RemoteProtocolError'> occured when doing scheduled job pcr_news_poller.
-2021-04-16 00:00:07.510 | ERROR    | salmon:wrapper:21 - can't handle event type ConnectionClosed when role=SERVER and state=SEND_RESPONSE
-Traceback (most recent call last):
+  File "C:\bot\SalmonBot\salmon\modules\setu\setu.py", line 109, in online_setu
+    base64_str = f"base64://{base64.b64encode(resp_data['data']).decode()}"
 
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 326, in map_exceptions
-    yield
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
-    (status_code, headers, stream, ext,) = await transport.arequest(
-                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000020BCAD3E700>
-                                                 └ <httpcore.AsyncConnectionPool object at 0x0000020BEE0CF430>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection_pool.py", line 218, in arequest
-    response = await connection.arequest(
-                     │          └ <function AsyncHTTPConnection.arequest at 0x0000020BCAD3ACA0>
-                     └ <AsyncHTTPConnection http_version=HTTP/1.1 state=2>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\connection.py", line 106, in arequest
-    return await self.connection.arequest(method, url, headers, stream, ext)
-                 │    │          │        │       │    │        │       └ {'timeout': {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}}
-                 │    │          │        │       │    │        └ <httpx._content.PlainByteStream object at 0x0000020BEE0CFB20>
-                 │    │          │        │       │    └ [(b'Host', b'www.princessconnect.so-net.tw'), (b'Accept', b'*/*'), (b'Accept-Encoding', b'gzip, deflate'), (b'Connection', b'...
-                 │    │          │        │       └ (b'http', b'www.princessconnect.so-net.tw', None, b'/news/')
-                 │    │          │        └ b'GET'
-                 │    │          └ <function AsyncHTTP11Connection.arequest at 0x0000020BCAD3A430>
-                 │    └ <AsyncHTTP11Connection state=2>
-                 └ <AsyncHTTPConnection http_version=HTTP/1.1 state=2>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\http11.py", line 72, in arequest
-    ) = await self._receive_response(timeout)
-              │    │                 └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
-              │    └ <function AsyncHTTP11Connection._receive_response at 0x0000020BCAD3A700>
-              └ <AsyncHTTP11Connection state=2>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\http11.py", line 133, in _receive_response
-    event = await self._receive_event(timeout)
-                  │    │              └ {'connect': 5.0, 'read': 5.0, 'write': 5.0, 'pool': 5.0}
-                  │    └ <function AsyncHTTP11Connection._receive_event at 0x0000020BCAD3A820>
-                  └ <AsyncHTTP11Connection state=2>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_async\http11.py", line 169, in _receive_event
-    event = self.h11_state.next_event()
-            │    │         └ <function Connection.next_event at 0x0000020BCAD1E3A0>
-            │    └ <h11._connection.Connection object at 0x0000020BEE0C7B80>
-            └ <AsyncHTTP11Connection state=2>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
-    self.gen.throw(type, value, traceback)
-    │    │   │     │     │      └ <traceback object at 0x0000020BEE04D2C0>
-    │    │   │     │     └ RemoteProtocolError("can't handle event type ConnectionClosed when role=SERVER and state=SEND_RESPONSE")
-    │    │   │     └ <class 'h11._util.RemoteProtocolError'>
-    │    │   └ <method 'throw' of 'generator' objects>
-    │    └ <generator object map_exceptions at 0x0000020BEE05B7B0>
-    └ <contextlib._GeneratorContextManager object at 0x0000020BEE0C7850>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpcore\_exceptions.py", line 12, in map_exceptions
-    raise to_exc(exc) from None
-          └ <class 'httpcore.RemoteProtocolError'>
-
-httpcore.RemoteProtocolError: can't handle event type ConnectionClosed when role=SERVER and state=SEND_RESPONSE
-
-
-The above exception was the direct cause of the following exception:
-
-
+KeyError: 'data'
+2021-05-09 20:51:55.379 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from setu, type=message, priority=1, temp=False> failed.
 Traceback (most recent call last):
 
   File "C:\bot\SalmonBot\run.py", line 8, in <module>
     salmon.run('run:app')
-    │      └ <function run at 0x0000020BCAF598B0>
+    │      └ <function run at 0x000001A8E3A829D0>
     └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
 
   File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
     nonebot.run(app=app)
     │       │       └ 'run:app'
-    │       └ <function run at 0x0000020BCAB8DA60>
+    │       └ <function run at 0x000001A8E36B7B80>
     └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
@@ -383,143 +229,91 @@ Traceback (most recent call last):
     │                │     │      └ ()
     │                │     └ None
     │                └ None
-    └ <function get_driver at 0x0000020BC8379AF0>
+    └ <function get_driver at 0x000001A8E0E49C10>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
     uvicorn.run(app or self.server_app,
-    │       │   │      │    └ <property object at 0x0000020BED272860>
-    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000020BCAB950A0>
+    │       │   │      │    └ <property object at 0x000001A885D9CC70>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x000001A8E36A9C40>
     │       │   └ 'run:app'
-    │       └ <function run at 0x0000020BED0EA790>
+    │       └ <function run at 0x000001A885C1A8B0>
     └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
     server.run()
-    │      └ <function Server.run at 0x0000020BED1134C0>
-    └ <uvicorn.main.Server object at 0x0000020BEDF156D0>
+    │      └ <function Server.run at 0x000001A885C3B5E0>
+    └ <uvicorn.main.Server object at 0x000001A886E2AEB0>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
     loop.run_until_complete(self.serve(sockets=sockets))
     │    │                  │    │             └ None
-    │    │                  │    └ <function Server.serve at 0x0000020BED113550>
-    │    │                  └ <uvicorn.main.Server object at 0x0000020BEDF156D0>
-    │    └ <function BaseEventLoop.run_until_complete at 0x0000020BCAA59700>
+    │    │                  │    └ <function Server.serve at 0x000001A885C3B670>
+    │    │                  └ <uvicorn.main.Server object at 0x000001A886E2AEB0>
+    │    └ <function BaseEventLoop.run_until_complete at 0x000001A8E3581820>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x0000020BCAA59670>
+    │    └ <function BaseEventLoop.run_forever at 0x000001A8E3581790>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x0000020BCAA5B1F0>
+    │    └ <function BaseEventLoop._run_once at 0x000001A8E3583310>
     └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x0000020BCA9FB310>
-    └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0C7BB0>(<Future finished result=None>)>
+    │      └ <function Handle._run at 0x000001A8E3522430>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001A886FA90D0>(<_GatheringFu...=[True, True]>)>
 
   File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
     self._context.run(self._callback, *self._args)
     │    │            │    │           │    └ <member '_args' of 'Handle' objects>
-    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0C7BB0>(<Future finished result=None>)>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001A886FA90D0>(<_GatheringFu...=[True, True]>)>
     │    │            │    └ <member '_callback' of 'Handle' objects>
-    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0C7BB0>(<Future finished result=None>)>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001A886FA90D0>(<_GatheringFu...=[True, True]>)>
     │    └ <member '_context' of 'Handle' objects>
-    └ <Handle <TaskWakeupMethWrapper object at 0x0000020BEE0C7BB0>(<Future finished result=None>)>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001A886FA90D0>(<_GatheringFu...=[True, True]>)>
 
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\apscheduler\executors\base_py3.py", line 30, in run_coroutine_job
-    retval = await job.func(*job.args, **job.kwargs)
-                   │   │     │   │       │   └ <member 'kwargs' of 'Job' objects>
-                   │   │     │   │       └ <Job (id=新闻动态 name=pcr_news_poller)>
-                   │   │     │   └ <member 'args' of 'Job' objects>
-                   │   │     └ <Job (id=新闻动态 name=pcr_news_poller)>
-                   │   └ <member 'func' of 'Job' objects>
-                   └ <Job (id=新闻动态 name=pcr_news_poller)>
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
+          │            │        │    └ GroupMessageEvent(time=1620564714, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001A886EBDD30>
+          │            └ <Matcher from setu, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x000001A8E3A5C5E0>
 
-> File "C:\bot\SalmonBot\salmon\scheduler.py", line 16, in wrapper
-    ret = await func()
-                └ <function pcr_news_poller at 0x0000020BEDE70DC0>
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
+          │       │   │    └ GroupMessageEvent(time=1620564714, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001A886EBDD30>
+          │       └ <function Matcher.run at 0x000001A8E373D940>
+          └ <Matcher from setu, type=message, priority=1, temp=False>
 
-  File "C:\bot\SalmonBot\salmon\modules\priconne\news.py", line 98, in pcr_news_poller
-    await news_poller(SonetSpider, svtw, '台服官网')
-          │           │            └ <salmon.service.Service object at 0x0000020BEDC7FE80>
-          │           └ <class 'news.SonetSpider'>
-          └ <function news_poller at 0x0000020BEDC87040>
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': None, 'command': None}, '_suffix': {'raw_command': None, 'command': None}, 'match': <re.Match obj...
+          │    │           │        │    └ GroupMessageEvent(time=1620564714, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001A886EBDD30>
+          │    │           └ <function random_setu at 0x000001A886E1B310>
+          │    └ <function Matcher.run_handler at 0x000001A8E373D8B0>
+          └ <Matcher from setu, type=message, priority=1, temp=False>
 
-  File "C:\bot\SalmonBot\salmon\modules\priconne\news.py", line 88, in news_poller
-    news = await spider.get_update()
-                 │      └ <classmethod object at 0x0000020BEDC89760>
-                 └ <class 'news.SonetSpider'>
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function random_setu at 0x000001A886E1B310>
 
-  File "C:\bot\SalmonBot\salmon\modules\priconne\news.py", line 39, in get_update
-    resp = await cls.get_response()
-                 │   └ <classmethod object at 0x0000020BEDC957F0>
-                 └ <class 'news.SonetSpider'>
+  File "C:\bot\SalmonBot\salmon\modules\setu\setu.py", line 65, in random_setu
+    await online_setu(bot, event, keyword)
+          │           │    │      └ ''
+          │           │    └ GroupMessageEvent(time=1620564714, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │           └ <nonebot.adapters.cqhttp.bot.Bot object at 0x000001A886EBDD30>
+          └ <function online_setu at 0x000001A886E1B280>
 
-  File "C:\bot\SalmonBot\salmon\modules\priconne\news.py", line 28, in get_response
-    resp = await aiohttpx.get(cls.url)
-                 │        │   │   └ 'http://www.princessconnect.so-net.tw/news/'
-                 │        │   └ <class 'news.SonetSpider'>
-                 │        └ <function get at 0x0000020BED2F84C0>
-                 └ <module 'salmon.aiohttpx' from 'C:\\bot\\SalmonBot\\salmon\\aiohttpx.py'>
+  File "C:\bot\SalmonBot\salmon\modules\setu\setu.py", line 109, in online_setu
+    msg = f'「{resp_data["title"]}」/「{resp_data["author"]}」\nPID:{resp_data["id"]}\n[CQ:image,timeout=30,file={img_url}]'
 
-  File "C:\bot\SalmonBot\salmon\aiohttpx.py", line 8, in get
-    resp = await client.get(url, *args, **kwargs)
-                 │      │   │     │       └ {}
-                 │      │   │     └ ()
-                 │      │   └ 'http://www.princessconnect.so-net.tw/news/'
-                 │      └ <function AsyncClient.get at 0x0000020BCAF3C3A0>
-                 └ <httpx.AsyncClient object at 0x0000020BEE0CF3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1548, in get
-    return await self.request(
-                 │    └ <function AsyncClient.request at 0x0000020BCAF3C0D0>
-                 └ <httpx.AsyncClient object at 0x0000020BEE0CF3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1371, in request
-    response = await self.send(
-                     │    └ <function AsyncClient.send at 0x0000020BCAF3C160>
-                     └ <httpx.AsyncClient object at 0x0000020BEE0CF3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1406, in send
-    response = await self._send_handling_auth(
-                     │    └ <function AsyncClient._send_handling_auth at 0x0000020BCAF3C1F0>
-                     └ <httpx.AsyncClient object at 0x0000020BEE0CF3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1444, in _send_handling_auth
-    response = await self._send_handling_redirects(
-                     │    └ <function AsyncClient._send_handling_redirects at 0x0000020BCAF3C280>
-                     └ <httpx.AsyncClient object at 0x0000020BEE0CF3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1476, in _send_handling_redirects
-    response = await self._send_single_request(request, timeout)
-                     │    │                    │        └ Timeout(timeout=5.0)
-                     │    │                    └ <Request('GET', 'http://www.princessconnect.so-net.tw/news/')>
-                     │    └ <function AsyncClient._send_single_request at 0x0000020BCAF3C310>
-                     └ <httpx.AsyncClient object at 0x0000020BEE0CF3D0>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_client.py", line 1502, in _send_single_request
-    (status_code, headers, stream, ext,) = await transport.arequest(
-                                                 │         └ <function AsyncConnectionPool.arequest at 0x0000020BCAD3E700>
-                                                 └ <httpcore.AsyncConnectionPool object at 0x0000020BEE0CF430>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\contextlib.py", line 135, in __exit__
-    self.gen.throw(type, value, traceback)
-    │    │   │     │     │      └ <traceback object at 0x0000020BEE04D580>
-    │    │   │     │     └ RemoteProtocolError(RemoteProtocolError("can't handle event type ConnectionClosed when role=SERVER and state=SEND_RESPONSE"))
-    │    │   │     └ <class 'httpcore.RemoteProtocolError'>
-    │    │   └ <method 'throw' of 'generator' objects>
-    │    └ <generator object map_exceptions at 0x0000020BEDF8EDD0>
-    └ <contextlib._GeneratorContextManager object at 0x0000020BEE0CFA00>
-
-  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\httpx\_exceptions.py", line 343, in map_exceptions
-    raise mapped_exc(message, **kwargs) from exc  # type: ignore
-          │          │          └ {'request': <Request('GET', 'http://www.princessconnect.so-net.tw/news/')>}
-          │          └ "can't handle event type ConnectionClosed when role=SERVER and state=SEND_RESPONSE"
-          └ <class 'httpx.RemoteProtocolError'>
-
-httpx.RemoteProtocolError: can't handle event type ConnectionClosed when role=SERVER and state=SEND_RESPONSE
-2021-04-16 00:04:08.185 | ERROR    | salmon:silence:50 - 禁言失败. <class 'nonebot.adapters.cqhttp.exception.ActionFailed'>
+KeyError: 'id'
+2021-05-09 20:53:04.183 | ERROR    | setu:online_setu:113 - 发送图片https://i.pixiv.cat/img-original/img/2020/09/25/20/41/32/84604392_p0.jpg失败
