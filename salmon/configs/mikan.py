@@ -1,1 +1,0 @@
-MIKAN_TOKEN = "DRuGkubaoYvgwFd8C82vYh/OFSQOd+Hges2/038cQEc="

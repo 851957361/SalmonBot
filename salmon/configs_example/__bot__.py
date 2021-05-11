@@ -1,12 +1,12 @@
 """请根据注释编辑图片和功能配置，
-然后将文件夹config_example重命名为config
+然后将文件夹configs_example重命名为configs
 
-※bot监听的端口与ip等请将根目录下的.env.dev.example重命名为.env.dev并编辑配置
+※bot监听的端口与ip配置请将根目录下的.env.dev.example重命名为.env.dev并编辑配置
 """
 
 DEBUG = False           # log日志调试模式
 
-SUPERUSERS = [1351495774]    # 填写超级用户的QQ号，可填多个用半角逗号","隔开
+SUPERUSERS = []    # 填写超级用户的QQ号，可填多个用半角逗号","隔开
 
 # 发送图片的协议
 # 可选 http, file, base64
@@ -24,11 +24,11 @@ RES_URL = 'http://127.0.0.1:5000/static/'
 MODULES_ON = {
     'botmanage',
     'priconne',
-    'dice',
     'groupmaster',
-    'hourcall',
-    'setu',
-    'mikan',
-    'translate',
+    # 'dice',
+    # 'hourcall',
+    # 'setu',
+    # 'mikan',
+    # 'translate',
     # 'twitter',
 }
