@@ -1,7 +1,7 @@
 import numpy as np
 from salmon import Service, Bot, R, util
 from salmon.util import FreqLimiter
-from salmon.typing import CQEvent, Message, T_State, GroupMessageEvent, PrivateMessageEvent
+from salmon.typing import CQEvent, T_State, GroupMessageEvent, PrivateMessageEvent, Message
 from salmon.modules.priconne.pcr_data import chara
 
 
@@ -78,6 +78,12 @@ is_who = sv.on_suffix('是谁', only_group=False)
 
 @miner.handle()
 async def miner_rec(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
+    if isinstance(event, GroupMessageEvent):
+        state['prompt'] = f'>{nickname}\n请发送当前竞技场排名'
+    elif isinstance(event, PrivateMessageEvent):
+        state['prompt'] = '请发送当前竞技场排名'
     try:
         args = int(event.message.extract_plain_text())
         if args:
@@ -85,8 +91,10 @@ async def miner_rec(bot: Bot, event: CQEvent, state: T_State):
     except:
         pass
 
-@miner.got('rank', prompt='请发送当前竞技场排名')
+@miner.got('rank', prompt='{prompt}')
 async def arena_miner(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     rank = int(state['rank'])
     rank = np.clip(rank, 1, 15001)
     s_all = all_season[1:rank].sum()
@@ -105,11 +113,13 @@ async def arena_miner(bot: Bot, event: CQEvent, state: T_State):
          lst.append(1)
          break
     else:
-        msg3 = "请输入15001以内的正整数"
+        if isinstance(event, GroupMessageEvent):
+            msg3 = f">{nickname}\n请输入15001以内的正整数"
+        elif isinstance(event, PrivateMessageEvent):
+            msg3 = "请输入15001以内的正整数"
         await miner.finish(msg3)
     if isinstance(event, GroupMessageEvent):
-        at_sender = f'[CQ:at,qq={event.user_id}]'
-        msg1 = Message(f"{at_sender}\n最高排名奖励还剩{s_this}钻\n历届最高排名还剩{s_all}钻\n推荐挖矿路径:\n")
+        msg1 = f">{nickname}\n最高排名奖励还剩{s_this}钻\n历届最高排名还剩{s_all}钻\n推荐挖矿路径:\n"
     elif isinstance(event, PrivateMessageEvent):
         msg1 = f"最高排名奖励还剩{s_this}钻\n历届最高排名还剩{s_all}钻\n推荐挖矿路径:\n"
     msg2 = ''.join('%s' %id for id in lst)
@@ -118,16 +128,26 @@ async def arena_miner(bot: Bot, event: CQEvent, state: T_State):
 
 @rank.handle()
 async def rank_rec(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
+    if isinstance(event, GroupMessageEvent):
+        state['prompt'] = f'>{nickname}\n请发送需要查询rank表的区服'
+    elif isinstance(event, PrivateMessageEvent):
+        state['prompt'] = '请发送需要查询rank表的区服'
     args = util.normalize_str(event.get_plaintext().strip())
     if args:
         state['name'] = args
 
-@rank.got('name', prompt='请发送需要查询rank表的区服')
+@rank.got('name', prompt='{prompt}')
 async def rank_sheet(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     name = util.normalize_str(state['name'])
-    at_sender = f'[CQ:at,qq={event.user_id}]'
     if name in ('国', '国服', 'cn'):
-        await rank.finish('请选择详细区服\n※例:"rank表b服"或"rank表台服"')
+        if isinstance(event, GroupMessageEvent):
+            await rank.finish(f'>{nickname}\n请选择详细区服\n※例:"rank表b服"或"rank表台服"')
+        elif isinstance(event, PrivateMessageEvent):
+            await rank.finish('请选择详细区服\n※例:"rank表b服"或"rank表台服"')
     elif name in ('b', 'b服', 'bl', 'bilibili', '陆', '陆服'):
         name = 'BL'
     elif name in ('台', '台服', 'tw', 'sonet'):
@@ -136,10 +156,13 @@ async def rank_sheet(bot: Bot, event: CQEvent, state: T_State):
         name = 'JP'
     else:
         if isinstance(event, GroupMessageEvent):
-            await rank.finish(Message(f'{at_sender}\n未知区服，请重新选择\n*rank表日服\n*rank表台服\n*rank表b服'))
+            await rank.finish(f'>{nickname}\n未知区服，请重新选择\n*rank表日服\n*rank表台服\n*rank表b服')
         elif isinstance(event, PrivateMessageEvent):
             await rank.finish('未知区服，请重新选择\n*rank表日服\n*rank表台服\n*rank表b服')
-    msg = ['表格仅供参考']
+    if isinstance(event, GroupMessageEvent):
+        msg = [f'>{nickname}\n表格仅供参考']
+    elif isinstance(event, PrivateMessageEvent):
+        msg = ['表格仅供参考']
     if name == 'JP':
         msg.append(f'※不定期搬运自图中Q群\n※广告为原作者推广，与本bot无关\nR{rank_jp} rank表：\n{pjp}')
         # pos = match.group(3)
@@ -160,9 +183,11 @@ async def rank_sheet(bot: Bot, event: CQEvent, state: T_State):
 
 @yukari.handle()
 async def yukari_sheet(bot: Bot, event: CQEvent):
-    at_sender = Message(f'[CQ:at,qq={event.user_id}]')
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
+    sender = f'>{nickname}\n'
     if isinstance(event, GroupMessageEvent):
-        await bot.send(event, at_sender + YUKARI_SHEET)
+        await bot.send(event, sender + YUKARI_SHEET)
     elif isinstance(event, PrivateMessageEvent):
         await bot.send(event, YUKARI_SHEET)
 
@@ -183,15 +208,19 @@ async def whois(bot: Bot, event: CQEvent, state: T_State):
     if confi < 60:
         return
     uid = event.user_id
-    at_sender = f'[CQ:at,qq={uid}]'
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     if not lmt.check(uid):
         if isinstance(event, GroupMessageEvent):
-            await bot.send(event, f'{at_sender}\n兰德索尔花名册冷却中(剩余 {int(lmt.left_time(uid)) + 1}秒)')
+            await bot.send(event, f'>{nickname}\n兰德索尔花名册冷却中(剩余 {int(lmt.left_time(uid)) + 1}秒)')
             return
         elif isinstance(event, PrivateMessageEvent):
             await bot.send(event, f'兰德索尔花名册冷却中(剩余 {int(lmt.left_time(uid)) + 1}秒)')
             return
     lmt.start_cd(uid, 120 if guess else 0)
     if guess:
-        msg = f'您有{confi}%的可能在找{guess_name} {c.icon.cqcode} {c.name}'
+        if isinstance(event, GroupMessageEvent):
+            msg = f'>{nickname}\n您有{confi}%的可能在找{guess_name} {c.icon.cqcode} {c.name}'
+        elif isinstance(event, PrivateMessageEvent):    
+            msg = f'您有{confi}%的可能在找{guess_name} {c.icon.cqcode} {c.name}'
         await bot.send(event, Message(msg))

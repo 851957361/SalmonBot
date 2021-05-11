@@ -11,7 +11,7 @@
 import re
 from itertools import zip_longest
 from salmon import Service, util, Bot
-from salmon.typing import CQEvent, T_State, GroupMessageEvent, PrivateMessageEvent, Message
+from salmon.typing import CQEvent, T_State, GroupMessageEvent, PrivateMessageEvent
 
 
 sv = Service('pcr-cherugo', bundle='pcr娱乐', help_='''
@@ -70,17 +70,26 @@ decherulize = sv.on_fullmatch('切噜～♪', only_group=False)
 
 @cherulize.handle()
 async def cherulize_rec(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     args = event.message.extract_plain_text()
     if args:
         state['kouyougo'] = args
+    if isinstance(event, GroupMessageEvent):
+        message = f'>{nickname}\n请问要切噜什么切噜噜？'
+    elif isinstance(event, PrivateMessageEvent):
+        message = '请问要切噜什么切噜噜？'
+    state['prompt'] = message
 
-@cherulize.got('kouyougo', prompt='请问要切噜什么呢？')
+@cherulize.got('kouyougo', prompt='{prompt}')
 async def cheru(bot: Bot, event: CQEvent, state: T_State):
     s = state['kouyougo']
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
+    sender = f'>{nickname}\n'
     if len(s) > 500:
         if isinstance(event, GroupMessageEvent):
-            at_sender = Message(f'[CQ:at,qq={event.user_id}]')
-            await cherulize.finish(at_sender + CHERU_DEKINAI)
+            await cherulize.finish(sender + CHERU_DEKINAI)
         elif isinstance(event, PrivateMessageEvent):
             await cherulize.finish(CHERU_DEKINAI)
     await bot.send(event, '切噜～♪' + str2cheru(s))
@@ -88,23 +97,31 @@ async def cheru(bot: Bot, event: CQEvent, state: T_State):
 
 @decherulize.handle()
 async def decherulize_rec(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     args = event.message.extract_plain_text()
     if args:
         state['cherugo'] = args
+    if isinstance(event, GroupMessageEvent):
+        message = f'>{nickname}\n请发送切噜语切噜噜~'
+    elif isinstance(event, PrivateMessageEvent):
+        message = '请发送切噜语切噜噜~'
+    state['prompt'] = message
 
-@decherulize.got('cherugo', prompt='请发送切噜语切噜噜~')
+@decherulize.got('cherugo', prompt='{prompt}')
 async def decheru(bot: Bot, event: CQEvent, state: T_State):
     s = state['cherugo']
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
+    sender = f'>{nickname}\n'
     if len(s) > 1501:
-        if isinstance(event, GroupMessageEvent):
-            at_sender = Message(f'[CQ:at,qq={event.user_id}]')
-            await cherulize.finish(at_sender + CHERU_DEKINAI)
+        if isinstance(event, GroupMessageEvent):  
+            await decherulize.finish(sender + CHERU_DEKINAI)
         elif isinstance(event, PrivateMessageEvent):
-            await cherulize.finish(CHERU_DEKINAI)
+            await decherulize.finish(CHERU_DEKINAI)
     if isinstance(event, GroupMessageEvent):
-        at_sender = Message(f'[CQ:at,qq={event.user_id}]')
-        msg = '的切噜噜是：\n' + util.filt_message(cheru2str(s))
-        await bot.send(event, at_sender + msg)
+        msg = f'>{nickname}的切噜噜是：\n' + util.filt_message(cheru2str(s))
+        await bot.send(event, msg)
     elif isinstance(event, PrivateMessageEvent):
         msg = '您的切噜噜是：\n' + util.filt_message(cheru2str(s))
         await bot.send(event, msg)

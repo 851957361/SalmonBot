@@ -29,9 +29,8 @@ async def do_dice(bot: Bot, event: CQEvent, num, min_, max_, opr, offset, TIP="�
         f'={res}' if offset or num > 1 else '',
     ]
     msg = ''.join(msg)
-    at_sender = Message(f'[CQ:at,qq={event.user_id}]')
     if isinstance(event, GroupMessageEvent):
-        await bot.send(event, at_sender + msg)
+        await bot.send(event, msg, at_sender=True)
     elif isinstance(event, PrivateMessageEvent):
         await bot.send(event, '您' + msg)
 
@@ -62,7 +61,7 @@ async def kc_marriage_rec(bot: Bot, event: CQEvent, state: T_State):
     if wife:
         tip = f'与{wife}的ケッコンカッコカリ结果是：'
     elif isinstance(event, GroupMessageEvent):
-        tip = Message(f'[CQ:at,qq={event.user_id}]的ケッコンカッコカリ结果是：')
+        tip = f'的ケッコンカッコカリ结果是：'
     elif isinstance(event, PrivateMessageEvent):
         tip = '您的ケッコンカッコカリ结果是：'
     await do_dice(bot, event, 1, 3, 6, 1, 0, tip)

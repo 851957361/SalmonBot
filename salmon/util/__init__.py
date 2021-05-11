@@ -10,8 +10,8 @@ from datetime import datetime, timedelta
 import pytz
 from matplotlib import pyplot as plt
 from PIL import Image
-from aiocqhttp.exceptions import ActionFailed
-from salmon import log, Bot, configs
+import salmon
+from salmon import Bot, configs
 from salmon.typing import Message, Union, CQEvent
 try:
     import ujson as json
@@ -30,7 +30,7 @@ def load_config(inbuilt_file_var):
             config = json.load(f)
             return config
     except Exception as e:
-        log.logger.exception(e)
+        salmon.logger.exception(e)
         return {}
 
 
@@ -38,7 +38,7 @@ async def delete_msg(bot: Bot, event: CQEvent):
     try:
         await bot.delete_msg(self_id=event.self_id, message_id=event.message_id)
     except Exception as e:
-        log.logger.error(f'撤回失败. {type(e)}')
+        salmon.logger.error(f'撤回失败. {type(e)}')
 
 
 async def silence(bot: Bot, event: CQEvent, ban_time, skip_su=True):
@@ -47,7 +47,7 @@ async def silence(bot: Bot, event: CQEvent, ban_time, skip_su=True):
             return
         await bot.set_group_ban(self_id=event.self_id, group_id=event.group_id, user_id=event.user_id, duration=ban_time)
     except Exception as e:
-        log.logger.error(f'禁言失败. {type(e)}')
+        salmon.logger.error(f'禁言失败. {type(e)}')
 
 
 def pic2b64(pic:Image) -> str:

@@ -5,7 +5,6 @@ from nonebot.plugin import on_shell_command, on_command
 from nonebot.adapters.cqhttp import Event as CQEvent
 from nonebot.adapters.cqhttp.event import GroupMessageEvent, PrivateMessageEvent
 from nonebot.adapters.cqhttp.message import Message
-from nonebot.exception import FinishedException
 import salmon
 from salmon import Service, priv, Bot
 from salmon.service import parse_gid
@@ -31,8 +30,7 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
 @lssv.got('gids', prompt='请输入需要查询的群号', args_parser=parse_gid)
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if not 'gids' in state:
-        await bot.send(event, 'Invalid input.')
-        raise FinishedException
+        await lssv.finish('Invalid input.')
     verbose_all = state['args']
     svs = Service.get_loaded_services().values()
     u_priv = priv.get_user_priv(bot, event)
@@ -48,8 +46,7 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
                     msg.append(f"|{ox}| {sv.name}")
             await lssv.finish('\n'.join(msg))
     else:
-        await bot.send(event, '查看服务列表需要管理及以上的权限')
-        raise FinishedException
+        await lssv.finish('查看服务列表需要管理及以上的权限')
 
 
 @enable.handle()
@@ -57,11 +54,10 @@ async def enable_service(bot: Bot, event: CQEvent):
     if isinstance(event, GroupMessageEvent):
         names = event.get_plaintext().split()
         uid = event.user_id
-        at_sender = Message(f'[CQ:at,qq={uid}]')
+        user_info = await bot.get_stranger_info(user_id=uid)
+        nickname = user_info.get('nickname', '未知用户')
         if not names:
-            msg = at_sender + '\n服务开关不支持连续会话\n请在空格后接要启用的服务名'
-            await bot.send(event, msg)
-            raise FinishedException
+            await enable.finish(f'>{nickname}\n请在空格后接要启用的服务名')
         group_id = event.group_id
         svs = Service.get_loaded_services()
         succ, notfound = [], []
@@ -73,30 +69,26 @@ async def enable_service(bot: Bot, event: CQEvent):
                     sv.set_enable(group_id)
                     succ.append(name)
                 else:
-                    await bot.send(event, at_sender + f'\n权限不足！启用[{name}]需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
-                    raise FinishedException
+                    await enable.finish(f'>{nickname}\n权限不足！启用[{name}]需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
             else:
                 notfound.append(name)
-        msg = []
+        msg = [f'>{nickname}']
         if succ:
             msg.append('已启用服务：' + '、'.join(succ))
         if notfound:
             msg.append('未找到服务：' + '、'.join(notfound))
         if msg:
-            await bot.send(event, at_sender + '\n'.join(msg))
+            await enable.finish('\n'.join(msg))
     elif isinstance(event, PrivateMessageEvent):
         if event.user_id not in salmon.configs.SUPERUSERS:
-            await bot.send(event, '请在群聊中启用服务')
-            raise FinishedException
+            await enable.finish('请在群聊中启用服务')
         args = event.get_plaintext().split()
         if len(args) < 2:
-            await bot.send(event, 'Input not supported.\nUsage: <service_name> <group_id1> [<group_id2>, ...]')
-            raise FinishedException
+            await enable.finish('Input not supported.\nUsage: <service_name> <group_id1> [<group_id2>, ...]')
         name, *group_ids = args
         svs = Service.get_loaded_services()
         if name not in svs:
-            await bot.send(event, f'未找到服务：{name}')
-            raise FinishedException
+            await enable.finish(f'未找到服务：{name}')
         sv = svs[name]
         succ = []
         for gid in group_ids:
@@ -106,8 +98,7 @@ async def enable_service(bot: Bot, event: CQEvent):
                 succ.append(gid)
             except:
                 await bot.send(event, f'非法群号：{gid}')
-        await bot.send(event, f'服务[{name}]已于{len(succ)}个群内启用：{succ}')
-        raise FinishedException
+        await enable.finish(f'服务[{name}]已于{len(succ)}个群内启用：{succ}')
 
 
 @disable.handle()
@@ -115,46 +106,41 @@ async def disable_service(bot: Bot, event: CQEvent):
     if isinstance(event, GroupMessageEvent):
         names = event.get_plaintext().split()
         uid = event.user_id
-        at_sender = Message(f'[CQ:at,qq={uid}]')
+        user_info = await bot.get_stranger_info(user_id=uid)
+        nickname = user_info.get('nickname', '未知用户')
         if not names:
-            msg = at_sender + '\n服务开关不支持连续会话\n请在空格后接要启用的服务名'
-            await bot.send(event, msg)
-            raise FinishedException
+            await disable.finish(f'>{nickname}\n请在空格后接要启用的服务名')
         group_id = event.group_id
         svs = Service.get_loaded_services()
         succ, notfound = [], []
         for name in names:
             if name in svs:
                 sv = svs[name]
-                u_priv = priv.get_user_priv(bot, event)
+                u_priv = priv.get_user_priv(event)
                 if u_priv >= sv.manage_priv:
                     sv.set_disable(group_id)
                     succ.append(name)
                 else:
-                    await bot.send(event, at_sender + f'\n权限不足！禁用[{name}]需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
-                    raise FinishedException
+                    await disable.finish(f'>{nickname}\n权限不足！启用[{name}]需要权限：{sv.manage_priv}，您的权限：{u_priv}\n{PRIV_TIP}')
             else:
                 notfound.append(name)
-        msg = []
+        msg = [f'>{nickname}']
         if succ:
             msg.append('已禁用服务：' + '、'.join(succ))
         if notfound:
             msg.append('未找到服务：' + '、'.join(notfound))
         if msg:
-            await bot.send(event, at_sender + '\n'.join(msg))
+            await disable.finish('\n'.join(msg))
     elif isinstance(event, PrivateMessageEvent):
         if event.user_id not in salmon.configs.SUPERUSERS:
-            await bot.send(event, '请在群聊中禁用服务')
-            raise FinishedException
+            await disable.finish('请在群聊中禁用服务')
         args = event.get_plaintext().split()
         if len(args) < 2:
-            await bot.send(event, 'Input not supported.\nUsage: <service_name> <group_id1> [<group_id2>, ...]')
-            raise FinishedException
+            await disable.finish('Input not supported.\nUsage: <service_name> <group_id1> [<group_id2>, ...]')
         name, *group_ids = args
         svs = Service.get_loaded_services()
         if name not in svs:
-            await bot.send(event, f'未找到服务：{name}')
-            raise FinishedException
+            await disable.finish(f'未找到服务：{name}')
         sv = svs[name]
         succ = []
         for gid in group_ids:
@@ -164,5 +150,4 @@ async def disable_service(bot: Bot, event: CQEvent):
                 succ.append(gid)
             except:
                 await bot.send(event, f'非法群号：{gid}')
-        await bot.send(event, f'服务[{name}]已于{len(succ)}个群内禁用：{succ}')
-        raise FinishedException
+        await disable.finish(f'服务[{name}]已于{len(succ)}个群内禁用：{succ}')

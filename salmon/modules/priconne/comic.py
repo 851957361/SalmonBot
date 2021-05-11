@@ -7,7 +7,7 @@ except:
     import json
 import salmon
 from salmon import aiohttpx, R, Service, Bot, scheduler
-from salmon.typing import CQEvent, T_State, FinishedException, Message
+from salmon.typing import CQEvent, T_State, FinishedException, Message, GroupMessageEvent, PrivateMessageEvent
 
 
 sv_help = '''
@@ -30,24 +30,37 @@ comic = sv.on_fullmatch('官漫', only_group=False)
 
 @comic.handle()
 async def comic_rec(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     args = event.message.extract_plain_text()
     if args:
         state['episode'] = args
+    if isinstance(event, GroupMessageEvent):
+        message = f'>{nickname}\n请发送漫画的集数'
+    elif isinstance(event, PrivateMessageEvent):
+        message = '请发送漫画的集数'
+    state['prompt'] = message
 
-@comic.got('episode', prompt='请发送漫画的集数')
+@comic.got('episode', prompt='{prompt}')
 async def read_comic(bot: Bot, event: CQEvent, state: T_State):
     episode = state['episode']
-    at_sender = Message(f'[CQ:at,qq={event.user_id}]')
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     if not re.fullmatch(r'\d{0,3}', episode):
         raise FinishedException
     episode = episode.lstrip('0')
     index = load_index()
     if episode not in index:
-        await comic.finish(at_sender + f'未查找到第{episode}话，敬请期待官方更新')
+        if isinstance(event, GroupMessageEvent):
+            await comic.finish(f'>{nickname}\n未查找到第{episode}话，敬请期待官方更新')
+        elif isinstance(event, PrivateMessageEvent):
+            await comic.finish(f'未查找到第{episode}话，敬请期待官方更新')
     title = index[episode]['title']
     pic = R.img('priconne/comic/', get_pic_name(episode)).cqcode
-    msg = Message(f'プリンセスコネクト！Re:Dive公式4コマ\n第{episode}話 {title}\n{pic}')
-    await bot.send(event, at_sender + msg)
+    if isinstance(event, GroupMessageEvent):
+        await comic.finish(Message(f'>{nickname}\nプリンセスコネクト！Re:Dive公式4コマ\n第{episode}話 {title}\n{pic}'))
+    elif isinstance(event, PrivateMessageEvent):
+        await comic.finish(Message(f'プリンセスコネクト！Re:Dive公式4コマ\n第{episode}話 {title}\n{pic}'))
 
 
 async def download_img(save_path, link):

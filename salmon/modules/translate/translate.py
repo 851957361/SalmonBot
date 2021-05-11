@@ -13,7 +13,7 @@ from urllib.parse import quote_plus
 import aiohttp
 import salmon
 from salmon import Bot, Service
-from salmon.typing import CQEvent, MessageEvent, ActionFailed, T_State
+from salmon.typing import CQEvent, MessageEvent, ActionFailed, T_State, GroupMessageEvent, PrivateMessageEvent
 try:
     import ujson as json
 except ImportError:
@@ -21,7 +21,7 @@ except ImportError:
 
 
 TXT = '''
-[翻译] 接需要翻译的外语内容
+[翻译] 机器翻译
 '''.strip()
 
 sv = Service('机器翻译', bundle='查询', help_=TXT)
@@ -56,6 +56,8 @@ async def rand_string(n=8) -> str:
 @translate.handle()
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, MessageEvent):
+        user_info = await bot.get_stranger_info(user_id=event.user_id)
+        nickname = user_info.get('nickname', '未知用户')
         available = [
             'zh', 'en', 'fr', 'es', 'it',
             'de', 'tr', 'ru', 'pt', 'vi',
@@ -86,7 +88,7 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
                     available = ['zh']
                 if len(available) == 1:
                     state['target'] = 'zh'
-                    logger.info(input)
+                    salmon.logger.info(input)
                     if len(input) == 3:
                         state['text'] = input[2]
                     else:
@@ -102,7 +104,10 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
                             state['text'] = input[1]
             else:
                 state['text'] = event.get_plaintext()
-        message = f'请选择输入语种，可选值如下~\n{state["available"]}'
+        if isinstance(event, GroupMessageEvent):
+            message = f'>{nickname}\n请选择输入语种，可选值如下~\n{state["available"]}'
+        elif isinstance(event, PrivateMessageEvent):
+            message = f'请选择输入语种，可选值如下~\n{state["available"]}'
         state['prompt'] = message
     else:
         salmon.logger.warning('Not supported: translator')
@@ -112,9 +117,14 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
 @translate.got('source', prompt='{prompt}')
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, MessageEvent):
+        user_info = await bot.get_stranger_info(user_id=event.user_id)
+        nickname = user_info.get('nickname', '未知用户')
         available = deepcopy(state['valid'])
         if not state['source'] in state['valid']:
-            message = f'不支持的输入语种 {state["source"]}'
+            if isinstance(event, GroupMessageEvent):
+                message = f'>{nickname}\n不支持的输入语种 {state["source"]}'
+            elif isinstance(event, PrivateMessageEvent):
+                message = f'不支持的输入语种 {state["source"]}'
             try:
                 await translate.finish(message)
             except ActionFailed as e:
@@ -141,7 +151,10 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
         else:
             state['available'] = ' | '.join(available)
             state['valid'] = deepcopy(available)
-        message = f'请选择目标语种，可选值如下~\n{state["available"]}'
+        if isinstance(event, GroupMessageEvent):
+            message = f'>{nickname}\n请选择目标语种，可选值如下~\n{state["available"]}'
+        elif isinstance(event, PrivateMessageEvent):
+            message = f'请选择目标语种，可选值如下~\n{state["available"]}'
         state['prompt'] = message
     else:
         salmon.logger.warning('Not supported: translator')
@@ -151,8 +164,13 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
 @translate.got('target', prompt='{prompt}')
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, MessageEvent):
+        user_info = await bot.get_stranger_info(user_id=event.user_id)
+        nickname = user_info.get('nickname', '未知用户')
         if not state['target'] in state['valid']:
-            message = f'不支持的目标语种 {state["target"]}'
+            if isinstance(event, GroupMessageEvent):
+                message = f'>{nickname}\n不支持的目标语种 {state["target"]}'
+            elif isinstance(event, PrivateMessageEvent):
+                message = f'不支持的目标语种 {state["target"]}'
             try:
                 await translate.finish(message)
             except ActionFailed as e:
@@ -160,7 +178,10 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
                     f'ActionFailed | {e.info["msg"].lower()} | retcode = {e.info["retcode"]} | {e.info["wording"]}'
                 )
                 return
-        message = '请输入要翻译的内容~'
+        if isinstance(event, GroupMessageEvent):
+            message = f'>{nickname}\n请输入要翻译的内容~'
+        elif isinstance(event, PrivateMessageEvent):
+            message = '请输入要翻译的内容~'
         state['prompt'] = message
     else:
         salmon.logger.warning('Not supported: translator')
@@ -170,6 +191,8 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
 @translate.got('text', prompt='{prompt}')
 async def _(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, MessageEvent):
+        user_info = await bot.get_stranger_info(user_id=event.user_id)
+        nickname = user_info.get('nickname', '未知用户')
         param = {
             'app_id': f'{app_id}',
             'time_stamp': f'{int(time())}',
@@ -186,7 +209,7 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
         ) as resp:
             code = resp.status
             if code != 200:
-                message = '※ 网络异常，请稍后再试~'
+                message = '※ 网络异常，请稍后再试~'      
                 try:
                     await translate.finish(message)
                 except ActionFailed as e:
@@ -196,7 +219,10 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
                     return
             data = loadsJson(await resp.read())
         if data['ret']:
-            message = '※ 翻译失败，请简化文本~'
+            if isinstance(event, GroupMessageEvent):
+                message = f'>{nickname}\n※ 翻译失败，请简化文本~'
+            elif isinstance(event, PrivateMessageEvent):
+                message = '※ 翻译失败，请简化文本~'
             try:
                 await translate.finish(message)
             except ActionFailed as e:
@@ -206,7 +232,11 @@ async def _(bot: Bot, event: CQEvent, state: T_State):
                 return
         message = data['data']['target_text']
         try:
-            await translate.finish(message)
+            if isinstance(event, GroupMessageEvent):
+                sender = f'>{nickname}\n'
+                await translate.finish(sender + message)
+            elif isinstance(event, PrivateMessageEvent):   
+                await translate.finish(message)
         except ActionFailed as e:
             salmon.logger.error(
                 f'ActionFailed | {e.info["msg"].lower()} | retcode = {e.info["retcode"]} | {e.info["wording"]}'

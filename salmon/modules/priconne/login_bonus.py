@@ -48,15 +48,19 @@ login = sv.on_fullmatch('签到', aliases={'盖章', '妈', '妈?', '妈妈', '�
 @login.handle()
 async def give_okodokai(bot: Bot, event: CQEvent):
     uid = event.user_id
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     if not lmt.check(uid):
-        await login.finish('明日はもう一つプレゼントをご用意してお待ちしますね')
+        if isinstance(event, GroupMessageEvent):
+            await login.finish(f'>{nickname}\n明日はもう一つプレゼントをご用意してお待ちしますね')
+        elif isinstance(event, PrivateMessageEvent):
+            await login.finish('明日はもう一つプレゼントをご用意してお待ちしますね')
     lmt.increase(uid)
-    at_sender = Message(f'[CQ:at,qq={uid}]')
     present = random.choice(login_presents)
     todo = random.choice(todo_list)
     pic = Message(R.img("priconne/kokkoro_stamp.png").cqcode)
     if isinstance(event, GroupMessageEvent):
-        msg = at_sender + '\nおかえりなさいませ、主さま' + pic + f'\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？'
+        msg = f'>{nickname}\nおかえりなさいませ、主さま' + pic + f'\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？'
     elif isinstance(event, PrivateMessageEvent):
         msg = 'おかえりなさいませ、主さま' + pic + f'\n{present}を獲得しました\n私からのプレゼントです\n主人今天要{todo}吗？'
     await login.finish(msg)

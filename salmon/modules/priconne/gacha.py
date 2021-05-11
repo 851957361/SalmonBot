@@ -4,8 +4,8 @@ from collections import defaultdict
 import salmon
 from salmon import Service, Bot, priv, util, log
 from salmon.util import DailyNumberLimiter, concat_pic, pic2b64
-from salmon.typing import CQEvent, Message, MessageSegment, T_State, GroupMessageEvent, PrivateMessageEvent
-from salmon.service import matcher_wrapper, parse_uid
+from salmon.typing import CQEvent, Message, MessageSegment, T_State, GroupMessageEvent, PrivateMessageEvent, FinishedException
+from salmon.service import parse_uid
 from salmon.modules.priconne.pcr_data import chara
 from salmon.modules.priconne.pool import Gacha
 try:
@@ -89,23 +89,27 @@ async def look_pool(bot: Bot, event: CQEvent):
 
 @gacha_switch.handle()
 async def switch_recg(bot: Bot, event: CQEvent, state: T_State):
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
     if isinstance(event, PrivateMessageEvent):
         await gacha_switch.finish('请在群聊内切换卡池')
     elif isinstance(event, GroupMessageEvent):
         args = util.normalize_str(event.get_plaintext().strip())
         if args:
             state['name'] = args
+        message = f'>{nickname}\n请发送需要切换的卡池的区服'
+        state['prompt'] = message
 
-@gacha_switch.got('name', prompt='请发送需要切换的卡池的区服')
+@gacha_switch.got('name', prompt='{prompt}')
 async def switch_pool(bot: Bot, event: CQEvent, state: T_State):
     if isinstance(event, GroupMessageEvent):
-        uid = event.user_id
-        at_sender = f'[CQ:at,qq={uid}]'
+        user_info = await bot.get_stranger_info(user_id=event.user_id)
+        nickname = user_info.get('nickname', '未知用户')
         if not priv.check_priv(bot, event, priv.ADMIN): 
-            await gacha_switch.finish(Message(f'{at_sender}\n只有群管理才能切换卡池'))
+            await gacha_switch.finish(f'>{nickname}\n只有群管理才能切换卡池')
         name = util.normalize_str(state['name'])
         if name in ('国', '国服', 'cn'):
-            await gacha_pool.finish('请选择以下卡池\n> 选择卡池b服\n> 选择卡池台服')
+            await gacha_pool.finish(f'>{nickname}\n请选择以下卡池\n> 选择卡池b服\n> 选择卡池台服')
         elif name in ('b', 'b服', 'bl', 'bilibili', '陆', '陆服'):
             name = 'BL'
         elif name in ('台', '台服', 'tw', 'sonet'):
@@ -115,46 +119,53 @@ async def switch_pool(bot: Bot, event: CQEvent, state: T_State):
         elif name in ('混', '混合', 'mix'):
             name = 'MIX'
         else:
-            await gacha_pool.finish(Message(f'{at_sender}\n未知区服，{POOL_NAME_TIP}'))
+            await gacha_pool.finish(f'>{nickname}\n未知区服，{POOL_NAME_TIP}')
         gid = str(event.group_id)
         _group_pool[gid] = name
         dump_pool_config()
-        await bot.send(event, Message(f'{at_sender}\n卡池已切换为{name}池'))
+        await bot.send(event, f'>{nickname}\n卡池已切换为{name}池')
         await look_pool(bot, event)
 
 
-async def check_jewel_num(mathcer: matcher_wrapper, event: CQEvent):
+async def check_jewel_num(bot: Bot, event: CQEvent):
     uid = event.user_id
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     if not jewel_limit.check(uid):
         if isinstance(event, GroupMessageEvent):
-            at_sender = Message(f'[CQ:at,qq={uid}]')
-            await mathcer.finish(at_sender + JEWEL_EXCEED_NOTICE)
+            sender = f'>{nickname}\n'
+            await bot.send(event, sender + JEWEL_EXCEED_NOTICE)
         elif isinstance(event, PrivateMessageEvent):
-            await mathcer.finish(JEWEL_EXCEED_NOTICE)
+            await bot.send(event, JEWEL_EXCEED_NOTICE)
+        raise FinishedException
 
 
-async def check_tenjo_num(mathcer: matcher_wrapper, event: CQEvent):
+async def check_tenjo_num(bot: Bot, event: CQEvent):
     uid = event.user_id
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     if not tenjo_limit.check(uid):
         if isinstance(event, GroupMessageEvent):
-            at_sender = Message(f'[CQ:at,qq={uid}]')
-            await mathcer.finish(at_sender + TENJO_EXCEED_NOTICE)
+            sender = f'>{nickname}\n'
+            await bot.send(event, sender + TENJO_EXCEED_NOTICE)
         elif isinstance(event, PrivateMessageEvent):
-            await mathcer.finish(TENJO_EXCEED_NOTICE)
+            await bot.send(event, TENJO_EXCEED_NOTICE)
+        raise FinishedException
 
 
 @gacha_1.handle()
 async def ichi_rec(bot: Bot, event: CQEvent, state: T_State):
-    await check_jewel_num(gacha_1, event)
+    await check_jewel_num(bot, event)
     uid = event.user_id
     jewel_limit.increase(uid, 150)
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     if isinstance(event, GroupMessageEvent):
         gid = event.group_id
         gacha = Gacha(_group_pool[gid])
         chara, _ = gacha.gacha_one(gacha.up_prob, gacha.s3_prob, gacha.s2_prob)
         res = f'{chara.icon.cqcode} {chara.name} {"★"*chara.star}'
-        at_sender = f'[CQ:at,qq={uid}]'
-        await gacha_1.finish(Message(f'{at_sender}\n素敵な仲間が増えますよ！\n{res}'))
+        await gacha_1.finish(Message(f'>{nickname}\n素敵な仲間が増えますよ！\n{res}'))
     elif isinstance(event, PrivateMessageEvent):
         args = util.normalize_str(event.get_plaintext().strip())
         if args:
@@ -185,12 +196,13 @@ async def gacha_ichi(bot: Bot, event: CQEvent, state: T_State):
 @gacha_10.handle()
 async def jyu_rec(bot: Bot, event: CQEvent, state: T_State):
     SUPER_LUCKY_LINE = 170
-    await check_jewel_num(gacha_10, event)
+    await check_jewel_num(bot, event)
     uid = event.user_id
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     jewel_limit.increase(uid, 1500)
     if isinstance(event, GroupMessageEvent):
         gid = event.group_id
-        at_sender = f'[CQ:at,qq={uid}]'
         gacha = Gacha(_group_pool[gid])
         result, hiishi = gacha.gacha_ten()
         res1 = chara.gen_team_pic(result[:5], star_slot_verbose=False)
@@ -204,7 +216,7 @@ async def jyu_rec(bot: Bot, event: CQEvent, state: T_State):
         res = f'{res}\n{res1}\n{res2}'
         if hiishi >= SUPER_LUCKY_LINE:
             await bot.send(event, '恭喜海豹！おめでとうございます！')
-        await gacha_10.finish(Message(f'{at_sender}\n素敵な仲間が増えますよ！\n{res}'))
+        await gacha_10.finish(Message(f'>{nickname}\n素敵な仲間が増えますよ！\n{res}'))
     elif isinstance(event, PrivateMessageEvent):
         args = util.normalize_str(event.get_plaintext().strip())
         if args:
@@ -245,8 +257,10 @@ async def gacha_jyu(bot: Bot, event: CQEvent, state: T_State):
 
 @gacha_200.handle()
 async def nibyaku_rec(bot: Bot, event: CQEvent, state: T_State):
-    await check_tenjo_num(gacha_200, event)
+    await check_tenjo_num(bot, event)
     uid = event.user_id
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
     tenjo_limit.increase(uid)
     if isinstance(event, GroupMessageEvent):
         gid = event.group_id
@@ -271,7 +285,8 @@ async def nibyaku_rec(bot: Bot, event: CQEvent, state: T_State):
             res = pic2b64(res)
             res = MessageSegment.image(res)
         msg = [
-            f"\n素敵な仲間が増えますよ！ {res}",
+            f">{nickname}\n"
+            f"素敵な仲間が増えますよ！ {res}",
             f"★★★×{up+s3} ★★×{s2} ★×{s1}",
             f"获得记忆碎片×{100*up}与女神秘石×{50*(up+s3) + 10*s2 + s1}！\n第{result['first_up_pos']}抽首次获得up角色" if up else f"获得女神秘石{50*(up+s3) + 10*s2 + s1}个！"
         ]
@@ -299,8 +314,7 @@ async def nibyaku_rec(bot: Bot, event: CQEvent, state: T_State):
         elif up >= 4:
             msg.append("记忆碎片一大堆！您是托吧？")
         msg = Message('\n'.join(msg))
-        at_sender = Message(f'[CQ:at,qq={uid}]')
-        await gacha_200.finish(at_sender + msg)
+        await gacha_200.finish(msg)
     elif isinstance(event, PrivateMessageEvent):
         args = util.normalize_str(event.get_plaintext().strip())
         if args:

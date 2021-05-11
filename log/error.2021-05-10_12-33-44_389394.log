@@ -1,0 +1,400 @@
+2021-05-10 12:33:44.385 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+2021-05-10 12:33:44.390 | ERROR    | alert:disconnect:23 - WebSocket连接已断开
+2021-05-10 17:02:28.406 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from service_manage, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 8, in <module>
+    salmon.run('run:app')
+    │      └ <function run at 0x0000024BDB8929D0>
+    └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
+    nonebot.run(app=app)
+    │       │       └ 'run:app'
+    │       └ <function run at 0x0000024BDB4C7B80>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {'app': 'run:app'}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000024BD8C68C10>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000024BFDBACCC0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000024BDB4B9C10>
+    │       │   └ 'run:app'
+    │       └ <function run at 0x0000024BFDA2A8B0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000024BFDA4B5E0>
+    └ <uvicorn.main.Server object at 0x0000024BFEB17070>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000024BFDA4B670>
+    │    │                  └ <uvicorn.main.Server object at 0x0000024BFEB17070>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000024BDB391820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000024BDB391790>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000024BDB393310>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000024BDB332430>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000024BFEBFEC40>(<_GatheringFu...result=[True]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000024BFEBFEC40>(<_GatheringFu...result=[True]>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000024BFEBFEC40>(<_GatheringFu...result=[True]>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000024BFEBFEC40>(<_GatheringFu...result=[True]>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1620637348, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024BFEB9FCA0>
+          │            └ <Matcher from service_manage, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x0000024BDB86C5E0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1620637348, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024BFEB9FCA0>
+          │       └ <function Matcher.run at 0x0000024BDB54D940>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '禁用', 'command': ('禁用',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │    │           │        │    └ GroupMessageEvent(time=1620637348, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024BFEB9FCA0>
+          │    │           └ <function disable_service at 0x0000024BFDDA7DC0>
+          │    └ <function Matcher.run_handler at 0x0000024BDB54D8B0>
+          └ <Matcher from service_manage, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function disable_service at 0x0000024BFDDA7DC0>
+
+  File "C:\bot\SalmonBot\salmon\modules\botmanage\service_manage.py", line 129, in disable_service
+    u_priv = priv.get_user_priv(bot, event)
+             │    │             │    └ GroupMessageEvent(time=1620637348, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+             │    │             └ <nonebot.adapters.cqhttp.bot.Bot object at 0x0000024BFEB9FCA0>
+             │    └ <function get_user_priv at 0x0000024BDB984790>
+             └ <module 'salmon.priv' from 'C:\\bot\\SalmonBot\\salmon\\priv.py'>
+
+TypeError: get_user_priv() takes 1 positional argument but 2 were given
+2021-05-10 17:09:34.959 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+2021-05-10 17:09:34.959 | ERROR    | alert:disconnect:23 - WebSocket连接已断开
+2021-05-10 18:27:31.415 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "feedback"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 4, in <module>
+    salmon.init()
+    │      └ <function init at 0x0000018C129928B0>
+    └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 26, in init
+    nonebot.load_plugins(os.path.join(os.path.dirname(__file__), 'modules', module_name))
+    │       │            │  │    │    │  │    │       │                     └ 'botmanage'
+    │       │            │  │    │    │  │    │       └ 'C:\\bot\\SalmonBot\\salmon\\__init__.py'
+    │       │            │  │    │    │  │    └ <function dirname at 0x0000018C0FB19AF0>
+    │       │            │  │    │    │  └ <module 'ntpath' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py'>
+    │       │            │  │    │    └ <module 'os' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py'>
+    │       │            │  │    └ <function join at 0x0000018C0FB19820>
+    │       │            │  └ <module 'ntpath' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py'>
+    │       │            └ <module 'os' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py'>
+    │       └ <function load_plugins at 0x0000018C12651C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\modules\\botmanage'), name='feedback', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000018C3507D430>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000018C34CC02C0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='feedback', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000018C35BDAF70>, origin='C:\\bo...
+             └ <function _load at 0x0000018C0F60F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 786, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 923, in get_code
+  File "<frozen importlib._bootstrap_external>", line 853, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\modules\botmanage\feedback.py", line 36
+    await bot.send(event, f'>{nickname}\n您的反馈已发送至维护组！\n========\n{text}'))
+                                                                         ^
+
+SyntaxError: unmatched ')'
+2021-05-10 18:27:31.461 | ERROR    | nonebot:_load_plugin:1037 - Failed to import "feedback"
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 8, in <module>
+    salmon.run('run:app')
+    │      └ <function run at 0x0000018C129929D0>
+    └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
+    nonebot.run(app=app)
+    │       │       └ 'run:app'
+    │       └ <function run at 0x0000018C125C7B80>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {'app': 'run:app'}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x0000018C0FD89C10>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x0000018C34CACEA0>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x0000018C125B9C10>
+    │       │   └ 'run:app'
+    │       └ <function run at 0x0000018C34B2B8B0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x0000018C34B4B5E0>
+    └ <uvicorn.main.Server object at 0x0000018C35C2A430>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x0000018C34B4B670>
+    │    │                  └ <uvicorn.main.Server object at 0x0000018C35C2A430>
+    │    └ <function BaseEventLoop.run_until_complete at 0x0000018C12491820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x0000018C12491790>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000018C12493310>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000018C12432430>
+    └ <Handle <TaskStepMethWrapper object at 0x0000018C35C2A610>()>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskStepMethWrapper object at 0x0000018C35C2A610>()>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskStepMethWrapper object at 0x0000018C35C2A610>()>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskStepMethWrapper object at 0x0000018C35C2A610>()>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 397, in serve
+    config.load()
+    │      └ <function Config.load at 0x0000018C34B2B0D0>
+    └ <uvicorn.config.Config object at 0x0000018C34CA4E50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\config.py", line 278, in load
+    self.loaded_app = import_from_string(self.app)
+    │                 │                  │    └ 'run:app'
+    │                 │                  └ <uvicorn.config.Config object at 0x0000018C34CA4E50>
+    │                 └ <function import_from_string at 0x0000018C34B03DC0>
+    └ <uvicorn.config.Config object at 0x0000018C34CA4E50>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\importer.py", line 20, in import_from_string
+    module = importlib.import_module(module_str)
+             │         │             └ 'run'
+             │         └ <function import_module at 0x0000018C0FB29F70>
+             └ <module 'importlib' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\importlib\\__init__.py'>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\importlib\__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'run'
+           │          └ <function _gcd_import at 0x0000018C0F611310>
+           └ <module 'importlib._bootstrap' (frozen)>
+
+  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\run.py", line 4, in <module>
+    salmon.init()
+    │      └ <function init at 0x0000018C129928B0>
+    └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 26, in init
+    nonebot.load_plugins(os.path.join(os.path.dirname(__file__), 'modules', module_name))
+    │       │            │  │    │    │  │    │       │                     └ 'botmanage'
+    │       │            │  │    │    │  │    │       └ 'C:\\bot\\SalmonBot\\salmon\\__init__.py'
+    │       │            │  │    │    │  │    └ <function dirname at 0x0000018C0FB19AF0>
+    │       │            │  │    │    │  └ <module 'ntpath' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py'>
+    │       │            │  │    │    └ <module 'os' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py'>
+    │       │            │  │    └ <function join at 0x0000018C0FB19820>
+    │       │            │  └ <module 'ntpath' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\ntpath.py'>
+    │       │            └ <module 'os' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\os.py'>
+    │       └ <function load_plugins at 0x0000018C12651C10>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1044, in load_plugins
+    result = context.run(_load_plugin, module_info)
+             │       │   │             └ ModuleInfo(module_finder=FileFinder('C:\\bot\\SalmonBot\\salmon\\modules\\botmanage'), name='feedback', ispkg=False)
+             │       │   └ <function load_plugins.<locals>._load_plugin at 0x0000018C35C1FA60>
+             │       └ <method 'run' of 'Context' objects>
+             └ <Context object at 0x0000018C35A3A880>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\plugin.py", line 1028, in _load_plugin
+    module = _load(spec)
+             │     └ ModuleSpec(name='feedback', loader=<_frozen_importlib_external.SourceFileLoader object at 0x0000018C35CAA520>, origin='C:\\bo...
+             └ <function _load at 0x0000018C0F60F040>
+
+  File "<frozen importlib._bootstrap>", line 711, in _load
+  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 786, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 923, in get_code
+  File "<frozen importlib._bootstrap_external>", line 853, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+
+  File "C:\bot\SalmonBot\salmon\modules\botmanage\feedback.py", line 36
+    await bot.send(event, f'>{nickname}\n您的反馈已发送至维护组！\n========\n{text}'))
+                                                                         ^
+
+SyntaxError: unmatched ')'
+2021-05-10 18:30:38.042 | ERROR    | nonebot:_run_matcher:156 - Running matcher <Matcher from feedback, type=message, priority=1, temp=False> failed.
+Traceback (most recent call last):
+
+  File "C:\bot\SalmonBot\run.py", line 8, in <module>
+    salmon.run('run:app')
+    │      └ <function run at 0x00000216B26E29D0>
+    └ <module 'salmon' from 'C:\\bot\\SalmonBot\\salmon\\__init__.py'>
+
+  File "C:\bot\SalmonBot\salmon\__init__.py", line 30, in run
+    nonebot.run(app=app)
+    │       │       └ 'run:app'
+    │       └ <function run at 0x00000216B2317B80>
+    └ <module 'nonebot' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\nonebot\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\__init__.py", line 219, in run
+    get_driver().run(host, port, *args, **kwargs)
+    │                │     │      │       └ {'app': 'run:app'}
+    │                │     │      └ ()
+    │                │     └ None
+    │                └ None
+    └ <function get_driver at 0x00000216AFAD9C10>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\drivers\fastapi.py", line 160, in run
+    uvicorn.run(app or self.server_app,
+    │       │   │      │    └ <property object at 0x00000216D49FCE50>
+    │       │   │      └ <nonebot.drivers.fastapi.Driver object at 0x00000216B230ABE0>
+    │       │   └ 'run:app'
+    │       └ <function run at 0x00000216D487B8B0>
+    └ <module 'uvicorn' from 'C:\\Users\\WatanabeAsa\\AppData\\Local\\Programs\\Python\\Python39\\lib\\site-packages\\uvicorn\\__in...
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 362, in run
+    server.run()
+    │      └ <function Server.run at 0x00000216D489B5E0>
+    └ <uvicorn.main.Server object at 0x00000216D5937310>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\uvicorn\main.py", line 390, in run
+    loop.run_until_complete(self.serve(sockets=sockets))
+    │    │                  │    │             └ None
+    │    │                  │    └ <function Server.serve at 0x00000216D489B670>
+    │    │                  └ <uvicorn.main.Server object at 0x00000216D5937310>
+    │    └ <function BaseEventLoop.run_until_complete at 0x00000216B21E1820>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 629, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x00000216B21E1790>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 596, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x00000216B21E3310>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\base_events.py", line 1890, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x00000216B2182430>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000216D5A52040>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x00000216D5A52040>(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x00000216D5A52040>(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x00000216D5A52040>(<Future finished result=None>)>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 126, in _check_matcher
+    await _run_matcher(Matcher, bot, event, state)
+          │            │        │    │      └ {'_prefix': {'raw_command': '反馈', 'command': ('反馈',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │            │        │    └ GroupMessageEvent(time=1620642637, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │            │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000216D59E2190>
+          │            └ <Matcher from feedback, type=message, priority=1, temp=False>
+          └ <function _run_matcher at 0x00000216B26BC5E0>
+
+> File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\message.py", line 154, in _run_matcher
+    await matcher.run(bot, event, state)
+          │       │   │    │      └ {'_prefix': {'raw_command': '反馈', 'command': ('反馈',)}, '_suffix': {'raw_command': None, 'command': None}}
+          │       │   │    └ GroupMessageEvent(time=1620642637, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │       │   └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000216D59E2190>
+          │       └ <function Matcher.run at 0x00000216B239D940>
+          └ <Matcher from feedback, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 527, in run
+    await self.run_handler(handler, bot, event, state_)
+          │    │           │        │    │      └ {'_prefix': {'raw_command': '反馈', 'command': ('反馈',)}, '_suffix': {'raw_command': None, 'command': None}, '_current_key': 'te...
+          │    │           │        │    └ GroupMessageEvent(time=1620642637, self_id=3235657949, post_type='message', sub_type='normal', user_id=1351495774, message_ty...
+          │    │           │        └ <nonebot.adapters.cqhttp.bot.Bot object at 0x00000216D59E2190>
+          │    │           └ <function Matcher.got.<locals>._key_getter at 0x00000216D58EE820>
+          │    └ <function Matcher.run_handler at 0x00000216B239D8B0>
+          └ <Matcher from feedback, type=message, priority=1, temp=False>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 512, in run_handler
+    await handler(
+          └ <function Matcher.got.<locals>._key_getter at 0x00000216D58EE820>
+
+  File "C:\Users\WatanabeAsa\AppData\Local\Programs\Python\Python39\lib\site-packages\nonebot\matcher.py", line 349, in _key_getter
+    message=str(prompt).format(**state))
+                │                └ {'_prefix': {'raw_command': '反馈', 'command': ('反馈',)}, '_suffix': {'raw_command': None, 'command': None}, '_current_key': 'te...
+                └ '{prompt}'
+
+KeyError: 'prompt'
+2021-05-10 21:29:31.942 | ERROR    | nonebot:receive:285 - WebSocket disconnected by peer.
+2021-05-10 21:29:31.943 | ERROR    | alert:disconnect:23 - WebSocket连接已断开

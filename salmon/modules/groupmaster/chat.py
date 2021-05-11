@@ -42,8 +42,7 @@ async def chat_waifu(bot: Bot, event: CQEvent):
 @laogong.handle()
 async def chat_laogong(bot: Bot, event: CQEvent):
     if isinstance(event, GroupMessageEvent):
-        at_sender = Message(f'[CQ:at,qq={event.user_id}]')
-        await bot.send(event, at_sender + '你走开啦！')
+        await bot.send(event, '你走开啦！', at_sender=True)
     elif isinstance(event, PrivateMessageEvent):
         await bot.send(event, '你走开啦！')
 
@@ -51,8 +50,7 @@ async def chat_laogong(bot: Bot, event: CQEvent):
 @mua.handle()
 async def chat_mua(bot: Bot, event: CQEvent):
     if isinstance(event, GroupMessageEvent):
-        at_sender = Message(f'[CQ:at,qq={event.user_id}]')
-        await bot.send(event, at_sender + '笨蛋~')
+        await bot.send(event, '笨蛋~', at_sender=True)
     elif isinstance(event, PrivateMessageEvent):
         await bot.send(event, '笨蛋~')
 
@@ -86,7 +84,7 @@ async def chat_queshi(bot: Bot, event: CQEvent):
 @sv.on_keyword(('会战'))
 async def chat_clanba(bot: Bot, event: CQEvent):
     if random.random() < 0.02:
-        await bot.send(event, Message(R.img('我的天啊你看看都几度了.jpg').cqcode))
+        await bot.send(event, Message(R.img('我的天啊你看看都几点了.jpg').cqcode))
 
 
 @sv.on_keyword(('内鬼'))

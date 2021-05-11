@@ -18,12 +18,13 @@ anti_crit = on_command('ban_word', to_me(), aliases=BANNED_WORD)
 @anti_crit.handle()
 async def ban_word(bot: Bot, event: CQEvent):
     user_id = event.user_id
+    user_info = await bot.get_stranger_info(user_id=user_id)
+    nickname = user_info.get('nickname', '未知用户')
     salmon.logger.critical(f'Self: {event.self_id}, Message {event.message_id} from {user_id}: {event.message}')
     priv.set_block_user(user_id, timedelta(hours=8))
     pic = R.img(f"chieri{random.randint(1, 4)}.jpg").cqcode
     if isinstance(event, GroupMessageEvent):
-        at_sender = f'[CQ:at,qq={user_id}]'
-        await bot.send(event, Message(f"{at_sender}\n不理你啦！バーカー\n{pic}"))
+        await bot.send(event, Message(f">{nickname}\n不理你啦！バーカー\n{pic}"))
         await util.silence(bot, event, 8*60*60)
     elif isinstance(event, PrivateMessageEvent):
         await bot.send(event, Message(f"不理你啦！バーカー\n{pic}"))

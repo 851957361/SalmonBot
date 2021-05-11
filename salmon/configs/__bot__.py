@@ -29,6 +29,6 @@ MODULES_ON = {
     'hourcall',
     'setu',
     'mikan',
-    # 'translate',
+    'translate',
     # 'twitter',
 }

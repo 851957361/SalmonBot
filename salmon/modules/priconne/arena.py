@@ -5,7 +5,7 @@ import re
 from PIL import Image, ImageDraw, ImageFont
 import salmon
 from salmon import aiohttpx, configs, Service, R, Bot
-from salmon.typing import CQEvent, Message, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException, T_State
+from salmon.typing import CQEvent, MessageSegment, GroupMessageEvent, PrivateMessageEvent, FinishedException, T_State
 from salmon.util import FreqLimiter, pic2b64
 from salmon.modules.priconne.pcr_data import chara
 try:
@@ -266,17 +266,20 @@ def render_atk_def_teams(entries, border_pix=5):
 
 async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
     uid = event.user_id
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
+    sender = f'>{nickname}\n'
     if isinstance(event, PrivateMessageEvent):
         if uid not in salmon.configs.SUPERUSERS:
             await bot.send(event, '非维护组请在群聊中查询')
             raise FinishedException
     refresh_quick_key_dic()
-    at_sender = Message(f'[CQ:at,qq={uid}]')
     if not lmt.check(uid):
         msg = '您查询得过于频繁，请稍等片刻'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     lmt.start_cd(uid)
     # 处理输入数据
@@ -293,38 +296,44 @@ async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
     if not defen:
         msg = '查询请发送"怎么拆+防守队伍"(无需+号)'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     if len(defen) > 5:
         msg = '编队不能多于5名角色'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     if len(defen) < 5:
         msg = '由于数据库限制，少于5名角色的检索条件请移步pcrdfans.com进行查询'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     if len(defen) != len(set(defen)):
         msg = '编队中含重复角色'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     if any(chara.is_npc(i) for i in defen):
         msg = '编队中含未实装角色'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     if 1004 in defen:
         msg = '\n⚠️您正在查询普通版炸弹人\n※万圣版可用万圣炸弹人/瓜炸等别称'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     # 执行查询
     salmon.logger.info('Doing query...')
@@ -336,21 +345,23 @@ async def _arena_query(bot: Bot, event: CQEvent, state: T_State, region: int):
         if code == 117:
             await bot.send(event, "高峰期服务器限流！请前往pcrdfans.com/battle查询")
         else:
-            await bot.send(event, at_sender + f'CODE{code} 查询出错，请联系维护组调教\n请先前往pcrdfans.com进行查询')
+            await bot.send(event, f'CODE{code} 查询出错，请联系维护组调教\n请先前往pcrdfans.com进行查询')
         raise FinishedException
     salmon.logger.info('Got response!')
     # 处理查询结果
     if res is None:
         msg = '数据库未返回数据，请再次尝试查询或前往pcrdfans.com'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     if not len(res):
         msg = '抱歉没有查询到解法\n※没有作业说明随便拆 发挥你的想象力～★\n作业上传请前往pcrdfans.com'
         if isinstance(event, GroupMessageEvent):
-            msg = at_sender + msg
-        await bot.send(event, msg)
+            await bot.send(event, sender + msg)
+        elif isinstance(event, PrivateMessageEvent):
+            await bot.send(event, msg)
         raise FinishedException
     res = res[:min(6, len(res))]    # 限制显示数量，截断结果
     # 发送回复

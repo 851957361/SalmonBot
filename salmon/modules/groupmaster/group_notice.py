@@ -24,8 +24,7 @@ async def increace_welcome(bot: Bot, event: GroupIncreaseNoticeEvent):
         return  # ignore myself
     welcomes = salmon.configs.groupmaster.increase_welcome
     gid = event.group_id
-    at_sender = Message(f'[CQ:at,qq={event.user_id}]')
     if gid in welcomes:
-        await group_increase.finish(at_sender + welcomes[gid])
+        await bot.send(event, welcomes[gid], at_sender=True)
     # elif 'default' in welcomes:
-    #     await group_increase.finish(at_sender + welcomes['default'])
+    #     await bot.send(event, welcomes[default], at_sender=True)

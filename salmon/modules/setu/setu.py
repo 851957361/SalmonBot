@@ -50,15 +50,17 @@ setu = sv.on_rex(r'^[色涩瑟][图圖]|[来來发發给給][张張个個幅点�
 @setu.handle()
 async def random_setu(bot: Bot, event: CQEvent, state: T_State):
     uid = event.user_id
-    at_sender = Message(f'[CQ:at,qq={event.user_id}]')
+    user_info = await bot.get_stranger_info(user_id=uid)
+    nickname = user_info.get('nickname', '未知用户')
+    sender = f'>{nickname}\n'
     if not _nlmt.check(uid):
         if isinstance(event, GroupMessageEvent):   
-            await setu.finish(at_sender + EXCEED_NOTICE)
+            await setu.finish(sender + EXCEED_NOTICE)
         elif isinstance(event, PrivateMessageEvent):
             await setu.finish(EXCEED_NOTICE)
     if not _flmt.check(uid):
         if isinstance(event, GroupMessageEvent):
-            await setu.finish(at_sender + CD_NOTICE)
+            await setu.finish(sender + CD_NOTICE)
         elif isinstance(event, PrivateMessageEvent):
             await setu.finish(CD_NOTICE)
     match = state['match']

@@ -9,8 +9,9 @@ qksimg = R.img('antiqks.jpg').cqcode
 
 @sv.on_keyword(qks_url)
 async def _(bot: Bot, event: CQEvent):
-    msg = Message(f'骑空士爪巴\n{qksimg}')
+    user_info = await bot.get_stranger_info(user_id=event.user_id)
+    nickname = user_info.get('nickname', '未知用户')
+    msg = Message(f'>{nickname}\n骑空士爪巴\n{qksimg}')
     if isinstance(event, GroupMessageEvent):
-        at_sender = Message(f'[CQ:at,qq={event.user_id}]')
-        await bot.send(event, at_sender + msg)
+        await bot.send(event, msg)
         await util.silence(bot, event, 60)
