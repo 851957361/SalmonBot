@@ -5,7 +5,7 @@ A QQbot for Princess Connect Re:Dive (and other usage :) based on nonebot2.
 
 ## 简介
 
-**SalmonBot:** [Hoshinobot](https://github.com/Ice-Cirno/HoshinoBot)的基于 [nonebot2](https://v2.nonebot.dev/next/) 框架的版本。感谢[Ice-Cirno](https://github.com/Ice-Cirno)dalao!
+**SalmonBot:**  [Hoshinobot](https://github.com/Ice-Cirno/HoshinoBot) 基于 [nonebot2](https://v2.nonebot.dev/next/) 框架的项目。感谢 [Ice-Cirno](https://github.com/Ice-Cirno) 等开发者的帮助!
 
 
 ## 特点
