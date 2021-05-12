@@ -102,10 +102,10 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
     > 关于`--prefix=/`：
     > 作用是指定安装路径。
-    > 不指定prefix，则可执行文件默认放在`/usr/local/bin`，库文件默认放在`/usr/local/lib`，配置文件默认放在`/usr/local/etc`，其它的资源文件放在`/usr/local/share`
+    > 不指定prefix，则可执行文件默认放在`/usr/local/bin`，库文件默认放在`/usr/local/lib`，配置文件默认放在`/usr/local/etc`，其它的资源文件放在`/usr/local/share`。
     > 若卸载这个程序，需要在原来的make目录下用一次`make uninstall`(前提是make文件指定过uninstall)，或者去上述目录里面把相关的文件一个个删掉。 指定prefix，直接删掉一个文件夹即可。
     > 
-    > 如果命令`./configure --prefix=/usr/local/python3.9`报以下错误：`-bash: ./configure: No such file or directory`
+    > 如果命令`./configure --prefix=/usr/local/python3.9`报以下错误：`-bash: ./configure: No such file or directory`，
     > 使用命令`find -name configure`来查找目录。
     > 若目录下有makefile文件，直接使用`make`编译，`make install`安装；若有setup、install等sh文件或其它可执行文件，则改为直接执行该文件。
 
