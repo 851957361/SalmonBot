@@ -388,10 +388,10 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
 如果您已经有了授权key , 在文件`salmon/configs/priconne.py`中填写您的key：
 
-    ```python
-    class arena:
-        AUTH_KEY = "your_key"
-    ```
+```python
+class arena:
+    AUTH_KEY = "your_key"
+```
 
 
 
@@ -402,15 +402,15 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
 番剧订阅数据来自 [蜜柑计划 - Mikan Project](https://mikanani.me/)，您可以注册一个账号，添加订阅的番剧，之后点击 Mikan 首页的 RSS订阅 ，复制类似于下面的url地址：
 
-    ```
-    https://mikanani.me/RSS/MyBangumi?token=abcdfegABCFEFG%2b123%3d%3d
-    ```
+```
+https://mikanani.me/RSS/MyBangumi?token=abcdfegABCFEFG%2b123%3d%3d
+```
 
 保留其中的`token`参数，在文件`salmon/configs/mikan.py`中填写您的token：
 
-    ```python
-    MIKAN_TOKEN = "abcdfegABCFEFG+123=="
-    ```
+```python
+MIKAN_TOKEN = "abcdfegABCFEFG+123=="
+```
 
 > 注意：您需要将 token 部分的`%2b`替换为`+`，将`%2f`替换为`/`，将`%3d`替换为`=`。
 
@@ -422,12 +422,12 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
 若您已有推特开发者账号，在文件`salmon/configs/twitter.py`中填写您的key：
 
-    ```python
-    consumer_key = "your_consumer_key",
-    consumer_secret = "your_consumer_secret",
-    access_token_key = "your_access_token_key",
-    access_token_secret = "your_access_token_secret"
-    ```
+```python
+consumer_key = "your_consumer_key",
+consumer_secret = "your_consumer_secret",
+access_token_key = "your_access_token_key",
+access_token_secret = "your_access_token_secret"
+```
 
 
 
@@ -435,14 +435,14 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
 您可以在文件`salmon/configs/groupmaster.py`中设置群聊的入群欢迎：
 
-    ```python
-    increase_welcome = {
-        "default": "欢迎入群！你已经是群大佬了, 快来跟群萌新打个招呼吧~",
-        114514191: "欢迎来到 下北泽群 !",
-        145141919: "欢迎来到 红茶交流群 !",
-        141919810: "欢迎来到 下北泽红茶群 !",
-    }
-    ```
+```python
+increase_welcome = {
+    "default": "欢迎入群！你已经是群大佬了, 快来跟群萌新打个招呼吧~",
+    114514191: "欢迎来到 下北泽群 !",
+    145141919: "欢迎来到 红茶交流群 !",
+    141919810: "欢迎来到 下北泽红茶群 !",
+}
+```
 
 
 
