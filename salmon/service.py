@@ -1,5 +1,5 @@
 '''
-触发器的处理参考了[Akiraxie](http://github.com/AkiraXie/)的项目[hoshino.nb2](https://github.com/AkiraXie/hoshino.nb2)
+The definition of matchers refers to this project [hoshino.nb2](https://github.com/AkiraXie/hoshino.nb2)
 
 Thanks to @Akiraxie dalao！
 '''
