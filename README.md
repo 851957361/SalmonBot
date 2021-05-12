@@ -177,7 +177,7 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
     Salmonbot 使用反向 websocket 与 go-cqhttp 通信, 所以对配置文件中的反向 websocket 部分进行配置，下面的配置可供参考。
 
-    其他配置可参考 go-cqhttp 的[配置文档](https://docs.go-cqhttp.org/guide/config.html#%E9%85%8D%E7%BD%AE)
+    其他配置可参考 go-cqhttp 的[配置文档](https://docs.go-cqhttp.org/guide/config.html#%E9%85%8D%E7%BD%AE)。
 
     ```hjson
     {
@@ -320,6 +320,8 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
     
     Salmonbot 使用反向 websocket 与 go-cqhttp 通信, 所以对配置文件中的反向 websocket 部分进行配置，下面的配置可供参考。
 
+    其他配置可参考 go-cqhttp 的[配置文档](https://docs.go-cqhttp.org/guide/config.html#%E9%85%8D%E7%BD%AE)
+
     ```hjson
     {
         heartbeat_interval: 3
@@ -378,6 +380,9 @@ SalmonBot 的功能各群可根据自己的需要进行开关控制，群管理�
 
 下面将会分别介绍功能的配置与api key的获取方法：
 
+> 以下功能请先在`salmon/configs/__bot__.py`的`MODULES_ON`中取消对应模块的注释  
+> 部分功能默认关闭，在群内发送 `启用 service-name` 即可开启
+
 
 
 #### pcrdfans授权key
@@ -396,9 +401,6 @@ class arena:
 
 
 #### 蜜柑番剧 RSS Token
-
-> 请先在`salmon/configs/__bot__.py`的`MODULES_ON`中取消`mikan`的注释  
-> 本功能默认关闭，在群内发送 "启用 bangumi" 即可开启
 
 番剧订阅数据来自 [蜜柑计划 - Mikan Project](https://mikanani.me/)，您可以注册一个账号，添加订阅的番剧，之后点击 Mikan 首页的 RSS订阅 ，复制类似于下面的url地址：
 
@@ -442,6 +444,19 @@ increase_welcome = {
     145141919: "欢迎来到 红茶交流群 !",
     141919810: "欢迎来到 下北泽红茶群 !",
 }
+```
+
+
+
+#### 机器翻译
+
+机器翻译功能需要在[腾讯 AI 开放平台](https://ai.qq.com/console/)新建应用，并从能力库接入[机器翻译](https://ai.qq.com/console/capability/detail/7)能力。
+
+接入后在文件`salmon/configs/translate.py`中填写您的应用鉴权信息：
+
+```python
+tencent_app_id = "APPID"
+tencent_app_key = "APPKEY"
 ```
 
 

@@ -17,7 +17,7 @@ except:
 sv_help = '''
 [怎么拆] 接防守队角色名 查询竞技场解法
 '''.strip()
-sv = Service('pcr-arena', help_=sv_help, bundle='pcr查询')
+sv = Service('pcr-arena', help_=sv_help, enable_on_default=False, bundle='pcr查询')
 
 
 lmt = FreqLimiter(5)
