@@ -13,7 +13,7 @@ peony_twitter[all]~=1.1.7
 zhconv>=1.4.1
 beautifulsoup4>=4.9.3
 dataclasses==0.6
-nonebot2==2.0.0a11
+nonebot2==2.0.0a10
 nonebot_plugin_apscheduler
 peony>=1.0.34
 Pillow>=8.1.0
